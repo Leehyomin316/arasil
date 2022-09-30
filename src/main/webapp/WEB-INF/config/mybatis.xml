@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.ibatis.datasource.pooled.PooledDataSource">
+		<property name="driver" value="org.mariadb.jdbc.Driver" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="arasil" />
+		<property name="password" value="arasil" />
+	</bean>
+
+
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation"
+			value="classpath:mybatis/model/model-config.xml" />
+		<property name="mapperLocations"
+			value="classpath:mybatis/mappers/test.xml" />
+		<property name="transactionFactory">
+			<bean
+				class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
+		</property>
+	</bean>
+	<bean id="sqlSession"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- AOP Transaction을 실행하는 대상 Method 설정 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="insert*" rollback-for="RuntimeException"></tx:method>
+			<tx:method name="create*" rollback-for="RuntimeException"></tx:method>
+			<tx:method name="update*" rollback-for="RuntimeException"></tx:method>
+			<tx:method name="delete*" rollback-for="RuntimeException"></tx:method>
+			<tx:method name="*" rollback-for="Exception"></tx:method>
+			<tx:method name="select*" read-only="true"></tx:method>
+			<tx:method name="get*" read-only="true"></tx:method>
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- AOP Pointcut/Advisor 설정 -->
+	<aop:config>
+		<aop:pointcut id="txMethod"
+			expression="execution(* com.scci.service..*Service.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txMethod" />
+	</aop:config>
+
+	<tx:annotation-driven
+		transaction-manager="txManager" />
+	<!-- <aop:config> -->
+	<!-- <aop:pointcut id="txMethod" -->
+	<!-- expression="execution(* com.scci.dao..*Impl.*(..))" /> -->
+	<!-- <aop:advisor advice-ref="txAdvice" pointcut-ref="txMethod" /> -->
+	<!-- </aop:config> -->
+	<!-- <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+		<property name="dataSource" ref="dataSource" /> </bean> <tx:advice id="txAdvice" 
+		transaction-manager="txManager"> <tx:attributes> <tx:method name="get*" read-only="true" 
+		/> <tx:method name="insert*" read-only="false" propagation="REQUIRED" rollback-for="Exception" 
+		/> <tx:method name="update*" read-only="false" propagation="REQUIRED" rollback-for="Exception" 
+		/> <tx:method name="delete*" read-only="false" propagation="REQUIRED" rollback-for="Exception" 
+		/> </tx:attributes> </tx:advice> <aop:config> <aop:pointcut id="txMethod" 
+		expression="execution(* com.scci.service..*(..))" /> <aop:advisor advice-ref="txAdvice" 
+		pointcut-ref="txMethod" /> </aop:config> -->
+
+
+	<!-- mysql, mariadb -->
+	<!-- <bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource"> 
+		<property name="driver" value="${jdbc.driverClassName}" /> <property name="url" 
+		value="${jdbc.url}" /> <property name="username" value="${jdbc.username}" 
+		/> <property name="password" value="${jdbc.password}" /> </bean> <bean id="sqlSessionFactory" 
+		class="org.mybatis.spring.SqlSessionFactoryBean"> <property name="dataSource" 
+		ref="dataSource" /> <property name="configLocation" value="classpath:mybatis/model/model-config.xml" 
+		/> <property name="mapperLocations" value="classpath:mybatis/mappers/test.xml" 
+		/> </bean> <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"> 
+		<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg> </bean> -->
+
+
+
+	<!-- Member DAO는 개발자가 만든 클래스이므로 XML에서 설정하지 않고 자바코드에서 애너테이션으로 설정 <bean id="memberDAO" 
+		class="com.spring.member.dao.MemberDAOImpl"> <property name="sqlSession" 
+		ref="sqlSession"></property> </bean> -->
+
+</beans>
