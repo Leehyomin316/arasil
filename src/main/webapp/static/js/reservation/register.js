@@ -84,10 +84,10 @@ $(function(){
         // 연속으로 몇박까지 가능한지를 계산 해야 함 
         calendar.addEventListener("click", (e)=>{
           let target = e.target;
+          console.log(target);
           if ( target.classList.contains("prev") ){
             return;
           }
-          console.log(target);
         });
     }
   
@@ -106,3 +106,26 @@ $(function(){
   }
   global.initCalendar = calendarInit;
 })(window||this);
+
+(function(){
+	const roomInfoTabletbody = document.querySelector(".select_room_container .select_room_table .table tbody");
+	roomInfoTabletbody.addEventListener("click", (e)=>{
+          let target = e.target;
+          if ( !target.classList.contains("form-check-input") ){
+            return;
+          }
+          $.ajax({
+	        type: "GET",
+	        url: `./getRoomInfo`,
+	        dataType: "text",
+	        contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+	        error: function() {
+	          console.log('통신실패!!');
+	        },
+	        success: function(data) {
+	          console.log("통신데이터 값 : " + data);
+	        }
+	      });
+          console.log(target);
+	});
+})();
