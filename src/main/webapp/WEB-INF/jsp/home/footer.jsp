@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>footer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+</style>
 </head>
 <body>
 <footer>
