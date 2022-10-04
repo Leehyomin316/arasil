@@ -8,8 +8,11 @@
 	<script	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
 	<link href="${pageContext.request.contextPath}/static/css/reservation/register.css" rel="stylesheet"></link>
     <link href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <link href="${pageContext.request.contextPath}/static/css/homeStyle.css" rel="stylesheet"></link>
 </head>
 <body>
+<%@ include file="../home/header.jsp"%>
+<div class="main_content">
     <section class="select_date_container">
         <div class="sec_cal">
             <div class="cal_nav">
@@ -122,6 +125,8 @@
             </table>     
         </div>
     </section>
+</div>
+<%@ include file="../home/footer.jsp"%>
 </body>
 <script src="${pageContext.request.contextPath}/static/js/reservation/register.js"></script>
 </html>
