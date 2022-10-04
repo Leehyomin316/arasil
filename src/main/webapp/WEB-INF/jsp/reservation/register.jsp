@@ -12,6 +12,7 @@
 </head>
 <body>
 <%@ include file="../home/header.jsp"%>
+<div class="main_content">
     <section class="select_date_container">
         <div class="sec_cal">
             <div class="cal_nav">
@@ -124,6 +125,7 @@
             </table>     
         </div>
     </section>
+</div>
 <%@ include file="../home/footer.jsp"%>
 </body>
 <script src="${pageContext.request.contextPath}/static/js/reservation/register.js"></script>
