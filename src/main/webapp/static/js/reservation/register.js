@@ -128,4 +128,10 @@ $(function(){
 	      });
           console.log(target);
 	});
+	
+	const toggleBtn = document.querySelector("#toggleRegFormBtn");
+	const modalContainer = document.querySelector(".ud-modal-container");
+	toggleBtn.addEventListener("click", ()=>{
+		modalContainer.classList.toggle("active");
+	});
 })();

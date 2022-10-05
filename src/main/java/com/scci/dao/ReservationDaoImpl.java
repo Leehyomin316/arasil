@@ -14,8 +14,8 @@ public class ReservationDaoImpl implements ReservationDao{
 	private SqlSession sqlSession;
 
 	@Override
-	public List<Map<String, String>> getRoomInfos() {
+	public List<Map<String, String>> getRoomInfos(Map<String, String> param) {
 		// TODO Auto-generated method stub
-		return sqlSession.selectList("mapper.reservation.selectRoomInfos");
+		return sqlSession.selectList("mapper.reservation.selectRoomInfos", param);
 	}
 }

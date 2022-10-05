@@ -1,5 +1,7 @@
 package com.scci.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +23,12 @@ public class ReservationController {
 	
 	@RequestMapping(value="/register", method=RequestMethod.GET)
 	public String register(@RequestParam Map<String, String> param, Model model) {
-		List<Map<String, String>> roomInfos = service.getRoomInfos();
+		if ( param.get("reserveDt") == null ) {
+	        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+	        Calendar c1 = Calendar.getInstance();
+			param.put("reserveDt", sdf.format(c1.getTime()));
+		}
+		List<Map<String, String>> roomInfos = service.getRoomInfos(param);
 		model.addAttribute("roomInfoList", roomInfos);
 		return "reservation/register";
 	}

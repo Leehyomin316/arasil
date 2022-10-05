@@ -14,8 +14,8 @@ public class ReservationServiceImpl implements ReservationService {
 	private ReservationDao dao;
 
 	@Override
-	public List<Map<String, String>> getRoomInfos() {
+	public List<Map<String, String>> getRoomInfos(Map<String, String> param) {
 		// TODO Auto-generated method stub
-		return dao.getRoomInfos();
+		return dao.getRoomInfos(param);
 	}
 }
