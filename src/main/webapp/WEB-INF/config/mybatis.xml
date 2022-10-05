@@ -13,7 +13,7 @@
 	<bean id="dataSource"
 		class="org.apache.ibatis.datasource.pooled.PooledDataSource">
 		<property name="driver" value="org.mariadb.jdbc.Driver" />
-		<property name="url" value="${jdbc.url}" />
+		<property name="url" value="jdbc:mysql://localhost:3306/arasil" />
 		<property name="username" value="arasil" />
 		<property name="password" value="arasil" />
 	</bean>
@@ -25,7 +25,7 @@
 		<property name="configLocation"
 			value="classpath:mybatis/model/model-config.xml" />
 		<property name="mapperLocations"
-			value="classpath:mybatis/mappers/test.xml" />
+			value="classpath:mybatis/mappers/*.xml" />
 		<property name="transactionFactory">
 			<bean
 				class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
