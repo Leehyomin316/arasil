@@ -8,7 +8,6 @@
 	<script	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
 	<link href="${pageContext.request.contextPath}/static/css/reservation/register.css" rel="stylesheet"></link>
     <link href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
-    <link href="${pageContext.request.contextPath}/static/css/homeStyle.css" rel="stylesheet"></link>
 </head>
 <body>
 <%@ include file="../home/header.jsp"%>

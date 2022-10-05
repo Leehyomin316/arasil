@@ -5,10 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Menu</title>
+<script	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
+<link href="${pageContext.request.contextPath}/static/css/homeStyle.css" rel="stylesheet"></link>
+<script src="${pageContext.request.contextPath}/static/js/home.js"></script>
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#!"><img src="<c:url value='/static/img/image1.jpg'/>" id="icon"/></a>
+        <a class="navbar-brand" href="#!"><img src="<c:url value='/static/img/icon02.png'/>" id="icon"/></a>
         <div class="container px-4 px-lg-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -25,7 +29,7 @@
                     <li class="nav-item active"><a class="nav-link" href="">예약</a>
                     	<ul>
                     		<li class="sub-menu"><a class="nav-link" href="#!">예약안내</a></li>
-                    		<li class="sub-menu"><a class="nav-link" href="#!">실시간예약</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="reservation/register">실시간예약</a></li>
                    			<li class="sub-menu"><a class="nav-link" href="#!">예약조회/취소</a></li>
                     	</ul>
                     </li>
