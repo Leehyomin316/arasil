@@ -35,7 +35,7 @@
             </div> 
             <div class="collapse navbar-collapse gallery" >  
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="">게시판</a>
+                    <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">게시판</a>
                     	<ul>
                     		<li class="sub-menu"><a class="nav-link" href="#!">공지사항</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="#!">자주묻는 질문</a></li>
