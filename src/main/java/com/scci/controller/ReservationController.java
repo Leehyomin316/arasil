@@ -38,9 +38,8 @@ public class ReservationController {
 	 * */
 	@RequestMapping(value="/getRoomInfo", method=RequestMethod.GET)
 	public String getRoomInfo(@RequestParam Map<String, String> param, Model model) {
-		RoomInfoVO room = new RoomInfoVO();
-		room.setRoomNm("청실홍실");
-		model.addAttribute("rooms", room);
+		List<Map<String, String>> roomInfos = service.getRoomInfos(param);
+		model.addAttribute("roomInfoList", roomInfos);
 		return "jsonView";
 	}
 }

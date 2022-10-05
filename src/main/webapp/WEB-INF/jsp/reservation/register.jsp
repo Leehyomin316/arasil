@@ -73,15 +73,22 @@
                 <tbody>
                 <c:forEach var="item" items="${roomInfoList}">
                     <tr>
-                        <th scope="row"><input class="form-check-input" type="radio" name="roomType"></th>
+                        <th scope="row">
+                        	<c:if test="${item.status_cd ne 'Y'}">
+	                        	<input class="form-check-input" type="radio" name="roomType">
+                        	</c:if>
+                        </th>
                         <td><c:out value="${item.room_nm}" /></td>
                         <td>
 	                        <c:choose>
 	                        	<c:when test="${item.status_cd eq 'Y'}">
-	                        		<c:out value="예약가능"/>
+	                        		<c:out value="예약불가"/>
 	                        	</c:when>
+	                        	<c:otherwise>
+									<c:out value="예약가능"/>
+	                        	</c:otherwise>
 	                        </c:choose>
-                        <td>
+                        </td>
                         <td>실시간예약</td>
                         <td><c:out value="${item.standard_person}/${item.max_person}" /></td>
                         <td>20평</td>
