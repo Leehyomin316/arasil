@@ -34,8 +34,6 @@
                     	</ul>
                     </li>
                 </ul>
-            </div> 
-            <div class="collapse navbar-collapse gallery" >  
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">게시판</a>
                     	<ul>
@@ -60,7 +58,7 @@
                     	</ul>
                     </li>
                 </ul>
-            </div>
+            </div> 
         </div>
     </nav>
 </body>
