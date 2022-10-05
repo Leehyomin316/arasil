@@ -1,17 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>아라실에 오신걸 환영합니다</title>
 	<script	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.js"></script>
 	<link href="${pageContext.request.contextPath}/static/css/reservation/register.css" rel="stylesheet"></link>
-    <link href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
-    <link href="${pageContext.request.contextPath}/static/css/homeStyle.css" rel="stylesheet"></link>
+    <link href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'></link>
+<%--     <link href="${pageContext.request.contextPath}/static/css/homeStyle.css" rel="stylesheet"></link> --%>
 </head>
 <body>
-<%@ include file="../home/header.jsp"%>
+<%-- <%@ include file="../home/header.jsp"%> --%>
 <div class="main_content">
     <section class="select_date_container">
         <div class="sec_cal">
@@ -56,6 +56,7 @@
         </div>
     </section>
     <section class="select_room_container">
+		<p class="h5">객실 선택</p>
         <div class="select_room_table">
             <table class="table">
                 <thead>
@@ -70,36 +71,29 @@
                     </tr>
                 </thead>
                 <tbody>
+                <c:forEach var="item" items="${roomInfoList}">
                     <tr>
                         <th scope="row"><input class="form-check-input" type="radio" name="roomType"></th>
-                        <td>jhon</td>
-                        <td>Jon@gmail.com</td>
-                        <td>10/10/1995</td>
-                        <td><button class="btn btn-sm btn-primary">Edit</button></td>
-                        <td><button class="btn btn-sm btn-danger">Delete</button></td>
+                        <td><c:out value="${item.room_nm}" /></td>
+                        <td>
+	                        <c:choose>
+	                        	<c:when test="${item.status_cd eq 'Y'}">
+	                        		<c:out value="예약가능"/>
+	                        	</c:when>
+	                        </c:choose>
+                        <td>
+                        <td>실시간예약</td>
+                        <td><c:out value="${item.standard_person}/${item.max_person}" /></td>
+                        <td>20평</td>
+                        <td><c:out value="${item.use_fee}" /></td>
                     </tr>
-                    <tr>
-                        <th scope="row"><input class="form-check-input" type="radio" name="roomType"></th>
-                        <td>mark</td>
-                        <td>mark@gmail.com</td>
-                        <td>10/10/1996</td>
-                        <td><button class="btn btn-sm btn-primary">Edit</button></td>
-                        <td><button class="btn btn-sm btn-danger">Delete</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><input class="form-check-input" type="radio" name="roomType"></th>
-                        <td>Raj</td>
-                        <td>raj@gmail.com</td>
-                        <td>10/10/1997</td>
-                        <td><button class="btn btn-sm btn-primary">Edit</button></td>
-                        <td><button class="btn btn-sm btn-danger">Delete</button></td>
-                    </tr>
+                </c:forEach>
                 </tbody>
             </table>     
         </div>
     </section>
     <section class="select_option_container">
-        <h5>옵션 선택 및 예약</h5>
+		<p class="h5">옵션 선택 및 예약</p>
         <div class="select_option_table">
             <table class="table">
                 <thead>
@@ -125,8 +119,28 @@
             </table>     
         </div>
     </section>
+    <section class="modal-area">
+		<a data-bs-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
+		
+		<div class="modal" id="myModal">
+			<div class="modal-dialog modal-xl">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h4 class="modal-title">Modal title</h4>    
+		          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+		        </div><div class="container"></div>
+		        <div class="modal-body">
+		          Content for the dialog / modal goes here.
+		        </div>
+		        <div class="modal-footer">
+		          <a href="#" data-bs-dismiss="modal" class="btn btn-outline-dark">Close</a>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+    </section>
 </div>
-<%@ include file="../home/footer.jsp"%>
+<%-- <%@ include file="../home/footer.jsp"%> --%>
 </body>
 <script src="${pageContext.request.contextPath}/static/js/reservation/register.js"></script>
 </html>
