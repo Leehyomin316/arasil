@@ -25,7 +25,7 @@
                     	</ul>
                     </li>
                 </ul>
-                <ul class="navbar-nav ml-auto ul-margin ">
+                <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link" href="">예약</a>
                     	<ul>
                     		<li class="sub-menu"><a class="nav-link" href="#!">예약안내</a></li>
@@ -34,7 +34,7 @@
                     	</ul>
                     </li>
                 </ul>
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">게시판</a>
                     	<ul>
                     		<li class="sub-menu"><a class="nav-link" href="#!">공지사항</a></li>
