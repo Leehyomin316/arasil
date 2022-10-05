@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -70,30 +69,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                <c:forEach var="item" items="${roomInfoList}">
                     <tr>
                         <th scope="row"><input class="form-check-input" type="radio" name="roomType"></th>
-                        <td>jhon</td>
-                        <td>Jon@gmail.com</td>
-                        <td>10/10/1995</td>
-                        <td><button class="btn btn-sm btn-primary">Edit</button></td>
-                        <td><button class="btn btn-sm btn-danger">Delete</button></td>
+                        <td><c:out value="${item.room_nm}" /></td>
+                        <td>예약상태</td>
+                        <td>실시간예약</td>
+                        <td>10/20</td>
+                        <td>20평</td>
+                        <td><c:out value="${item.use_fee}" /></td>
                     </tr>
-                    <tr>
-                        <th scope="row"><input class="form-check-input" type="radio" name="roomType"></th>
-                        <td>mark</td>
-                        <td>mark@gmail.com</td>
-                        <td>10/10/1996</td>
-                        <td><button class="btn btn-sm btn-primary">Edit</button></td>
-                        <td><button class="btn btn-sm btn-danger">Delete</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><input class="form-check-input" type="radio" name="roomType"></th>
-                        <td>Raj</td>
-                        <td>raj@gmail.com</td>
-                        <td>10/10/1997</td>
-                        <td><button class="btn btn-sm btn-primary">Edit</button></td>
-                        <td><button class="btn btn-sm btn-danger">Delete</button></td>
-                    </tr>
+                </c:forEach>
                 </tbody>
             </table>     
         </div>

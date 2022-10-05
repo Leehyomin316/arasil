@@ -25,7 +25,7 @@
 		<property name="configLocation"
 			value="classpath:mybatis/model/model-config.xml" />
 		<property name="mapperLocations"
-			value="classpath:mybatis/mappers/test.xml" />
+			value="classpath:mybatis/mappers/*.xml" />
 		<property name="transactionFactory">
 			<bean
 				class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
