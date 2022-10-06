@@ -10,8 +10,8 @@
     <link href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<%-- <%@ include file="../home/header.jsp"%> --%>
-<div class="main_content">
+<%@ include file="../home/header.jsp"%>
+<div class="container-fluid p-0">
     <section class="select_date_container">
         <div class="sec_cal">
             <div class="cal_nav">
@@ -146,7 +146,7 @@
 		</div>
     </section>
 </div>
-<%-- <%@ include file="../home/footer.jsp"%> --%>
+<%@ include file="../home/footer.jsp"%>
 </body>
 <script src="${pageContext.request.contextPath}/static/js/reservation/register.js"></script>
 </html>
