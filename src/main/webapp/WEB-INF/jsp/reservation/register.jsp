@@ -37,7 +37,6 @@
             <pre>■ 입실/퇴실 시간
 ㅁ 입실시간 : 오후 3시
 ㅁ 퇴실시간 : 오전 11시
-ㅁ 오후 10시 이후의 입실은 미리 연락부탁드립니다.
 
 ■ 인원 추가요금
 ㅁ 기준인원 초과 시 추가요금 발생
@@ -52,7 +51,7 @@
 
 ■ 증빙안내
 ㅁ 펜션라이프는 판매대행처로 소득세법과 부가가치세법에 따라 세금계산서가발행되지 않습니다.
-ㅁ 신용카드 결제는 신용카드매출전표, 실시간 계좌이체는 현금영수증으로 결제증빙이 가능합니다.</pre>
+</pre>
         </div>
     </section>
     <section class="select_room_container">
@@ -94,7 +93,7 @@
                         <td><c:out value="${item.standard_person}/${item.max_person}" /></td>
                         <td>40평</td>
                         <td><c:out value="${item.use_fee}" /></td>
-                        <td id="reserveDt" scope="col" style="display:none;"></td>
+                        <td scope="row" style="display:none;"></td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -116,8 +115,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><input class="form-check-input" type="radio" name="roomType"></th>
-                        <td></td>
+                        <th></th>
+                        <td scope="row"></td>
                         <td><select id=""></select></td>
                         <td><select id="use_person" name="use_person" size="1">
                         	<option value="">선택</option>

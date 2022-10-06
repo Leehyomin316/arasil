@@ -83,6 +83,7 @@ $(function() {
 			// 예약을 하려는 날짜가 예약 테이블의 startDt와 endDt-1 사이에 존재 하는 건이 있는지 여부 및
 			// 연속으로 몇박까지 가능한지를 계산 해야 함
 			let roomTableRows = document.querySelectorAll(".select_room_table table tbody tr"); 
+			let optionTableRows = document.querySelectorAll(".select_option_table table tbody tr"); 
 			calendar.addEventListener("click", (e) => {
 				let target = e.target;
 				console.log(target);
@@ -108,7 +109,9 @@ $(function() {
 							roomTableRows[i].children[0].innerHTML = v.status_cd=='Y'?"":`<input class="form-check-input" type="radio" name="roomType">`;
 							roomTableRows[i].children[2].innerText = v.status_cd=='Y'?"예약불가":"예약가능";
 							roomTableRows[i].children[7].innerText = reserveDt;
+							optionTableRows[i].children[1].innerText = reserveDt;
 						});
+						
 					}
 				});
 			});
