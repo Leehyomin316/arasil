@@ -58,7 +58,7 @@ $(function() {
 			calendar.innerHTML = '';
 
 			// 지난달
-			for (var i = prevDate - prevDay + 1; i <= prevDate; i++) {
+			for (var i = prevDate - prevDay; i <= prevDate; i++) {
 				calendar.innerHTML = calendar.innerHTML + '<div class="day prev disable">' + i + '</div>'
 			}
 			// 이번달
@@ -66,7 +66,7 @@ $(function() {
 				calendar.innerHTML = calendar.innerHTML + '<div class="day current">' + i + '</div>'
 			}
 			// 다음달
-			for (var i = 1; i <= (7 - nextDay == 7 ? 0 : 7 - nextDay); i++) {
+			for (var i = 1; i <= (7 - nextDay == 7 ? 0 : 6 - nextDay); i++) {
 				calendar.innerHTML = calendar.innerHTML + '<div class="day next disable">' + i + '</div>'
 			}
 
@@ -107,6 +107,7 @@ $(function() {
 						result.roomInfoList.forEach((v, i)=>{
 							roomTableRows[i].children[0].innerHTML = v.status_cd=='Y'?"":`<input class="form-check-input" type="radio" name="roomType">`;
 							roomTableRows[i].children[2].innerText = v.status_cd=='Y'?"예약불가":"예약가능";
+							roomTableRows[i].children[7].innerText = reserveDt;
 						});
 					}
 				});
