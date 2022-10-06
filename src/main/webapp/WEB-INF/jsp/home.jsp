@@ -9,27 +9,29 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 <title>아라실에 오신걸 환영합니다</title>
-<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
+<script	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
+<script	src="${pageContext.request.contextPath}/static/js/background.js"></script>
 </head>
 <body>
 	<!-- Navigation-->
 	<%@ include file="home/header.jsp"%>
 	<%-- 	<c:import url="header.jsp"></c:import> --%>
-	<div class="main-content">
-		<img src="<c:url value='/static/img/home2.jpg'/>" id="back-ground"/>
+	<div class="main-content image_area">
+		<img src="<c:url value='/static/img/home1.jpg'/>"  alt="image1"/>
+		<img src="<c:url value='/static/img/home2.jpg'/>" class="back-ground" alt="image2"/>
 			
 	    
 
-		<section>
-	       <div class="container px-4 px-lg-5">
-	           <div class="row gx-4 gx-lg-5">
-	               <div class="col-lg-6">
-	                    <h1 class="mt-5">hello</h1>
-	                   <p></p>
-	               </div>
-	           </div>
-	       </div>
-	    </section>
+<!-- 		<section> -->
+<!-- 	       <div class="container px-4 px-lg-5"> -->
+<!-- 	           <div class="row gx-4 gx-lg-5"> -->
+<!-- 	               <div class="col-lg-6"> -->
+<!-- 	                    <h1 class="mt-5">hello</h1> -->
+<!-- 	                   <p></p> -->
+<!-- 	               </div> -->
+<!-- 	           </div> -->
+<!-- 	       </div> -->
+<!-- 	    </section> -->
 
 	</div>
 

@@ -6586,14 +6586,15 @@ li.sub-menu > a.nav-link{
 .ratio-21x9 {
   --bs-aspect-ratio: 42.8571428571%;
 }
-
+@media screen and (Max-width:800){
 .fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height:auto;
-  z-index: 1030;
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  left: 0;
+	  height:auto;
+	  z-index: 1030;
+	}
 }
 @media screen and (Min-width:800px) {
 	.fixed-top {
@@ -7942,6 +7943,10 @@ li.sub-menu > a.nav-link{
   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.bg-basy{
+	  --bs-bg-opacity: 1;
+	  background-color:#a7825d;
+}
 .bg-body {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
@@ -11460,19 +11465,28 @@ ul.ul-top{
 ul.ul-margin{
 	margin-top:7px;
 }
-.main-content{
-	margin-top:76px;
-	margin-bottom:133px;
+@media screen and (Max-width:574px){
+	.main-content{
+		margin-top:76px;
+		margin-bottom:133px;
+	}
 }
 @media screen and (Min-width:574px) and (Max-width:800px){
 	.main-content{
 		margin-top:66px;
+		margin-bottom:133px;
 	}
 }
 @media screen and (Min-width:800px){
 	.main-content{
 	margin-top:0;
 	margin-left:240px;
-	margin-bottom:42px;
+	margin-bottom:50px;
 	}
 }
+.sub-menu{
+	list-style:none;
+}
+.link-icon { position: relative; display: inline-block; font-size: 14px; font-weight: 500; color: #333; margin-top:5px;}
+.link-icon.twitter { background-image: url(./images/icon-twitter.png); background-repeat: no-repeat; width:30px; height:30px;}
+.link-icon.facebook { background-image: url(./images/icon-facebook.png); background-repeat: no-repeat;  width:30px; height:30px;} 

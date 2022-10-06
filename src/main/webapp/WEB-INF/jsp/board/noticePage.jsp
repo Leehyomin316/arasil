@@ -21,7 +21,7 @@
 <body>
 	<%@ include file="../home/header.jsp"%>
 	<article>
-		<div class="container">
+		<div class="main-content">
 				<h1>공지사항</h1>
 				<div class="table-responsive">
 				<table class="table table-striped table-sm">
