@@ -5,7 +5,6 @@
 <head>
 	<title>아라실에 오신걸 환영합니다</title>
 	<script	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
-<%--     <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.js"></script> --%>
 	  <link href="${pageContext.request.contextPath}/static/css/reservation/register.css" rel="stylesheet"></link>
     <link href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
 </head>
