@@ -5,6 +5,7 @@
 <head>
 	<title>아라실에 오신걸 환영합니다</title>
 	<script	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
+		<script	src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
 	  <link href="${pageContext.request.contextPath}/static/css/reservation/register.css" rel="stylesheet"></link>
     <link href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
 </head>
@@ -136,20 +137,20 @@
                         	<option value="8">8</option>
                         	<option value="9">9</option>
                         	<option value="10" selected>10</option>
-                        	<option value="10">11</option>
-                        	<option value="10">12</option>
-                        	<option value="10">13</option>
-                        	<option value="10">14</option>
-                        	<option value="10">15</option>
-                        	<option value="10">16</option>
-                        	<option value="10">17</option>
-                        	<option value="10">18</option>
-                        	<option value="10">19</option>
-                        	<option value="10">20</option>
+                        	<option value="11">11</option>
+                        	<option value="12">12</option>
+                        	<option value="13">13</option>
+                        	<option value="14">14</option>
+                        	<option value="15">15</option>
+                        	<option value="16">16</option>
+                        	<option value="17">17</option>
+                        	<option value="18">18</option>
+                        	<option value="19">19</option>
+                        	<option value="20">20</option>
                         </select></td>
                         <td><input readonly class="form-control-plaintext" id="totalFee">
-                        	<input type="text" id="useFee">
-                        	<input type="text" id="additionalFee">
+                        	<input type="hidden" id="useFee">
+                        	<input type="hidden" id="additionalFee">
                         </td>
                     </tr>
                 </tbody>
@@ -157,6 +158,7 @@
         </div>
     </section>
     <section class="modal-area">
+    	<button class="btn btn-primary" id="modalBtn">pop</button>
 		<a data-bs-toggle="modal" href="#myModal" class="btn btn-primary">예약결제</a>
 		
 		<div class="modal" id="myModal">
