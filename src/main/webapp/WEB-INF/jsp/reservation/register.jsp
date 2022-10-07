@@ -5,6 +5,7 @@
 <head>
 	<title>아라실에 오신걸 환영합니다</title>
 	<script	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
+		<script	src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
 	  <link href="${pageContext.request.contextPath}/static/css/reservation/register.css" rel="stylesheet"></link>
     <link href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
 </head>
@@ -148,8 +149,8 @@
                         	<option value="10">20</option>
                         </select></td>
                         <td><input readonly class="form-control-plaintext" id="totalFee">
-                        	<input type="text" id="useFee">
-                        	<input type="text" id="additionalFee">
+                        	<input type="hidden" id="useFee">
+                        	<input type="hidden" id="additionalFee">
                         </td>
                     </tr>
                 </tbody>
@@ -157,6 +158,7 @@
         </div>
     </section>
     <section class="modal-area">
+    	<button id="modalBtn">pop</button>
 		<a data-bs-toggle="modal" href="#myModal" class="btn btn-primary">예약결제</a>
 		
 		<div class="modal" id="myModal">

@@ -181,4 +181,10 @@ $(function() {
 		});
 		console.log(target);
 	});
+	
+	// script를 통해서 modal 창을 여는 방법
+	$("#modalBtn").on("click", function(){
+		$("#myModal").modal('show');
+		//$("#myModal").modal('hide');
+	});
 })();
