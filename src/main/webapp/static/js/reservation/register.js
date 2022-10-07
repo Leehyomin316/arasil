@@ -204,7 +204,7 @@ $(function() {
 		const days = parseInt(daysSelObj.value);
 		let totalFee = useFee;
 		if ( person > 10 ) {
-			totalFee += additionalFee*(person-10);
+			totalFee += additionalFee*(person-10)*days;
 		}
 		if ( days > 1) {
 			totalFee += useFee*(days-1);
