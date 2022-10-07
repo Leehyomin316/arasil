@@ -111,6 +111,8 @@
 
 .current:hover {background: rgb(223, 170, 170);}
 
+.current.active {background: rgb(223, 170, 170);}
+
 
 
 .sec_cal .cal_wrap .dates {

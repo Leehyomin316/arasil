@@ -91,7 +91,9 @@ $(function() {
 				}
 				var reserveDt = currentYear+(currentMonth+1+"").padStart(2, '0')+target.innerText.padStart(2, '0');
 				var reserveDtForCalculate = currentYear+"-"+(currentMonth+1+"").padStart(2, '0')+"-"+target.innerText.padStart(2, '0')+" 00:00:00";
-				console.log(reserveDt);
+				let days = document.querySelectorAll("div.day");
+				days.forEach(v=>v.classList.remove("active"));
+				e.target.classList.add("active");
 				$.ajax({
 					type: "GET",
 					url: `./getRoomInfo`,
@@ -157,7 +159,6 @@ $(function() {
 				console.log('통신실패!!');
 			},
 			success: function(data) {
-//				console.log("통신데이터 값 : " + data);
 				const result = JSON.parse(data);
 				console.log(result);
 				
@@ -180,6 +181,4 @@ $(function() {
 		});
 		console.log(target);
 	});
-
-
 })();
