@@ -42,4 +42,11 @@ public class ReservationController {
 		model.addAttribute("roomInfoList", roomInfos);
 		return "jsonView";
 	}
+	
+	@RequestMapping(value="/getNearestDt", method=RequestMethod.GET)
+	public String getNearestDt(@RequestParam Map<String, String> param, Model model) {
+		Map<String, String> nearestDt = service.getNearestDt(param);
+		model.addAttribute("nearestDt", nearestDt);
+		return "jsonView";
+	}
 }

@@ -66,7 +66,8 @@
                         <th scope="col">인원(기준/최대)</th>
                         <th scope="col">크기</th>
                         <th scope="col">요금</th>
-                        <th scope="col" style="display:none;">날짜</th>
+                        <th scope="col">인당 추가요금</th>
+                        <th scope="col" style="display:none;">room_id</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -92,7 +93,8 @@
                         <td><c:out value="${item.standard_person}/${item.max_person}" /></td>
                         <td>40평</td>
                         <td><c:out value="${item.use_fee}" /></td>
-                        <td scope="row" style="display:none;"></td>
+                        <td><c:out value="${item.additional_fee}" /></td>
+                        <td scope="row" style="display:none;">${item.room_id}</td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -114,11 +116,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th></th>
-                        <td scope="row"></td>
-                        <td><select id=""></select></td>
-                        <td><select id="use_person" name="use_person" size="1">
-                        	<option value="">선택</option>
+                        <td>
+                        	<input type="hidden" name="roomId" id="roomId">
+                        	<input type="text" readonly class="form-control-plaintext" id="roomNm" name="roomNm">
+                        </td>
+                        <td>
+                        	<input type="text" readonly class="form-control-plaintext" id="reserveDt">
+                        	<input type="hidden" id="reserveDtForCalculate" >
+                        </td>
+                        <td><select class="form-select" name="useDays" id="useDays"></select></td>
+                        <td><select class="form-select" id="usePerson" name="usePerson">
                         	<option value="1">1</option>
                         	<option value="2">2</option>
                         	<option value="3">3</option>
@@ -128,7 +135,7 @@
                         	<option value="7">7</option>
                         	<option value="8">8</option>
                         	<option value="9">9</option>
-                        	<option value="10">10</option>
+                        	<option value="10" selected>10</option>
                         	<option value="10">11</option>
                         	<option value="10">12</option>
                         	<option value="10">13</option>
@@ -140,7 +147,10 @@
                         	<option value="10">19</option>
                         	<option value="10">20</option>
                         </select></td>
-                        <td></td>
+                        <td><input readonly class="form-control-plaintext" id="totalFee">
+                        	<input type="text" id="useFee">
+                        	<input type="text" id="additionalFee">
+                        </td>
                     </tr>
                 </tbody>
             </table>     

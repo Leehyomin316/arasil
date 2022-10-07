@@ -18,4 +18,10 @@ public class ReservationServiceImpl implements ReservationService {
 		// TODO Auto-generated method stub
 		return dao.getRoomInfos(param);
 	}
+
+	@Override
+	public Map<String, String> getNearestDt(Map<String, String> param) {
+		// TODO Auto-generated method stub
+		return dao.getNearestDt(param);
+	}
 }

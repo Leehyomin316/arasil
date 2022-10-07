@@ -83,7 +83,6 @@ $(function() {
 			// 예약을 하려는 날짜가 예약 테이블의 startDt와 endDt-1 사이에 존재 하는 건이 있는지 여부 및
 			// 연속으로 몇박까지 가능한지를 계산 해야 함
 			let roomTableRows = document.querySelectorAll(".select_room_table table tbody tr"); 
-			let optionTableRows = document.querySelectorAll(".select_option_table table tbody tr"); 
 			calendar.addEventListener("click", (e) => {
 				let target = e.target;
 				console.log(target);
@@ -91,6 +90,7 @@ $(function() {
 					return;
 				}
 				var reserveDt = currentYear+(currentMonth+1+"").padStart(2, '0')+target.innerText.padStart(2, '0');
+				var reserveDtForCalculate = currentYear+"-"+(currentMonth+1+"").padStart(2, '0')+"-"+target.innerText.padStart(2, '0')+" 00:00:00";
 				console.log(reserveDt);
 				$.ajax({
 					type: "GET",
@@ -108,8 +108,8 @@ $(function() {
 						result.roomInfoList.forEach((v, i)=>{
 							roomTableRows[i].children[0].innerHTML = v.status_cd=='Y'?"":`<input class="form-check-input" type="radio" name="roomType">`;
 							roomTableRows[i].children[2].innerText = v.status_cd=='Y'?"예약불가":"예약가능";
-							roomTableRows[i].children[7].innerText = reserveDt;
-							optionTableRows[i].children[1].innerText = reserveDt;
+							$("#reserveDt").val(reserveDt);
+							$("#reserveDtForCalculate").val(reserveDtForCalculate);
 						});
 						
 					}
@@ -140,18 +140,42 @@ $(function() {
 		if (!target.classList.contains("form-check-input")) {
 			return;
 		}
+		const tds = e.target.parentElement.parentElement.children;
 		console.log(target);
+		$("#roomId").val(tds[8].innerText);
+		$("#roomNm").val(tds[1].innerText);
+		$("#useFee").val(tds[6].innerText);
+		$("#additionalFee").val(tds[7].innerText);
 
 		$.ajax({
 			type: "GET",
-			url: `./getRoomInfo`,
+			url: `./getNearestDt`,
 			dataType: "text",
+			data: {roomId: tds[8].innerText, reserveDt: $("#reserveDt").val()},
 			contentType: "application/x-www-form-urlencoded;charset=UTF-8",
 			error: function() {
 				console.log('통신실패!!');
 			},
 			success: function(data) {
-				console.log("통신데이터 값 : " + data);
+//				console.log("통신데이터 값 : " + data);
+				const result = JSON.parse(data);
+				console.log(result);
+				
+				let baseDt = new Date($("#reserveDtForCalculate").val());
+				var btDay = 1;
+				if ( result.nearestDt != null ) {
+					let endDt = new Date(result.nearestDt.start_dt);
+					
+					var btMs = endDt.getTime() - baseDt.getTime() ;
+					btDay = btMs / (1000*60*60*24) ;
+				}else{
+					btDay = 7;
+				}
+				const $selectObj = $("#useDays");
+				$selectObj.children('option').remove();
+				for(var i=0; i<btDay; i++){
+					$selectObj.append(`<option value='${i+1}'>${i+1}박</option>`);
+				}
 			}
 		});
 		console.log(target);

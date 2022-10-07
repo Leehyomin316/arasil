@@ -13,4 +13,11 @@
 										    and a.reserv_code != 'D'
 										 group by a.room_id ) b on a.room_id = b.room_id
 </select>
+<select id="getNearestDt" resultType="map" parameterType="map">
+	select DATE_FORMAT(min(a.start_dt), '%Y-%m-%d') start_dt
+	  from reservation a
+	 where a.start_dt > STR_TO_DATE(#{reserveDt}, '%Y%m%d')
+	   and a.reserv_code in ('A', 'B', 'C', 'D')
+	   and a.room_id = #{roomId};
+</select>
 </mapper>
