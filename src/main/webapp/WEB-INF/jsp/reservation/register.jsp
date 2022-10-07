@@ -158,7 +158,7 @@
         </div>
     </section>
     <section class="modal-area">
-    	<button id="modalBtn">pop</button>
+    	<button class="btn btn-primary" id="modalBtn">pop</button>
 		<a data-bs-toggle="modal" href="#myModal" class="btn btn-primary">예약결제</a>
 		
 		<div class="modal" id="myModal">
