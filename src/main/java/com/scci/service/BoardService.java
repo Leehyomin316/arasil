@@ -6,5 +6,7 @@ import java.util.Map;
 import com.scci.vo.NoticeVO;
 
 public interface BoardService {
-	public List<NoticeVO> getNoticePage(Map<String, String> params);
+	public List<NoticeVO> getNotice(NoticeVO noticeVO);
+	
+	public void getNoticeInsert(NoticeVO noticeVO);
 }

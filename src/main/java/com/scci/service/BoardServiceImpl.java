@@ -15,7 +15,12 @@ public class BoardServiceImpl implements BoardService{
 	private BoardDAO boardDAO;
 	
 	@Override 
-	public List<NoticeVO> getNoticePage(Map<String,String> params){
-	return boardDAO.getNoticePage(params);
+	public List<NoticeVO> getNotice(NoticeVO noticeVO){
+	return boardDAO.getNotice(noticeVO);
+	}
+	
+	@Override
+	public void getNoticeInsert(NoticeVO noticeVO) {
+		boardDAO.getNoticeInsert(noticeVO);
 	}
 }
