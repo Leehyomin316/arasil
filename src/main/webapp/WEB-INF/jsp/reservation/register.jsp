@@ -137,16 +137,16 @@
                         	<option value="8">8</option>
                         	<option value="9">9</option>
                         	<option value="10" selected>10</option>
-                        	<option value="10">11</option>
-                        	<option value="10">12</option>
-                        	<option value="10">13</option>
-                        	<option value="10">14</option>
-                        	<option value="10">15</option>
-                        	<option value="10">16</option>
-                        	<option value="10">17</option>
-                        	<option value="10">18</option>
-                        	<option value="10">19</option>
-                        	<option value="10">20</option>
+                        	<option value="11">11</option>
+                        	<option value="12">12</option>
+                        	<option value="13">13</option>
+                        	<option value="14">14</option>
+                        	<option value="15">15</option>
+                        	<option value="16">16</option>
+                        	<option value="17">17</option>
+                        	<option value="18">18</option>
+                        	<option value="19">19</option>
+                        	<option value="20">20</option>
                         </select></td>
                         <td><input readonly class="form-control-plaintext" id="totalFee">
                         	<input type="hidden" id="useFee">

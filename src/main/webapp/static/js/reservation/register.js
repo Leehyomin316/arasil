@@ -177,6 +177,7 @@ $(function() {
 				for(var i=0; i<btDay; i++){
 					$selectObj.append(`<option value='${i+1}'>${i+1}박</option>`);
 				}
+				$("#totalFee").val(tds[6].innerText);
 			}
 		});
 		console.log(target);
@@ -187,4 +188,27 @@ $(function() {
 		$("#myModal").modal('show');
 		//$("#myModal").modal('hide');
 	});
+	
+	let totalFeeObj = document.getElementById("totalFee");
+	let personSelObj = document.getElementById("usePerson");
+	let daysSelObj = document.getElementById("useDays");
+	
+	personSelObj.addEventListener("change", changeHandler);
+	daysSelObj.addEventListener("change", changeHandler);
+
+	function changeHandler(){
+		console.log(this);
+		const useFee = parseInt($("#useFee").val());
+		const additionalFee = parseInt($("#additionalFee").val());
+		const person = parseInt(personSelObj.value);
+		const days = parseInt(daysSelObj.value);
+		let totalFee = useFee;
+		if ( person > 10 ) {
+			totalFee += additionalFee*(person-10);
+		}
+		if ( days > 1) {
+			totalFee += useFee*(days-1);
+		}
+		totalFeeObj.value = totalFee;
+	}
 })();
