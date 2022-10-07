@@ -26,7 +26,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto ul-margin">
-                    <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/register">예약</a>
+                    <li class="nav-item active"><a class="nav-link" href="">예약</a>
                     	<ul>
                     		<li class="sub-menu"><a class="nav-link" href="#!">예약안내</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li>
@@ -35,7 +35,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto ul-margin">
-                    <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">게시판</a>
+                    <li class="nav-item active"><a class="nav-link" href="">게시판</a>
                     	<ul>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="#!">자주묻는 질문</a></li>
@@ -48,8 +48,8 @@
                     	<ul>
                     		<li class="sub-menu"><a class="nav-link" href="https://blog.naver.com/arasil_pension">네이버 블로그</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="https://www.instagram.com/arasil_pension/">인스타그램</a></li>
-                   			<li class="sub-menu"><a id="btnTwitter" class="link-icon twitter nav-link" href="javascript:shareTwitter();"><img src="<c:url value='/static/img/icon-twitter.png'/>"/></a></li>
-                   			<li class="sub-menu"><a id="btnFacebook" class="link-icon facebook nav-link" href="javascript:shareFacebook();"><img src="<c:url value='/static/img/icon-facebook.png'/>"/></a> </li>
+<%--                    			<li class="sub-menu"><a id="btnTwitter" class="link-icon twitter nav-link" href="javascript:shareTwitter();"><img src="<c:url value='/static/img/icontwitter.png'/>"/></a></li> --%>
+<%--                    			<li class="sub-menu"><a id="btnFacebook" class="link-icon facebook nav-link" href="javascript:shareFacebook();"><img src="<c:url value='/static/img/iconfacebook.png'/>"/></a> </li> --%>
                    			<li class="cloak"><a class="nav-link">.</a></li>
                    			<li class="cloak"><a class="nav-link">.</a></li>
                     	</ul>

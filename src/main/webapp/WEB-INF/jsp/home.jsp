@@ -17,8 +17,8 @@
 	<%@ include file="home/header.jsp"%>
 	<%-- 	<c:import url="header.jsp"></c:import> --%>
 	<div class="main-content image_area">
-		<img src="<c:url value='/static/img/home1.jpg'/>"  alt="image1"/>
-		<img src="<c:url value='/static/img/home2.jpg'/>" class="back-ground" alt="image2"/>
+		<img src="<c:url value='/static/img/home1.jpg'/>" class="back-ground" alt="image1"/>
+		<img src="<c:url value='/static/img/home2.jpg'/>"  alt="image2"/>
 			
 	    
 
