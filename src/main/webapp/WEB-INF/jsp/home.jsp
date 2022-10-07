@@ -32,7 +32,7 @@
 
 			<div class="mySlides">
 				<div class="numbertext">2 / 6</div>
-				<img src="${pageContext.request.contextPath}/static/img/home.jpg" style="width: 100%">
+				<img src="${pageContext.request.contextPath}/static/img/home2.jpg" style="width: 100%">
 			</div>
 
 			<div class="mySlides">
@@ -68,7 +68,7 @@
 						style="width: 100%" onclick="currentSlide(1)" alt="The Woods">
 				</div>
 				<div class="column-slider">
-					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home.jpg"
+					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home2.jpg"
 						style="width: 100%" onclick="currentSlide(2)"
 						alt="Trolltunga, Norway">
 				</div>
