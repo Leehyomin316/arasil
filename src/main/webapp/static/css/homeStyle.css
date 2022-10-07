@@ -305,14 +305,15 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
-/* <--icon--> */
+/* icon */
 img,
 svg {
 	position: fixed;
   vertical-align: middle;
     
 }
-#icon{
+img#icon{
+	position: fixed;
     top: 10px;
     left: 10px;
 	width:54px;
@@ -3970,6 +3971,12 @@ textarea.form-control-lg {
   font-weight:900;
   font-size:0.75rem;
 }
+@media screen and (Min-width:800px){
+	.nav-link{
+		font-size:1rem;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
