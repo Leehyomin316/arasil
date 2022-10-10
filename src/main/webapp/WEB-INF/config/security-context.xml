@@ -11,6 +11,7 @@
 		
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/customer**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/reservation/**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/**" access="permitAll" />
 		
 		
@@ -34,9 +35,9 @@
 	  <authentication-provider>
 		<jdbc-user-service data-source-ref="dataSource"
 		  users-by-username-query=
-		    "select username,password, 1 enabled from users where username=?"
+		    "select user_id username,pwd password, 1 enabled from users where user_id=?"
 		  authorities-by-username-query=
-		    "select username, role from user_roles where username =?  " />
+		    "select user_id username, role_id role from user_role where user_id =?  " />
 	  </authentication-provider>
 	</authentication-manager>
 
