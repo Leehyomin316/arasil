@@ -11,7 +11,7 @@
 		
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/customer**" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/reservation/**" access="hasRole('ROLE_ADMIN')" />
+<!-- 		<intercept-url pattern="/reservation/**" access="hasRole('ROLE_ADMIN')" /> -->
 		<intercept-url pattern="/**" access="permitAll" />
 		
 		
