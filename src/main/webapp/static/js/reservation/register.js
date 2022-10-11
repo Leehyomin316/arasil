@@ -189,7 +189,7 @@ $(function() {
 		$("#inputRoomNm").val($("#roomNm").val());
 		$("#inputStartDt").val($("#reserveDt").val());
 		$("#inputUseDay").val($("#useDays").val());
-		$("#inputUsePerson").val($("#useDays").val());
+		$("#inputUsePerson").val($("#usePerson").val());
 		$("#inputTotalFee").val($("#totalFee").val());
 		$("#myModal").modal('show');
 		//$("#myModal").modal('hide');
