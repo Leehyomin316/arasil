@@ -8,7 +8,7 @@ $(function(){
 		setInterval(()=>{
 			showSlides();
 			slideIndex++;
-		}, 2000);
+		}, 5000);
 	}
 	
 //	setInterval(()=>{
