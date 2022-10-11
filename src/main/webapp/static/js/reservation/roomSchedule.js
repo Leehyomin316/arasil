@@ -142,9 +142,10 @@ $(function() {
 	function fillRoomSchedules(){
 		const [year, month] = document.querySelector(".year-month").innerText.split(".");
 		console.log(year, month);
-		const startDt = `${year}${month}01`;
+		const startDt = `${year}${month.padStart(2, '0')}01`;
 		const lastDay = new Date(year, parseInt(month)-1, 0).getDate();
-		const endDt = `${year}${month}${lastDay}`;
+		const endDt = `${year}${month.padStart(2, '0')}${lastDay}`;
+		console.log(startDt, lastDay, endDt);
 		$.ajax({
 			type: "GET",
 			url: `./getRoomSchedules`,
@@ -165,10 +166,12 @@ $(function() {
 	function fillCalendarWithSchedule(data){
 		var schedules = data.scheduleInfos;
 		const roomGroup = groupBy(schedules, 'room_id');
+		console.log(roomGroup);
 		for(let groupKey in roomGroup){
 			const group = roomGroup[groupKey];
 			group.forEach((item)=>{
 				let startDt = new Date(item.start_dt).getDate();
+				console.log(`111111111111111 ${startDt}`);
 				let days = item.days;
 				let $scheduleUl = $(`.day.current.${startDt} .schedule`);
 				$scheduleUl.append(`<li>${item.room_nm}(${item.guest_nm})</li>`);
