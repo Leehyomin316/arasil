@@ -30,4 +30,10 @@ public class ReservationServiceImpl implements ReservationService {
 		// TODO Auto-generated method stub
 		return dao.getRoomSchedules(param);
 	}
+
+	@Override
+	public int insertReservation(Map<String, String> param) {
+		// TODO Auto-generated method stub
+		return dao.insertReservation(param);
+	}
 }

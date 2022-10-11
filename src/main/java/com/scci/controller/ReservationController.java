@@ -61,4 +61,10 @@ public class ReservationController {
 		model.addAttribute("scheduleInfos", scheduleInfos);
 		return "jsonView";
 	}
+	
+	@RequestMapping(value="/addReservation", method=RequestMethod.POST)
+	public String addReservation(@RequestParam Map<String, String> param, Model model) {
+		service.insertReservation(param);	
+		return "reservation/roomSchedule";
+	}
 }

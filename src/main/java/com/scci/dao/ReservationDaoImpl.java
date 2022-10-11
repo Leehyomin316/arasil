@@ -31,4 +31,10 @@ public class ReservationDaoImpl implements ReservationDao{
 		return sqlSession.selectList("mapper.reservation.getReservedList", param);
 	}
 
+	@Override
+	public int insertReservation(Map<String, String> param) {
+		// TODO Auto-generated method stub
+		return sqlSession.insert("mapper.reservation.addReservation", param);
+	}
+
 }
