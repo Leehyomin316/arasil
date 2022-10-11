@@ -162,7 +162,7 @@ h6, .h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 abbr[title],
@@ -316,7 +316,7 @@ svg {
     
 }
 img#icon{
-	position: fixed;
+	position: absolute;
     top: 10px;
     left: 10px;
 	width:54px;
@@ -11502,7 +11502,7 @@ ul.ul-margin{
 .underline{
 	border-bottom:solid;
 	border-width:1px;
-	color:rgba(255, 255, 255, 0.55);
+	color:rgba(255, 255, 255, 0.3);
 }
 .link-icon { position: relative; display: inline-block; font-size: 14px; font-weight: 500; color: #333; margin-top:5px;}
 .link-icon.twitter { background-image: url(./images/icon-twitter.png); background-repeat: no-repeat; width:30px; height:30px;}
