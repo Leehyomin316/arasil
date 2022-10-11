@@ -15,10 +15,10 @@
 		parameterType="com.scci.vo.NoticeVO">
 		select notice_id, notice_title, notice_content, notice_date, user_id
 		from notice
-		where 1=1
-		<if test='noticeId != null'>
+		where notice_id = #{noticeId}
+	<!-- 	<if test= 'value != null'>
 			and notice_id = #{noticeId}
-		</if>
+		</if> -->
 	</select>
 
 <insert id="selectInsert" parameterType="com.scci.vo.NoticeVO">

@@ -14,18 +14,21 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
-<script src="${pageContext.request.contextPath}/static/js/home.js"></script>
-<link href="${pageContext.request.contextPath}/static/css/homeStyle.css"
-	rel="stylesheet"></link>
-<link rel="icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 	
 	<script>
-		$(document).on('click','#btnWriteForm',function(e){
-			e.preventDefault();
-		
+	$(function(){
+		$("#btnWriteForm").on("click", function(){
 			location.href="${pageContext.request.contextPath}/board/noticeForm";
 		});
+	});
+	</script>
+	<script>
+	function fn_contentView(noticeId){
+		var url = "${pageContext.request.contextPath}/board/noticeContent";
+		url = url + "?noticeId="+noticeId;
+		location.href= url;
+	}
 	</script>
 </head>
 <body>
@@ -55,7 +58,11 @@
 									<c:forEach var="row" items="${notice}">
 										<tr>
 											<td>${row.notice_id}</td>
-											<td>${row.notice_title}</td>
+											<td>
+											<a href="#" onClick="fn_contentView(<c:out value="${row.notice_id}"/>)">
+												<c:out value = "${row.notice_title}"/>
+												</a>
+											</td>
 											<td><fmt:formatDate value="${row.notice_date}"
 													pattern="yyyy-MM-dd HH:mm:ss" /></td>
 											<td>${row.user_id}</td>

@@ -18,7 +18,7 @@
 				$("#form").submit();
 			});
 			$("#btnList").on("click", function(){
-				location.herf="${pageContext.request.contextPath}/board/noticePage";
+				location.href="${pageContext.request.contextPath}/board/noticePage";
 			});
 		});
 	</script>

@@ -1,7 +1,8 @@
 package com.scci.controller;
 
 import java.util.List;
-import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,5 +38,18 @@ public class BoardController {
 			RedirectAttributes rttr) {
 		boardService.getNoticeInsert(noticeVO);
 		return "redirect:/board/noticePage";
+	}
+	
+//	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
+//	public String getNoticeContent(Model model, int noticeId) {
+//		NoticeVO pageContent = boardService.getNoticeContent(noticeId);
+//		model.addAttribute("pageContent", pageContent);
+//		return "board/noticeContent";
+//	}
+	// 수정 전 (아직 해결안됨)
+	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
+	public String getNoticeContent(Model model, @RequestParam("noticeId")int noticeId) {
+		model.addAttribute("pageContent", boardService.getNoticeContent(noticeId));
+		return "board/noticeContent";
 	}
 }
