@@ -18,4 +18,17 @@ public class ReservationDaoImpl implements ReservationDao{
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("mapper.reservation.selectRoomInfos", param);
 	}
+
+	@Override
+	public Map<String, String> getNearestDt(Map<String, String> param) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("mapper.reservation.getNearestDt", param);
+	}
+	
+	@Override
+	public List<Map<String, String>> getRoomSchedules(Map<String, String> param) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("mapper.reservation.getReservedList", param);
+	}
+
 }

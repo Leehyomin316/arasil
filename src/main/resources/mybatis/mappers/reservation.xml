@@ -13,4 +13,25 @@
 										    and a.reserv_code != 'D'
 										 group by a.room_id ) b on a.room_id = b.room_id
 </select>
+
+<select id="getNearestDt" resultType="map" parameterType="map">
+	select DATE_FORMAT(min(a.start_dt), '%Y-%m-%d') start_dt
+	  from reservation a
+	 where a.start_dt > STR_TO_DATE(#{reserveDt}, '%Y%m%d')
+	   and a.reserv_code in ('A', 'B', 'C', 'D')
+	   and a.room_id = #{roomId};
+</select>
+
+<select id="getReservedList" resultType="map" parameterType="map">
+    <![CDATA[
+	select a.room_id, a.room_nm, a.guest_nm, a.guest_cell_phone, a.start_dt, a.end_dt, a.end_dt-a.start_dt days
+	  from ( select a.room_id, b.room_nm, a.guest_nm, a.guest_cell_phone, if ( a.start_dt < str_to_date(#{startDt}, '%Y%m%d'), str_to_date(#{startDt}, '%Y%m%d'), a.start_dt ) as start_dt,
+				    if ( a.end_dt > str_to_date(#{endDt}, '%Y%m%d'), str_to_date(#{endDt}, '%Y%m%d'), a.end_dt ) as end_dt
+			   from reservation a inner join room_info b on a.room_id = b.room_id
+			  where ( a.start_dt between str_to_date(#{startDt}, '%Y%m%d') and str_to_date(#{endDt}, '%Y%m%d') or
+		         a.end_dt between str_to_date(#{startDt}, '%Y%m%d') and str_to_date(#{endDt}, '%Y%m%d') )
+			    and a.reserv_code != 'D' ) a
+	order by a.room_id, a.start_dt;
+    ]]>
+</select>
 </mapper>

@@ -62,6 +62,7 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
+  --bs-body-text-align:left;
 }
 
 *,
@@ -182,10 +183,12 @@ address {
 ol,
 ul {
   padding-left: 0rem;
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
 }
+
+
 
 ol,
 ul,
@@ -305,14 +308,15 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
-/* <--icon--> */
+/* icon */
 img,
 svg {
-	position: fixed;
+/* 	position: fixed; */
   vertical-align: middle;
     
 }
-#icon{
+img#icon{
+	position: fixed;
     top: 10px;
     left: 10px;
 	width:54px;
@@ -3966,10 +3970,16 @@ textarea.form-control-lg {
   color: #0d6efd;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  text-align:center;
+  text-align:left;
   font-weight:900;
   font-size:0.75rem;
 }
+@media screen and (Min-width:800px){
+	.nav-link{
+		font-size:1rem;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
@@ -11407,6 +11417,7 @@ footer{
 	background:white;
 }
 footer > ul{
+	display:flex;
 	list-style: none;
 	flex-direction: column;
 	margin-bottom: 0;
@@ -11452,7 +11463,7 @@ footer > ul >li{
 	flex-direction: column;
 	margin-left:5px;
 	margin-right:5px;
-	text-align:center;
+	text-align:left;
 	position:static;
 }
 li.cloak{
@@ -11486,6 +11497,12 @@ ul.ul-margin{
 }
 .sub-menu{
 	list-style:none;
+}
+
+.underline{
+	border-bottom:solid;
+	border-width:1px;
+	color:rgba(255, 255, 255, 0.55);
 }
 .link-icon { position: relative; display: inline-block; font-size: 14px; font-weight: 500; color: #333; margin-top:5px;}
 .link-icon.twitter { background-image: url(./images/icon-twitter.png); background-repeat: no-repeat; width:30px; height:30px;}

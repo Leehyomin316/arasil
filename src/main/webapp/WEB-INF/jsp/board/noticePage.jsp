@@ -14,7 +14,9 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
-<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
+<link rel="icon" type="image/x-icon"
+	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
+
 	
 	<script>
 	$(function(){

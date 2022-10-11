@@ -10,7 +10,7 @@
 
 
 .sec_cal {
-  width: 60%;
+  width: 100%;
   min-width: 550px;
   margin: 0 auto;
   font-family: "NotoSansR";
@@ -27,8 +27,9 @@
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 78px;
+  font-size: 32px;
+  line-height: 48px;
+  height: 5vh;
 }
 
 .sec_cal .cal_nav .year-month {
@@ -47,7 +48,7 @@
 .sec_cal .cal_nav .go-next {
   display: block;
   width: 50px;
-  height: 78px;
+  height: 48px;
   font-size: 0;
   display: flex;
   justify-content: center;
@@ -97,6 +98,7 @@
 
 .sec_cal .cal_wrap .day {
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: calc(100% / 7);
@@ -118,7 +120,7 @@
 .sec_cal .cal_wrap .dates {
   display: flex;
   flex-flow: wrap;
-  height: 290px;
+  height:70vh;
 }
 
 .sec_cal .cal_wrap .day:nth-child(7n) {

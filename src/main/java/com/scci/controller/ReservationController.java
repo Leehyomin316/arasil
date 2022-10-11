@@ -42,4 +42,23 @@ public class ReservationController {
 		model.addAttribute("roomInfoList", roomInfos);
 		return "jsonView";
 	}
+	
+	@RequestMapping(value="/getNearestDt", method=RequestMethod.GET)
+	public String getNearestDt(@RequestParam Map<String, String> param, Model model) {
+		Map<String, String> nearestDt = service.getNearestDt(param);
+		model.addAttribute("nearestDt", nearestDt);
+		return "jsonView";
+	}
+	
+	@RequestMapping(value="/roomSchedule", method=RequestMethod.GET)
+	public String reservationStatus(@RequestParam Map<String, String> param, Model model) {
+		return "reservation/roomSchedule";
+	}
+	
+	@RequestMapping(value="/getRoomSchedules", method=RequestMethod.GET)
+	public String getRoomSchedules(@RequestParam Map<String, String> param, Model model) {
+		List<Map<String, String>> scheduleInfos = service.getRoomSchedules(param);
+		model.addAttribute("scheduleInfos", scheduleInfos);
+		return "jsonView";
+	}
 }
