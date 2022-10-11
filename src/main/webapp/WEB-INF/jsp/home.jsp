@@ -12,18 +12,16 @@
 <title>아라실에 오신걸 환영합니다</title>
 <script
 	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
-<script
-	src="${pageContext.request.contextPath}/static/js/home/slider.js"></script>
 <link
 	href="${pageContext.request.contextPath}/static/css/home/slider.css"
-	rel="stylesheet"></link>
+	rel="stylesheet"></link>	
 </head>
 <body>
 	<!-- Navigation-->
-<%-- 		<%@ include file="home/header.jsp"%> --%>
+		<%@ include file="home/header.jsp"%>
 	<%-- 	<c:import url="header.jsp"></c:import> --%>
 	<div class="main-content">
-		<h2 style="text-align:center">Slideshow Gallery</h2>
+		<h2 style="text-align:center"></h2>
 		<div class="slider-container">
 			<div class="mySlides">
 				<div class="numbertext active-slider">1 / 6</div>
@@ -113,4 +111,6 @@
 
 	<%@ include file="home/footer.jsp"%>
 </body>
+<script
+	src="${pageContext.request.contextPath}/static/js/home/slider.js"></script>
 </html>
