@@ -11498,6 +11498,13 @@ ul.ul-margin{
 .sub-menu{
 	list-style:none;
 }
+ul > li ul.underline{
+	display:none;
+}
+ul > li:hover ul.underline{
+	display:block;
+	float:none;
+}
 
 .underline{
 	border-bottom:solid;
