@@ -14,7 +14,9 @@
 	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
 <link
 	href="${pageContext.request.contextPath}/static/css/home/slider.css"
-	rel="stylesheet"></link>	
+	rel="stylesheet"></link>
+<script
+	src="${pageContext.request.contextPath}/static/js/home/slider.js"></script>	
 </head>
 <body>
 	<!-- Navigation-->
@@ -25,32 +27,32 @@
 		<div class="slider-container">
 			<div class="mySlides">
 				<div class="numbertext active-slider">1 / 6</div>
-				<img src="${pageContext.request.contextPath}/static/img/home.jpg" style="width: 100%">
+				<img src="${pageContext.request.contextPath}/static/img/home01.jpg" style="width: 100%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">2 / 6</div>
-				<img src="${pageContext.request.contextPath}/static/img/home2.jpg" style="width: 100%">
+				<img src="${pageContext.request.contextPath}/static/img/home02.jpg" style="width: 100%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">3 / 6</div>
-				<img src="${pageContext.request.contextPath}/static/img/home.jpg" style="width: 100%">
+				<img src="${pageContext.request.contextPath}/static/img/home03.jpg" style="width: 100%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">4 / 6</div>
-				<img src="${pageContext.request.contextPath}/static/img/home.jpg" style="width: 100%">
+				<img src="${pageContext.request.contextPath}/static/img/home04.jpg" style="width: 100%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">5 / 6</div>
-				<img src="${pageContext.request.contextPath}/static/img/home.jpg" style="width: 100%">
+				<img src="${pageContext.request.contextPath}/static/img/home05.jpg" style="width: 100%">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">6 / 6</div>
-				<img src="${pageContext.request.contextPath}/static/img/home.jpg" style="width: 100%">
+				<img src="${pageContext.request.contextPath}/static/img/home06.jpg" style="width: 100%">
 			</div>
 
 			<a class="prev" onclick="plusSlides(-1)">❮</a> <a class="next"
@@ -62,33 +64,33 @@
 
 			<div class="row-slider">
 				<div class="column-slider">
-					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home.jpg"
-						style="width: 100%" onclick="currentSlide(1)" alt="The Woods">
+					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home01.jpg"
+						style="width: 100%" onclick="currentSlide(1)" alt="아라실">
 				</div>
 				<div class="column-slider">
-					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home2.jpg"
+					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home02.jpg"
 						style="width: 100%" onclick="currentSlide(2)"
-						alt="Trolltunga, Norway">
+						alt="아라실">
 				</div>
 				<div class="column-slider">
-					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home.jpg"
+					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home03.jpg"
 						style="width: 100%" onclick="currentSlide(3)"
-						alt="Mountains and fjords">
+						alt="아라실">
 				</div>
 				<div class="column-slider">
-					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home.jpg"
+					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home04.jpg"
 						style="width: 100%" onclick="currentSlide(4)"
-						alt="Northern Lights">
+						alt="아라실">
 				</div>
 				<div class="column-slider">
-					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home.jpg"
+					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home05.jpg"
 						style="width: 100%" onclick="currentSlide(5)"
-						alt="Nature and sunrise">
+						alt="아라실">
 				</div>
 				<div class="column-slider">
-					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home.jpg"
+					<img class="demo cursor" src="${pageContext.request.contextPath}/static/img/home06.jpg"
 						style="width: 100%" onclick="currentSlide(6)"
-						alt="Snowy Mountains">
+						alt="아라실">
 				</div>
 			</div>
 		</div>
@@ -111,6 +113,5 @@
 
 	<%@ include file="home/footer.jsp"%>
 </body>
-<script
-	src="${pageContext.request.contextPath}/static/js/home/slider.js"></script>
+
 </html>
