@@ -24,14 +24,14 @@
 
 <select id="getReservedList" resultType="map" parameterType="map">
     <![CDATA[
-	select a.room_id, b.room_nm, a.guest_nm, a.guest_cell_phone, a.start_dt, a.end_dt, a.end_dt-start_dt days
-	  from reservation a inner join room_info b on a.room_id = b.room_id
-	 where ( str_to_date(#{startDt}, '%Y%m%d') <= a.start_dt
-	   or str_to_date(#{startDt}, '%Y%m%d') <= a.end_dt )
-	   and ( str_to_date(#{endDt}, '%Y%m%d') >= a.start_dt
-	   or str_to_date(#{endDt}, '%Y%m%d') >= a.end_dt )
-	   and a.reserv_code != 'D'
-	order by a.room_id, a.start_dt
+	select a.room_id, a.room_nm, a.guest_nm, a.guest_cell_phone, a.start_dt, a.end_dt, a.end_dt-a.start_dt days
+	  from ( select a.room_id, b.room_nm, a.guest_nm, a.guest_cell_phone, if ( a.start_dt < str_to_date(#{startDt}, '%Y%m%d'), str_to_date(#{startDt}, '%Y%m%d'), a.start_dt ) as start_dt,
+				    if ( a.end_dt > str_to_date(#{endDt}, '%Y%m%d'), str_to_date(#{endDt}, '%Y%m%d'), a.end_dt ) as end_dt
+			   from reservation a inner join room_info b on a.room_id = b.room_id
+			  where ( a.start_dt between str_to_date(#{startDt}, '%Y%m%d') and str_to_date(#{endDt}, '%Y%m%d') or
+		         a.end_dt between str_to_date(#{startDt}, '%Y%m%d') and str_to_date(#{endDt}, '%Y%m%d') )
+			    and a.reserv_code != 'D' ) a
+	order by a.room_id, a.start_dt;
     ]]>
 </select>
 </mapper>
