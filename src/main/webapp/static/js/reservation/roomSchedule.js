@@ -67,7 +67,7 @@ $(function() {
 				calendar.innerHTML = calendar.innerHTML + 
 				`<div class="day current ${i}">
 					<span>${i}</span>
-					<div class="schedule"></div>
+					<ul class="schedule"></ul>
 				</div>`;
 			}
 			// 다음달
@@ -164,15 +164,36 @@ $(function() {
 	
 	function fillCalendarWithSchedule(data){
 		var schedules = data.scheduleInfos;
-		var group = schedules.filter((item)=>item.room_id==1);
-		group.forEach((item)=>{
-			let startDt = new Date(item.start_dt).getDate();
-			let days = item.days;
-			console.log(startDt, days);
-			let $scheduleDiv = $(`.day.current.${startDt} .schedule`);
-			console.log($scheduleDiv);
-			$scheduleDiv.text(item.room_nm);
-		});
+		const roomGroup = groupBy(schedules, 'room_id');
+		for(let groupKey in roomGroup){
+			const group = roomGroup[groupKey];
+			group.forEach((item)=>{
+				let startDt = new Date(item.start_dt).getDate();
+				let days = item.days;
+				let $scheduleUl = $(`.day.current.${startDt} .schedule`);
+				$scheduleUl.append(`<li>${item.room_nm}(${item.guest_nm})</li>`);
+				if ( days > 0 ){
+					for(let i=0; i<days; i++){
+						let $ul =  $(`.day.current.${startDt+(i+1)} .schedule`);
+						$ul.append(`<li>${item.room_nm}(${item.guest_nm})</li>`);										
+					}
+				}
+			});			
+		}
+	}
+	// 배열의 원소들을 그룹키 별로 그룹화 시켜 주는 함수
+	// {1:Array, 2:Array}
+	function groupBy (data, key) {
+	    return data.reduce(function (carry, el) {
+	        var group = el[key];
+	
+	        if (carry[group] === undefined) {
+	            carry[group] = []
+	        }
+	
+	        carry[group].push(el)
+	        return carry
+	    }, {})
 	}
 	
 	global.initCalendar = calendarInit;
