@@ -169,10 +169,43 @@
 		          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
 		        </div><div class="container"></div>
 		        <div class="modal-body">
-		          Content for the dialog / modal goes here.
+		        	<form id="reservationRegForm" action='<c:url value="/reservation/addReservation"/>' method="post">
+						<div class="mb-3">
+						  <label for="guestNm" class="form-label">예약자 성명</label>
+						  <input type="text" class="form-control" id="inputGuestNm" name="inputGuestNm" value="개차반" placeholder="홍길동">
+						</div>
+						<div class="mb-3">
+						  <label for="guestCellPhone" class="form-label">전화번호</label>
+						  <input type="text" class="form-control" id="inputGuestCellPhone" name="inputGuestCellPhone" value="01012345678" placeholder="01012345678">
+						<div>
+				            <table class="table">
+				                <thead>
+				                    <tr>
+				                        <th scope="col">객실정보</th>
+				                        <th scope="col">이용일</th>
+				                        <th scope="col">기간</th>
+				                        <th scope="col">이용인원</th>
+				                        <th scope="col">이용요금</th>
+				                    </tr>
+				                </thead>
+				                <tbody>
+				                    <tr>
+				                        <td>
+				                        	<input type="text" id="inputRoomId" name="inputRoomId">
+				                        	<input type="text" readonly class="form-control-plaintext" id="inputRoomNm" name="inputRoomNm">
+				                        </td>
+				                        <td><input readonly class="form-control-plaintext" id="inputStartDt" name="inputStartDt"></td>
+				                        <td><input readonly class="form-control-plaintext" id="inputUseDay" name="inputUseDay"></select></td>
+				                        <td><input readonly class="form-control-plaintext" id="inputUsePerson" name="inputUsePerson"></td>
+				                        <td><input readonly class="form-control-plaintext" id="inputTotalFee" name="inputTotalFee"></td>
+				                    </tr>
+				                </tbody>
+				            </table>  						
+						</div>		
+		        	</form>
 		        </div>
 		        <div class="modal-footer">
-		          <a href="#" data-bs-dismiss="modal" class="btn btn-outline-dark">예약</a>
+		          <a href="#" data-bs-dismiss="modal" class="btn btn-outline-dark" id="reserveRunBtn">예약</a>
 		          <a href="#" data-bs-dismiss="modal" class="btn btn-outline-dark">취소</a>
 		        </div>
 		      </div>

@@ -185,6 +185,12 @@ $(function() {
 	
 	// script를 통해서 modal 창을 여는 방법
 	$("#modalBtn").on("click", function(){
+		$("#inputRoomId").val($("#roomId").val());
+		$("#inputRoomNm").val($("#roomNm").val());
+		$("#inputStartDt").val($("#reserveDt").val());
+		$("#inputUseDay").val($("#useDays").val());
+		$("#inputUsePerson").val($("#useDays").val());
+		$("#inputTotalFee").val($("#totalFee").val());
 		$("#myModal").modal('show');
 		//$("#myModal").modal('hide');
 	});
@@ -211,4 +217,8 @@ $(function() {
 		}
 		totalFeeObj.value = totalFee;
 	}
+	
+	$("#reserveRunBtn").on("click", function(){
+		$("#reservationRegForm").submit();
+	});
 })();

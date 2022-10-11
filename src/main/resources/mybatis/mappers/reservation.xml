@@ -31,7 +31,33 @@
 			  where ( a.start_dt between str_to_date(#{startDt}, '%Y%m%d') and str_to_date(#{endDt}, '%Y%m%d') or
 		         a.end_dt between str_to_date(#{startDt}, '%Y%m%d') and str_to_date(#{endDt}, '%Y%m%d') )
 			    and a.reserv_code != 'D' ) a
-	order by a.room_id, a.start_dt;
+	order by a.room_id, a.start_dt
     ]]>
 </select>
+
+<insert id="addReservation" parameterType="map">
+    <![CDATA[
+	INSERT INTO `arasil`.`reservation`
+	(`ROOM_ID`,
+	`GUEST_NM`,
+	`GUEST_CELL_PHONE`,
+	`RESERV_DT`,
+	`START_DT`,
+	`END_DT`,
+	`RESERV_CODE`,
+	`EXTRA_PERSON`,
+	`user_id`)
+	VALUES
+	(#{inputRoomId},
+	#{inputGuestNm},
+	#{inputGuestCellPhone},
+	now(),
+	str_to_date(#{inputStartDt}, '%Y%m%d'),
+	DATE_ADD(str_to_date(#{inputStartDt}, '%Y%m%d'), INTERVAL #{inputUseDay}-1 DAY),
+	'A',
+	#{inputUsePerson},
+	'admin'
+	)
+    ]]>
+</insert>
 </mapper>
