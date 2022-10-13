@@ -4072,7 +4072,7 @@ li.sub-menu > a.nav-link{
   justify-content: space-around;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  flex-direction:raw;
+  flex-direction:row;
   
 }
 .navbar > .container,
@@ -11398,8 +11398,6 @@ html {
 }
 body {
 	min-height: 100%;
-/* 	background: url(../img/home.jpg) no-repeat center center fixed; */
-/* 	background-size: cover; */
 }
 img.back-ground{
 	min-height: 100%;
@@ -11498,14 +11496,17 @@ ul.ul-margin{
 .sub-menu{
 	list-style:none;
 }
-ul > li ul.underline{
-	display:none;
+@media screen and (Max-width:800px){
+	ul > li ul.underline{
+		display:none;
+	}
 }
-ul > li:hover ul.underline{
-	display:block;
-	float:none;
+@media screen and (Max-width:800px){
+	ul > li:hover ul.underline{
+		display:block;
+		float:none;
+	}
 }
-
 .underline{
 	border-bottom:solid;
 	border-width:1px;

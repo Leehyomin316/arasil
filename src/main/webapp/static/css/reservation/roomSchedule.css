@@ -90,6 +90,12 @@
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
+
+}
+.days{
+	align-items:center;
+	text-align:center;
+	font-weight:700;
 }
 
 .sec_cal .cal_wrap::after {
@@ -99,13 +105,10 @@
 .sec_cal .cal_wrap .day {
   display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: calc(100% / 7);
   text-align: left;
-  color: #999;
   font-size: 12px;
-  text-align: center;
+  text-align: left;
   border-radius:5px
 }
 
@@ -150,4 +153,8 @@ section {
     font-family: "NotoSansR";
     text-align: left;
   }
+}
+ul{
+	list-style:inside;
+	margin-right:5px;
 }

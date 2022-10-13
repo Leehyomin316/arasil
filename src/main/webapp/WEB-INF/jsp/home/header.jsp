@@ -6,13 +6,12 @@
 <meta charset="UTF-8">
 <title>Menu</title>
 <link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>
-<script src="${pageContext.request.contextPath}/static/js/header.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>
 <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-basy fixed-top">
-        <a class="navbar-brand" href="${pageContext.request.contextPath}"><img src="<c:url value='/static/img/icon02.png'/>" id="icon"/></a>
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/WEB_INF/jsp/home"><img src="<c:url value='/static/img/icon02.png'/>" id="icon"/></a>
         <div class="container px-4 px-lg-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -47,7 +46,7 @@
                 <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link">기타</a>
                     	<ul class="underline">
-                    		<li class="sub-menu"><a class="nav-link" href="https://blog.naver.com/arasil_pension">네이버 블로그</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="https://https://blog.naver.com/wlsfhrytk">네이버 블로그</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="https://www.instagram.com/arasil_pension/">인스타그램</a></li>
 <%--                    			<li class="sub-menu"><a id="btnTwitter" class="link-icon twitter nav-link" href="javascript:shareTwitter();"><img src="<c:url value='/static/img/icontwitter.png'/>"/></a></li> --%>
 <%--                    			<li class="sub-menu"><a id="btnFacebook" class="link-icon facebook nav-link" href="javascript:shareFacebook();"><img src="<c:url value='/static/img/iconfacebook.png'/>"/></a> </li> --%>
