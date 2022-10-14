@@ -321,6 +321,14 @@ img#icon{
     left: 10px;
 	width:54px;
 }
+@media (Min-width:800px){
+	img#icon{
+	position: absolute;
+    top: 15px;
+    left: 15px;
+	width:80px;
+}
+}
 #back-ground{
 	size:cover;
 }

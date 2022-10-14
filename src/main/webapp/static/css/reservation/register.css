@@ -3,23 +3,57 @@
 }
 
 .select_date_container {
-  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+	border-bottom:double;
+	border-width:5px;
+	border-color:rgba(0,0,0,0.3);
 }
+@media (Min-width:1200px){
+	.select_date_container{
+		display: flex;
+	    flex-direction: row;
+	    align-content: flex-start;
+	    flex-wrap: nowrap;
 
+	}
+}
 
 .sec_cal {
-  width: 60%;
-  min-width: 550px;
+  width: 80%;
+  min-width: 320px;
+  max-width: 700px;
   margin: 0 auto;
+  margin-left:10px;
   font-family: "NotoSansR";
+  
 }
+@media (Min-width:800px){
+	div.sec_cal{
+		margin-left: 100px;
+	}
+}
+@media (Min-width:1200px){
+	div.sec_cal{
+		border-right:double;
+		border-width:5px;
+		border-color:rgba(0,0,0,0.3);
+	}
+}
+@media (Max-width:1200px){
+	div.sec_cal{
+		border-bottom:double;
+		border-width:5px;
+		border-color:rgba(0,0,0,0.3);
+	}
+}
+
 .usage_rules {
-  width: 40%;
   margin: 0 auto;
   font-family: "NotoSansR";
-  text-align: justify;
+  text-align: left;
 }
 
 .sec_cal .cal_nav {
@@ -79,7 +113,7 @@
 }
 
 .sec_cal .cal_wrap {
-  padding-top: 40px;
+  padding-top: 20px;
   position: relative;
   margin: 0 auto;
 }
@@ -97,8 +131,8 @@
 
 .sec_cal .cal_wrap .day {
   display:flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: calc(100% / 7);
   text-align: left;
   color: #999;
@@ -143,9 +177,42 @@ section {
     align-items: space-between;
   }
   .usage_rules {
-    display: none;
+/*     display: none; */
     margin: 0 0;
     font-family: "NotoSansR";
     text-align: left;
   }
+}
+/* 모바일용 스크롤바 만들기 */
+table.table { 
+	max-width: 100%;
+	width: 100%;
+}
+.select_room_container{
+	overflow-x: auto;
+	white-space: nowrap;
+}
+.select_option_table{
+	overflow-x: auto;
+	white-space: nowrap;
+}
+.usage_rules{
+	overflow-x: auto;
+	white-space: pre-warp;
+}
+.usage_rules > pre{
+	white-space:pre-wrap;
+	
+}
+/* 소재목 꾸미기 */
+p.h5{
+	margin-top: 0;
+    margin-bottom: 1rem;
+    border: 1px solid white;
+    border-left: solid 10px #8A66AE;
+    padding: 7px;
+    border-radius: 5px;
+    width: fit-content;
+    color: #000000;
+    background: #F8E8FF;
 }
