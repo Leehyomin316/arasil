@@ -321,6 +321,14 @@ img#icon{
     left: 10px;
 	width:54px;
 }
+@media (Min-width:800px){
+	img#icon{
+	position: absolute;
+    top: 15px;
+    left: 15px;
+	width:80px;
+}
+}
 #back-ground{
 	size:cover;
 }
@@ -11404,7 +11412,7 @@ img.back-ground{
 	size:cover;
 }
 footer{
-	z-index:9999;
+	z-index:99999;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -11436,8 +11444,8 @@ footer > ul >li{
 	padding-left: 0;
 	margin-bottom: 0;
 	padding:1px;
-	font-size: calc(0.7rem + 1vw);
-	font-family: 'Nanum Pen Script', cursive;
+	font-size: calc(0.5rem + 1vw);
+	font-family: 'Noto Serif KR', serif;
 }
 @media screen and (Min-width:800px){
 	footer > ul >li{
@@ -11445,20 +11453,12 @@ footer > ul >li{
 		padding-left: 0;
 		margin-bottom: 0;
 		padding:5px;
-		font-size: calc(0.5rem + 1vw);
+		font-size: calc(2px + 1vw);
 	}
 }
-@media screen and (Min-width:1200px){
-	footer > ul >li{
-		display: flex;
-		padding-left: 0;
-		margin-bottom: 0;
-		padding:5px;
-		font-size: 0.9rem;
-	}
-}
+
 .sub-menu{
-	flex-direction: column;
+	flex-direction: row;
 	margin-left:5px;
 	margin-right:5px;
 	text-align:left;
@@ -11490,7 +11490,7 @@ ul.ul-margin{
 	.main-content{
 	margin-top:0;
 	margin-left:240px;
-	margin-bottom:50px;
+	margin-bottom:60px;
 	}
 }
 .sub-menu{

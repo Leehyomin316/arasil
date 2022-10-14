@@ -17,47 +17,46 @@
 	rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<%@ include file="../home/header.jsp"%>
-	<div class="main-content">
-		<div class="container-fluid p-0">
-			<section class="select_date_container">
-				<div class="sec_cal">
-					<div class="cal_nav">
-						<a href="javascript:;" class="nav-btn go-prev">prev</a>
-						<div class="year-month"></div>
-						<a href="javascript:;" class="nav-btn go-next">next</a>
-					</div>
-					<div class="cal_wrap">
-						<div class="days">
-							<div class="day">SUN</div>
-							<div class="day">MON</div>
-							<div class="day">TUE</div>
-							<div class="day">WED</div>
-							<div class="day">THU</div>
-							<div class="day">FRI</div>
-							<div class="day">SAT</div>
-						</div>
-						<div class="dates"></div>
-					</div>
-				</div>
-				<div class="usage_rules">
-					<pre>■ 입실/퇴실 시간
-ㅁ 입실시간 : 오후 3시
-ㅁ 퇴실시간 : 오전 11시
+<%@ include file="../home/header.jsp"%>
+<div class="main-content">
+<div class="container-fluid p-0">
+    <section class="select_date_container">
+        <div class="sec_cal">
+            <div class="cal_nav">
+              <a href="javascript:;" class="nav-btn go-prev">prev</a>
+              <div class="year-month"></div>
+              <a href="javascript:;" class="nav-btn go-next">next</a>
+            </div>
+            <div class="cal_wrap">
+                <div class="days">
+                	<div class="day">SUN</div>
+                    <div class="day">MON</div>
+                    <div class="day">TUE</div>
+                    <div class="day">WED</div>
+                    <div class="day">THU</div>
+                    <div class="day">FRI</div>
+                    <div class="day">SAT</div>
+                </div>
+                <div class="dates"></div>
+            </div>
+        </div>
+        <div class="usage_rules">
+            <pre>   ■ 입실/퇴실 시간
+   - 입실시간 : 오후 3시
+   - 퇴실시간 : 오전 11시
+   
+   
+   ■ 인원 추가요금
+   - 기준인원 초과 시 추가요금 발생
+   - (유아,아동,성인) 1인 추가 1만원
+   - 최대인원 초과 시 입실(환불) 불가
+   - (영유아 포함) 최대 수용 인원 초과를 엄격히 금함
+   
+   
+   ■ 예약안내
+   - 예약 이용수칙을 반드시 확인바랍니다.
+   - 예약 전 취소수수료를 꼭 확인바랍니다.
 
-■ 인원 추가요금
-ㅁ 기준인원 초과 시 추가요금 발생
-ㅁ (유아,아동,성인) 1인 추가 1만원
-ㅁ 최대인원 초과 시 입실(환불) 불가
-ㅁ (영유아 포함) 최대 수용 인원 초과를 엄격히 금함
-
-
-■ 예약안내
-ㅁ 펜션연락처는 예약과 동시에 고객님의 휴대폰으로 자동발송됩니다.
-ㅁ 예약 전 취소수수료를 꼭 확인바랍니다.
-
-■ 증빙안내
-ㅁ 펜션라이프는 판매대행처로 소득세법과 부가가치세법에 따라 세금계산서가발행되지 않습니다.
 </pre>
 				</div>
 			</section>
