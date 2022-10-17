@@ -4124,11 +4124,10 @@ li.sub-menu > a.nav-link{
 }
 
 .navbar-nav {
-  display: flex;
-  flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  position: inherit;
 }
 
 .navbar-nav .nav-link {
@@ -4145,9 +4144,11 @@ li.sub-menu > a.nav-link{
 }
 
 .navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
+	display: flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .navbar-toggler {
@@ -4254,35 +4255,37 @@ li.sub-menu > a.nav-link{
     overflow-y: visible;
   }
 }
-@media (Min-width: 768px) {
-  .navbar-expand-md {
-    flex-wrap: nowrap;
+@media (Min-width: 800px) {
+  .navbar-expand-lg {
+    flex-wrap: wrap;
     justify-content: flex-start;
   }
-  .navbar-expand-md .navbar-nav {
-   flex-direction: column;
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
   }
-  .navbar-expand-md .navbar-nav .dropdown-menu {
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .navbar-expand-md .navbar-nav .nav-link {
+  .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-  .navbar-expand-md .navbar-nav-scroll {
+  .navbar-expand-lg .navbar-nav-scroll {
     overflow: visible;
   }
-  .navbar-expand-md .navbar-collapse {
+  .navbar-expand-lg .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
+    flex-direction: column;
+    align-items: flex-end;
   }
-  .navbar-expand-md .navbar-toggler {
+  .navbar-expand-lg .navbar-toggler {
     display: none;
   }
-  .navbar-expand-md .offcanvas-header {
+  .navbar-expand-lg .offcanvas-header {
     display: none;
   }
-  .navbar-expand-md .offcanvas {
+  .navbar-expand-lg .offcanvas {
     position: inherit;
     bottom: 0;
     z-index: 1000;
@@ -4294,13 +4297,13 @@ li.sub-menu > a.nav-link{
     transition: none;
     transform: none;
   }
-  .navbar-expand-md .offcanvas-top,
-.navbar-expand-md .offcanvas-bottom {
+  .navbar-expand-lg .offcanvas-top,
+.navbar-expand-lg .offcanvas-bottom {
     height: auto;
     border-top: 0;
     border-bottom: 0;
   }
-  .navbar-expand-md .offcanvas-body {
+  .navbar-expand-lg .offcanvas-body {
     display: flex;
     flex-grow: 0;
     padding: 0;
@@ -11419,8 +11422,8 @@ footer{
     width: 100%;
 	padding: 5px 1vw;
 	text-align: center;
-	color: black;
-	background:white;
+	color:#CFFF8D;
+	background:#425f57;
 }
 footer > ul{
 	display:flex;
@@ -11468,7 +11471,12 @@ li.cloak{
 	opacity:0;
 }
 ul.ul-top{
-	margin-top:20px;
+	margin-top:7px;
+}
+@media (Min-width:800px){
+	ul.ul-top{
+		margin-top:20px;
+	}
 }
 
 ul.ul-margin{
