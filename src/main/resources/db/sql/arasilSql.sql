@@ -99,4 +99,19 @@ INSERT INTO `arasil`.`users`
 `ENABLED`)
 VALUES
 ('admin', 'admin@google.com', 'admin', true);
+
+INSERT INTO `arasil`.`roles`
+(`ROLE_ID`,
+`ROLE_NM`)
+VALUES
+('role_admin'
+,'관리자권한');
+
+INSERT INTO `arasil`.`user_role`
+(`USER_ID`,
+`ROLE_ID`)
+VALUES
+('admin',
+'role_admin');
+
 COMMIT;
