@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="com.scci.vo.NoticeVO"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 
 <!DOCTYPE html>
@@ -22,6 +23,12 @@
 		$("#btnList").on("click",function() {
 		location.href = "${pageContext.request.contextPath}/board/noticePage";
 		});
+		
+		const updateBtn = document.querySelector("#btnUpdate");
+		const formObj = document.querySelector("#form");
+		updateBtn.addEventListener("click", function(){
+			formObj.submit();
+		});
 	});
 </script>
 </head>
@@ -29,31 +36,29 @@
 <body>
 	<article>
 		<div class="container" role="main">
-			<h2>게시글 내용</h2>
-			<div class="bg-white rounded shadow-sm">
-				<div class ="noticeTitle">
-					<label>제목</label>
+	<article>
+		<div class="container" role="main">
+			<h2>공지사항 상세보기</h2>
+			<form name="form" id="form" role="form" method="post"
+				action="${pageContext.request.contextPath}/board/updateNotice">
+				<div class="mb-3">
+					<label for="noticetitle">제목</label> <input type="text"
+						class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"
+						placeholder="제목을 입력해 주세요">
 				</div>
-				<div>
-				<input name="title" readonly="readonly" value = '<c:out value="${pageContent.noticeTitle }"/>'>
+				<div class="mb-3">
+					<label for="noticeContent">내용</label>
+					<textarea class="form-control" rows="5" name="noticeContent"  id="noticeContent"
+						placeholder="내용을 입력해 주세요">${notice.noticeContent}</textarea>
 				</div>
-				<div>
-				<lable>내용</lable>
-				</div>
-				<div>
-				<input name="content" readonly="readonly" value = '<c:out value = "${pageContent.noticeContent }"/>'>
-				</div>
-				<div>
-				<label>작성자 : </label><c:out value = "${pageContent.userId }"/>
-				</div>
-				<div>
-				<label>작성날짜 : </label><c:out value = "${pageContent.noticeDate }"/>
-				</div>
-			</div>
-			
-			<div style="margin-top: 20px">
-				<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
-				<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
+				<input type="hidden" value="admin" name="userId"/>
+				<input type="hidden" name="noticeId" value="${notice.noticeId}"/>				
+			</form>
+			<div>
+				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+					<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
+				</sec:authorize>			
+<!-- 				<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button> -->
 				<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 			</div>
 		</div>

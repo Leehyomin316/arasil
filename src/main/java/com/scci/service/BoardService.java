@@ -11,4 +11,6 @@ public interface BoardService {
 	public void getNoticeInsert(NoticeVO noticeVO);
 	
 	public NoticeVO getNoticeContent(int noticeId);
+	
+	public int updateNotice(NoticeVO noticeVO);
 }

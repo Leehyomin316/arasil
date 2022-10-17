@@ -12,4 +12,6 @@ public interface BoardDAO {
 	public int getNoticeInsert(NoticeVO noticeVO);
 	// 상세보기
 	public NoticeVO getNoticeContent(int noticeId); 
+	
+	public int updateNotice(NoticeVO noticeVO);
 }

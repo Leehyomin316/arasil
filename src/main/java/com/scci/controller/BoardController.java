@@ -38,6 +38,12 @@ public class BoardController {
 		return "redirect:/board/noticePage";
 	}
 	
+	@RequestMapping(value="/updateNotice", method = RequestMethod.POST)
+	public String updateNotice(Model model, NoticeVO noticeVO) {
+		int result = boardService.updateNotice(noticeVO);
+		return "redirect:/board/noticePage";
+	}
+	
 //	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
 //	public String getNoticeContent(Model model, int noticeId) {
 //		NoticeVO pageContent = boardService.getNoticeContent(noticeId);
@@ -47,7 +53,7 @@ public class BoardController {
 	// 수정 전 (아직 해결안됨)
 	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
 	public String getNoticeContent(Model model, @RequestParam("noticeId")int noticeId) {
-		model.addAttribute("pageContent", boardService.getNoticeContent(noticeId));
+		model.addAttribute("notice", boardService.getNoticeContent(noticeId));
 		return "board/noticeContent";
 	}
 }
