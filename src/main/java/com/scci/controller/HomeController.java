@@ -1,8 +1,11 @@
 package com.scci.controller;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +20,7 @@ import com.scci.vo.CustomerVO;
 
 @Controller
 public class HomeController {
+	private final Logger log = LoggerFactory.getLogger(getClass());
 	@Autowired
 	private TestService testService;
 	
@@ -25,6 +29,12 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("home");
 		return mv;
+	}
+	
+	@RequestMapping("/welcome")
+	public String welcome(Principal principal) {
+		log.info(principal.getName());
+		return "welcome";
 	}
 	@RequestMapping(value="/menu/{id}")
 	public String menu(@PathVariable("id") String id, @RequestParam Map<String, String> param, Model model) {
