@@ -104,7 +104,7 @@ INSERT INTO `arasil`.`roles`
 (`ROLE_ID`,
 `ROLE_NM`)
 VALUES
-('role_admin'
+('ROLE_ADMIN'
 ,'관리자권한');
 
 INSERT INTO `arasil`.`user_role`
@@ -112,6 +112,6 @@ INSERT INTO `arasil`.`user_role`
 `ROLE_ID`)
 VALUES
 ('admin',
-'role_admin');
+'ROLE_ADMIN');
 
 COMMIT;
