@@ -35,19 +35,19 @@
 					<label>제목</label>
 				</div>
 				<div>
-				<input name="title" readonly="readonly" value = '<c:out value="${pageContent.notice_title }"/>'>
+				<input name="title" readonly="readonly" value = '<c:out value="${pageContent.noticeTitle }"/>'>
 				</div>
 				<div>
 				<lable>내용</lable>
 				</div>
 				<div>
-				<input name="content" readonly="readonly" value = '<c:out value = "${pageContent.notice_content }"/>'>
+				<input name="content" readonly="readonly" value = '<c:out value = "${pageContent.noticeContent }"/>'>
 				</div>
 				<div>
-				<label>작성자 : </label><c:out value = "${pageContent.user_id }"/>
+				<label>작성자 : </label><c:out value = "${pageContent.userId }"/>
 				</div>
 				<div>
-				<label>작성날짜 : </label><c:out value = "${pageContent.notice_date }"/>
+				<label>작성날짜 : </label><c:out value = "${pageContent.noticeDate }"/>
 				</div>
 			</div>
 			

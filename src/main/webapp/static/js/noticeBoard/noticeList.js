@@ -1,0 +1,7 @@
+/**
+ * 
+ */
+ 
+(function(global) {
+	
+})(window || this);

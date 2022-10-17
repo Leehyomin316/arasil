@@ -2,8 +2,6 @@ package com.scci.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,10 +21,10 @@ public class BoardController {
 	private BoardService boardService;
 
 	@RequestMapping(value = "/noticePage", method = RequestMethod.GET)
-	public String noticePage(NoticeVO noticeVO, Model model) {
+	public String noticePage(@ModelAttribute NoticeVO noticeVO, Model model) {
 		List<NoticeVO> notice = boardService.getNotice(noticeVO);
 		model.addAttribute("notice", notice);
-		return "board/noticePage";
+		return "board/noticeList";
 	}
 
 	@RequestMapping("/noticeForm")

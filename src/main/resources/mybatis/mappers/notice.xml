@@ -4,15 +4,16 @@
    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.notice">
 
-	<select id="selectNotice" resultType="map" parameterType="map">
-		select
-		notice_id , notice_title, notice_content, notice_date, user_id
-		from notice
-
+	<select id="selectNotice" resultType="com.scci.vo.NoticeVO" parameterType="com.scci.vo.NoticeVO">
+		select notice_id , notice_title, notice_content, notice_date, user_id
+		  from notice
+         where 1=1
+	     <if test="noticeTitle!=null and !noticeTitle.equals('')">
+			and notice_title like #{noticeTitle}
+		</if>         		
 	</select>
 
-	<select id="selectContent" resultType="com.scci.vo.NoticeVO"
-		parameterType="com.scci.vo.NoticeVO">
+	<select id="selectContent" resultType="com.scci.vo.NoticeVO">
 		select notice_id, notice_title, notice_content, notice_date, user_id
 		from notice
 		where notice_id = #{noticeId}
