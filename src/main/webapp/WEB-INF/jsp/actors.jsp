@@ -16,6 +16,7 @@
 		<c:forEach var="actor" items="${results}">
 			<li>${actor.BOOK_ID} ${actor.BOOK_NM} ${actor.PUBLISHER}</li>
 		</c:forEach>
+		<div></div>
 	</ul>
 </body>
 </html>
