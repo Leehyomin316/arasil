@@ -20,6 +20,11 @@
 
 	}
 }
+@media (Max-width:500px) and (Min-width:800px){
+	.select_date_container{
+		margin-left:100px;
+	}
+}
 
 .sec_cal {
   width: 80%;
