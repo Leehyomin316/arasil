@@ -100,14 +100,14 @@ INSERT INTO `arasil`.`users`
 VALUES
 ('admin', 'admin@google.com', 'admin', true);
 
-INSERT INTO `arasil`.`roles`
+INSERT INTO `arasil`.`ROLES`
 (`ROLE_ID`,
 `ROLE_NM`)
 VALUES
 ('role_admin'
 ,'관리자권한');
 
-INSERT INTO `arasil`.`user_role`
+INSERT INTO `arasil`.`USER_ROLE`
 (`USER_ID`,
 `ROLE_ID`)
 VALUES

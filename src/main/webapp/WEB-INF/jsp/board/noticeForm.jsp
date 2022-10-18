@@ -11,17 +11,20 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
-
+<script src="${pageContext.request.contextPath}/static/js/header.js"></script>
 <script>
-		$(function(){
-			$("#btnSave").on("click", function(){
-				$("#form").submit();
-			});
-			$("#btnList").on("click", function(){
-				location.href="${pageContext.request.contextPath}/board/noticePage";
-			});
+	$(function() {
+		$("#btnSave").on("click", function() {
+			$("#form").submit();
 		});
-	</script>
+		$("#btnList")
+				.on(
+						"click",
+						function() {
+							location.href = "${pageContext.request.contextPath}/board/noticePage";
+						});
+	});
+</script>
 <style>
 body {
 	padding-top: 70px;
@@ -30,33 +33,37 @@ body {
 </style>
 </head>
 <body>
-	<article>
-		<div class="container" role="main">
-			<h2>공지사항 글쓰기</h2>
-			<form name="form" id="form" role="form" method="post"
-				action="${pageContext.request.contextPath}/board/saveBoard">
-				<div class="mb-3">
-					<label for="noticetitle">제목</label> <input type="text"
-						class="form-control" name="noticeTitle" id="noticeTitle"
-						placeholder="제목을 입력해 주세요">
+	<%@ include file="../home/header.jsp"%>
+	<div class="main-content">
+		<article>
+			<div class="container" role="main">
+				<h2>공지사항 글쓰기</h2>
+				<form name="form" id="form" role="form" method="post"
+					action="${pageContext.request.contextPath}/board/saveBoard">
+					<div class="mb-3">
+						<label for="noticetitle">제목</label> <input type="text"
+							class="form-control" name="noticeTitle" id="noticeTitle"
+							placeholder="제목을 입력해 주세요">
+					</div>
+<!-- 					<div class="mb-3"> -->
+<!-- 						<label for="noticeWriter">작성자</label> <input type="text" -->
+<!-- 							class="form-control" name="noticeWriter" id="noticeWriter" -->
+<!-- 							placeholder="이름을 입력해 주세요"> -->
+<!-- 					</div> -->
+					<div class="mb-3">
+						<label for="noticeContent">내용</label>
+						<textarea class="form-control" rows="5" name="noticeContent"
+							id="noticeContent" placeholder="내용을 입력해 주세요"></textarea>
+					</div>
+					<input type="hidden" value="admin" name="userId" />
+				</form>
+				<div>
+					<button type="button" class="btn btn-sm btn-primary" id="btnSave">저장</button>
+					<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 				</div>
-				<div class="mb-3">
-					<label for="noticeWriter">작성자</label> <input type="text"
-						class="form-control" name="noticeWriter" id="noticeWriter"
-						placeholder="이름을 입력해 주세요">
-				</div>
-				<div class="mb-3">
-					<label for="noticeContent">내용</label>
-					<textarea class="form-control" rows="5" name="noticeContent" id="noticeContent"
-						placeholder="내용을 입력해 주세요"></textarea>
-				</div>
-				<input type="hidden" value="admin" name="userId"/>
-			</form>
-			<div>
-				<button type="button" class="btn btn-sm btn-primary" id="btnSave">저장</button>
-				<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 			</div>
-		</div>
-	</article>
+		</article>
+	</div>
+	<%@ include file="../home/footer.jsp"%>
 </body>
 </html>
