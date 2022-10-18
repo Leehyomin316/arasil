@@ -5688,6 +5688,61 @@ li.sub-menu > a.nav-link{
   padding: 1rem;
 }
 
+.acceptCheckbox{
+	background-color:#F6F6F6;
+	margin: 10px 550px 10px 1px;
+}
+.mb-8 {
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+.mb-8b tr{
+	border-bottom:0.5px solid black;
+}
+.mb-8h {
+	border-bottom:1px solid black;
+}
+
+.mb-8b-a{
+	text-align:left;
+	width:250px;
+}
+.mb-8b-b {
+	text-align:center;
+	width:150px;
+}
+.mb-8b td.mb-8b-b{
+	text-align:center;
+	background-color:	#EEEEEE;
+}
+.mb-8b-c{
+	text-align:center;
+	width:150px;
+}
+.mb-6{
+	font-size:small;
+	width:550px;
+}
+.mb-7{
+	color:red;
+}
+.mb-9{
+	font-size:x-small;
+	width:550px;
+}
+.subscribeInfo{
+	position:absolute;
+	width:500px;
+	top:160px;
+	right:20px;
+}
+.sTb th{
+	background-color:#EEEEEE;
+	border:0.5px solid #F6F6F6;
+}
+.sTb td{
+	border:0.5px solid #F6F6F6;
+}
 .modal-footer {
   display: flex;
   flex-wrap: wrap;

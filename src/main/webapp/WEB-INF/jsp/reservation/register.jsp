@@ -174,7 +174,7 @@
 								<form id="reservationRegForm"
 									action='<c:url value="/reservation/addReservation"/>'
 									method="post">
-									<div>
+									<div><h5><b>객실 및 옵션 확인</b></h5>
 										<table class="table">
 											<thead>
 												<tr>
@@ -187,7 +187,7 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td><input type="text" id="inputRoomId"
+													<td><input type="hidden" id="inputRoomId"
 														name="inputRoomId"> <input type="text" readonly
 														class="form-control-plaintext" id="inputRoomNm"
 														name="inputRoomNm"></td>
@@ -203,23 +203,10 @@
 											</tbody>
 										</table>
 									</div>
-									<div class=""><h5>예약자 정보</h5>
-										<div class="mb-3">
-											<label for="guestNm" class="form-label">예약자 성명</label> <input
-												type="text" class="form-control" id="inputGuestNm"
-												name="inputGuestNm" value="개차반" placeholder="이름을 입력하세요.">
-										</div>
-										<div class="mb-3">
-											<label for="guestCellPhone" class="form-label">전화번호</label> <input
-												type="text" class="form-control" id="inputGuestCellPhone"
-												name="inputGuestCellPhone" value="01012345678"
-												placeholder="전화번호를 입력하세요.">
-										</div>
-									</div>
 									<div class="clauseAccpet">
-										<label class="mb-4"><h5>약관동의</h5></label> <br> <input
-											type="checkbox" name="item" value="취소 수수료 동의">취소 수수료
-										동의
+										<div class="mb-4"><h5><b>약관동의</b></h5></div> <div class="acceptCheckbox"><b><input
+											type="checkbox" name="item" value="취소 수수료 동의"> 취소 수수료에 동의
+										</b></div>
 										<div class="mb-5">
 											<div class="mb-6">
 												<br>
@@ -237,58 +224,54 @@
 												</p>
 												<p>수수료 내역은 아래와 같습니다.</p>
 											</div>
+											<br>
 											<table class="mb-8">
-												<colgroup>
-													<col>
-													<col>
-													<col>
-												</colgroup>
-												<thead>
+												<thead class="mb-8h">
 													<tr>
-														<th>기준</th>
-														<th>취소수수료(%)</th>
-														<th>환불율(%)</th>
+														<th class="mb-8b-a">기준</th>
+														<th class="mb-8b-b">취소수수료(%)</th>
+														<th class="mb-8b-c">환불율(%)</th>
 													</tr>
 												</thead>
-												<tbody>
+												<tbody class="mb-8b">
 													<tr>
-														<td>이용일 <b>당일~6</b>일전 취소시
+														<td class="mb-8b-a">이용일 <b>당일~6</b>일전 취소시
 														</td>
-														<td>100%</td>
-														<td>환불없음</td>
+														<td class="mb-8b-b">100%</td>
+														<td class="mb-8b-c">환불없음</td>
 													</tr>
 													<tr>
-														<td>이용일 <b>7</b> 일전 취소시
+														<td class="mb-8b-a">이용일 <b>7</b> 일전 취소시
 														</td>
-														<td>50%</td>
-														<td>50% 환불</td>
+														<td class="mb-8b-b">50%</td>
+														<td class="mb-8b-c">50% 환불</td>
 													</tr>
 													<tr>
-														<td>이용일 <b>14</b> 일전 취소시
+														<td class="mb-8b-a">이용일 <b>14</b> 일전 취소시
 														</td>
-														<td>25%</td>
-														<td>75% 환불</td>
+														<td class="mb-8b-b">25%</td>
+														<td class="mb-8b-c">75% 환불</td>
 													</tr>
 													<tr>
-														<td>이용일 <b>21</b> 일전 취소시
+														<td class="mb-8b-a">이용일 <b>21</b> 일전 취소시
 														</td>
-														<td>0%</td>
-														<td>100% 환불</td>
+														<td class="mb-8b-b">0%</td>
+														<td class="mb-8b-c">100% 환불</td>
 													</tr>
 													<tr>
-														<td>기본 취소 수수료</td>
-														<td>0%</td>
-														<td>100% 환불</td>
+														<td class="mb-8b-a">기본 취소 수수료</td>
+														<td class="mb-8b-b">0%</td>
+														<td class="mb-8b-c">100% 환불</td>
 													</tr>
 												</tbody>
 											</table>
 										</div>
-										<input type="checkbox" name="item" value="개인정보수집동의">개인정보수집동의
+										<div class="acceptCheckbox"><input type="checkbox" name="item" value="개인정보수집동의"><b> 개인정보 수집 및 이용에 동의</b></div>
 										<div class="mb-5">
 											<div class="mb-6">
 												<br>
-												<div>아라실펜션은(는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에
-													관한 법률을 준수하고 있습니다.</div>
+												<div>아라실펜션은(는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에	
+												관한 법률을 준수하고 있습니다.</div>
 												<br>
 												<div>
 													<b>개인정보의 수집항목 및 이용목적</b>
@@ -332,8 +315,21 @@
 												</table>
 											</div>
 										</div>
-										<input type="checkbox" name="item" value="구매 조건 확인 및 결제 진행 동의">
-										구매 조건 확인 및 결제 진행 동의
+										<div class="acceptCheckbox"><input type="checkbox" name="item" value="구매 조건 확인 및 결제 진행 동의"><b> 구매 조건 확인 및 결제 진행 동의</b></div>
+									</div>
+									<div class="subscribeInfo"><div class="sticky-subsInfo"><h5><b>예약자 정보</b></h5>
+										<div class="mb-3">
+											<label for="guestNm" class="form-label">예약자 성명</label> <input
+												type="text" class="form-control" id="inputGuestNm"
+												name="inputGuestNm" value="" placeholder="이름을 입력하세요.">
+										</div>
+										<div class="mb-3">
+											<label for="guestCellPhone" class="form-label">전화번호</label> <input
+												type="text" class="form-control" id="inputGuestCellPhone"
+												name="inputGuestCellPhone" value=""
+												placeholder="전화번호를 입력하세요.">
+										</div>
+									</div>
 									</div>
 								</form>
 							</div>

@@ -59,7 +59,7 @@
 			</div>
 			<div class="login">
 				<sec:authorize access="isAnonymous()">
-					<a class="login" href="${pageContext.request.contextPath}/login">로그인</a>
+					<a class="login" href="${pageContext.request.contextPath}/login">관리자 로그인</a>
 				</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
 					<span><sec:authentication property="principal.username" />님 반갑니다.</span>
