@@ -45,11 +45,6 @@ body {
 							class="form-control" name="noticeTitle" id="noticeTitle"
 							placeholder="제목을 입력해 주세요">
 					</div>
-<!-- 					<div class="mb-3"> -->
-<!-- 						<label for="noticeWriter">작성자</label> <input type="text" -->
-<!-- 							class="form-control" name="noticeWriter" id="noticeWriter" -->
-<!-- 							placeholder="이름을 입력해 주세요"> -->
-<!-- 					</div> -->
 					<div class="mb-3">
 						<label for="noticeContent">내용</label>
 						<textarea class="form-control" rows="5" name="noticeContent"

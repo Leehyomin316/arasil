@@ -9,17 +9,19 @@
 <link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>
 <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
+<script src="https://kit.fontawesome.com/5c8c9f57c5.js" crossorigin="anonymous"></script>
 </head>
 <body scroll=auto style="overflow-x:hidden">
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-basy fixed-top">
         <a class="navbar-brand" href="${pageContext.request.contextPath}/WEB_INF/jsp/home"><img src="<c:url value='/static/img/icon02.png'/>" id="icon"/></a>
+   		<sec:authorize access="isAnonymous()">
+			<a class="login" href="${pageContext.request.contextPath}/login">관리자 로그인</a>
+		</sec:authorize>
         <div class="container px-4 px-lg-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-
-                
                 <ul class="navbar-nav ml-auto ul-top">
                     <li class="nav-item active"><a class="nav-link">소개</a>
                     	<ul class="underline">
