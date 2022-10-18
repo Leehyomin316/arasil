@@ -36,8 +36,6 @@
 <body>
 	<article>
 		<div class="container" role="main">
-	<article>
-		<div class="container" role="main">
 			<h2>공지사항 상세보기</h2>
 			<form name="form" id="form" role="form" method="post"
 				action="${pageContext.request.contextPath}/board/updateNotice">
@@ -57,8 +55,8 @@
 			<div>
 				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
 					<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
+					<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
 				</sec:authorize>			
-<!-- 				<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button> -->
 				<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 			</div>
 		</div>

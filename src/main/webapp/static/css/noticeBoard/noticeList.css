@@ -331,3 +331,10 @@ blockquote {
         background: blue;
 
        }
+
+div.login{
+	display:flex;
+	justify-content: flex-end;
+	margin-right:15px;
+}
+}

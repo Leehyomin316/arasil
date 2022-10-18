@@ -10,7 +10,7 @@
 <script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>
 <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 </head>
-<body>
+<body scroll=auto style="overflow-x:hidden">
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-basy fixed-top">
@@ -18,11 +18,9 @@
         <div class="container px-4 px-lg-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-			<sec:authorize access="isAuthenticated()">
-				<span><sec:authentication property="principal.username" />님 반갑니다.</span>
-			</sec:authorize>
+
                 
-                <ul class="navbar-nav ml-auto ul-top ">
+                <ul class="navbar-nav ml-auto ul-top">
                     <li class="nav-item active"><a class="nav-link">소개</a>
                     	<ul class="underline">
                     		<li class="sub-menu"><a class="nav-link" href="#!">공간소개</a></li>
@@ -61,16 +59,7 @@
                    			<li class="cloak"><a class="nav-link">.</a></li>
                     	</ul>
                     </li>
-                </ul>
-				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
-	                <ul class="navbar-nav ml-auto ul-margin">
-	                    <li class="nav-item active"><a class="nav-link">관리자메뉴</a>
-	                    	<ul class="underline">
-	                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticeForm">공지사항등록</a></li>
-	                    	</ul>
-	                    </li>
-	                </ul>
-				</sec:authorize>                
+                </ul>             
             </div> 
         </div>
     </nav>
