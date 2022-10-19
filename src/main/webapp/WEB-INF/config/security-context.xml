@@ -20,13 +20,13 @@
 		
 		<form-login 
 		    login-page="/login" 
-		    default-target-url="/board/noticePage"
+		    default-target-url="/"
 		    login-processing-url="/j_spring_security_check" 
 			authentication-failure-url="/login?error" 
 			username-parameter="username"
 			password-parameter="password" />
 	    <logout logout-url="/logout" 
-	    	logout-success-url="/board/noticePage"
+	    	logout-success-url="/"
 	        invalidate-session="true"
 	        delete-cookies="JSESSIONID"/>
 		<!-- enable csrf protection -->

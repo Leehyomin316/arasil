@@ -17,7 +17,7 @@
 	rel="stylesheet"></link>
 <link rel="icon" type="image/x-icon"
 	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
-
+<script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
 <script>
 	$(function() {
 		$("#btnList").on("click",function() {

@@ -13,6 +13,7 @@
 <title>아라실에 오신걸 환영합니다.</title>
 <script
 	src="${pageContext.request.contextPath}/static/jQuery/jquery-3.6.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/header.js"></script>		
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
@@ -57,15 +58,6 @@
 					</div>
 				</form>
 			</div>
-			<div class="login">
-				<sec:authorize access="isAnonymous()">
-					<a class="login" href="${pageContext.request.contextPath}/login">관리자 로그인</a>
-				</sec:authorize>
-				<sec:authorize access="isAuthenticated()">
-					<span><sec:authentication property="principal.username" />님 반갑니다.</span>
-					<a class="login" href="${pageContext.request.contextPath}/logout">로그아웃</a>
-				</sec:authorize>
-			</div>
 			<div class="container">
 				<div class="row mb-5">
 					<c:choose>
@@ -97,17 +89,6 @@
 						</c:when>
 					</c:choose>
 				</div>
-			</div>
-			<div>
-				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
-	                <ul class="navbar-nav ml-auto ul-margin">
-	                    <li class="nav-item active"><a class="nav-link">관리자메뉴</a>
-	                    	<ul class="underline">
-	                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticeForm">공지사항등록</a></li>
-	                    	</ul>
-	                    </li>
-	                </ul>
-				</sec:authorize>   
 			</div>
 		</article>
 	</div>
