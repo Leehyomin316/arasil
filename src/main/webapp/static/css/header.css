@@ -11581,16 +11581,20 @@ ul.ul-margin{
 }
 .sub-menu{
 	list-style:none;
+	scroll-behavior:smooth;
+	transition:1s;
 }
 @media screen and (Max-width:800px){
 	ul > li ul.underline{
 		display:none;
+		transition: all 1s;
 	}
 }
 @media screen and (Max-width:800px){
 	ul > li:hover ul.underline{
 		display:block;
 		float:none;
+		letter-spacing: -0.88px;
 	}
 }
 .underline{
@@ -11606,4 +11610,8 @@ ul.ul-margin{
 	display:flex;
 	justify-content: flex-end;
 	text-decoration:none;
+}
+.smooth{
+	scroll-behavior:smooth;
+	transition:1s;
 }

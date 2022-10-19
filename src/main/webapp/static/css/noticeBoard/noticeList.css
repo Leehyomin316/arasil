@@ -301,8 +301,14 @@ blockquote {
         text-indent: 25px;
         border: 2px solid #d6d4d4;
 		margin-top:20px;
-		margin-bottom:10px;
+		margin-bottom:40px;
 
+       }
+       @media screen and (Min-width:800px){
+       		.search input{
+       			margin-top:20px;
+				margin-bottom:10px;
+       		}
        }
 
 
