@@ -87,7 +87,7 @@
 			</figure>
 			<figure class="fifthContent">
 				<div class="surround-img">
-					<img src="${pageContext.request.contextPath}/static/img/BoSeong05.jpg">
+					<img src="${pageContext.request.contextPath}/static/img/BoSeong05.JPG">
 				</div>
 				<div class="surround-text">
 					<h3>태백산맥 문화관</h3>
@@ -108,7 +108,7 @@
 			<h3>장흥 즐기기</h3>
 			<figure class="firstContent">
 				<div class="surround-img">
-					<img src="${pageContext.request.contextPath}/static/img/JangHeung01.jpg">
+					<img src="${pageContext.request.contextPath}/static/img/JangHeung01.JPG">
 				</div>
 				<div class="surround-text">
 					<h3>편백숲 우드랜드</h3>
@@ -139,7 +139,7 @@
 			</figure>
 			<figure class="thirdContent">
 				<div class="surround-img">
-					<img src="${pageContext.request.contextPath}/static/img/JangHeung03.jpg">
+					<img src="${pageContext.request.contextPath}/static/img/JangHeung03.JPG">
 				</div>
 				<div class="surround-text">
 					<h3>소등섬</h3>
@@ -156,7 +156,7 @@
 			</figure>
 			<figure class="fourthContent">
 				<div class="surround-img">
-					<img src="${pageContext.request.contextPath}/static/img/JangHeung04.jpg">
+					<img src="${pageContext.request.contextPath}/static/img/JangHeung04.JPG">
 				</div>
 				<div class="surround-text">
 					<h3>정남진 전망대</h3>
@@ -172,7 +172,7 @@
 			</figure>
 			<figure class="fifthContent">
 				<div class="surround-img">
-					<img src="${pageContext.request.contextPath}/static/img/JangHeung05.jpg">
+					<img src="${pageContext.request.contextPath}/static/img/JangHeung05.JPG">
 				</div>
 				<div class="surround-text">
 					<h3>정남진 토요시장</h3>
