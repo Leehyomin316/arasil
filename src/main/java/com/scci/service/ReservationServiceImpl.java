@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.scci.dao.ReservationDao;
+import com.scci.paging.Criteria;
+import com.scci.vo.ReservationVO;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {
@@ -35,5 +37,17 @@ public class ReservationServiceImpl implements ReservationService {
 	public int insertReservation(Map<String, String> param) {
 		// TODO Auto-generated method stub
 		return dao.insertReservation(param);
+	}
+
+	@Override
+	public List<ReservationVO> getReservations(Criteria cri) {
+		// TODO Auto-generated method stub
+		return dao.getReservations(cri);
+	}
+
+	@Override
+	public int getReservationTotal() {
+		// TODO Auto-generated method stub
+		return dao.getReservationTotal();
 	}
 }
