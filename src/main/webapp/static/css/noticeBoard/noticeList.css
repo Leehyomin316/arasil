@@ -78,27 +78,27 @@ blockquote {
     background-color: transparent !important;
 }
 
-.bg-dark *,
-.bg-danger *,
-.bg-warning *,
-.bg-info *,
-.bg-success *,
-.bg-secondary *,
-.bg-primary *,
-.bg-dark .batch-icon,
-.bg-danger .batch-icon,
-.bg-warning .batch-icon,
-.bg-info .batch-icon,
-.bg-success .batch-icon,
-.bg-secondary .batch-icon,
-.bg-primary .batch-icon {
-    color: #FFFFFF;
-}
+/* .bg-dark *, */
+/* .bg-danger *, */
+/* .bg-warning *, */
+/* .bg-info *, */
+/* .bg-success *, */
+/* .bg-secondary *, */
+/* .bg-primary *, */
+/* .bg-dark .batch-icon, */
+/* .bg-danger .batch-icon, */
+/* .bg-warning .batch-icon, */
+/* .bg-info .batch-icon, */
+/* .bg-success .batch-icon, */
+/* .bg-secondary .batch-icon, */
+/* .bg-primary .batch-icon { */
+/*     color: #FFFFFF; */
+/* } */
 
-.bg-gradient [class^="card-"],
-.bg-gradient [class^="card-"] * {
-    color: #FFFFFF !important;
-}
+/* .bg-gradient [class^="card-"], */
+/* .bg-gradient [class^="card-"] * { */
+/*     color: #FFFFFF !important; */
+/* } */
 
 
 /* Highlight Colors - Bottom Border */
@@ -151,14 +151,14 @@ blockquote {
     transition: opacity 0.2s ease-out;
 }
 
-.bg-gradient [class^="card-"],
-.bg-gradient [class^="card-"] p {
-    color: #FFFFFF !important;
-}
+/* .bg-gradient [class^="card-"], */
+/* .bg-gradient [class^="card-"] p { */
+/*     color: #FFFFFF !important; */
+/* } */
 
-.bg-gradient [class^="card-"] footer *{
-    color: #be2d2e !important;
-}
+/* .bg-gradient [class^="card-"] footer *{ */
+/*     color: #be2d2e !important; */
+/* } */
 
 .bg-secondary.bg-gradient {
     color: #FFFFFF !important;
@@ -300,7 +300,8 @@ blockquote {
         height: 60px;
         text-indent: 25px;
         border: 2px solid #d6d4d4;
-
+		margin-top:20px;
+		margin-bottom:10px;
 
        }
 
@@ -331,10 +332,19 @@ blockquote {
         background: blue;
 
        }
+/* 카드 색상 */
+.blockquote > footer{
+	background-color:rgba(255,255,128,0.9);
+}
+footer > a{
+	color:rgba(0,0,0,0.4);
+}
+div.col-md-4:nth-of-type(2n) > div.card > div.card-body{
+	background-color:rgba(181,219,146,1);
+	color:black !important;
+}
+div.col-md-4:nth-of-type(2n+1) > div.card > div.card-body{
+	background-color:rgba(214,230,245,1);
+	color:black !important;
+}
 
-div.login{
-	display:flex;
-	justify-content: flex-end;
-	margin-right:15px;
-}
-}
