@@ -160,15 +160,15 @@ $(function() {
 			},
 			success: function(data) {
 				const result = JSON.parse(data);
-				console.log(result);
 				
 				let baseDt = new Date($("#reserveDtForCalculate").val());
+				console.log("baseDt "  + baseDt);
 				var btDay = 1;
 				if ( result.nearestDt != null ) {
 					let endDt = new Date(result.nearestDt.start_dt);
 					
 					var btMs = endDt.getTime() - baseDt.getTime() ;
-					btDay = btMs / (1000*60*60*24) ;
+					btDay = btMs / (1000*60*60*24) - 1;
 				}else{
 					btDay = 7;
 				}
