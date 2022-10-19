@@ -7,7 +7,7 @@ public class Criteria {
 	public Criteria() {
 		// 최초 게시판에 진입할 때를 위해서 기본 값을 설정 해야 한다.
 		this.page = 1;
-		this.perPageNum = 5;
+		this.perPageNum = 10;
 	}
 
 	public int getPage() {
