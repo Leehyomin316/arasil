@@ -25,9 +25,9 @@
                 <ul class="navbar-nav ml-auto ul-top">
                     <li class="nav-item active"><a class="nav-link">소개</a>
                     	<ul class="underline">
-                    		<li class="sub-menu"><a class="nav-link" href="#!">공간소개</a></li>
-                    		<li class="sub-menu"><a class="nav-link" href="#!">주변소개</a></li>
-                   			<li class="sub-menu"><a class="nav-link" href="#!">찾아오시는길</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/intro/introPlace">공간소개</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/intro/introSurround">주변소개</a></li>
+                   			<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/intro/introLocation">찾아오시는길</a></li>
                     	</ul>
                     </li>
                 </ul>
