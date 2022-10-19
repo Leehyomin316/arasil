@@ -247,8 +247,8 @@ sup {
 }
 
 a {
-  color: #0d6efd;
-  text-decoration: underline;
+  color: rgba(0,0,0,0.2);
+
 }
 a:hover {
   color: #0a58ca;
@@ -11548,11 +11548,12 @@ li.cloak{
 }
 ul.ul-top{
 	margin-top:7px;
-	padding-top:80px;
+	
 }
-@media (Min-width:800px){
+@media screen and (Min-width:800px){
 	ul.ul-top{
 		margin-top:20px;
+		padding-top:80px;
 	}
 }
 
@@ -11597,6 +11598,14 @@ ul.ul-margin{
 	border-width:1px;
 	color:rgba(255, 255, 255, 0.3);
 }
-.link-icon { position: relative; display: inline-block; font-size: 14px; font-weight: 500; color: #333; margin-top:5px;}
-.link-icon.twitter { background-image: url(./images/icon-twitter.png); background-repeat: no-repeat; width:30px; height:30px;}
-.link-icon.facebook { background-image: url(./images/icon-facebook.png); background-repeat: no-repeat;  width:30px; height:30px;}
+
+.link-icon { position: relative; display: inline-block; font-size: 14px; font-weight: 500; color: #333; margin-top:5px; width:30px;}
+.link-icon.twitter { background-image: url(./images/icon-twitter.png); background-repeat: no-repeat;}
+.link-icon.facebook { background-image: url(./images/icon-facebook.png); background-repeat: no-repeat;} 
+
+.login{
+	display:flex;
+	justify-content: flex-end;
+	text-decoration:none;
+}
+

@@ -11,7 +11,7 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
-<script src="${pageContext.request.contextPath}/static/js/header.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/header.js"></script>		
 <script>
 	$(function() {
 		$("#btnSave").on("click", function() {
@@ -26,9 +26,11 @@
 	});
 </script>
 <style>
-body {
-	padding-top: 70px;
-	padding-bottom: 30px;
+@media screen and (Min-width:800px){
+	body {
+		padding-top: 70px;
+		padding-bottom: 30px;
+	}
 }
 </style>
 </head>

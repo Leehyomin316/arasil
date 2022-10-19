@@ -5,19 +5,25 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.scci.paging.Criteria;
+import com.scci.paging.PageMaker;
 import com.scci.service.ReservationService;
-import com.scci.vo.RoomInfoVO;
+import com.scci.vo.ReservationVO;
 
 @Controller
 @RequestMapping("/reservation")
 public class ReservationController {
+	private final Logger logger = LoggerFactory.getLogger(getClass());
 	@Autowired
 	private ReservationService service;
 	
@@ -66,5 +72,21 @@ public class ReservationController {
 	public String addReservation(@RequestParam Map<String, String> param, Model model) {
 		service.insertReservation(param);	
 		return "reservation/roomSchedule";
+	}
+	
+	// 관리자용 리스트 형태의 화면을 제공하기 위함
+	@RequestMapping(value="/listPage", method=RequestMethod.GET)
+	public String listPage(@ModelAttribute("cri") Criteria cri, Model model) throws Exception {
+		logger.info(cri.toString());
+		List<ReservationVO> list = service.getReservations(cri);
+		int total = service.getReservationTotal();
+		
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(total);
+		
+		model.addAttribute("list", list);
+		model.addAttribute("pageMaker", pageMaker);
+		return "reservation/listPage";
 	}
 }
