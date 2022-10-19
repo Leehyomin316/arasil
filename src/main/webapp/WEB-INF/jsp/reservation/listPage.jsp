@@ -52,6 +52,7 @@
 						<th>기간</th>
 						<th>예약자명</th>
 						<th>총인원</th>
+						<th>상태코드</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -64,6 +65,7 @@
 							<td>${reservationVO.days}</td>
 							<td>${reservationVO.guestNm}</td>
 							<td>${reservationVO.extraPerson}</td>
+							<td>${reservationVO.reservCode}</td>
 						</tr>
 					</c:forEach>
 				</tbody>

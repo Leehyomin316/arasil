@@ -63,7 +63,7 @@
 
 <select id="selectReservations" resultType="com.scci.vo.ReservationVO">
 <![CDATA[
-	select a.reserv_seq, a.room_id, b.room_nm, a.guest_nm, a.guest_cell_phone, a.reserv_dt, a.start_dt, a.end_dt, a.end_dt-a.start_dt days
+	select a.reserv_seq, a.room_id, b.room_nm, a.guest_nm, a.reserv_code, a.guest_cell_phone, a.reserv_dt, a.start_dt, a.end_dt, a.end_dt-a.start_dt days
 	  from reservation a inner join room_info b on a.room_id = b.room_id
 	 order by a.reserv_dt desc
 	limit #{pageStart}, #{perPageNum}
