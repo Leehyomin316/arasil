@@ -80,8 +80,8 @@
 				      </a>
 				    </li>
 			  	</c:if>
-			  	<c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" step="1" varStatus="status">
-				    <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/reservation/listPage?page=${status.count}&perPageNum=${pageMaker.cri.perPageNum}">${status.count}</a></li>
+			  	<c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" step="1" varStatus="status" var="i">
+				    <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/reservation/listPage?page=${i}&perPageNum=${pageMaker.cri.perPageNum}">${i}</a></li>
 			  	</c:forEach>
 			    <c:if test="${pageMaker.next == true && pageMaker.endPage > 0}">
 				    <li class="page-item">
