@@ -1,3 +1,6 @@
+*{
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
 .surroundTitle{
 	position: relative;
 	top: 50px;
@@ -24,13 +27,14 @@
 	width: 600px;
 	height: 400px;
 	left: 300 px;
-	margin: 20px;
+	margin: 20px 20px 20px 0px;
 }
-.surround-text{
+.surround-text {
 	padding: 50px 0px 0px 85px;
 	width: 500px;
+	height: 400px;
+	top: -425px;
 	left: 600px;
-	top: -400px;
 	position:relative;
 	
 }
@@ -58,4 +62,3 @@ figure .fourthContent{
 figure .fifthContent{
 	height:600px;
 }
-

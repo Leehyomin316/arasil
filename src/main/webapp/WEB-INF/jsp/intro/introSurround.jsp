@@ -15,15 +15,18 @@
 <link
 	href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css'
 	rel='stylesheet' type='text/css'>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+</style>
 </head>
 <body>
 	<%@ include file="../home/header.jsp"%>
 	<figure class="surroundContent">
 		<div class="surroundTitle">
-			<h2>주변소개</h2>
+			<h2><b>주변소개</b></h2>
 		</div>
 		<div class="first-surround">
-			<h3>보성 즐기기</h3>
+			<h3>보성 관광지</h3>
 			<figure class="firstContent">
 				<div class="surround-img">
 					<img src="${pageContext.request.contextPath}/static/img/BoSeong01.jpg">
@@ -105,7 +108,7 @@
 			</figure>
 		</div>
 		<div class="second-surround">
-			<h3>장흥 즐기기</h3>
+			<h3>장흥 관광지</h3>
 			<figure class="firstContent">
 				<div class="surround-img">
 					<img src="${pageContext.request.contextPath}/static/img/JangHeung01.JPG">
