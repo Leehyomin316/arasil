@@ -1,0 +1,64 @@
+*{
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+.surroundTitle{
+	position: relative;
+	top: 50px;
+	left: 300px;
+}
+
+.first-surround{
+	position: relative;
+	top: 100px;
+	left: 300px;
+}
+.second-surround{
+	position: relative;
+	top: 100px;
+	left: 300px;
+}
+.surround-img{
+	width: 100%;
+	float: left;
+}
+
+.surround-img img{
+	display: block;
+	width: 600px;
+	height: 400px;
+	left: 300 px;
+	margin: 20px 20px 20px 0px;
+}
+.surround-text {
+	padding: 50px 0px 0px 85px;
+	width: 500px;
+	height: 400px;
+	top: -425px;
+	left: 600px;
+	position:relative;
+	
+}
+span.line{
+	display: block;
+	width: 30px;
+	height: 1px;
+	background-color: #9c9c9c;
+	margin: 0px 0px 35px;
+	transition: 0.8s;
+    transition-delay: 0.6s;
+}
+figure .firstContent{
+	height:500px;
+}
+figure .secondContent{
+	height:500px;
+}
+figure .thirdContent{
+	height:500px;
+}
+figure .fourthContent{
+	height:500px;
+}
+figure .fifthContent{
+	height:600px;
+}

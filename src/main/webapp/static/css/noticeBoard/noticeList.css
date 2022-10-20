@@ -1,3 +1,4 @@
+@import '../common.css';
 .card:not([class*=card-outline-]) {
     border: 0;
 }

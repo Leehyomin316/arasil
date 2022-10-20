@@ -5688,6 +5688,13 @@ li.sub-menu > a.nav-link{
   padding: 1rem;
 }
 
+#allCheck{
+	width: 18px;
+	height: 18px;
+}
+.allCheckbox{
+	font-size:large;
+}
 .acceptCheckbox{
 	background-color:#F6F6F6;
 	margin: 10px 550px 10px 1px;
@@ -11602,6 +11609,7 @@ ul.ul-margin{
 	border-width:1px;
 	color:rgba(255, 255, 255, 0.3);
 }
+
 .link-icon { position: relative; display: inline-block; font-size: 14px; font-weight: 500; color: #333; margin-top:5px; width:30px;}
 .link-icon.twitter { background-image: url(./images/icon-twitter.png); background-repeat: no-repeat;}
 .link-icon.facebook { background-image: url(./images/icon-facebook.png); background-repeat: no-repeat;} 
@@ -11611,7 +11619,9 @@ ul.ul-margin{
 	justify-content: flex-end;
 	text-decoration:none;
 }
+
 .smooth{
 	scroll-behavior:smooth;
 	transition:1s;
 }
+
