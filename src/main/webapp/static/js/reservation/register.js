@@ -177,7 +177,8 @@ $(function() {
 				for (var i = 0; i < btDay; i++) {
 					$selectObj.append(`<option value='${i + 1}'>${i + 1}박</option>`);
 				}
-				$("#totalFee").val(tds[6].innerText);
+				const fee = parseInt(tds[6].innerText).toLocaleString('ko-KR');
+				$("#totalFee").val(fee);
 			}
 		});
 		console.log(target);
@@ -213,9 +214,9 @@ $(function() {
 			totalFee += additionalFee * (person - 10) * days;
 		}
 		if (days > 1) {
-			totalFee += useFee * (days - 1);
+			totalFee += useFee * (days - 1)-(50000*days);
 		}
-		totalFeeObj.value = totalFee;
+		totalFeeObj.value = totalFee.toLocaleString('ko-KR');
 	}
 
 	$('#all').click(function(){
