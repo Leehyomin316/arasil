@@ -5688,6 +5688,13 @@ li.sub-menu > a.nav-link{
   padding: 1rem;
 }
 
+#allCheck{
+	width: 18px;
+	height: 18px;
+}
+.allCheckbox{
+	font-size:large;
+}
 .acceptCheckbox{
 	background-color:#F6F6F6;
 	margin: 10px 550px 10px 1px;
