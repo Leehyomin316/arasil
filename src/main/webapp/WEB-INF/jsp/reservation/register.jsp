@@ -47,19 +47,28 @@
             <pre>   ■ 입실/퇴실 시간
    - 입실시간 : 오후 3시
    - 퇴실시간 : 오전 11시
-   
-   
-   ■ 인원 추가요금
-   - 기준인원 초과 시 추가요금 발생
-   - (유아,아동,성인) 1인 추가 1만원
-   - 최대인원 초과 시 입실(환불) 불가
-   - (영유아 포함) 최대 수용 인원 초과를 엄격히 금함
-   
-   
-   ■ 예약안내
-   - 예약 이용수칙을 반드시 확인바랍니다.
-   - 예약 전 취소수수료를 꼭 확인바랍니다.
 
+   
+■ 입실/퇴실 시간
+- 입실시간 : 오후 3시
+- 퇴실시간 : 오전 11시
+   
+   
+■ 인원 추가요금
+- 기준인원 초과 시 추가요금 발생
+- (유아,아동,성인) 1인 추가 1만원
+- 최대인원 초과 시 입실(환불) 불가
+- (영유아 포함) 최대 수용 인원 초과를 엄격히 금함
+
+   
+■ 할인안내
+- 2박 이상 이용시 1박당 5만원 할인 됩니다.
+
+   
+■ 예약안내
+- 예약 이용수칙을 반드시 확인바랍니다.
+- 예약 전 취소수수료를 꼭 확인바랍니다.
+   
 </pre>
 				</div>
 			</section>
@@ -177,7 +186,10 @@
 								<form id="reservationRegForm"
 									action='<c:url value="/reservation/addReservation"/>'
 									method="post">
-									<div><h5><b>객실 및 옵션 확인</b></h5>
+									<div>
+										<h5>
+											<b>객실 및 옵션 확인</b>
+										</h5>
 										<table class="table">
 											<thead>
 												<tr>
@@ -197,7 +209,7 @@
 													<td><input readonly class="form-control-plaintext"
 														id="inputStartDt" name="inputStartDt"></td>
 													<td><input readonly class="form-control-plaintext"
-														id="inputUseDay" name="inputUseDay"></select></td>
+														id="inputUseDay" name="inputUseDay"></td>
 													<td><input readonly class="form-control-plaintext"
 														id="inputUsePerson" name="inputUsePerson"></td>
 													<td><input readonly class="form-control-plaintext"
@@ -207,9 +219,21 @@
 										</table>
 									</div>
 									<div class="clauseAccpet">
-										<div class="mb-4"><h5><b>약관동의</b></h5></div> <div class="acceptCheckbox"><b><input
-											type="checkbox" name="item" value="취소 수수료 동의"> 취소 수수료에 동의
-										</b></div>
+										<div class="mb-4">
+											<h5>
+												<b>약관동의</b>
+											</h5>
+										</div>
+										<div class="allCheckbox">
+											<h5>
+												<b><input type="checkbox" id="all" name="all"
+													value="전체동의" required> 전체 동의 </b>
+											</h5>
+										</div>
+										<div class="acceptCheckbox">
+											<b><input type="checkbox" name="checkbox" value="취소 수수료 동의"
+												required> 취소 수수료에 동의 </b>
+										</div>
 										<div class="mb-5">
 											<div class="mb-6">
 												<br>
@@ -269,12 +293,15 @@
 												</tbody>
 											</table>
 										</div>
-										<div class="acceptCheckbox"><input type="checkbox" name="item" value="개인정보수집동의"><b> 개인정보 수집 및 이용에 동의</b></div>
+										<div class="acceptCheckbox">
+											<input type="checkbox" name="checkbox" value="개인정보수집동의" required><b>
+												개인정보 수집 및 이용에 동의</b>
+										</div>
 										<div class="mb-5">
 											<div class="mb-6">
 												<br>
-												<div>아라실펜션은(는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에	
-												관한 법률을 준수하고 있습니다.</div>
+												<div>아라실펜션은(는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에
+													관한 법률을 준수하고 있습니다.</div>
 												<br>
 												<div>
 													<b>개인정보의 수집항목 및 이용목적</b>
@@ -318,29 +345,35 @@
 												</table>
 											</div>
 										</div>
-										<div class="acceptCheckbox"><input type="checkbox" name="item" value="구매 조건 확인 및 결제 진행 동의"><b> 구매 조건 확인 및 결제 진행 동의</b></div>
-									</div>
-									<div class="subscribeInfo"><div class="sticky-subsInfo"><h5><b>예약자 정보</b></h5>
-										<div class="mb-3">
-											<label for="guestNm" class="form-label">예약자 성명</label> <input
-												type="text" class="form-control" id="inputGuestNm"
-												name="inputGuestNm" value="" placeholder="이름을 입력하세요.">
-										</div>
-										<div class="mb-3">
-											<label for="guestCellPhone" class="form-label">전화번호</label> <input
-												type="text" class="form-control" id="inputGuestCellPhone"
-												name="inputGuestCellPhone" value=""
-												placeholder="전화번호를 입력하세요.">
+										<div class="acceptCheckbox">
+											<input type="checkbox" name="checkbox" value="구매 조건 확인 및 결제 진행 동의" required><b>
+												구매 조건 확인 및 결제 진행 동의</b>
 										</div>
 									</div>
+									<div class="subscribeInfo">
+										<div class="sticky-subsInfo">
+											<h5>
+												<b>예약자 정보</b>
+											</h5>
+											<div class="mb-3">
+												<label for="guestNm" class="form-label">예약자 성명</label> <input
+													type="text" class="form-control" id="inputGuestNm"
+													name="inputGuestNm" value="" placeholder="이름을 입력하세요." required>
+											</div>
+											<div class="mb-3">
+												<label for="guestCellPhone" class="form-label">전화번호</label>
+												<input type="text" class="form-control"
+													id="inputGuestCellPhone" name="inputGuestCellPhone"
+													value="" placeholder="전화번호를 입력하세요." required>
+											</div>
+										</div>
 									</div>
-								</form>
 							</div>
 							<div class="modal-footer">
-								<a href="#" data-bs-dismiss="modal" class="btn btn-outline-dark"
-									id="reserveRunBtn">예약</a> <a href="#" data-bs-dismiss="modal"
-									class="btn btn-outline-dark">취소</a>
+								<button class="btn btn-outline-dark">예약</button>
+								<button class="btn btn-outline-dark">취소</button>
 							</div>
+							</form>
 						</div>
 					</div>
 				</div>
