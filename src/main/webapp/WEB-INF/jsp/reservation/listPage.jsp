@@ -41,6 +41,9 @@
 <body>
 	<%@ include file="../home/header.jsp"%>
 	<div class="main-content">
+		<header class="title">
+			<h1>예약 현황</h1>
+		</header>
 		<div>
 			<table class="table table-hover table-striped">
 				<thead>

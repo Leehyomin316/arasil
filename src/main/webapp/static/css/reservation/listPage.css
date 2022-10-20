@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import '../common.css';
 nav.pagination {
 	justify-content: center;
 }
@@ -13,3 +13,8 @@ ul.pagination {
 th{
 	white-space: nowrap
 }
+
+.title {
+	margin: 10px;
+}
+
