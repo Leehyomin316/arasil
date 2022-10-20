@@ -1,3 +1,4 @@
+@import '../common.css';
 * {
   box-sizing: border-box;
 }
@@ -188,7 +189,7 @@ section {
     text-align: left;
   }
 }
-/* ¸ð¹ÙÀÏ¿ë ½ºÅ©·Ñ¹Ù ¸¸µé±â */
+/* ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½Å©ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ */
 table.table { 
 	max-width: 100%;
 	width: 100%;
@@ -209,7 +210,7 @@ table.table {
 	white-space:pre-wrap;
 	
 }
-/* ¼ÒÀç¸ñ ²Ù¹Ì±â */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¹Ì±ï¿½ */
 p.h5{
 	margin-top: 0;
     margin-bottom: 1rem;

@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import '../common.css';
 nav.pagination {
 	justify-content: center;
 }
@@ -9,3 +9,12 @@ ul.pagination {
 	flex-direction: row;
 	margin-right: 10px;
 }
+
+th{
+	white-space: nowrap
+}
+
+.title {
+	margin: 10px;
+}
+
