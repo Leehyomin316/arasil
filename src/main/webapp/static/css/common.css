@@ -55,18 +55,18 @@ div.main-content > header {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 5px;
+  height: 8px;
   width: 55px;
-  background-color: #111;
+  background-color: #790e8b;
 }
 .title h1:after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 2px;
-  height: 1px;
+  height: 2px;
   width: 95%;
-  max-width: 255px;
+  max-width: 288px;
   background-color: #333;
 }
 
