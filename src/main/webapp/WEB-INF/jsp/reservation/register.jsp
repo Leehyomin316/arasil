@@ -17,31 +17,37 @@
 	rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<%@ include file="../home/header.jsp"%>
-	<div class="main-content">
-		<div class="container-fluid p-0">
-			<section class="select_date_container">
-				<div class="sec_cal">
-					<div class="cal_nav">
-						<a href="javascript:;" class="nav-btn go-prev">prev</a>
-						<div class="year-month"></div>
-						<a href="javascript:;" class="nav-btn go-next">next</a>
-					</div>
-					<div class="cal_wrap">
-						<div class="days">
-							<div class="day">SUN</div>
-							<div class="day">MON</div>
-							<div class="day">TUE</div>
-							<div class="day">WED</div>
-							<div class="day">THU</div>
-							<div class="day">FRI</div>
-							<div class="day">SAT</div>
-						</div>
-						<div class="dates"></div>
-					</div>
-				</div>
-				<div class="usage_rules">
-					<pre>   
+<%@ include file="../home/header.jsp"%>
+<div class="main-content">
+	<header class="title">
+		<h1>실시간 예약</h1>
+	</header>
+<div class="container-fluid p-0">
+    <section class="select_date_container">
+        <div class="sec_cal">
+            <div class="cal_nav">
+              <a href="javascript:;" class="nav-btn go-prev">prev</a>
+              <div class="year-month"></div>
+              <a href="javascript:;" class="nav-btn go-next">next</a>
+            </div>
+            <div class="cal_wrap">
+                <div class="days">
+                	<div class="day">SUN</div>
+                    <div class="day">MON</div>
+                    <div class="day">TUE</div>
+                    <div class="day">WED</div>
+                    <div class="day">THU</div>
+                    <div class="day">FRI</div>
+                    <div class="day">SAT</div>
+                </div>
+                <div class="dates"></div>
+            </div>
+        </div>
+        <div class="usage_rules">
+            <pre>   ■ 입실/퇴실 시간
+   - 입실시간 : 오후 3시
+   - 퇴실시간 : 오전 11시
+
    
 ■ 입실/퇴실 시간
 - 입실시간 : 오후 3시

@@ -42,6 +42,9 @@
 <body>
 	<%@ include file="../home/header.jsp"%>
 	<div class="main-content">
+		<header class="title">
+			<h1>공지사항</h1>
+		</header>
 		<article>
 			<div class="container">
 				<form action="noticePage" method="get">
