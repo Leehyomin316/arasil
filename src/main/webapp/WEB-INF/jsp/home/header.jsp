@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-basy fixed-top">
         <div class="container px-4 px-lg-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <a class="navbar-brand" href="${pageContext.request.contextPath}/"><img src="<c:url value='/static/img/icon02.png'/>" id="icon"/></a>
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/static/img/icon02.png" id="icon"/></a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto ul-top">
 			   		<sec:authorize access="isAnonymous()">
@@ -67,10 +67,9 @@
                     		<li class="sub-menu"><a class="nav-link" href="https://www.instagram.com/arasil_pension/">인스타그램</a></li>
                    			<li class="sub-menu">
                    			<a id="btnTwitter" class="link-icon twitter nav-link" href="javascript:shareTwitter();">
-                   			<img src="<c:url value='/static/img/icontwitter.png'/>" class="link-icon"/></a>
+                   			<img src="${pageContext.request.contextPath}/static/img/icontwitter.png" class="link-icon"/></a>
                    			<a id="btnFacebook" class="link-icon facebook nav-link" href="javascript:shareFacebook();">
-                   			<img src="<c:url value='/static/img/iconfacebook.png'/>"class="link-icon"/></a></li>
-                   			<li class="sub-menu"> </li>
+                   			<img src="${pageContext.request.contextPath}/static/img/iconfacebook.png"class="link-icon"/></a></li>
                     	</ul>
                     </li>
                 </ul>
