@@ -41,6 +41,8 @@
 						</details>
 					</tbody>
 			</div>
+		</article>
+	</div>
 			<%@ include file="../home/footer.jsp"%>
 </body>
 </html>
