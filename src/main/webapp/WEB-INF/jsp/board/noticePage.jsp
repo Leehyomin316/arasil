@@ -35,6 +35,14 @@
 		location.href= url;
 	}
 	</script>
+<script>
+	function fn_FAQView(noticeId){
+		var url = "${pageContext.request.contextPath}/board/noticeFAQ";
+		url = url + "?noticeId="+noticeId;
+		location.href= url;
+	}
+	</script>
+
 </head>
 <body>
 	<%@ include file="../home/header.jsp"%>
@@ -52,27 +60,27 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:choose>
-							<c:when test="${empty notice}">
-								<tr>
-									<td colspan="5" align="center">데이터가 없습니다</td>
-								</tr>
-							</c:when>
-							<c:when test="${!empty notice}">
-								<c:forEach var="row" items="${notice}">
-									<tr>
-										<td>${row.notice_id}</td>
-										<td><a href="#"
-											onClick="fn_contentView(<c:out value="${row.notice_id}"/>)">
-												<c:out value="${row.notice_title}" />
-										</a></td>
-										<td><fmt:formatDate value="${row.notice_date}"
-												pattern="yyyy-MM-dd HH:mm:ss" /></td>
-										<td>${row.user_id}</td>
-									</tr>
-								</c:forEach>
-							</c:when>
-						</c:choose>
+<%-- 						<c:choose> --%>
+<%-- 							<c:when test="${empty notice}"> --%>
+<!-- 								<tr> -->
+<!-- 									<td colspan="5" align="center">데이터가 없습니다</td> -->
+<!-- 								</tr> -->
+<%-- 							</c:when> --%>
+<%-- 							<c:when test="${!empty notice}"> --%>
+<%-- 								<c:forEach var="row" items="${notice}"> --%>
+<!-- 									<tr> -->
+<%-- 										<td>${row.notice_id}</td> --%>
+<!-- 										<td><a href="#" -->
+<%-- 											onClick="fn_contentView(<c:out value="${row.notice_id}"/>)"> --%>
+<%-- 												<c:out value="${row.notice_title}" /> --%>
+<!-- 										</a></td> -->
+<%-- 										<td><fmt:formatDate value="${row.notice_date}" --%>
+<%-- 												pattern="yyyy-MM-dd HH:mm:ss" /></td> --%>
+<%-- 										<td>${row.user_id}</td> --%>
+<!-- 									</tr> -->
+<%-- 								</c:forEach> --%>
+<%-- 							</c:when> --%>
+<%-- 						</c:choose> --%>
 					</tbody>
 				</table>
 			</div>

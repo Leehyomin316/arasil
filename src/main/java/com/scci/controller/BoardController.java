@@ -58,4 +58,8 @@ public class BoardController {
 		model.addAttribute("notice", boardService.getNoticeContent(noticeId));
 		return "board/noticeContent";
 	}
+	@RequestMapping(value="/noticeFAQ", method = RequestMethod.GET)
+	public String getNoticeFAQ() {
+		return "board/noticeFAQ";
+	}
 }

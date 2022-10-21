@@ -25,7 +25,7 @@
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
 						<li class="nav-item active">
-						<span><sec:authentication property="principal.username" />님 반갑니다.</span>
+						<span><sec:authentication property="principal.username" />님 반갑습니다.</span>
 						</li>
 						<li class="nav-item active">
 						<a class="login" href="${pageContext.request.contextPath}/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
@@ -56,8 +56,7 @@
                     <li class="nav-item active"><a class="nav-link">게시판</a>
                     	<ul class="underline">
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
-                    		<li class="sub-menu"><a class="nav-link" href="#!">자주묻는 질문</a></li>
-                   			<li class="sub-menu"><a class="nav-link" href="#!">이용수칙</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticeFAQ">자주묻는 질문</a></li>
                     	</ul>
                     </li>
                 </ul>
