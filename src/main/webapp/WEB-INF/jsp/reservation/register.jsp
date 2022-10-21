@@ -17,34 +17,34 @@
 	rel='stylesheet' type='text/css'>
 </head>
 <body>
-<%@ include file="../home/header.jsp"%>
-<div class="main-content">
-	<header class="title">
-		<h1>실시간 예약</h1>
-	</header>
-<div class="container-fluid p-0">
-    <section class="select_date_container">
-        <div class="sec_cal">
-            <div class="cal_nav">
-              <a href="javascript:;" class="nav-btn go-prev">prev</a>
-              <div class="year-month"></div>
-              <a href="javascript:;" class="nav-btn go-next">next</a>
-            </div>
-            <div class="cal_wrap">
-                <div class="days">
-                	<div class="day">SUN</div>
-                    <div class="day">MON</div>
-                    <div class="day">TUE</div>
-                    <div class="day">WED</div>
-                    <div class="day">THU</div>
-                    <div class="day">FRI</div>
-                    <div class="day">SAT</div>
-                </div>
-                <div class="dates"></div>
-            </div>
-        </div>
-        <div class="usage_rules">
-            <pre>                          
+	<%@ include file="../home/header.jsp"%>
+	<div class="main-content">
+		<header class="title">
+			<h1>실시간 예약</h1>
+		</header>
+		<div class="container-fluid p-0">
+			<section class="select_date_container">
+				<div class="sec_cal">
+					<div class="cal_nav">
+						<a href="javascript:;" class="nav-btn go-prev">prev</a>
+						<div class="year-month"></div>
+						<a href="javascript:;" class="nav-btn go-next">next</a>
+					</div>
+					<div class="cal_wrap">
+						<div class="days">
+							<div class="day">SUN</div>
+							<div class="day">MON</div>
+							<div class="day">TUE</div>
+							<div class="day">WED</div>
+							<div class="day">THU</div>
+							<div class="day">FRI</div>
+							<div class="day">SAT</div>
+						</div>
+						<div class="dates"></div>
+					</div>
+				</div>
+				<div class="usage_rules">
+					<pre>                          
 ■ 입실/퇴실 시간
 - 입실시간 : 오후 3시
 - 퇴실시간 : 오전 11시
@@ -58,7 +58,7 @@
 
    
 ■ 할인안내
-- 2박 이상 이용시 1박당 5만원 할인 됩니다.
+- 2박 이상 이용시 1박당 5만원 할인
 
    
 ■ 예약안내
@@ -227,8 +227,8 @@
 											</h5>
 										</div>
 										<div class="acceptCheckbox">
-											<b><input type="checkbox" name="checkbox" value="취소 수수료 동의"
-												required> 취소 수수료에 동의 </b>
+											<b><input type="checkbox" name="checkbox"
+												value="취소 수수료 동의" required> 취소 수수료에 동의 </b>
 										</div>
 										<div class="mb-5">
 											<div class="mb-6">
@@ -290,8 +290,8 @@
 											</table>
 										</div>
 										<div class="acceptCheckbox">
-											<input type="checkbox" name="checkbox" value="개인정보수집동의" required><b>
-												개인정보 수집 및 이용에 동의</b>
+											<input type="checkbox" name="checkbox" value="개인정보수집동의"
+												required><b> 개인정보 수집 및 이용에 동의</b>
 										</div>
 										<div class="mb-5">
 											<div class="mb-6">
@@ -342,8 +342,9 @@
 											</div>
 										</div>
 										<div class="acceptCheckbox">
-											<input type="checkbox" name="checkbox" value="구매 조건 확인 및 결제 진행 동의" required><b>
-												구매 조건 확인 및 결제 진행 동의</b>
+											<input type="checkbox" name="checkbox"
+												value="구매 조건 확인 및 결제 진행 동의" required><b> 구매 조건
+												확인 및 결제 진행 동의</b>
 										</div>
 									</div>
 									<div class="subscribeInfo">
@@ -354,7 +355,8 @@
 											<div class="mb-3">
 												<label for="guestNm" class="form-label">예약자 성명</label> <input
 													type="text" class="form-control" id="inputGuestNm"
-													name="inputGuestNm" value="" placeholder="이름을 입력하세요." required>
+													name="inputGuestNm" value="" placeholder="이름을 입력하세요."
+													required>
 											</div>
 											<div class="mb-3">
 												<label for="guestCellPhone" class="form-label">전화번호</label>
@@ -362,6 +364,26 @@
 													id="inputGuestCellPhone" name="inputGuestCellPhone"
 													value="" placeholder="전화번호를 입력하세요." required>
 											</div>
+										</div>
+									</div>
+									<div class="paymentInfo">
+										<div class="sticky-subsInfo">
+											<h5>
+												<b>결제 수단</b>
+											</h5>
+											<div class="mb-10">
+												<input type="radio" name="payment" value="무통장입금" checked>
+												무통장입금
+											</div>
+											<div class="mb-11">
+												<input type="text" class="form-control" id="accountInfo"
+													name="accountInfo" value="농협 627-02-207095 (채영숙)" readonly>
+											</div>
+											<div class="mb-12">
+												<input type="text" class="form-control" id="payerNm"
+													name="payerNm" value="" placeholder="입금자명(미입력시 예약자명)">
+											</div>
+											<div><p> 주문후 1시간 이내 미입금시 자동 취소됩니다.</p></div>
 										</div>
 									</div>
 							</div>

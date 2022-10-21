@@ -5743,6 +5743,24 @@ li.sub-menu > a.nav-link{
 	top:160px;
 	right:20px;
 }
+.paymentInfo{
+	position:absolute;
+	width:500px;
+	top:400px;
+	right:20px;
+}
+.mb-10{
+	margin: 0px;
+}
+.mb-11{
+	margin: 10px 0px 10px 0px;
+}
+.mb-11 #accountInfo{
+	background-color: white;
+}
+.mb-12{
+	margin: 0px 0px 10px 0px;
+}
 .sTb th{
 	background-color:#EEEEEE;
 	border:0.5px solid #F6F6F6;
