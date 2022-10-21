@@ -95,7 +95,7 @@ VALUES
 INSERT INTO `arasil`.`users`
 (`user_id`,
 `EMAIL`,
-`PASSWARD`,
+`PWD`,
 `ENABLED`)
 VALUES
 ('admin', 'admin@google.com', 'admin', true);

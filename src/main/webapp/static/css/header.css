@@ -5688,6 +5688,13 @@ li.sub-menu > a.nav-link{
   padding: 1rem;
 }
 
+#allCheck{
+	width: 18px;
+	height: 18px;
+}
+.allCheckbox{
+	font-size:large;
+}
 .acceptCheckbox{
 	background-color:#F6F6F6;
 	margin: 10px 550px 10px 1px;
@@ -11581,16 +11588,20 @@ ul.ul-margin{
 }
 .sub-menu{
 	list-style:none;
+	scroll-behavior:smooth;
+	transition:1s;
 }
 @media screen and (Max-width:800px){
 	ul > li ul.underline{
 		display:none;
+		transition: all 1s;
 	}
 }
 @media screen and (Max-width:800px){
 	ul > li:hover ul.underline{
 		display:block;
 		float:none;
+		letter-spacing: -0.88px;
 	}
 }
 .underline{
@@ -11607,5 +11618,10 @@ ul.ul-margin{
 	display:flex;
 	justify-content: flex-end;
 	text-decoration:none;
+}
+
+.smooth{
+	scroll-behavior:smooth;
+	transition:1s;
 }
 

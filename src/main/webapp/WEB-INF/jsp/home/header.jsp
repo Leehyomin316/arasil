@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-basy fixed-top">
         <div class="container px-4 px-lg-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <a class="navbar-brand" href="${pageContext.request.contextPath}/"><img src="<c:url value='/static/img/icon02.png'/>" id="icon"/></a>
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/static/img/icon02.png" id="icon"/></a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto ul-top">
 			   		<sec:authorize access="isAnonymous()">
@@ -44,7 +44,7 @@
                 </ul>
                 <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link">예약</a>
-                    	<ul class="underline">
+                    	<ul class="underline smooth">
                     		<li class="sub-menu"><a class="nav-link" href="#!">예약안내</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/roomSchedule">예약현황</a></li>
@@ -54,23 +54,23 @@
                 </ul>
                 <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link">게시판</a>
-                    	<ul class="underline">
+                    	<ul class="underline smooth">
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticeFAQ">자주묻는 질문</a></li>
+
                     	</ul>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link">기타</a>
-                    	<ul class="underline">
+                    	<ul class="underline smooth">
                     		<li class="sub-menu"><a class="nav-link" href="https://blog.naver.com/wlsfhrytk">네이버 블로그</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="https://www.instagram.com/arasil_pension/">인스타그램</a></li>
                    			<li class="sub-menu">
                    			<a id="btnTwitter" class="link-icon twitter nav-link" href="javascript:shareTwitter();">
-                   			<img src="<c:url value='/static/img/icontwitter.png'/>" class="link-icon"/></a>
+                   			<img src="${pageContext.request.contextPath}/static/img/icontwitter.png" class="link-icon"/></a>
                    			<a id="btnFacebook" class="link-icon facebook nav-link" href="javascript:shareFacebook();">
-                   			<img src="<c:url value='/static/img/iconfacebook.png'/>"class="link-icon"/></a></li>
-                   			<li class="sub-menu"> </li>
+                   			<img src="${pageContext.request.contextPath}/static/img/iconfacebook.png"class="link-icon"/></a></li>
                     	</ul>
                     </li>
                 </ul>
