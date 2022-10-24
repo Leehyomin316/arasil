@@ -10,6 +10,7 @@
 <script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>
 <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 <script src="https://kit.fontawesome.com/5c8c9f57c5.js" crossorigin="anonymous"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-basy fixed-top">
@@ -70,7 +71,9 @@
                    			<a id="btnTwitter" class="link-icon twitter nav-link" href="javascript:shareTwitter();">
                    			<img src="${pageContext.request.contextPath}/static/img/icontwitter.png" class="link-icon"/></a>
                    			<a id="btnFacebook" class="link-icon facebook nav-link" href="javascript:shareFacebook();">
-                   			<img src="${pageContext.request.contextPath}/static/img/iconfacebook.png"class="link-icon"/></a></li>
+                   			<img src="${pageContext.request.contextPath}/static/img/iconfacebook.png"class="link-icon"/></a>
+                   			<a id="btnKakao" class="link-icon kakao nav-link" href="javascript:shareKakao();">
+                   			<img src="${pageContext.request.contextPath}/static/img/iconkakao.png"class="link-icon"/></a></li>
                     	</ul>
                     </li>
                 </ul>
