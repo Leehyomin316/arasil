@@ -1,0 +1,15 @@
+* {
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.main_content{
+	position: relative;
+	top: 50px;
+	left: 300px;
+	float: left;
+}
+.guide2 .rules{
+	display: block;
+	width: 550px;
+	
+}
