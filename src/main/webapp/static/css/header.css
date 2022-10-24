@@ -275,6 +275,7 @@ pre {
   margin-bottom: 1rem;
   overflow: auto;
   font-size: 0.875em;
+  margin-left: 1rem;
 }
 pre code {
   font-size: inherit;
@@ -314,17 +315,17 @@ svg {
   vertical-align: middle;
     
 }
-img#icon{
-	position: absolute;
-    top: 10px;
-    left: 10px;
-	width:54px;
+@media (Max-width:800px){
+	img#icon{
+		position: absolute;
+	    top: 10px;
+	    left: 10px;
+		width:54px;
+	}
 }
 @media (Min-width:800px){
 	img#icon{
-	position: absolute;
-    top: 15px;
-    left: 15px;
+	position: relative;
 	width:80px;
 }
 }
@@ -4107,7 +4108,7 @@ li.sub-menu > a.nav-link{
 	    overflow: auto;
 	    overflow-x: hidden;
 	    align-content: flex-start;
-	    justify-content: flex-end;;
+	    justify-content: center;
 
 	}
 }
@@ -4131,7 +4132,6 @@ li.sub-menu > a.nav-link{
 .navbar-brand {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
@@ -4139,7 +4139,7 @@ li.sub-menu > a.nav-link{
 }
 @media screen and (Min-width:800px){
 	.navbar-brand{
-		margin-left:0.7rem;
+	
 	}
 }
 
@@ -4297,7 +4297,7 @@ li.sub-menu > a.nav-link{
     display: flex !important;
     flex-basis: auto;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
   }
   .navbar-expand-lg .navbar-toggler {
     display: none;
@@ -11578,7 +11578,6 @@ ul.ul-top{
 @media screen and (Min-width:800px){
 	ul.ul-top{
 		margin-top:20px;
-		padding-top:80px;
 	}
 }
 

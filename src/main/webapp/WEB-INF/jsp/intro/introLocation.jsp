@@ -11,21 +11,35 @@
 <link
 	href="${pageContext.request.contextPath}/static/css/intro/introLocation.css"
 	rel="stylesheet"></link>
+<link
+	href="${pageContext.request.contextPath}/static/css/common.css"
+	rel="stylesheet"></link>	
 </head>
 <body>
 	<%@ include file="/WEB-INF/jsp/home/header.jsp"%>
 	<div class="main-content">
-		<div>
-			<img src="${pageContext.request.contextPath}/static/img/introLocation.jpg" class="introbackground">
-		</div>
-		<div id="map" style="width: 80%; height: 450px;"></div>
-		<div class="bus">
-			<div><img src="${pageContext.request.contextPath}/static/img/bus.png"
-				class="bus" /></div>
-			<div><p>장흥시외버스터미널 : 장흥터미널-전일, 장흥터미널-수락, 장흥터미널-용곡</p></div>
+		<header class="title">
+			<h1>찾아오시는길</h1>
+		</header>
+<!-- 		<DIV> -->
+<!-- 			<IMG -->
+<%-- 				SRC="${PAGECONTEXT.REQUEST.CONTEXTPATH}/STATIC/IMG/INTROLOCATION.JPG" --%>
+<!-- 				CLASS="INTROBACKGROUND"> -->
+<!-- 		</DIV> -->
+		<div class="sort">
+			<div id="map" style="width: 80%; height: 450px;"></div>
+			<div class="bus">
+				<div>
+					<img src="${pageContext.request.contextPath}/static/img/bus.png"
+						class="bus" />
+				</div>
+				<div>
+					<p>장흥시외버스터미널 : 장흥터미널-전일, 장흥터미널-수락, 장흥터미널-용곡</p>
+				</div>
+			</div>
 		</div>
 	</div>
-
+	34.6373501, 127.0334672
 	<%@ include file="/WEB-INF/jsp/home/footer.jsp"%>
 	<script type="text/javascript"
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2763b9b327520dc81e3d716c3730366c"></script>
@@ -37,7 +51,7 @@
 		// 지도의 확대 레벨
 		};
 
-		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		var map = new kakao.maps.Map(mapContainer, mapOption);
 
 		// 마커가 표시될 위치입니다 
 		var markerPosition = new kakao.maps.LatLng(34.6373501, 127.0334672);
@@ -50,8 +64,17 @@
 		// 마커가 지도 위에 표시되도록 설정합니다
 		marker.setMap(map);
 
-		// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-		// marker.setMap(null);
+		var iwContent = '<div style="padding:5px;">수문한옥마을/아라실  <br><a href="https://map.kakao.com/link/map/아라실 팬션,34.6373501, 127.0334672" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/아라실 팬션,34.6373501, 127.0334672" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		iwPosition = new kakao.maps.LatLng(33.450701, 126.570667); //인포윈도우 표시 위치입니다
+
+		// 인포윈도우를 생성합니다
+		var infowindow = new kakao.maps.InfoWindow({
+			position : iwPosition,
+			content : iwContent
+		});
+
+		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+		infowindow.open(map, marker);
 	</script>
 </body>
 </html>
