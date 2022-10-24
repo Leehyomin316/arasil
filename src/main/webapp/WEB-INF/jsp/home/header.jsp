@@ -45,7 +45,7 @@
                 <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link">예약</a>
                     	<ul class="underline smooth">
-                    		<li class="sub-menu"><a class="nav-link" href="#!">예약안내</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/reservationGuide">예약안내</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/roomSchedule">예약현황</a></li>
                    			<li class="sub-menu"><a class="nav-link" href="#!">예약조회/취소</a></li>

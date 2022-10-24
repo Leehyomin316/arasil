@@ -74,6 +74,11 @@ public class ReservationController {
 		return "reservation/roomSchedule";
 	}
 	
+	@RequestMapping(value="/reservationGuide", method=RequestMethod.GET)
+	public String reservationGuide() {
+		return "reservation/reservationGuide";
+	}
+	
 	// 관리자용 리스트 형태의 화면을 제공하기 위함
 	@RequestMapping(value="/listPage", method=RequestMethod.GET)
 	public String listPage(@ModelAttribute("cri") Criteria cri, Model model) throws Exception {
