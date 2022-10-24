@@ -69,7 +69,7 @@
 				</div>
 			</section>
 			<section class="select_room_container">
-				<p class="h5">객실 선택</p>
+				<p class="h5" id="roomSelect">객실 선택</p>
 				<div class="select_room_table">
 					<table class="table">
 						<thead>

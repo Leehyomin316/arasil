@@ -143,7 +143,7 @@ $(function() {
 			return;
 		}
 		const tds = e.target.parentElement.parentElement.children;
-		console.log(target);
+
 		$("#roomId").val(tds[8].innerText);
 		$("#roomNm").val(tds[1].innerText);
 		$("#useFee").val(tds[6].innerText);
@@ -181,11 +181,27 @@ $(function() {
 				$("#totalFee").val(fee);
 			}
 		});
-		console.log(target);
 	});
 
 	// script를 통해서 modal 창을 여는 방법
+	var radioButtons = document.getElementsByName('roomType');
+	var roomSelectTitle = document.getElementById("roomSelect");
 	$("#modalBtn").on("click", function() {
+		roomSelectTitle.classList.remove("blink");
+		let isChecked = false;
+		for(let i=0; i<radioButtons.length; i++){
+			let ele = radioButtons[i];
+			if ( ele.checked ) {
+				isChecked = true;
+				break;
+			}
+		}
+		if ( !isChecked ) {
+			alert("예약할 객실을 선택 하세요.");
+			roomSelectTitle.classList.add("blink");
+			return;
+		}
+			
 		$("#inputRoomId").val($("#roomId").val());
 		$("#inputRoomNm").val($("#roomNm").val());
 		$("#inputStartDt").val($("#reserveDt").val());
