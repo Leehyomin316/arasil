@@ -8,7 +8,7 @@ div.main-content{
     flex-direction: column;
 }
 div#map{
-	margin-top:100px;
+	margin-top:40px;
 }
 img.bus{
 	width:150px;
@@ -24,3 +24,7 @@ div.sort{
 	align-items:center;
     flex-direction: column;
 }
+div.address{
+	text-align:center;
+}
+

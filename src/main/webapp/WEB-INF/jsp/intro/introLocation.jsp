@@ -21,11 +21,9 @@
 		<header class="title">
 			<h1>찾아오시는길</h1>
 		</header>
-<!-- 		<DIV> -->
-<!-- 			<IMG -->
-<%-- 				SRC="${PAGECONTEXT.REQUEST.CONTEXTPATH}/STATIC/IMG/INTROLOCATION.JPG" --%>
-<!-- 				CLASS="INTROBACKGROUND"> -->
-<!-- 		</DIV> -->
+		<div class="address">
+			주소 : 전라남도 장흥군 안양면 수문전원길 29, 전라남도 장흥군 안양면 수문리 454
+		</div>
 		<div class="sort">
 			<div id="map" style="width: 80%; height: 450px;"></div>
 			<div class="bus">
