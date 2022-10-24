@@ -1,15 +1,49 @@
-* {
-	font-family: 'IBM Plex Sans KR', sans-serif;
-}
+@import '../common.css';
 
-.main_content{
-	position: relative;
-	top: 50px;
-	left: 300px;
-	float: left;
+main {
+	margin: 20px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	display: flex;
+	flex-direction: row;
 }
-.guide2 .rules{
-	display: block;
-	width: 550px;
-	
+button.goReservation{
+	margin: 20px 200px 40px 220px;
+	width: 124px;
+	height: 40px;
+	background-color: #a3a1a1;
+    color: #e3dede;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: 0.25s;
+    border: none;
+    display: inline-block;
+    font-weight: 600;
+}
+button.goReservation:active {
+    transform: scale(1.5);
+}
+button.goReservation:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.columnType{
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	width:80%;
+}
+.rowType{
+	max-width: 600px;
+	width:80%;
+}
+.reserveGuide{
+	margin-left: 30px;
+}
+.refund{
+	margin-left: 30px;
+}
+.rules{
+	margin: 0px 0px 30px 50px;
 }
