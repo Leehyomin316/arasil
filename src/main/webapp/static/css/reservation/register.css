@@ -222,3 +222,13 @@ p.h5{
     color: #000000;
     background: #F8E8FF;
 }
+
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink-effect 1s step-end 5;
+}
