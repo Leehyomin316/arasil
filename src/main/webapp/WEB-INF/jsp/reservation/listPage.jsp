@@ -54,6 +54,7 @@
 						<th>종료일</th>
 						<th>기간</th>
 						<th>예약자명</th>
+						<th>전화번호</th>
 						<th>총인원</th>
 						<th>이용요금</th>
 						<th>상태코드</th>
@@ -68,6 +69,7 @@
 							<td>${reservationVO.endDt}</td>
 							<td>${reservationVO.days}</td>
 							<td>${reservationVO.guestNm}</td>
+							<td>${reservationVO.guestCellPhone}</td>
 							<td>${reservationVO.extraPerson}</td>
 							<td>${reservationVO.totalFee}</td>
 							<td>${reservationVO.reservCode}</td>
