@@ -11,24 +11,24 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
+<link
+href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
+rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>		
 <script>
 	$(function() {
 		$("#btnSave").on("click", function() {
 			$("#form").submit();
 		});
-		$("#btnList")
-				.on(
-						"click",
-						function() {
-							location.href = "${pageContext.request.contextPath}/board/noticePage";
-						});
+		$("#btnList").on("click", function() {
+			location.href = "${pageContext.request.contextPath}/board/noticePage";
+		});
 	});
 </script>
 <style>
 @media screen and (Min-width:800px){
 	body {
-		padding-top: 70px;
+		padding-top: 10px;
 		padding-bottom: 30px;
 	}
 }
@@ -39,7 +39,9 @@
 	<div class="main-content">
 		<article>
 			<div class="container" role="main">
-				<h2>공지사항 글쓰기</h2>
+			<header class="title">
+				<h1>공지사항 글쓰기</h1>
+			</header>
 				<form name="form" id="form" role="form" method="post"
 					action="${pageContext.request.contextPath}/board/saveBoard">
 					<div class="mb-3">
