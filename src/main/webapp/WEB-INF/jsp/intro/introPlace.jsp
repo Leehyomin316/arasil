@@ -46,8 +46,10 @@
 				<span class="line"></span>
 				<h4>편의시설</h4>
 				<p>정자, 툇마루, 야외바베큐시설, 수돗가</p>
+				<div class="button-center">
 				<button type="button" class="goReservation"
 					onClick="location.href='${pageContext.request.contextPath}/reservation/register'">실시간예약</button>
+				</div>	
 			</section>
 			<section class="placeRight">
 				<div class="right-img">
