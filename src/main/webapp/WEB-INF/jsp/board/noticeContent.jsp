@@ -15,9 +15,6 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
-<link
-	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeList.css"
-	rel="stylesheet"></link>
 <link rel="icon" type="image/x-icon"
 	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
@@ -29,52 +26,40 @@
 		
 		const updateBtn = document.querySelector("#btnUpdate");
 		const formObj = document.querySelector("#form");
-		const deleteBtn = document.querySelectory("#btnDelete");
 		updateBtn.addEventListener("click", function(){
 			formObj.submit();
-		});
-		deleteBtn.addEventListener("click", function(){
-			
 		});
 	});
 </script>
 </head>
 
-
 <body>
-	<%@ include file="../home/header.jsp"%>
-	<div class="main-content">
-		<article>
+	<article>
 		<div class="container" role="main">
-			<header class="title">
-			<h1>공지사항 상세보기</h1>
-			</header>
-				<form name="form" id="form" role="form" method="post"
-					action="${pageContext.request.contextPath}/board/updateNotice">
-					<div class="mb-3">
-						<label for="noticetitle">제목</label> <input type="text"
-							class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"
-							placeholder="제목을 입력해 주세요">
-					</div>
-					<div class="mb-3">
-						<label for="noticeContent">내용</label>
-						<textarea class="form-control" rows="5" name="noticeContent"  id="noticeContent"
-							placeholder="내용을 입력해 주세요">${notice.noticeContent}</textarea>
-					</div>
-					<input type="hidden" value="admin" name="userId"/>
-					<input type="hidden" name="noticeId" value="${notice.noticeId}"/>				
-				</form>
-<!-- 			관리자 추가 메뉴 -->
-				<div>
-					<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
-						<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
-						<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
-					</sec:authorize>			
-					<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
+			<h2>공지사항 상세보기</h2>
+			<form name="form" id="form" role="form" method="post"
+				action="${pageContext.request.contextPath}/board/updateNotice">
+				<div class="mb-3">
+					<label for="noticetitle">제목</label> <input type="text"
+						class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"
+						placeholder="제목을 입력해 주세요">
 				</div>
+				<div class="mb-3">
+					<label for="noticeContent">내용</label>
+					<textarea class="form-control" rows="5" name="noticeContent"  id="noticeContent"
+						placeholder="내용을 입력해 주세요">${notice.noticeContent}</textarea>
+				</div>
+				<input type="hidden" value="admin" name="userId"/>
+				<input type="hidden" name="noticeId" value="${notice.noticeId}"/>				
+			</form>
+			<div>
+				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+					<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
+					<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
+				</sec:authorize>			
+				<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 			</div>
-		</article>
-	</div>
-		<%@ include file="../home/footer.jsp"%>
+		</div>
+	</article>
 </body>
 </html>
