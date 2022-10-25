@@ -11,13 +11,15 @@ main {
 	figure .surround-content {
 		display: flex;
 		flex-direction: column;
-		height: 700px;
 		margin-bottom: 50px; 
+		align-items: center;
 	}
 }
 
 .surround-img {
-	width: 100%;
+	display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .surround-img img {
@@ -25,7 +27,7 @@ main {
 	max-width: 600px;
 	width: 80%;
 	max-height: 400px;
-	margin: 20px 20px 20px 0px;
+	margin: 20px;
 }
 
 .hTitle {
@@ -34,9 +36,7 @@ main {
 
 .surround-text {
 	margin-top: 20px;
-	max-width: 600px;
-	width:80%;
-	max-height: 400px;
+	max-width: 500px;
 }
 
 span.line {
@@ -61,18 +61,16 @@ div.second-surround {
 	align-items: center;
 }
 
-@media ( min-width :800px) {
+@media (min-width:800px) {
 	figure .surround-content {
 		display: flex;
 		flex-direction: row;
-		height: 500px;
+		height: 350px;
 	}
 }
-@media (max-width : 350px){
+@media (max-width:350px){
 	figure .surround-content {
 		display: flex;
-		flex-direction: row;
-		height: 500px;
-		width: 380px;
+		flex-direction: column;
 	}
 }

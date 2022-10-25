@@ -3980,7 +3980,7 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   text-align:left;
   font-weight:900;
-  font-size:0.75rem;
+  font-size:0.4em;
 }
 @media screen and (Min-width:800px){
 	.nav-link{
@@ -4169,6 +4169,7 @@ li.sub-menu > a.nav-link{
     flex-grow: 1;
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
 }
 
 .navbar-toggler {
@@ -11510,6 +11511,7 @@ html {
 }
 body {
 	min-height: 100%;
+	overflow-x:hidden;
 }
 img.back-ground{
 	min-height: 100%;
@@ -11608,13 +11610,14 @@ ul.ul-margin{
 	scroll-behavior:smooth;
 	transition:1s;
 }
-/* @media screen and (Max-width:800px){ */
+/* 마우스를 대야 나오는 매뉴 */
+/* @media screen and (Max-width:376px){ */
 /* 	ul > li ul.underline{ */
 /* 		display:none; */
 /* 		transition: all 1s; */
 /* 	} */
 /* } */
-/* @media screen and (Max-width:800px){ */
+/* @media screen and (Max-width:376px){ */
 /* 	ul > li:hover ul.underline{ */
 /* 		display:block; */
 /* 		float:none; */
@@ -11644,8 +11647,4 @@ ul.ul-margin{
 	text-decoration:none;
 }
 
-.smooth{
-	scroll-behavior:smooth;
-	transition:1s;
-}
 
