@@ -1,6 +1,6 @@
 package com.scci.vo;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class ReservationVO {
 	private long roomId;
@@ -9,10 +9,11 @@ public class ReservationVO {
 	private String guestCellPhone;
 	private String startDt;
 	private String endDt;
-	private Date reserveDt;
+	private Timestamp reserveDt;
 	private String reservCode;
 	private int extraPerson;
 	private int days;
+	private int totalFee;
 	private long reservSeq;
 	
 	public long getReservSeq() {
@@ -63,10 +64,10 @@ public class ReservationVO {
 	public void setEndDt(String endDt) {
 		this.endDt = endDt;
 	}
-	public Date getReserveDt() {
+	public Timestamp getReserveDt() {
 		return reserveDt;
 	}
-	public void setReserveDt(Date reserveDt) {
+	public void setReserveDt(Timestamp reserveDt) {
 		this.reserveDt = reserveDt;
 	}
 	public String getReservCode() {
@@ -80,6 +81,12 @@ public class ReservationVO {
 	}
 	public void setExtraPerson(int extraPerson) {
 		this.extraPerson = extraPerson;
+	}
+	public int getTotalFee() {
+		return totalFee;
+	}
+	public void setTotalFee(int totalFee) {
+		this.totalFee = totalFee;
 	}
 	
 }

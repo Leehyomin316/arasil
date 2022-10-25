@@ -115,3 +115,5 @@ VALUES
 'ROLE_ADMIN');
 
 COMMIT;
+
+alter TABLE `reservation` add `TOTAL_FEE` int NULL after `EXTRA_PERSON`;
