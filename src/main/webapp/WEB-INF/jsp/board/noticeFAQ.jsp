@@ -27,7 +27,6 @@
 			</header>
 			<div class="FAQ_div">
 					<tbody>
-					<input type=checkbox id="check01" />
 						<details id = showFAQ>
 							<summary>펜션을 최대 몇명까지 이용할 수 있나요?</summary>
 							<p>&nbsp;&nbsp;&nbsp;- 최대 20명까지 이용 가능합니다</p>
@@ -42,14 +41,8 @@
 						</details>
 					</tbody>
 			</div>
-			<div>
-				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
-					<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
-					<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
-				</sec:authorize>			
-			</div>
 		</article>
 	</div>
-	<%@ include file="../home/footer.jsp"%>
+			<%@ include file="../home/footer.jsp"%>
 </body>
 </html>
