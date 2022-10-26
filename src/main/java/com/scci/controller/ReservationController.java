@@ -80,7 +80,7 @@ public class ReservationController {
 	}
 	
 	// 관리자용 리스트 형태의 화면을 제공하기 위함
-	@RequestMapping(value="/listPage", method=RequestMethod.GET)
+	@RequestMapping("/listPage")
 	public String listPage(@ModelAttribute("cri") Criteria cri, Model model) throws Exception {
 		logger.info(cri.toString());
 		List<ReservationVO> list = service.getReservations(cri);
@@ -93,5 +93,10 @@ public class ReservationController {
 		model.addAttribute("list", list);
 		model.addAttribute("pageMaker", pageMaker);
 		return "reservation/listPage";
+	}
+	@RequestMapping(value="/updateStatus", method=RequestMethod.POST)
+	public String updateStatus(@RequestParam List<String> ids, @RequestParam List<String> codes, Model model) {
+		service.updateStatus(ids, codes);
+		return "forward:listPage";
 	}
 }

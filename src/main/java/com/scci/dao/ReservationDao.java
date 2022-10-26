@@ -15,4 +15,6 @@ public interface ReservationDao {
 	
 	public List<ReservationVO> getReservations(Criteria cri);
 	public int getReservationTotal();
+	
+	public int updateStatus(ReservationVO vo);
 }

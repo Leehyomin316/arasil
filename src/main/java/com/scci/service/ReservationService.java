@@ -15,4 +15,6 @@ public interface ReservationService {
 	
 	public List<ReservationVO> getReservations(Criteria cri);
 	public int getReservationTotal();
+	
+	public int updateStatus(List<String> ids, List<String> codes);
 }
