@@ -23,6 +23,10 @@ public class BoardDAOImpl implements BoardDAO {
 	public int getNoticeInsert(NoticeVO noticeVO) {
 		return sqlSession.insert("mapper.notice.selectInsert", noticeVO);
 	}
+	@Override
+	public int getFAQInsert(NoticeVO noticeVO) {
+		return sqlSession.insert("mapper.notice.insertFAQ", noticeVO);
+	}
 	
 	@Override
 	public NoticeVO getNoticeContent(int noticeId) {
@@ -35,6 +39,10 @@ public class BoardDAOImpl implements BoardDAO {
 	@Override
 	public int updateNotice(NoticeVO noticeVO) {
 		return sqlSession.update("mapper.notice.updateNotice", noticeVO);
+	}
+	@Override
+	public int updateFAQ(NoticeVO noticeVO) {
+		return sqlSession.update("mapper.notice.updateFAQ", noticeVO);
 	}
 
 }

@@ -9,10 +9,14 @@ public interface BoardService {
 	public List<NoticeVO> getNotice(NoticeVO noticeVO);
 	
 	public void getNoticeInsert(NoticeVO noticeVO);
+
+	public void getFAQInsert(NoticeVO noticeVO);
 	
 	public NoticeVO getNoticeContent(int noticeId);
 	
 	public int updateNotice(NoticeVO noticeVO);
 	
 	public NoticeVO getNoticeFAQ(int noticeId);
+
+	public int updateFAQ(NoticeVO noticeVO);
 }

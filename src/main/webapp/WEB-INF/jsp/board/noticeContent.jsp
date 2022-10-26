@@ -17,6 +17,9 @@
 	rel="stylesheet"></link>
 <link rel="icon" type="image/x-icon"
 	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
+<link
+	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
+	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
 <script>
 	$(function() {
@@ -34,9 +37,13 @@
 </head>
 
 <body>
+	<%@ include file="../home/header.jsp"%>
+	<div class="main-content">
 	<article>
+	<header class="title">
+			<h1>공지사항 상세보기</h1>
+	</header>
 		<div class="container" role="main">
-			<h2>공지사항 상세보기</h2>
 			<form name="form" id="form" role="form" method="post"
 				action="${pageContext.request.contextPath}/board/updateNotice">
 				<div class="mb-3">
@@ -51,15 +58,17 @@
 				</div>
 				<input type="hidden" value="admin" name="userId"/>
 				<input type="hidden" name="noticeId" value="${notice.noticeId}"/>				
+				<div>
+					<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+						<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
+						<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
+					</sec:authorize>			
+					<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
+				</div>
 			</form>
-			<div>
-				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
-					<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
-					<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
-				</sec:authorize>			
-				<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
-			</div>
 		</div>
 	</article>
+	</div>
+	<%@ include file="../home/footer.jsp"%>
 </body>
 </html>
