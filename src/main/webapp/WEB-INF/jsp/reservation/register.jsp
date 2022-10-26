@@ -400,7 +400,7 @@
 							</div>
 							<div class="modal-footer">
 								<button class="btn btn-outline-dark">예약</button>
-								<button class="btn btn-outline-dark">취소</button>
+								<button class="btn btn-outline-dark cancelBtn">취소</button>
 							</div>
 							</form>
 						</div>
