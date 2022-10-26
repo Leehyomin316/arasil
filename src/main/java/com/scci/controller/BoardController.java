@@ -40,23 +40,24 @@ public class BoardController {
 		return "redirect:/board/noticePage";
 	}
 
-	@RequestMapping(value="/saveBoard2",method = RequestMethod.POST)
-	public String saveBoard2(@ModelAttribute("NoticeVO")NoticeVO noticeVO,
-			RedirectAttributes rttr) {
-		boardService.getFAQInsert(noticeVO);
-		return "redirect:/board/noticeFAQ";
-	}
 	
 	@RequestMapping(value="/updateNotice", method = RequestMethod.POST)
 	public String updateNotice(Model model, NoticeVO noticeVO) {
 		int result = boardService.updateNotice(noticeVO);
 		return "redirect:/board/noticePage";
 	}
+
 	
-	@RequestMapping(value="/updateFAQ", method = RequestMethod.POST)
-	public String updateFAQ(Model model, NoticeVO noticeVO) {
-		int result = boardService.updateFAQ(noticeVO);
-		return "redirect:/board/noticeFAQ";
+	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
+	public String getNoticeContent(Model model, @RequestParam("noticeId")int noticeId) {
+		model.addAttribute("notice", boardService.getNoticeContent(noticeId));
+		return "board/noticeContent";
+	}
+
+	@RequestMapping(value="/deleteNotice", method = RequestMethod.DELETE)
+	public String deleteNotice(Model model, NoticeVO noticeVO) {
+		int result = boardService.deleteNotice(noticeVO);
+		return "redirect:/board/noticePage";
 	}
 	
 //	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
@@ -66,17 +67,23 @@ public class BoardController {
 //		return "board/noticeContent";
 //	}
 	// 수정 전 (아직 해결안됨)
-	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
-	public String getNoticeContent(Model model, @RequestParam("noticeId")int noticeId) {
-		model.addAttribute("notice", boardService.getNoticeContent(noticeId));
-		return "board/noticeContent";
+	@RequestMapping(value="/boardFAQ", method = RequestMethod.GET)
+	public String getboardFAQ() {
+		return "board/boardFAQ";
 	}
-	@RequestMapping(value="/noticeFAQ", method = RequestMethod.GET)
-	public String getNoticeFAQ() {
-		return "board/noticeFAQ";
-	}
-	@RequestMapping(value="/noticeFAQInsert", method = RequestMethod.GET)
+	@RequestMapping(value="/boardFAQInsert", method = RequestMethod.GET)
 	public String getFAQInsert() {
-		return "board/noticeFAQInsert";
+		return "board/boardFAQInsert";
+	}
+	@RequestMapping(value="/updateFAQ", method = RequestMethod.POST)
+	public String updateFAQ(Model model, NoticeVO noticeVO) {
+		int result = boardService.updateFAQ(noticeVO);
+		return "redirect:/board/boardFAQ";
+	}
+	@RequestMapping(value="/boardFaqSave",method = RequestMethod.POST)
+	public String faqBoard(@ModelAttribute("NoticeVO")NoticeVO noticeVO,
+			RedirectAttributes rttr) {
+		boardService.getFAQInsert(noticeVO);
+		return "redirect:/board/boardFAQ";
 	}
 }
