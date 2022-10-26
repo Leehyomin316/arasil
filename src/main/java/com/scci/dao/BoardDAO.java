@@ -17,8 +17,10 @@ public interface BoardDAO {
 	
 	public int updateNotice(NoticeVO noticeVO);
 
-	public NoticeVO getNoticeFAQ(int noticeId);
+	public NoticeVO getBoardFAQ(int noticeId);
 
 	public int updateFAQ(NoticeVO noticeVO);
+
+	public int deleteNotice(NoticeVO noticeVO);
 
 }

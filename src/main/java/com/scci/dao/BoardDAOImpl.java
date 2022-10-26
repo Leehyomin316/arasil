@@ -33,7 +33,7 @@ public class BoardDAOImpl implements BoardDAO {
 		return sqlSession.selectOne("mapper.notice.selectContent", noticeId);
 	}
 	@Override
-	public NoticeVO getNoticeFAQ(int noticeId) {
+	public NoticeVO getBoardFAQ(int noticeId) {
 		return sqlSession.selectOne("mapper.notice.selectFAQ", noticeId);
 	}
 	@Override
@@ -43,6 +43,11 @@ public class BoardDAOImpl implements BoardDAO {
 	@Override
 	public int updateFAQ(NoticeVO noticeVO) {
 		return sqlSession.update("mapper.notice.updateFAQ", noticeVO);
+	}
+
+	@Override
+	public int deleteNotice(NoticeVO noticeVO) {
+		return sqlSession.delete("mapper.notice.deleteNotice", noticeVO);
 	}
 
 }

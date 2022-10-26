@@ -17,12 +17,8 @@
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>		
 <script>
 	$(function() {
-		$("#btnSave").on("click", function() {
-			alert("저장되었습니다");
-			$("#form").submit();
-		});
 		$("#btnList").on("click", function() {
-			location.href = "${pageContext.request.contextPath}/board/noticeFAQ";
+			location.href = "${pageContext.request.contextPath}/board/boardFAQ";
 		});
 	});
 </script>
@@ -36,20 +32,20 @@
 		<article>
 			<div class="container" role="main">
 				<form name="form" id="form" role="form" method="post"
-					action="${pageContext.request.contextPath}/board/saveBoard2">
+					action="${pageContext.request.contextPath}/board/boardFaqSave">
 					<div class="mb-3">
 						<label for="faq_title">제목</label> <input type="text"
 							class="form-control" name="faqTitle" id="faq_title"
-							placeholder="제목을 입력해 주세요">
+							placeholder="제목을 입력해 주세요" required>
 					</div>
 					<div class="mb-3">
 						<label for="faq_content">내용</label>
 						<textarea class="form-control" rows="5" name="faqContent"
-							id="faq_content" placeholder="내용을 입력해 주세요"></textarea>
+							id="faq_content" placeholder="내용을 입력해 주세요" required></textarea>
 					</div>
 					<input type="hidden" value="admin" name="userId" />
 					<div>
-						<button type="button" class="btn btn-sm btn-primary" id="btnSave">저장</button>
+						<button type="submit" class="btn btn-sm btn-primary" id="btnSave">저장</button>
 						<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 					</div>
 				</form>

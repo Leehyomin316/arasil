@@ -19,7 +19,7 @@
 <script>
 $(function() {
 	$("#btnInsert").on("click", function() {
-		location.href = "${pageContext.request.contextPath}/board/noticeFAQInsert";
+		location.href = "${pageContext.request.contextPath}/board/boardFAQInsert";
 	});
 });
 </script>
@@ -33,18 +33,10 @@ $(function() {
 				<h1>자주묻는질문</h1>
 			</header>
 			<div class="FAQ_div">
-				<details id = showFAQ>
-					<summary>펜션을 최대 몇명까지 이용할 수 있나요?</summary>
-					<p>&nbsp;&nbsp;&nbsp;- 최대 20명까지 이용 가능합니다</p>
-				</details>
-				<details id = showFAQ>
-					<summary>바베큐 시설이 있나요?</summary>
-					<p>&nbsp;&nbsp;&nbsp;- 야외에 바베큐 그릴이 준비되어있습니다</p>
-				</details>
-				<details id = showFAQ>
-					<summary>몇일 이후까지 예약 가능한가요?</summary>
-					<p>&nbsp;&nbsp;&nbsp;- 최대 90일이후 까지 예약 가능합니다</p>
-				</details>
+			<ul>
+				<li>aaaaaa</li>
+				<li>aaa</li>
+			</ul>
 			</div>
 			<div>
 				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">

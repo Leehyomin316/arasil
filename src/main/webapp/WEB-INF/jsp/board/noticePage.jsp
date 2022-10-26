@@ -35,13 +35,6 @@
 		location.href= url;
 	}
 	</script>
-<script>
-	function fn_FAQView(noticeId){
-		var url = "${pageContext.request.contextPath}/board/noticeFAQ";
-		url = url + "?noticeId="+noticeId;
-		location.href= url;
-	}
-	</script>
 
 </head>
 <body>

@@ -73,7 +73,7 @@
 	</insert>
 
 	<delete id="deleteNotice" parameterType="com.scci.vo.NoticeVO">
-	DELETE FROM NOTICE WHERE NOTICE_ID=10;
+		DELETE FROM NOTICE WHERE NOTICE_ID=#{noticeId};
 	</delete>
 
 
