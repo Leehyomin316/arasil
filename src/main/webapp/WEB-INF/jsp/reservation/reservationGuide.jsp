@@ -89,10 +89,12 @@
 						</table>
 					</div>
 				</section>
+				<div class="button-center">
 				<button type="button" class="goReservation"
 					onClick="location.href='${pageContext.request.contextPath}/reservation/register'">실시간예약</button>
+				</div>	
 			</div>
-			<div class="rowType>
+			<div class="rowType">
 				<section class="guide3">
 				<div class="rules">
 					<h4>이용수칙</h4>

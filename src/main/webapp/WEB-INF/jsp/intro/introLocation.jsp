@@ -11,9 +11,13 @@
 <link
 	href="${pageContext.request.contextPath}/static/css/intro/introLocation.css"
 	rel="stylesheet"></link>
-<link
-	href="${pageContext.request.contextPath}/static/css/common.css"
-	rel="stylesheet"></link>	
+<link href="${pageContext.request.contextPath}/static/css/common.css"
+	rel="stylesheet"></link>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap')
+	;
+</style>
 </head>
 <body>
 	<%@ include file="/WEB-INF/jsp/home/header.jsp"%>
@@ -21,11 +25,11 @@
 		<header class="title">
 			<h1>찾아오시는길</h1>
 		</header>
-		<div class="address">
-			주소 : 전라남도 장흥군 안양면 수문전원길 29, 전라남도 장흥군 안양면 수문리 454
-		</div>
+
 		<div class="sort">
 			<div id="map" style="width: 80%; height: 450px;"></div>
+			<div class="address">
+			주소 : 전라남도 장흥군 안양면 수문전원길 29, 전라남도 장흥군 안양면수문리 454</div>
 			<div class="bus">
 				<div>
 					<img src="${pageContext.request.contextPath}/static/img/bus.png"
