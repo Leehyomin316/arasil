@@ -145,7 +145,7 @@ $(function() {
 				if ( days > 0 ){
 					for(let i=0; i<days; i++){
 						let $ul =  $(`.day.current.${startDt+(i+1)} .schedule`);
-						$ul.append(`<li>${item.room_nm}(${item.guest_nm})</li>`);										
+						$ul.append(`<li>${item.room_nm}(${item.guest_nm})</li>`);								
 					}
 				}
 			});			

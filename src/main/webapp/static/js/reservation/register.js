@@ -189,19 +189,22 @@ $(function() {
 	$("#modalBtn").on("click", function() {
 		roomSelectTitle.classList.remove("blink");
 		let isChecked = false;
-		for(let i=0; i<radioButtons.length; i++){
+		for (let i = 0; i < radioButtons.length; i++) {
 			let ele = radioButtons[i];
-			if ( ele.checked ) {
+			if (ele.checked) {
 				isChecked = true;
 				break;
 			}
 		}
-		if ( !isChecked ) {
+		if (!isChecked) {
 			alert("예약할 객실을 선택 하세요.");
 			roomSelectTitle.classList.add("blink");
 			return;
 		}
-			
+		if ($("#reserveDt").val() == ''){
+			alert("이용일을 선택 하세요.");
+			return false;
+		}
 		$("#inputRoomId").val($("#roomId").val());
 		$("#inputRoomNm").val($("#roomNm").val());
 		$("#inputStartDt").val($("#reserveDt").val());
@@ -211,7 +214,8 @@ $(function() {
 		$("#myModal").modal('show');
 		//$("#myModal").modal('hide');
 	});
-
+	
+	
 	let totalFeeObj = document.getElementById("totalFee");
 	let personSelObj = document.getElementById("usePerson");
 	let daysSelObj = document.getElementById("useDays");
@@ -230,21 +234,28 @@ $(function() {
 			totalFee += additionalFee * (person - 10) * days;
 		}
 		if (days > 1) {
-			totalFee += useFee * (days - 1)-(50000*days);
+			totalFee += useFee * (days - 1) - (50000 * days);
 		}
 		totalFeeObj.value = totalFee.toLocaleString('ko-KR');
 	}
 
-	$('#all').click(function(){
-		if($("input:checkbox[id='all']").prop("checked")){
+	$('#all').click(function() {
+		if ($("input:checkbox[id='all']").prop("checked")) {
 			$("input[type=checkbox]").prop("checked", true);
-		}else{
+		} else {
 			$("input[type=checkbox]").prop("checked", false);
 		}
 	})
-	
+
 	$("#reserveRunBtn").on("click", function() {
 		$("#reservationRegForm").submit();
 	});
 
+})();
+
+(function(){
+	const cancelBtn = document.querySelector(".cancelBtn");
+	cancelBtn.addEventListener("click", ()=>{
+		$("#myModal").modal('hide');
+	});
 })();
