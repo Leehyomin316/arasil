@@ -182,7 +182,8 @@
 								<form id="reservationRegForm"
 									action='<c:url value="/reservation/addReservation"/>'
 									method="post">
-									<div>
+									<div class="tablebox"
+										style="overflow-x: auto; white-space: nowrap;">
 										<h5>
 											<b>객실 및 옵션 확인</b>
 										</h5>
@@ -214,176 +215,186 @@
 											</tbody>
 										</table>
 									</div>
-									<div class="clauseAccpet">
-										<div class="mb-4">
-											<h5>
-												<b>약관동의</b>
-											</h5>
-										</div>
-										<div class="allCheckbox">
-											<h5>
-												<b><input type="checkbox" id="all" name="all"
-													value="전체동의" required> 전체 동의 </b>
-											</h5>
-										</div>
-										<div class="acceptCheckbox">
-											<b><input type="checkbox" name="checkbox"
-												value="취소 수수료 동의" required> 취소 수수료에 동의 </b>
-										</div>
-										<div class="mb-5">
-											<div class="mb-6">
-												<br>
-												<p>예약취소는 구매한 사이트 "예약조회/취소" 에서 가능합니다.</p>
-												<p>
-													취소수수료는 예약시점과는 무관한 <span class="mb-7">이용시작일 기준</span>입니다.
-												</p>
-												<p>
-													환불시 <span class="mb-7">결제하신 금액에서 취소수수료를 제외한 금액을 환불</span>해
-													드립니다.
-												</p>
-												<p>취소수수료는 결제금액이 아닌 예약금(객실요금+기타옵션요금) 기준으로 책정됩니다.</p>
-												<p>
-													<span class="mb-7">취소수수료가 100% 인 경우 전액 환불되지 않습니다.</span>
-												</p>
-												<p>수수료 내역은 아래와 같습니다.</p>
+									<div class="modal-sort">
+										<div class="clauseAccpet">
+											<div class="mb-4">
+												<h5>
+													<b>약관동의</b>
+												</h5>
 											</div>
-											<br>
-											<table class="mb-8">
-												<thead class="mb-8h">
-													<tr>
-														<th class="mb-8b-a">기준</th>
-														<th class="mb-8b-b">취소수수료(%)</th>
-														<th class="mb-8b-c">환불율(%)</th>
-													</tr>
-												</thead>
-												<tbody class="mb-8b">
-													<tr>
-														<td class="mb-8b-a">이용일 <b>당일~6</b>일전 취소시
-														</td>
-														<td class="mb-8b-b">100%</td>
-														<td class="mb-8b-c">환불없음</td>
-													</tr>
-													<tr>
-														<td class="mb-8b-a">이용일 <b>7</b> 일전 취소시
-														</td>
-														<td class="mb-8b-b">50%</td>
-														<td class="mb-8b-c">50% 환불</td>
-													</tr>
-													<tr>
-														<td class="mb-8b-a">이용일 <b>14</b> 일전 취소시
-														</td>
-														<td class="mb-8b-b">25%</td>
-														<td class="mb-8b-c">75% 환불</td>
-													</tr>
-													<tr>
-														<td class="mb-8b-a">이용일 <b>21</b> 일전 취소시
-														</td>
-														<td class="mb-8b-b">0%</td>
-														<td class="mb-8b-c">100% 환불</td>
-													</tr>
-													<tr>
-														<td class="mb-8b-a">기본 취소 수수료</td>
-														<td class="mb-8b-b">0%</td>
-														<td class="mb-8b-c">100% 환불</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-										<div class="acceptCheckbox">
-											<input type="checkbox" name="checkbox" value="개인정보수집동의"
-												required><b> 개인정보 수집 및 이용에 동의</b>
-										</div>
-										<div class="mb-5">
-											<div class="mb-6">
-												<br>
-												<div>아라실펜션은(는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에
-													관한 법률을 준수하고 있습니다.</div>
-												<br>
-												<div>
-													<b>개인정보의 수집항목 및 이용목적</b>
+											<div class="allCheckbox">
+												<h5>
+													<b><input type="checkbox" id="all" name="all"
+														value="전체동의" required> 전체 동의 </b>
+												</h5>
+											</div>
+											<div class="acceptCheckbox">
+												<b><input type="checkbox" name="checkbox"
+													value="취소 수수료 동의" required> 취소 수수료에 동의 </b>
+											</div>
+											<div class="mb-5">
+												<div class="mb-6">
+													<br>
+													<p>예약취소는 구매한 사이트 "예약조회/취소" 에서 가능합니다.</p>
+													<p>
+														취소수수료는 예약시점과는 무관한 <span class="mb-7">이용시작일 기준</span>입니다.
+													</p>
+													<p>
+														환불시 <span class="mb-7">결제하신 금액에서 취소수수료를 제외한 금액을 환불</span>해
+														드립니다.
+													</p>
+													<p>취소수수료는 결제금액이 아닌 예약금(객실요금+기타옵션요금) 기준으로 책정됩니다.</p>
+													<p>
+														<span class="mb-7">취소수수료가 100% 인 경우 전액 환불되지 않습니다.</span>
+													</p>
+													<p>수수료 내역은 아래와 같습니다.</p>
 												</div>
-												<div>서비스 이용 과정에서 수집 및 이용되는 개인정보는 아래와 같습니다.</div>
 												<br>
+												<div style="overflow-x: auto; white-space: nowrap;">
+													<table class="mb-8">
+														<thead class="mb-8h">
+															<tr>
+																<th class="mb-8b-a">기준</th>
+																<th class="mb-8b-b">취소수수료(%)</th>
+																<th class="mb-8b-c">환불율(%)</th>
+															</tr>
+														</thead>
+														<tbody class="mb-8b">
+															<tr>
+																<td class="mb-8b-a">이용일 <b>당일~6</b>일전 취소시
+																</td>
+																<td class="mb-8b-b">100%</td>
+																<td class="mb-8b-c">환불없음</td>
+															</tr>
+															<tr>
+																<td class="mb-8b-a">이용일 <b>7</b> 일전 취소시
+																</td>
+																<td class="mb-8b-b">50%</td>
+																<td class="mb-8b-c">50% 환불</td>
+															</tr>
+															<tr>
+																<td class="mb-8b-a">이용일 <b>14</b> 일전 취소시
+																</td>
+																<td class="mb-8b-b">25%</td>
+																<td class="mb-8b-c">75% 환불</td>
+															</tr>
+															<tr>
+																<td class="mb-8b-a">이용일 <b>21</b> 일전 취소시
+																</td>
+																<td class="mb-8b-b">0%</td>
+																<td class="mb-8b-c">100% 환불</td>
+															</tr>
+															<tr>
+																<td class="mb-8b-a">기본 취소 수수료</td>
+																<td class="mb-8b-b">0%</td>
+																<td class="mb-8b-c">100% 환불</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
 											</div>
-											<div class="mb-9">
-												<table class="smallTable">
-													<thead class="sTable">
-														<tr class="sTb">
-															<th class="smallTableC" scope="col">구분</th>
-															<th class="smallTableC" scope="col">수집∙이용목적</th>
-															<th class="smallTableC" scope="col">수집∙이용항목</th>
-															<th class="smallTableC" scope="col">보유 및 이용기간</th>
-														</tr>
-													</thead>
-													<tbody class="smallTable">
-														<tr class="sTb">
-															<td class="smallTableC" rowspan="4">예약자(구매자)</td>
-															<td class="smallTableC">서비스 이용 및 계약의 이행, 본인 확인, 부정
-																이용 방지와 불만처리 등 민원처리</td>
-															<td class="smallTableC">이름, 휴대전화번호</td>
-															<td class="smallTableC" rowspan="4">이용목적 달성 후, 지체 없이
-																파기</td>
-														</tr>
-														<tr class="sTb">
-															<td class="smallTableC">서비스 이용 및 계약의 이행, 부정 이용∙거래 방지</td>
-															<td class="smallTableC">방문일시, 서비스 이용 기록, IP, 접속기록,
-																쿠키, 기기 정보</td>
-														</tr>
-														<tr class="sTb">
-															<td class="smallTableC">주문 및 예약 상품 결제 정보</td>
-															<td class="smallTableC">결제정보(계좌, 휴대폰정보),</td>
-														</tr>
-														<tr class="sTb">
-															<td class="smallTableC">결제 취소 금액 환불</td>
-															<td class="smallTableC">은행명, 계좌번호, 예금주명</td>
-														</tr>
-													</tbody>
-												</table>
+											<div class="acceptCheckbox">
+												<input type="checkbox" name="checkbox" value="개인정보수집동의"
+													required><b> 개인정보 수집 및 이용에 동의</b>
+											</div>
+											<div class="mb-5">
+												<div class="mb-6">
+													<br>
+													<div>아라실펜션은(는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에
+														관한 법률을 준수하고 있습니다.</div>
+													<br>
+													<div>
+														<b>개인정보의 수집항목 및 이용목적</b>
+													</div>
+													<div>서비스 이용 과정에서 수집 및 이용되는 개인정보는 아래와 같습니다.</div>
+													<br>
+												</div>
+												<div class="mb-9">
+													<table class="smallTable">
+														<thead class="sTable">
+															<tr class="sTb">
+																<th class="smallTableC" scope="col">구분</th>
+																<th class="smallTableC" scope="col">수집∙이용목적</th>
+																<th class="smallTableC" scope="col">수집∙이용항목</th>
+																<th class="smallTableC" scope="col">보유 및 이용기간</th>
+															</tr>
+														</thead>
+														<tbody class="smallTable">
+															<tr class="sTb">
+																<td class="smallTableC" rowspan="4">예약자(구매자)</td>
+																<td class="smallTableC">서비스 이용 및 계약의 이행, 본인 확인, 부정
+																	이용 방지와 불만처리 등 민원처리</td>
+																<td class="smallTableC">이름, 휴대전화번호</td>
+																<td class="smallTableC" rowspan="4">이용목적 달성 후, 지체
+																	없이 파기</td>
+															</tr>
+															<tr class="sTb">
+																<td class="smallTableC">서비스 이용 및 계약의 이행, 부정 이용∙거래
+																	방지</td>
+																<td class="smallTableC">방문일시, 서비스 이용 기록, IP, 접속기록,
+																	쿠키, 기기 정보</td>
+															</tr>
+															<tr class="sTb">
+																<td class="smallTableC">주문 및 예약 상품 결제 정보</td>
+																<td class="smallTableC">결제정보(계좌, 휴대폰정보),</td>
+															</tr>
+															<tr class="sTb">
+																<td class="smallTableC">결제 취소 금액 환불</td>
+																<td class="smallTableC">은행명, 계좌번호, 예금주명</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="acceptCheckbox">
+												<input type="checkbox" name="checkbox"
+													value="구매 조건 확인 및 결제 진행 동의" required><b> 구매 조건
+													확인 및 결제 진행 동의</b>
 											</div>
 										</div>
-										<div class="acceptCheckbox">
-											<input type="checkbox" name="checkbox"
-												value="구매 조건 확인 및 결제 진행 동의" required><b> 구매 조건
-												확인 및 결제 진행 동의</b>
-										</div>
-									</div>
-									<div class="subscribeInfo">
-										<div class="sticky-subsInfo">
-											<h5>
-												<b>예약자 정보</b>
-											</h5>
-											<div class="mb-3">
-												<label for="guestNm" class="form-label">예약자 성명</label> <input
-													type="text" class="form-control" id="inputGuestNm"
-													name="inputGuestNm" value="" placeholder="이름을 입력하세요."
-													required>
+										<div class="modal-right">
+											<div class="subscribeInfo">
+												<div class="sticky-subsInfo">
+													<h5>
+														<b>예약자 정보</b>
+													</h5>
+													<div class="mb-3">
+														<label for="guestNm" class="form-label">예약자 성명</label> <input
+															type="text" class="form-control" id="inputGuestNm"
+															name="inputGuestNm" value="" placeholder="이름을 입력하세요."
+															required>
+													</div>
+													<div class="mb-3">
+														<label for="guestCellPhone" class="form-label">전화번호</label>
+														<input type="text" class="form-control"
+															id="inputGuestCellPhone" name="inputGuestCellPhone"
+															value="" placeholder="전화번호를 입력하세요." required>
+													</div>
+												</div>
 											</div>
-											<div class="mb-3">
-												<label for="guestCellPhone" class="form-label">전화번호</label>
-												<input type="text" class="form-control"
-													id="inputGuestCellPhone" name="inputGuestCellPhone"
-													value="" placeholder="전화번호를 입력하세요." required>
+											<div class="paymentInfo">
+												<div class="sticky-subsInfo">
+													<h5>
+														<b>결제 수단</b>
+													</h5>
+													<div class="mb-10">
+														<input type="radio" name="payment" value="무통장입금" checked>
+														무통장입금
+													</div>
+													<div class="mb-11">
+														<input type="text" class="form-control" id="accountInfo"
+															name="accountInfo" value="농협 627-02-207095 (채영숙)"
+															readonly>
+													</div>
+													<div class="mb-12">
+														<input type="text" class="form-control" id="payerNm"
+															name="payerNm" value="" placeholder="입금자명(미입력시 예약자명)">
+													</div>
+													<div>
+														<p>주문후 1시간 이내 미입금시 자동 취소됩니다.</p>
+													</div>
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="paymentInfo">
-										<div class="sticky-subsInfo">
-											<h5>
-												<b>결제 수단</b>
-											</h5>
-											<div class="mb-10">
-												<input type="radio" name="payment" value="무통장입금" checked>
-												무통장입금
-											</div>
-											<div class="mb-11">
-												<input type="text" class="form-control" id="accountInfo"
-													name="accountInfo" value="농협 627-02-207095 (채영숙)" readonly>
-											</div>
-											<div class="mb-12">
-												<input type="text" class="form-control" id="payerNm"
-													name="payerNm" value="" placeholder="입금자명(미입력시 예약자명)">
-											</div>
-											<div><p> 주문후 1시간 이내 미입금시 자동 취소됩니다.</p></div>
 										</div>
 									</div>
 							</div>

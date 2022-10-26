@@ -6,13 +6,20 @@ img.introbackground{
 div.main-content{
     display: flex;
     flex-direction: column;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 div#map{
 	margin-top:40px;
 }
 img.bus{
-	width:150px;
-	height:150px;
+	width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 14px;
+    border-color: blueviolet;
+    margin: 20px;
+    background-color: #0a58ca63;
 }
 div.bus{
     display: flex;
@@ -26,5 +33,9 @@ div.sort{
 }
 div.address{
 	text-align:center;
+	margin-top:40px; 
+	border: 3px ;
+	padding:7px;
+	border-style:dashed double;
 }
 

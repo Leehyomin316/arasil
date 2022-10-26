@@ -6,8 +6,14 @@ main {
 	display: flex;
 	flex-direction: row;
 }
+@media (max-width:800px){
+	main{
+	flex-direction:column;
+	margin:30px;
+	}
+}
+/* 버튼 */
 button.goReservation{
-	margin: 20px 200px 40px 220px;
 	width: 124px;
 	height: 40px;
 	background-color: #a3a1a1;
@@ -28,6 +34,13 @@ button.goReservation:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
+div.button-center {
+	display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
 .columnType{
 	display: flex;
 	flex-direction: column;
@@ -38,6 +51,16 @@ button.goReservation:hover {
 	max-width: 600px;
 	width:80%;
 }
+@media (Max-width:800px){
+	.columnType{
+		width:100%;
+	}
+}
+@media (Max-width:800px){
+	.rowType{
+		width:100%;
+	}
+}
 .reserveGuide{
 	margin-left: 30px;
 }
@@ -47,3 +70,101 @@ button.goReservation:hover {
 .rules{
 	margin: 0px 0px 30px 50px;
 }
+
+@media (max-width:800px){
+	.reserveGuide{
+		margin-left:0;
+	}
+	.refund{
+		margin-left:0;
+	}
+	.rules{
+		margin:0;
+	}
+}
+
+.main-content h4{
+	margin-top:25px;
+	margin-bottom:25px;
+}
+#allCheck{
+	width: 18px;
+	height: 18px;
+}
+.allCheckbox{
+	font-size:large;
+}
+.acceptCheckbox{
+	background-color:#F6F6F6;
+	margin: 10px 550px 10px 1px;
+}
+.mb-8 {
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+.mb-8b tr{
+	border-bottom:0.5px solid black;
+}
+.mb-8h {
+	border-bottom:1px solid black;
+}
+
+.mb-8b-a{
+	text-align:left;
+	width:250px;
+}
+.mb-8b-b {
+	text-align:center;
+	width:150px;
+}
+.mb-8b td.mb-8b-b{
+	text-align:center;
+	background-color:	#EEEEEE;
+}
+.mb-8b-c{
+	text-align:center;
+	width:150px;
+}
+.mb-6{
+	font-size:small;
+	width:550px;
+}
+.mb-7{
+	color:red;
+}
+.mb-9{
+	font-size:x-small;
+	width:550px;
+}
+.subscribeInfo{
+	position:absolute;
+	width:500px;
+	top:160px;
+	right:20px;
+}
+.paymentInfo{
+	position:absolute;
+	width:500px;
+	top:400px;
+	right:20px;
+}
+.mb-10{
+	margin: 0px;
+}
+.mb-11{
+	margin: 10px 0px 10px 0px;
+}
+.mb-11 #accountInfo{
+	background-color: white;
+}
+.mb-12{
+	margin: 0px 0px 10px 0px;
+}
+.sTb th{
+	background-color:#EEEEEE;
+	border:0.5px solid #F6F6F6;
+}
+.sTb td{
+	border:0.5px solid #F6F6F6;
+}
+
