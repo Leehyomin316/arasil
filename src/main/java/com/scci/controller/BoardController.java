@@ -28,7 +28,7 @@ public class BoardController {
 		model.addAttribute("notice", notice);
 		return "board/noticeList";
 	}
-
+	
 	@RequestMapping("/noticeForm")
 	public String boardForm() {
 		return "board/noticeForm";
@@ -39,11 +39,24 @@ public class BoardController {
 		boardService.getNoticeInsert(noticeVO);
 		return "redirect:/board/noticePage";
 	}
+
+	@RequestMapping(value="/saveBoard2",method = RequestMethod.POST)
+	public String saveBoard2(@ModelAttribute("NoticeVO")NoticeVO noticeVO,
+			RedirectAttributes rttr) {
+		boardService.getFAQInsert(noticeVO);
+		return "redirect:/board/noticeFAQ";
+	}
 	
 	@RequestMapping(value="/updateNotice", method = RequestMethod.POST)
 	public String updateNotice(Model model, NoticeVO noticeVO) {
 		int result = boardService.updateNotice(noticeVO);
 		return "redirect:/board/noticePage";
+	}
+	
+	@RequestMapping(value="/updateFAQ", method = RequestMethod.POST)
+	public String updateFAQ(Model model, NoticeVO noticeVO) {
+		int result = boardService.updateFAQ(noticeVO);
+		return "redirect:/board/noticeFAQ";
 	}
 	
 //	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
@@ -61,5 +74,9 @@ public class BoardController {
 	@RequestMapping(value="/noticeFAQ", method = RequestMethod.GET)
 	public String getNoticeFAQ() {
 		return "board/noticeFAQ";
+	}
+	@RequestMapping(value="/noticeFAQInsert", method = RequestMethod.GET)
+	public String getFAQInsert() {
+		return "board/noticeFAQInsert";
 	}
 }

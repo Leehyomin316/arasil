@@ -23,6 +23,10 @@ public class BoardServiceImpl implements BoardService{
 	public void getNoticeInsert(NoticeVO noticeVO) {
 		boardDAO.getNoticeInsert(noticeVO);
 	}
+	@Override
+	public void getFAQInsert(NoticeVO noticeVO) {
+		boardDAO.getFAQInsert(noticeVO);
+	}
 	
 	@Override
 	public NoticeVO getNoticeContent(int noticeId) {
@@ -36,5 +40,9 @@ public class BoardServiceImpl implements BoardService{
 	@Override
 	public int updateNotice(NoticeVO noticeVO) {
 		return boardDAO.updateNotice(noticeVO);
+	}
+	@Override
+	public int updateFAQ(NoticeVO noticeVO) {
+		return boardDAO.updateFAQ(noticeVO);
 	}
 }

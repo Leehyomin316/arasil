@@ -85,6 +85,7 @@
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/listPage">예약현황</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticeForm">공지사항등록</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticeFAQ">FAQ관리</a></li>
                     	</ul>
                     </li>
                 </ul>
