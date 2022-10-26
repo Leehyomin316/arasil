@@ -50,4 +50,18 @@ public class ReservationServiceImpl implements ReservationService {
 		// TODO Auto-generated method stub
 		return dao.getReservationTotal();
 	}
+
+	@Override
+	public int updateStatus(List<String> ids, List<String> codes) {
+		int index = 0;
+		int result = 0;
+		for(String id : ids) {
+			ReservationVO vo = new ReservationVO();
+			vo.setReservSeq(Long.parseLong(id));
+			vo.setReservCode(codes.get(index));
+			index++;
+			result += dao.updateStatus(vo);
+		}
+		return result;
+	}
 }

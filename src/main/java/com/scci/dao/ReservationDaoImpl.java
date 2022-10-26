@@ -46,4 +46,10 @@ public class ReservationDaoImpl implements ReservationDao{
 		return sqlSession.selectOne("mapper.reservation.selectTotal");
 	}
 
+	@Override
+	public int updateStatus(ReservationVO vo) {
+		// TODO Auto-generated method stub
+		return sqlSession.insert("mapper.reservation.updateStatus", vo);
+	}
+
 }

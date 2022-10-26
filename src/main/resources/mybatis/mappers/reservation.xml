@@ -18,7 +18,7 @@
 	select DATE_FORMAT(min(a.start_dt), '%Y-%m-%d') start_dt
 	  from reservation a
 	 where a.start_dt > STR_TO_DATE(#{reserveDt}, '%Y%m%d')
-	   and a.reserv_code in ('A', 'B', 'C', 'D')
+	   and a.reserv_code in ('A', 'B', 'C')
 	   and a.room_id = #{roomId};
 </select>
 
@@ -78,5 +78,10 @@
 	  from reservation a 
 ]]>
 </select>
+
+<update id="updateStatus" parameterType="com.scci.vo.ReservationVO">
+	update reservation set reserv_code = #{reservCode}
+ 	 where reserv_seq = #{reservSeq}
+</update>
 
 </mapper>

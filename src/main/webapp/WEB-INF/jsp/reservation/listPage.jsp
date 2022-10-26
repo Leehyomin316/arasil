@@ -24,19 +24,22 @@
 
 
 <script>
-	$(function(){
-		$("#btnWriteForm").on("click", function(){
-			location.href="${pageContext.request.contextPath}/board/noticeForm";
-		});
+	$(function() {
+		$("#btnWriteForm")
+				.on(
+						"click",
+						function() {
+							location.href = "${pageContext.request.contextPath}/board/noticeForm";
+						});
 	});
-	</script>
+</script>
 <script>
-	function fn_contentView(noticeId){
+	function fn_contentView(noticeId) {
 		var url = "${pageContext.request.contextPath}/board/noticeContent";
-		url = url + "?noticeId="+noticeId;
-		location.href= url;
+		url = url + "?noticeId=" + noticeId;
+		location.href = url;
 	}
-	</script>
+</script>
 </head>
 <body>
 	<%@ include file="../home/header.jsp"%>
@@ -45,9 +48,15 @@
 			<h1>예약 현황</h1>
 		</header>
 		<div>
+			<button id="saveBtn" type="button">저장</button>
+			<form id="updateForm" action='<c:url value="/reservation/updateStatus"/>' method="post">
+				<input type="hidden" name="ids" id="ids">
+				<input type="hidden" name="codes" id="codes">
+			</form>
 			<table class="table table-hover table-striped">
 				<thead>
 					<tr>
+						<th>선택</th>
 						<th>예약번호</th>
 						<th>객실명</th>
 						<th>시작일</th>
@@ -60,10 +69,11 @@
 						<th>상태코드</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="resultTbody">
 					<c:forEach items="${list}" var="reservationVO">
-						<tr>
-							<td>${reservationVO.reservSeq}</td>
+						<tr class="resultRow">
+							<td><input class="chooseChk" name="chooseChk" type="checkbox"></td>
+							<td><input type="hidden" id="reservId" value="${reservationVO.reservSeq}">${reservationVO.reservSeq}</td>
 							<td>${reservationVO.roomNm}</td>
 							<td>${reservationVO.startDt}</td>
 							<td>${reservationVO.endDt}</td>
@@ -72,7 +82,12 @@
 							<td>${reservationVO.guestCellPhone}</td>
 							<td>${reservationVO.extraPerson}</td>
 							<td>${reservationVO.totalFee}</td>
-							<td>${reservationVO.reservCode}</td>
+							<td><select id="codeSelect" disabled>
+									<option value="A" <c:if test="${reservationVO.reservCode eq 'A'}">selected</c:if>>예약등록</option>
+									<option value="B" <c:if test="${reservationVO.reservCode eq 'B'}">selected</c:if>>입금대기</option>
+									<option value="C" <c:if test="${reservationVO.reservCode eq 'C'}">selected</c:if>>예약확정</option>
+									<option value="D" <c:if test="${reservationVO.reservCode eq 'D'}">selected</c:if>>예약취소</option>
+							</select></td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -80,28 +95,28 @@
 		</div>
 		<div>
 			<nav aria-label="Page navigation example" class="pagination">
-			  <ul class="pagination">
-			  	<c:if test="${pageMaker.prev == true}">
-				    <li class="page-item">
-				      <a class="page-link" href="${pageContext.request.contextPath}/reservation/listPage?page=${pageMaker.startPage-1}&perPageNum=${pageMaker.cri.perPageNum}" aria-label="Previous">
-				        <span aria-hidden="true">&laquo;</span>
-				        <span class="sr-only">Previous</span>
-				      </a>
-				    </li>
-			  	</c:if>
-			  	<c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" step="1" varStatus="status" var="i">
-				    <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/reservation/listPage?page=${i}&perPageNum=${pageMaker.cri.perPageNum}">${i}</a></li>
-			  	</c:forEach>
-			    <c:if test="${pageMaker.next == true && pageMaker.endPage > 0}">
-				    <li class="page-item">
-				      <a class="page-link" href="${pageContext.request.contextPath}/reservation/listPage?page=${pageMaker.endPage+1}&perPageNum=${pageMaker.cri.perPageNum}" aria-label="Next">
-				        <span aria-hidden="true">&raquo;</span>
-				        <span class="sr-only">Next</span>
-				      </a>
-				    </li>
-			    </c:if>
-			  </ul>
-			</nav>			
+				<ul class="pagination">
+					<c:if test="${pageMaker.prev == true}">
+						<li class="page-item"><a class="page-link"
+							href="${pageContext.request.contextPath}/reservation/listPage?page=${pageMaker.startPage-1}&perPageNum=${pageMaker.cri.perPageNum}"
+							aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+								<span class="sr-only">Previous</span>
+						</a></li>
+					</c:if>
+					<c:forEach begin="${pageMaker.startPage}"
+						end="${pageMaker.endPage}" step="1" varStatus="status" var="i">
+						<li class="page-item"><a class="page-link"
+							href="${pageContext.request.contextPath}/reservation/listPage?page=${i}&perPageNum=${pageMaker.cri.perPageNum}">${i}</a></li>
+					</c:forEach>
+					<c:if test="${pageMaker.next == true && pageMaker.endPage > 0}">
+						<li class="page-item"><a class="page-link"
+							href="${pageContext.request.contextPath}/reservation/listPage?page=${pageMaker.endPage+1}&perPageNum=${pageMaker.cri.perPageNum}"
+							aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span
+								class="sr-only">Next</span>
+						</a></li>
+					</c:if>
+				</ul>
+			</nav>
 		</div>
 	</div>
 	<%@ include file="../home/footer.jsp"%>
