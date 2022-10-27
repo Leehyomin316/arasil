@@ -23,8 +23,10 @@ $(function autoslide(){
 //             }
 ////		$("currentSlide").off("setInterval")	
 	};
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-	
 	function showSlides() {
 		var slides = document.getElementsByClassName("mySlides");
 		var dots = document.getElementsByClassName("demo");

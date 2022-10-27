@@ -41,7 +41,6 @@
 			</div>
 		</div>
 	</div>
-	34.6373501, 127.0334672
 	<%@ include file="/WEB-INF/jsp/home/footer.jsp"%>
 	<script type="text/javascript"
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2763b9b327520dc81e3d716c3730366c"></script>

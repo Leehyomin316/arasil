@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+.slider-container{
+	height:90%;
+}
 body {
   font-family: Arial;
   margin: 0;

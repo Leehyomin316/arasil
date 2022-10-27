@@ -11445,8 +11445,19 @@ footer{
     width: 100%;
 	padding: 5px 1vw;
 	text-align: center;
-	color:#CFFF8D;
-	background:#425f57;
+	color:rgba(255,255,255,0.5);
+	background:rgba(87, 63, 39,0.8);
+}
+footer > ul > li > span{
+	margin-right:5px;
+	text-align:left;
+}
+@media (min-width:800px){
+	footer{
+	left:240px;
+	right:0;
+	width: calc(100% - 240px);
+	}
 }
 footer > ul{
 	display:flex;
@@ -11454,6 +11465,8 @@ footer > ul{
 	flex-direction: column;
 	margin-bottom: 0;
 	padding-left:0;
+	align-items: flex-start;
+	margin-left:15px;
 }
 @media screen and (Min-width:800px){
 	footer > ul{
@@ -11509,20 +11522,20 @@ ul.ul-margin{
 @media screen and (Max-width:574px){
 	.main-content{
 		margin-top:76px;
-		margin-bottom:133px;
+		margin-bottom:210px;
 	}
 }
 @media screen and (Min-width:574px) and (Max-width:800px){
 	.main-content{
 		margin-top:66px;
-		margin-bottom:133px;
+		margin-bottom:210px;
 	}
 }
 @media screen and (Min-width:800px){
 	.main-content{
 	margin-top:0;
 	margin-left:240px;
-	margin-bottom:60px;
+	margin-bottom:80px;
 	}
 }
 .sub-menu{
