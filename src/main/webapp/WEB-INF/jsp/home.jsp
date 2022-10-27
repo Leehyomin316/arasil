@@ -29,37 +29,37 @@
 			<div class="mySlides">
 				<div class="numbertext active-slider">1 / 6</div>
 				<img src="${pageContext.request.contextPath}/static/img/home01.jpg"
-					style="width: 90%">
+					class="slideimage">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">2 / 6</div>
 				<img src="${pageContext.request.contextPath}/static/img/home02.jpg"
-					style="width: 90%">
+					class="slideimage">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">3 / 6</div>
 				<img src="${pageContext.request.contextPath}/static/img/home03.jpg"
-					style="width: 90%">
+					class="slideimage">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">4 / 6</div>
 				<img src="${pageContext.request.contextPath}/static/img/home04.jpg"
-					style="width: 90%">
+					class="slideimage">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">5 / 6</div>
 				<img src="${pageContext.request.contextPath}/static/img/home05.jpg"
-					style="width: 90%">
+					class="slideimage">
 			</div>
 
 			<div class="mySlides">
 				<div class="numbertext">6 / 6</div>
 				<img src="${pageContext.request.contextPath}/static/img/home06.jpg"
-					style="width: 90%">
+					class="slideimage"">
 			</div>
 			  <a class="prev" onclick="plusSlides(-1)">❮</a>
 			  <a class="next" onclick="plusSlides(1)">❯</a>
@@ -68,7 +68,7 @@
 				<p id="caption"></p>
 			</div>
 
-			<div class="row-slider">
+			<div class="row-slider" style="width:100%">
 				<div class="column-slider">
 					<img class="demo cursor"
 						src="${pageContext.request.contextPath}/static/img/home01.jpg"
