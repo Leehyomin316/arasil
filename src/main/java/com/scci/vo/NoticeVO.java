@@ -8,28 +8,7 @@ public class NoticeVO {
 	private String noticeContent; // 게시물내용
 	private Date noticeDate; // 게시물작성일자
 	private String userId; // 게시물작성자
-	private String faqTitle;
-	private String faqContent;
-	private String faqId;
 	
-	public String getFaqId() {
-		return faqId;
-	}
-	public void setFaqId(String faqId) {
-		this.faqId = faqId;
-	}
-	public String getFaqTitle() {
-		return faqTitle;
-	}
-	public void setFaqTitle(String faqTitle) {
-		this.faqTitle = faqTitle;
-	}
-	public String getFaqContent() {
-		return faqContent;
-	}
-	public void setFaqContent(String faqContent) {
-		this.faqContent = faqContent;
-	}
 	public long getNoticeId() {
 		return noticeId;
 	}

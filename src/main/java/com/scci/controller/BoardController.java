@@ -14,6 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.scci.service.BoardService;
 import com.scci.vo.NoticeVO;
+import com.scci.vo.FaqVO;
 
 @Controller
 @RequestMapping("/board")
@@ -67,23 +68,22 @@ public class BoardController {
 //		return "board/noticeContent";
 //	}
 	// 수정 전 (아직 해결안됨)
+
+
 	@RequestMapping(value="/boardFAQ", method = RequestMethod.GET)
-	public String getboardFAQ() {
+	public String getboardFAQ(Model model) {
+		model.addAttribute("FAQ", boardService.getBoardFAQ());
 		return "board/boardFAQ";
 	}
 	@RequestMapping(value="/boardFAQInsert", method = RequestMethod.GET)
 	public String getFAQInsert() {
 		return "board/boardFAQInsert";
 	}
-	@RequestMapping(value="/updateFAQ", method = RequestMethod.POST)
-	public String updateFAQ(Model model, NoticeVO noticeVO) {
-		int result = boardService.updateFAQ(noticeVO);
-		return "redirect:/board/boardFAQ";
-	}
 	@RequestMapping(value="/boardFaqSave",method = RequestMethod.POST)
-	public String faqBoard(@ModelAttribute("NoticeVO")NoticeVO noticeVO,
+	public String faqBoard(@ModelAttribute("FaqVO")FaqVO faqVO,
 			RedirectAttributes rttr) {
-		boardService.getFAQInsert(noticeVO);
+		boardService.getFAQInsert(faqVO);
 		return "redirect:/board/boardFAQ";
 	}
+	
 }

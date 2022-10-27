@@ -33,10 +33,10 @@
 			formObj.submit();
 		});
 		
-		const delete = document.querSelector("#btnDelete");
-		$("#btnDelete").on("click", function(){
-		});
 	});
+// 		const delete = document.querSelector("#btnDelete");
+// 		$("#btnDelete").on("click", function(){
+// 		});
 </script>
 </head>
 
@@ -50,7 +50,8 @@
 		<div class="container" role="main">
 			<form name="form" id="form" role="form" method="post"
 				action="${pageContext.request.contextPath}/board/updateNotice"
-				action="${pageContext.request.contextPath}/board/deleteNotice">
+<%-- 				action="${pageContext.request.contextPath}/board/deleteNotice" --%>
+				>
 				<div class="mb-3">
 					<label for="noticetitle">제목</label> <input type="text"
 						class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"

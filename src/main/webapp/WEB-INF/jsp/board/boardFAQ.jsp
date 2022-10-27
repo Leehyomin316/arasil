@@ -33,10 +33,22 @@ $(function() {
 				<h1>자주묻는질문</h1>
 			</header>
 			<div class="FAQ_div">
-			<ul>
-				<li>aaaaaa</li>
-				<li>aaa</li>
-			</ul>
+				<c:choose>
+					<c:when test="${empty FAQ}">
+						<tr>
+							<td colspan="5" align="center">데이터가 없습니다</td>
+						</tr>
+					</c:when>
+					<c:when test="${!empty FAQ}">
+						<c:forEach items="${FAQ}" var="row" >
+							<tr>
+								<details>${row.faqTitle}
+								<summary>${row.faqContent}</summary>
+								</details>
+							</tr>
+						</c:forEach>
+					</c:when>
+				</c:choose>
 			</div>
 			<div>
 				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">

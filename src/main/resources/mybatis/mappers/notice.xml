@@ -12,14 +12,7 @@
 			and notice_title like concat(#{noticeTitle}, '%')
 		</if>         		
 	</select>
-	<select id="selectFAQ" resultType="com.scci.vo.NoticeVO" parameterType="com.scci.vo.NoticeVO">
-		select faq_id , faq_title, faq_content, user_id
-		  from FAQ
-         where 1=1
-	     <if test="noticeTitle!=null and !noticeTitle.equals('')">
-			and notice_title like concat(#{noticeTitle}, '%')
-		</if>         		
-	</select>
+
 
 	<select id="selectContent" resultType="com.scci.vo.NoticeVO">
 		select notice_id, notice_title, notice_content, notice_date, user_id
@@ -38,14 +31,6 @@
 		`USER_ID` = #{userId}
 		WHERE `NOTICE_ID` = #{noticeId}
 	</update>
-	<update id="updateFAQ" parameterType="com.scci.vo.NoticeVO">
-		UPDATE `arasil`.`faq`
-		SET
-		`FAQ_TITLE` = #{faqTitle},
-		`FAQ_CONTENT` = #{faqContent},
-		`USER_ID` = #{userId}
-		WHERE `FAQ_ID` = #{faqId}
-	</update>
 
 	<insert id="selectInsert" parameterType="com.scci.vo.NoticeVO">
 		INSERT INTO `arasil`.`notice`
@@ -60,7 +45,15 @@
 			,#{userId}
 			)
 	</insert>
-	<insert id="insertFAQ" parameterType="com.scci.vo.NoticeVO">
+
+
+	<delete id="deleteNotice" parameterType="com.scci.vo.NoticeVO">
+		DELETE FROM NOTICE WHERE NOTICE_ID=#{noticeId};
+	</delete>
+
+
+
+	<insert id="insertFAQ" parameterType="com.scci.vo.FaqVO">
 		INSERT INTO `arasil`. `FAQ`
 			(`FAQ_TITLE`,
 			`FAQ_CONTENT`,
@@ -71,10 +64,25 @@
 			,#{userId}
 			)
 	</insert>
+	
+	<update id="updateFAQ" parameterType="com.scci.vo.FaqVO">
+		UPDATE `arasil`.`faq`
+		SET
+		`FAQ_TITLE` = #{faqTitle},
+		`FAQ_CONTENT` = #{faqContent},
+		`USER_ID` = #{userId}
+		WHERE `FAQ_ID` = #{faqId}
+	</update>
 
-	<delete id="deleteNotice" parameterType="com.scci.vo.NoticeVO">
-		DELETE FROM NOTICE WHERE NOTICE_ID=#{noticeId};
-	</delete>
+	<select id="selectFAQ" resultType="com.scci.vo.FaqVO" parameterType="com.scci.vo.FaqVO">
+		select faq_id , faq_title, faq_content, user_id
+		  from faq
+         where 1=1
+	     <if test="faqTitle!=null and !faqTitle.equals('')">
+			and faq_title like concat(#{faqTitle}, '%')
+		</if>         		
+	</select>
+	
 
 
 </mapper>
