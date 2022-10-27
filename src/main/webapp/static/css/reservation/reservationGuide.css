@@ -26,6 +26,14 @@ button.goReservation{
     display: inline-block;
     font-weight: 600;
 }
+/* 모바일 버튼위치 */
+@media (max-width:800px){
+	button.goReservation{
+		position:absolute;
+		bottom:130px;
+	}
+}
+
 button.goReservation:active {
     transform: scale(1.5);
 }
@@ -50,6 +58,7 @@ div.button-center {
 .rowType{
 	max-width: 600px;
 	width:80%;
+
 }
 @media (Max-width:800px){
 	.columnType{
@@ -59,6 +68,7 @@ div.button-center {
 @media (Max-width:800px){
 	.rowType{
 		width:100%;
+		margin-bottom:50px;
 	}
 }
 .reserveGuide{

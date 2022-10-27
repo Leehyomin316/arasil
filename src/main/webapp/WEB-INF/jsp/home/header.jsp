@@ -65,8 +65,14 @@
                 <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link">기타</a>
                     	<ul class="underline smooth">
-                    		<li class="sub-menu"><a class="nav-link" href="https://blog.naver.com/wlsfhrytk">네이버 블로그</a></li>
-                    		<li class="sub-menu"><a class="nav-link" href="https://www.instagram.com/arasil_pension/">인스타그램</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="https://blog.naver.com/wlsfhrytk" target="_blank">네이버 블로그</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="https://www.instagram.com/arasil_pension/" target="_blank">인스타그램</a></li>
+                    	</ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto ul-margin">
+                    <li class="nav-item active"><a class="nav-link">공유하기</a>
+                    	<ul class="underline smooth">
                    			<li class="sub-menu">
                    			<a id="btnTwitter" class="link-icon twitter nav-link" href="javascript:shareTwitter();">
                    			<img src="${pageContext.request.contextPath}/static/img/icontwitter.png" class="link-icon"/></a>
