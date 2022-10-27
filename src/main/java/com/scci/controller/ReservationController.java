@@ -99,4 +99,9 @@ public class ReservationController {
 		service.updateStatus(ids, codes);
 		return "forward:listPage";
 	}
+	
+	@RequestMapping(value="/checkReservation", method=RequestMethod.GET)
+	public String checkReservation() {
+		return "reservation/checkReservation";
+	}
 }

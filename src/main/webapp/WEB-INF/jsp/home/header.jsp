@@ -49,7 +49,7 @@
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/reservationGuide">예약안내</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/roomSchedule">예약현황</a></li>
-                   			<li class="sub-menu"><a class="nav-link" href="#!">예약조회/취소</a></li>
+                   			<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/checkReservation">예약조회/취소</a></li>
                     	</ul>
                     </li>
                 </ul>
