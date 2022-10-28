@@ -18,33 +18,11 @@
 	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>
 <script>
-$(function() {
-	$("#btnInsert").on("click", function() {
-		location.href = "${pageContext.request.contextPath}/board/boardFAQInsert";
-	});
-});
-</script>
-<script>
-// $(function fn_updateFAQ(faqID) {
-// 	var url = "${pageContext.request.contextPath}/board/boardFAQInsert";
-// 	url = url + "?faqId="+faqId;
-// 	location.href = url;
-// 	$("#btnUpdate").on("click", function() {
-// 		location.href = "${pageContext.request.contextPath}/board/boardFAQInsert";
-// 	});
-// });
 	function fn_updateFAQ(faqID) {
 		var url = "${pageContext.request.contextPath}/board/boardFAQInsert";
 		url = url + "?faqId="+faqId;
 		location.href = url;
 	};
-</script>
-<script>
-	$(function() {
-		$("btnUpdate").on("click", function() {
-			location.href = "${pageContext.request.contextPath}/board/updateFAQ";
-		})
-	})
 </script>
 
 

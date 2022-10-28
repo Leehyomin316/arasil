@@ -47,6 +47,9 @@ public class BoardDAOImpl implements BoardDAO {
 		return sqlSession.insert("mapper.notice.insertFAQ", faqVO);
 	}
 
+	public int updateFAQ(FaqVO faqVO) {
+		return sqlSession.update("mapper.notice.updateFAQ", faqVO);
+	}
 
 
 

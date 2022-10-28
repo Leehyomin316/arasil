@@ -21,5 +21,6 @@ public interface BoardService {
 
 	public void getFAQInsert(FaqVO faqVO);
 
+	public int updateFAQ(FaqVO faqVO);
 
 }
