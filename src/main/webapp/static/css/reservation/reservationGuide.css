@@ -30,7 +30,7 @@ button.goReservation{
 @media (max-width:800px){
 	button.goReservation{
 		position:absolute;
-		bottom:130px;
+		bottom:250px;
 	}
 }
 
@@ -68,7 +68,7 @@ div.button-center {
 @media (Max-width:800px){
 	.rowType{
 		width:100%;
-		margin-bottom:50px;
+		margin-bottom:150px;
 	}
 }
 .reserveGuide{
