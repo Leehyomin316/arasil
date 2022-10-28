@@ -27,6 +27,7 @@ div > article > h2{
 }
 
 .FAQ_div > details{
+
     width: 90%;
     max-width: 600px;
     margin: 0 auto;
@@ -41,6 +42,7 @@ div > article > h2{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+
 }
 
 

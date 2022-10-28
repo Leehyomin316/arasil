@@ -81,7 +81,7 @@ public class BoardController {
 		return "board/boardFAQInsert";
 	}
 	@RequestMapping(value="/updateFAQ", method = RequestMethod.GET)
-	public String updateFAQ(Model model, FaqVO faqVO) {
+	public String updateFAQ(Model model, FaqVO faqVO, String URL) {
 		model.addAttribute("updateFAQ", boardService.updateFAQ(faqVO));
 		return "redirect:/board/boardFAQInsert";
 	}
