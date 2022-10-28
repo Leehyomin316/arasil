@@ -81,9 +81,15 @@ public class BoardController {
 		return "board/boardFAQInsert";
 	}
 	@RequestMapping(value="/updateFAQ", method = RequestMethod.GET)
-	public String updateFAQ(Model model, FaqVO faqVO, String URL) {
+	public String updateFAQ(Model model, FaqVO faqVO) {
 		model.addAttribute("updateFAQ", boardService.updateFAQ(faqVO));
 		return "redirect:/board/boardFAQInsert";
+	}
+	@RequestMapping(value="/deleteFAQ", method = RequestMethod.GET)
+	public String deleteFAQ(Model model, FaqVO faqVO) {
+		model.addAttribute("deleteFAQ", boardService.deleteFAQ(faqVO));
+		System.out.println("delete");
+		return "board/boardFAQ";
 	}
 	@RequestMapping(value="/boardFaqSave",method = RequestMethod.POST)
 	public String faqBoard(@ModelAttribute("FaqVO")FaqVO faqVO,	RedirectAttributes rttr) {

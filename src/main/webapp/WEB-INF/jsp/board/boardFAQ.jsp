@@ -60,8 +60,8 @@
 						<c:forEach items="${FAQ}" var="row" >
 							<tr>
 								<details>
-								<summary>&nbsp;${row.faqTitle}</summary>
-								<ul>&nbsp;&nbsp;&nbsp;-&nbsp;${row.faqContent}</ul>
+								<summary><b>&nbsp;${row.faqTitle}</b></summary>
+								<ul><b>&nbsp;&nbsp;&nbsp;-&nbsp;${row.faqContent}</b></ul>
 									<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
 									<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
 									<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>

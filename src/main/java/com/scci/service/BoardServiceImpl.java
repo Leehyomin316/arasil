@@ -54,4 +54,9 @@ public class BoardServiceImpl implements BoardService{
 		return boardDAO.updateFAQ(faqVO);
 	}
 
+	@Override
+	public int deleteFAQ(FaqVO faqVO) {
+		return boardDAO.updateFAQ(faqVO);
+	}
+
 }

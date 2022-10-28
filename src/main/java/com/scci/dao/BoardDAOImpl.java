@@ -47,8 +47,14 @@ public class BoardDAOImpl implements BoardDAO {
 		return sqlSession.insert("mapper.notice.insertFAQ", faqVO);
 	}
 
+	@Override
 	public int updateFAQ(FaqVO faqVO) {
 		return sqlSession.update("mapper.notice.updateFAQ", faqVO);
+	}
+
+	@Override
+	public int deleteFAQ(FaqVO faqVO) {
+		return sqlSession.update("mapper.notice.deleteFAQ", faqVO);
 	}
 
 
