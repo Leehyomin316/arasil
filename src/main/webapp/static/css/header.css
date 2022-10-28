@@ -11455,11 +11455,11 @@ footer > ul > li > span{
 }
 @media (min-width:800px){
 	footer{
-	left:240px;
-	right:0;
-	width: calc(100% - 240px);
-	height:10.7vh;
-	}
+		left:240px;
+		right:0;
+		width: calc(100% - 240px);
+		height:10.7vh;
+		}
 }
 footer > ul{
 	display:flex;

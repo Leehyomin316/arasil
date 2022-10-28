@@ -16,9 +16,14 @@ div > article > h2{
 }
 
 .FAQ_div{
-  width:100%;
-  position:static;
-  float:left;
+	width: 100%;
+    position: static;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: 40px;
 }
 
 .FAQ_div > details{
