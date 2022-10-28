@@ -10,7 +10,7 @@
 </style>
 </head>
 <body>
-<footer>
+<footer class="main-footer">
 	<ul>
 		<li><span><b>주소 </b><br>장흥군 안양면 수문전원길 29</span></li>
 		<li><span><b>전화번호 </b><br>010-5609-9369 / 010-8466-9369</span></li>
