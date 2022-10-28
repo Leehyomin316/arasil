@@ -16,32 +16,48 @@ div > article > h2{
 }
 
 .FAQ_div{
-  width:100%;
-  position:static;
-  float:left;
+	width: 100%;
+    position: static;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: 40px;
 }
 
 .FAQ_div > details{
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto ;
-  margin-bottom: .5rem;
-  box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
-  border-radius: 5px;
-  overflow: hidden;
-  border-left:0px;
-  position:relative;
-  right:24%;
+
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0.1rem 1rem -0.5rem rgb(0 0 0 / 40%);
+    border-radius: 5px;
+    overflow: hidden;
+    border-left: 0px;
+    position: relative;
+    padding-bottom: 0.5rem;
+    padding-right: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
 }
 
 
 details summary {
-  background: #ffff99;
-  padding: 5px;
-  border: 5px solid transparent;
-  outline: none;
-  cursor: pointer;
-  transition: margin 200ms ease-out;
+    background: rgba(240,240,240);
+    padding: 5px;
+    border: 5px solid transparent;
+    outline: none;
+    cursor: pointer;
+    transition: margin 200ms ease-out;
+    box-shadow: 5px 5px 5px grey;
+    padding-right: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 details[open] summary {
