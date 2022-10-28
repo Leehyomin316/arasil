@@ -31,6 +31,7 @@ div > article > h2{
   overflow: hidden;
   border-left:0px;
   position:relative;
+  right:24%;
 }
 
 

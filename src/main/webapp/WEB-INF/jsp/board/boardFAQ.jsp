@@ -18,21 +18,13 @@
 	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>
 <script>
-$(function() {
-	$("#btnInsert").on("click", function() {
-		location.href = "${pageContext.request.contextPath}/board/boardFAQInsert";
+	$(function() {
+		$("#btnInsert").on("click", function() {
+			location.href = "${pageContext.request.contextPath}/board/boardFAQInsert";
+		});
 	});
-});
 </script>
 <script>
-// $(function fn_updateFAQ(faqID) {
-// 	var url = "${pageContext.request.contextPath}/board/boardFAQInsert";
-// 	url = url + "?faqId="+faqId;
-// 	location.href = url;
-// 	$("#btnUpdate").on("click", function() {
-// 		location.href = "${pageContext.request.contextPath}/board/boardFAQInsert";
-// 	});
-// });
 	function fn_updateFAQ(faqID) {
 		var url = "${pageContext.request.contextPath}/board/boardFAQInsert";
 		url = url + "?faqId="+faqId;
@@ -41,10 +33,11 @@ $(function() {
 </script>
 <script>
 	$(function() {
-		$("btnUpdate").on("click", function() {
+		$("#btnUpdate").on("click", function() {
 			location.href = "${pageContext.request.contextPath}/board/updateFAQ";
 		})
 	})
+
 </script>
 
 
@@ -66,12 +59,13 @@ $(function() {
 					<c:when test="${!empty FAQ}">
 						<c:forEach items="${FAQ}" var="row" >
 							<tr>
-								<details>&nbsp;&nbsp;&nbsp;${row.faqTitle}
-								<summary>&nbsp;${row.faqContent}</summary>
+								<details>
+								<summary>&nbsp;${row.faqTitle}</summary>
+								<ul>&nbsp;&nbsp;&nbsp;-&nbsp;${row.faqContent}</ul>
 									<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
 									<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
 									<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
-								</sec:authorize>		
+									</sec:authorize>		
 								</details>
 							</tr>
 						</c:forEach>
