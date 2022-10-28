@@ -11437,7 +11437,7 @@ img.back-ground{
 	min-height: 100%;
 	size:cover;
 }
-footer{
+footer.main-footer{
 	z-index:99999;
     position: absolute;
     left: 0;
@@ -11449,19 +11449,19 @@ footer{
 	background:rgba(87, 63, 39,0.8);
 
 }
-footer > ul > li > span{
+footer.main-footer > ul > li > span{
 	margin-right:5px;
 	text-align:left;
 }
 @media (min-width:800px){
-	footer{
+	footer.main-footer{
 		left:240px;
 		right:0;
 		width: calc(100% - 240px);
 		height:10.7vh;
 		}
 }
-footer > ul{
+footer.main-footer > ul{
 	display:flex;
 	list-style: none;
 	flex-direction: column;
@@ -11471,7 +11471,7 @@ footer > ul{
 	margin-left:15px;
 }
 @media screen and (Min-width:800px){
-	footer > ul{
+	footer.main-footer > ul{
 		display: flex;
 		list-style: none;
 		flex-direction: row;
@@ -11480,7 +11480,7 @@ footer > ul{
 		margin-right:5px;
 	}
 }
-footer > ul >li{
+footer.main-footer > ul >li{
 	display: flex;	
 	padding-left: 0;
 	margin-bottom: 0;
@@ -11489,7 +11489,7 @@ footer > ul >li{
 	font-family: 'Noto Serif KR', serif;
 }
 @media screen and (Min-width:800px){
-	footer > ul >li{
+	footer.main-footer > ul >li{
 		display: flex;
 		padding-left: 0;
 		margin-bottom: 0;
