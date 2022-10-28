@@ -30,14 +30,14 @@
 			location.href="${pageContext.request.contextPath}/board/noticeForm";
 		});
 	});
-	</script>
+</script>
 <script>
 	function fn_contentView(noticeId){
 		var url = "${pageContext.request.contextPath}/board/noticeContent";
 		url = url + "?noticeId="+noticeId;
 		location.href= url;
 	}
-	</script>
+</script>
 </head>
 <body>
 	<%@ include file="../home/header.jsp"%>

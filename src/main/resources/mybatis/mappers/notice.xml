@@ -52,6 +52,14 @@
 	</delete>
 
 
+	<select id="selectFAQ" resultType="com.scci.vo.FaqVO" parameterType="com.scci.vo.FaqVO">
+		select faq_id , faq_title, faq_content, user_id
+		  from faq
+         where 1=1
+	     <if test="faqTitle!=null and !faqTitle.equals('')">
+			and faq_title like concat(#{faqTitle}, '%')
+		</if>         		
+	</select>
 
 	<insert id="insertFAQ" parameterType="com.scci.vo.FaqVO">
 		INSERT INTO `arasil`. `FAQ`
@@ -74,14 +82,10 @@
 		WHERE `FAQ_ID` = #{faqId}
 	</update>
 
-	<select id="selectFAQ" resultType="com.scci.vo.FaqVO" parameterType="com.scci.vo.FaqVO">
-		select faq_id , faq_title, faq_content, user_id
-		  from faq
-         where 1=1
-	     <if test="faqTitle!=null and !faqTitle.equals('')">
-			and faq_title like concat(#{faqTitle}, '%')
-		</if>         		
-	</select>
+	<update id="deleteFAQ" parameterType="com.scci.vo.FaqVO">
+		DELETE FROM faq where FAQ_ID=#{faqID};
+	</update>
+
 	
 
 

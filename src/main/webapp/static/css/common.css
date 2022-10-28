@@ -73,36 +73,3 @@ div.main-content > header {
   max-width: 288px;
   background-color: #333;
 }
-
-.FAQ_div{
-  width:100%;
-  position:static;
-  float:left;
-}
-
-.FAQ_div > details{
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto ;
-  margin-bottom: .5rem;
-  box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
-  border-radius: 5px;
-  overflow: hidden;
-  border-left:0px;
-  position:relative;
-  right:24%;
-}
-
-
-details summary {
-  background: #ffff99;
-  padding: 5px;
-  border: 5px solid transparent;
-  outline: none;
-  cursor: pointer;
-  transition: margin 200ms ease-out;
-}
-
-details[open] summary {
-  margin-bottom: 10px;
-}

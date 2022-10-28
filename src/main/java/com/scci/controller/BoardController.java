@@ -69,7 +69,8 @@ public class BoardController {
 //	}
 	// 수정 전 (아직 해결안됨)
 
-
+// --------------------------------------------------------------------------------------
+	
 	@RequestMapping(value="/boardFAQ", method = RequestMethod.GET)
 	public String getboardFAQ(Model model) {
 		model.addAttribute("FAQ", boardService.getBoardFAQ());
@@ -79,9 +80,13 @@ public class BoardController {
 	public String getFAQInsert() {
 		return "board/boardFAQInsert";
 	}
+	@RequestMapping(value="/updateFAQ", method = RequestMethod.GET)
+	public String updateFAQ(Model model, FaqVO faqVO) {
+		model.addAttribute("updateFAQ", boardService.updateFAQ(faqVO));
+		return "redirect:/board/boardFAQInsert";
+	}
 	@RequestMapping(value="/boardFaqSave",method = RequestMethod.POST)
-	public String faqBoard(@ModelAttribute("FaqVO")FaqVO faqVO,
-			RedirectAttributes rttr) {
+	public String faqBoard(@ModelAttribute("FaqVO")FaqVO faqVO,	RedirectAttributes rttr) {
 		boardService.getFAQInsert(faqVO);
 		return "redirect:/board/boardFAQ";
 	}

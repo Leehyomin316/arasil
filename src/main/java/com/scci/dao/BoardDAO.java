@@ -23,6 +23,7 @@ public interface BoardDAO {
 
 	public int getFAQInsert(FaqVO faqVO);
 
+	public int updateFAQ(FaqVO faqVO);
 
 
 
