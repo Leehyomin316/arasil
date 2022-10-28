@@ -11447,6 +11447,7 @@ footer{
 	text-align: center;
 	color:rgba(255,255,255,0.5);
 	background:rgba(87, 63, 39,0.8);
+
 }
 footer > ul > li > span{
 	margin-right:5px;
@@ -11457,6 +11458,7 @@ footer > ul > li > span{
 	left:240px;
 	right:0;
 	width: calc(100% - 240px);
+	height:10.7vh;
 	}
 }
 footer > ul{

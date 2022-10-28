@@ -1,21 +1,30 @@
 @charset "UTF-8";
 
-.slider-container{
-	height:100%;
+.mySlides{
+	display:none;
+	width:100%;
+}
+.w3-content{
+	width:100%;
+}
+@media (min-width:800px){
+	.w3-content{
+	height:90vh;
+	}
+	
 }
 body {
   font-family: Arial;
   margin: 0;
 }
 img.slideimage{
-	max-width:700px;
+	width:100%;
+	max-height:800px;
 }
-.row-slider{
-	max-width:700px;
+.main-content a{
+	color:rgba(255,255,255,1);
 }
-.caption-container{
-	max-width:700px;
-}
+
 * {
   box-sizing: border-box;
 }
@@ -24,16 +33,17 @@ img {
   vertical-align: middle;
 }
 
-/* Position the image container (needed to position the left and right arrows) */
-div.main-content > .slider-container {
+div.main-content {
     position: relative;
-    border: 4px solid;
-    max-width: 708px;
+
+    overflow: hidden;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  overflow:hidden;
+  border: 4px solid;
 }
 
 .mySlides .active-slider{
@@ -46,20 +56,16 @@ div.main-content > .slider-container {
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.w3-section > .w3-btn {
   cursor: pointer;
   position: absolute;
   top: 40%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
   font-weight: bold;
   font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+  text-shadow: 5px 5px 5px;
 }
 
 /* Position the "next button" to the right */
@@ -71,44 +77,23 @@ div.main-content > .slider-container {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+div.w3-a {
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+    top:80%;
 }
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
+@media (min-width:800px){
+	div.w3-a{
+		top:90%;
+	}
 }
-
-.row-slider:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column-slider {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active-slider,
-.demo:hover {
-  opacity: 1;
+a.w3-a{
+	margin:5px;
+	color:black;
 }
