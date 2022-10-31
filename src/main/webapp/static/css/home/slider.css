@@ -43,7 +43,6 @@ div.main-content {
 .mySlides {
   display: none;
   overflow:hidden;
-  border: 4px solid;
 }
 
 .mySlides .active-slider{

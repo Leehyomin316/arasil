@@ -18,3 +18,15 @@ th{
 	margin: 10px;
 }
 
+@media (max-width: 800px) {
+  .hidden-table {
+    display: none;
+    visibility: hidden;
+    width: 0%;
+  }
+}
+
+table.table{
+	max-width: 100%;
+	width: 100%;
+}
