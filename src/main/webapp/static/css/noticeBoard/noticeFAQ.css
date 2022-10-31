@@ -16,7 +16,8 @@ div > article > h2{
 }
 
 .FAQ_div{
-	width: 100%;
+    width: 100%;
+    max-width: 600px;
     position: static;
     display: flex;
     flex-direction: column;
@@ -61,4 +62,7 @@ details summary {
 
 details[open] summary {
   margin-bottom: 10px;
+}
+#btnInsert{
+	margin-bottom:10px;
 }

@@ -69,7 +69,7 @@
 				</div>
 			</section>
 			<section class="select_room_container">
-				<p class="h5" id="roomSelect">객실 선택</p>
+				<p class="sub-title" id="roomSelect">객실 선택</p>
 				<div class="select_room_table">
 					<table class="table">
 						<thead>
@@ -114,7 +114,7 @@
 				</div>
 			</section>
 			<section class="select_option_container">
-				<p class="h5">옵션 선택 및 예약</p>
+				<p class="sub-title">옵션 선택 및 예약</p>
 				<div class="select_option_table">
 					<table class="table">
 						<thead>

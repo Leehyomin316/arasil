@@ -381,6 +381,6 @@ div.tablebox > table.table{
 }
 @media (max-width:800px){
 	.modal-footer{
-		margin-bottom:100px;
+		margin-bottom:200px;
 	}
 }
