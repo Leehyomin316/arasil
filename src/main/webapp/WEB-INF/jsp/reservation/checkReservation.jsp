@@ -28,24 +28,93 @@
 			<h1>예약조회</h1>
 		</header>
 		<div class="checkMain">
-			<div class="container">
+			<section class="container">
 				<div class="emptyDiv"></div>
 				<div class="checkInput">
-					<input type="text" class="reservId" placeholder="주문번호">
+					<input type="text" class="reservId" id="reservId" placeholder="주문번호">
 				</div>
 				<div class="checkInput">
-					<input type="text" class="guestNm" placeholder="이름">
+					<input type="text" class="guestNm" id="guestNm" placeholder="이름">
 				</div>
 				<div class="checkInput">
-					<input type="text" class="guestCellPhone" placeholder="연락처">
+					<input type="text" class="guestCellPhone" id="guestCellPhone" placeholder="연락처">
 				</div>
+			</section>
+			<section class="modal-area">
 				<button type="button" id="goCheck" class="goCheck">예약 조회</button>
-				<div class="">
+				<div class="goCheckBtn">
 					<h4>예약시 문자로 발송된 주문번호를 확인 후 예약조회를 진행해주세요</h4>
 				</div>
-			</div>
+				<div class="modal" id="myModal">
+					<div class="modal-dialog modal-xl">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title">예약조회</h4>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-hidden="true"></button>
+							</div>
+							<div class="modal-body">
+								<form id="checkRegForm" method="post" action='<c:url value="/reservation/checkReservation"/>'>
+									<div class="chkReserve">
+										<table class="reservTable">
+											<thead>
+												<tr>
+													<th scope="col">예약상태</th>
+												</tr>
+												<tr>
+													<th scope="col">예약자</th>
+												</tr>
+												<tr>
+													<th scope="col">예약번호</th>
+												</tr>
+												<tr>
+													<th scope="col">체크인</th>
+												</tr>
+												<tr>
+													<th scope="col">체크아웃</th>
+												</tr>
+												<tr>
+													<th scope="col">인원수</th>
+												</tr>
+												<tr>
+													<th scope="col">이용요금</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>${reservationVO.reservCode}</td>
+												</tr>
+												<tr>
+													<td>${reservationVO.guestNm}</td>
+												</tr>
+												<tr>
+													<td>${reservationVO.reservSeq}</td>
+												</tr>
+												<tr>
+													<td>${reservationVO.startDt}</td>
+												</tr>
+												<tr>
+													<td>${reservationVO.endDt}</td>
+												</tr>
+												<tr>
+													<td>${reservationVO.extraPerson}</td>
+												</tr>
+												<tr>
+													<td>${reservationVO.totalFee}</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	</div>
 	<%@ include file="../home/footer.jsp"%>
 </body>
+<script
+	src="${pageContext.request.contextPath}/static/js/reservation/checkReservation.js"></script>
 </html>

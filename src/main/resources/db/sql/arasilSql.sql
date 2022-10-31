@@ -29,7 +29,7 @@ REFERENCES `ROOM_INFO` (
 CREATE TABLE `USERS` (
 	`USER_ID`	varchar(50)	not NULL PRIMARY KEY,
 	`EMAIL`	varchar(255)	NULL,
-	`PASSWARD`	varchar(255)	NULL,
+	`PWD`	varchar(255)	NULL,
 	`ENABLED`	boolean	NULL
 );
 CREATE TABLE `ROLES` (
