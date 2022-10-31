@@ -27,7 +27,7 @@ public class BoardController {
 	public String noticePage(@ModelAttribute NoticeVO noticeVO, Model model, Principal principal) {
 		List<NoticeVO> notice = boardService.getNotice(noticeVO);
 		model.addAttribute("notice", notice);
-		return "board/noticeList";
+		return "board/noticePage";
 	}
 	
 	@RequestMapping("/noticeForm")
@@ -61,13 +61,6 @@ public class BoardController {
 		return "redirect:/board/noticePage";
 	}
 	
-//	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
-//	public String getNoticeContent(Model model, int noticeId) {
-//		NoticeVO pageContent = boardService.getNoticeContent(noticeId);
-//		model.addAttribute("pageContent", pageContent);
-//		return "board/noticeContent";
-//	}
-	// 수정 전 (아직 해결안됨)
 
 // --------------------------------------------------------------------------------------
 	
