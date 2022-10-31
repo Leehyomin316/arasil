@@ -410,3 +410,9 @@ table.smallTable{
 div.tablebox > table.table{
 	 max-width: 100%; width: 100%; 
 }
+.select_option_table th{
+	width:calc(100%/5);
+}
+.select_option_table tr{
+	width:calc(100%/5);
+}
