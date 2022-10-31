@@ -31,20 +31,20 @@
 				</header>
 				<br>
 				<br>
-				<h4>객실정보</h4>
+				<h4 class="sub-title">객실정보</h4>
 				<p>
 					방 4개, 화장실 2개, 거실 1개, 주방 1개 <br> <br> 기준인원 : 10인 | 최대인원 :
 					20인(20인 초과 입실 절대불가) <br> 체크인 15:00 | 체크아웃 : 11:00
 				</p>
 				<span class="line"></span>
-				<h4>비품</h4>
+				<h4 class="sub-title">비품</h4>
 				<p>
 					침실: 이불, 베개, 토퍼 <br> 주방: 냉장고, 전기밥솥, 전자레인지, 하이라이트, 식기류, 전기포트 <br>
 					화장실: 드라이기, 샤워용품(샴푸, 바디워시, 린스), 수건 <br> 거실: TV, 에어컨, 빔프로젝트,
 					응급상자, 선풍기 <br> 다용도실: 세탁기, 건조기, 분리수거통
 				</p>
 				<span class="line"></span>
-				<h4>편의시설</h4>
+				<h4 class="sub-title">편의시설</h4>
 				<p>정자, 툇마루, 야외바베큐시설, 수돗가</p>
 				<div class="button-center">
 				<button type="button" class="goReservation"
