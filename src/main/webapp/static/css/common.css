@@ -2,6 +2,9 @@
 @import
 	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap')
 	;
+.main-content{
+	  font-family: 'IBM Plex Sans KR', sans-serif;
+}
 
 .searchSection form.searchForm{
 	background-color: pink;
@@ -72,4 +75,17 @@ div.main-content > header {
   width: 95%;
   max-width: 288px;
   background-color: #333;
+}
+
+.sub-title{
+	margin-top: 0;
+    margin-bottom: 1rem;
+    border: 1px solid white;
+    border-left: solid 10px #8A66AE;
+    padding: 7px;
+    border-radius: 5px;
+    width: fit-content;
+    color: #000000;
+    background: #F8E8FF;
+    font-weight:500;
 }

@@ -16,9 +16,9 @@ div > article > h2{
 }
 
 .FAQ_div{
-	width: 100%;
+    width: 100%;
+    max-width: 600px;
     position: static;
-    float: left;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -32,7 +32,7 @@ div > article > h2{
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 0.5rem;
-    box-shadow: 0 0.1rem 1rem -0.5rem rgb(0 0 0 / 40%);
+    box-shadow: 0 0.02rem 0.05rem 0.01rem rgb(0 0 0 / 40%);
     border-radius: 5px;
     overflow: hidden;
     border-left: 0px;
@@ -62,4 +62,7 @@ details summary {
 
 details[open] summary {
   margin-bottom: 10px;
+}
+#btnInsert{
+	margin-bottom:10px;
 }
