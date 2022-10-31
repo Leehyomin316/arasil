@@ -44,7 +44,7 @@
 				</section>
 				<section class="guide2">
 					<div class="refund">
-						<h4>환불안내</h4>
+						<h4 class="sub-title">환불안내</h4>
 						<p>올바른 예약 문화 정착을 위하여 해당 업소에서는 예약 취소시 환불기준을 아래와 같이 운영하고 있으니 확인을
 							하시고 예약해주시기 바랍니다.</p>
 						<table class="mb-8">
@@ -97,7 +97,7 @@
 			<div class="rowType">
 				<section class="guide3">
 				<div class="rules">
-					<h4>이용수칙</h4>
+					<h4 class="sub-title">이용수칙</h4>
 					<p>예약시 아래 안내사항을 확인 부탁드리며, <br>동의 하신 분들에 한해 예약이 가능함을 알려드립니다.</p><br>
 					<h5>1. 이용시간</h5>
 					<ul style="list-style-type:none;">

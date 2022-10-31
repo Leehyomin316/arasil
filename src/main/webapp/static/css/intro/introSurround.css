@@ -34,6 +34,9 @@ main {
 	margin-left: 7%;
 }
 
+.main-content h3{
+	margin-bottom:1rem;
+}
 .surround-text {
 	margin-top: 20px;
 	max-width: 500px;

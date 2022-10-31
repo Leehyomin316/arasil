@@ -82,10 +82,13 @@ div.main-content > header {
     margin-bottom: 1rem;
     border: 1px solid white;
     border-left: solid 10px #8A66AE;
-    padding: 7px;
+    padding: 1rem;
+    padding-top:7px;
+    padding-bottom:7px;
     border-radius: 5px;
     width: fit-content;
     color: #000000;
     background: #F8E8FF;
     font-weight:500;
+    font-size:20px;
 }
