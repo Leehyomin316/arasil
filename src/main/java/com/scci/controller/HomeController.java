@@ -30,6 +30,10 @@ public class HomeController {
 		mv.setViewName("home");
 		return mv;
 	}
+	@RequestMapping(value="/home2", method=RequestMethod.GET)
+	public String home2() {
+		return "/home2";
+	}
 	
 	@RequestMapping("/welcome")
 	public String welcome(Principal principal) {
