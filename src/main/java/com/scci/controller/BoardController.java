@@ -19,47 +19,84 @@ import com.scci.vo.FaqVO;
 @Controller
 @RequestMapping("/board")
 public class BoardController {
-	
+
 	@Autowired
 	private BoardService boardService;
 
 	@RequestMapping(value = "/noticePage", method = RequestMethod.GET)
-	public String noticePage(@ModelAttribute NoticeVO noticeVO, Model model, Principal principal) {
-		List<NoticeVO> notice = boardService.getNotice(noticeVO);
-		model.addAttribute("notice", notice);
+	public String noticePage(Model model, Principal principal) {
+		model.addAttribute("noticePage", boardService.getNotice());
 		return "board/noticePage";
 	}
-	
-	@RequestMapping("/noticeForm")
-	public String boardForm() {
-		return "board/noticeForm";
-	}
+
+	   @RequestMapping("/noticeForm")
+	   public String boardForm(Model model) {
+	      model.addAttribute("NoticeVO", new NoticeVO());
+	      return "board/noticeForm";
+	   }
 	@RequestMapping(value="/saveBoard",method = RequestMethod.POST)
-	public String saveBoard(@ModelAttribute("NoticeVO")NoticeVO noticeVO,
-			RedirectAttributes rttr) {
-		boardService.getNoticeInsert(noticeVO);
+	public String saveBoard(@ModelAttribute("NoticeVO") NoticeVO noticeVO
+			,@RequestParam("mode") String mode
+			,RedirectAttributes rttr) {
+		if(mode.equals("edit")) {
+			boardService.getNoticeUpdate(noticeVO);
+		}else {
+			boardService.getNoticeInsert(noticeVO);
+		}
 		return "redirect:/board/noticePage";
 	}
-
-	
-	@RequestMapping(value="/updateNotice", method = RequestMethod.POST)
-	public String updateNotice(Model model, NoticeVO noticeVO) {
-		int result = boardService.updateNotice(noticeVO);
-		return "redirect:/board/noticePage";
-	}
-
 	
 	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
 	public String getNoticeContent(Model model, @RequestParam("noticeId")int noticeId) {
 		model.addAttribute("notice", boardService.getNoticeContent(noticeId));
 		return "board/noticeContent";
 	}
-
-	@RequestMapping(value="/deleteNotice", method = RequestMethod.DELETE)
-	public String deleteNotice(Model model, NoticeVO noticeVO) {
-		int result = boardService.deleteNotice(noticeVO);
+	
+	@RequestMapping(value="/editForm", method = RequestMethod.GET)
+	public String editForm(@RequestParam("noticeId")int noticeId
+			,@RequestParam("mode")String mode, Model model) {
+		model.addAttribute("notice", boardService.getNoticeContent(noticeId));
+		model.addAttribute("mode", mode);
+		model.addAttribute("NoticeVO", new NoticeVO());
+		return "board/noticeForm";
+	}
+	
+	@RequestMapping(value ="/deleteBoard", method = RequestMethod.GET)
+	public String getNoticeDelete(RedirectAttributes rttr, @RequestParam("noticeId")int noticeId) {
+		boardService.getNoticeDelete(noticeId);
 		return "redirect:/board/noticePage";
 	}
+/*
+ * @Autowired private BoardService boardService;
+ * 
+ * @RequestMapping(value = "/noticePage", method = RequestMethod.GET) public
+ * String noticePage(@ModelAttribute NoticeVO noticeVO, Model model, Principal
+ * principal) { List<NoticeVO> notice = boardService.getNotice(noticeVO);
+ * model.addAttribute("notice", notice); return "board/noticePage"; }
+ * 
+ * @RequestMapping("/noticeForm") public String boardForm() { return
+ * "board/noticeForm"; }
+ * 
+ * @RequestMapping(value="/saveBoard",method = RequestMethod.POST) public String
+ * saveBoard(@ModelAttribute("NoticeVO")NoticeVO noticeVO, RedirectAttributes
+ * rttr) { boardService.getNoticeInsert(noticeVO); return
+ * "redirect:/board/noticePage"; }
+ * 
+ * 
+ * @RequestMapping(value="/updateNotice", method = RequestMethod.POST) public
+ * String updateNotice(Model model, NoticeVO noticeVO) { int result =
+ * boardService.updateNotice(noticeVO); return "redirect:/board/noticePage"; }
+ * 
+ * 
+ * @RequestMapping(value="/noticeContent", method = RequestMethod.GET) public
+ * String getNoticeContent(Model model, @RequestParam("noticeId")int noticeId) {
+ * model.addAttribute("notice", boardService.getNoticeContent(noticeId)); return
+ * "board/noticeContent"; }
+ * 
+ * @RequestMapping(value="/deleteNotice", method = RequestMethod.DELETE) public
+ * String deleteNotice(Model model, NoticeVO noticeVO) { int result =
+ * boardService.deleteNotice(noticeVO); return "redirect:/board/noticePage"; }
+ */
 	
 
 // --------------------------------------------------------------------------------------
@@ -69,6 +106,13 @@ public class BoardController {
 		model.addAttribute("FAQ", boardService.getBoardFAQ());
 		return "board/boardFAQ";
 	}
+		
+	/*
+	 * @RequestMapping(value = "/faqContent", method = RequestMethod.GET) 
+	 * public String faqContent(Model model, @RequestParam("faqId")int faqId) {
+	 * model.addAttribute("faqContent", boardService.faqContent(faqId)); return
+	 * "board/boardFAQInsert"; }
+	 */
 	@RequestMapping(value="/boardFAQInsert", method = RequestMethod.GET)
 	public String getFAQInsert() {
 		return "board/boardFAQInsert";

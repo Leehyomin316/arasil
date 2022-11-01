@@ -6,6 +6,20 @@ import com.scci.vo.FaqVO;
 import com.scci.vo.NoticeVO;
 
 public interface BoardService {
+	
+	public List<NoticeVO> getNotice();
+	
+	public void getNoticeInsert(NoticeVO noticeVO);
+	
+	public NoticeVO getNoticeContent(int noticeId);
+	
+	public int getNoticeUpdate(NoticeVO noticeVO);
+	
+	public void getNoticeDelete(int noticeId);
+
+
+//--------------------------------------------------------
+	/*
 	public List<NoticeVO> getNotice(NoticeVO noticeVO);
 	
 	public void getNoticeInsert(NoticeVO noticeVO);
@@ -16,8 +30,12 @@ public interface BoardService {
 	
 	public int deleteNotice(NoticeVO noticeVO);
 	
-
+	*/
+	
+//---------------------------------------------------------
 	public List<FaqVO> getBoardFAQ();
+	
+	/* public FaqVO faqContent(int faqId); */
 
 	public void getFAQInsert(FaqVO faqVO);
 
