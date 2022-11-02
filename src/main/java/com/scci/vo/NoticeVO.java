@@ -3,16 +3,16 @@ package com.scci.vo;
 import java.util.Date;
 
 public class NoticeVO {
-	private long noticeId;
+	private int noticeId;
 	private String noticeTitle; // 게시물제목
 	private String noticeContent; // 게시물내용
 	private Date noticeDate; // 게시물작성일자
 	private String userId; // 게시물작성자
 	
-	public long getNoticeId() {
+	public int getNoticeId() {
 		return noticeId;
 	}
-	public void setNoticeId(long noticeId) {
+	public void setNoticeId(int noticeId) {
 		this.noticeId = noticeId;
 	}
 	public String getNoticeTitle() {

@@ -11,36 +11,65 @@ import com.scci.vo.NoticeVO;
 
 @Repository
 public class BoardDAOImpl implements BoardDAO {
-	@Autowired
+	
+ 	@Autowired
 	private SqlSession sqlSession;
 
 	@Override
-	public List<NoticeVO> getNotice(NoticeVO noticeVO) {
-		return sqlSession.selectList("mapper.notice.selectNotice", noticeVO);
+	public List<NoticeVO> getNotice() {
+		return sqlSession.selectList("mapper.notice.selectNotice");
 	}
-	@Override
-	public NoticeVO getNoticeContent(int noticeId) {
-		return sqlSession.selectOne("mapper.notice.selectContent", noticeId);
-	}
+
 	@Override
 	public int getNoticeInsert(NoticeVO noticeVO) {
 		return sqlSession.insert("mapper.notice.selectInsert", noticeVO);
 	}
+	
 	@Override
-	public int deleteNotice(NoticeVO noticeVO) {
-		return sqlSession.delete("mapper.notice.deleteNotice", noticeVO);
+	public NoticeVO getNoticeContent(int noticeId) {
+		return sqlSession.selectOne("mapper.notice.selectContent", noticeId);
 	}
+	
 	@Override
-	public int updateNotice(NoticeVO noticeVO) {
+	public int getNoticeUpdate(NoticeVO noticeVO) {
 		return sqlSession.update("mapper.notice.updateNotice", noticeVO);
 	}
-
 	
+	@Override
+	public int getNoticeDelete(int noticeId) {
+		return sqlSession.insert("mapper.notice.deleteNotice", noticeId);	
+	}
+//-----------------------------------------------------------------------
+	/*
+	 * @Autowired private SqlSession sqlSession;
+	 * 
+	 * @Override public List<NoticeVO> getNotice(NoticeVO noticeVO) { return
+	 * sqlSession.selectList("mapper.notice.selectNotice", noticeVO); }
+	 * 
+	 * @Override public NoticeVO getNoticeContent(int noticeId) { return
+	 * sqlSession.selectOne("mapper.notice.selectContent", noticeId); }
+	 * 
+	 * @Override public int getNoticeInsert(NoticeVO noticeVO) { return
+	 * sqlSession.insert("mapper.notice.selectInsert", noticeVO); }
+	 * 
+	 * @Override public int deleteNotice(NoticeVO noticeVO) { return
+	 * sqlSession.delete("mapper.notice.deleteNotice", noticeVO); }
+	 * 
+	 * @Override public int updateNotice(NoticeVO noticeVO) { return
+	 * sqlSession.update("mapper.notice.updateNotice", noticeVO); }
+	 */
+
+//---------------------------------------------------------------------------	
 	
 	@Override
 	public List<FaqVO> getBoardFAQ() {
 		return sqlSession.selectList("mapper.notice.selectFAQ");
 	}
+	
+	/*
+	 * @Override public FaqVO faqContent(int faqId) { return
+	 * sqlSession.selectOne("mapper.notice.faqContent", faqId); }
+	 */
 	
 	@Override
 	public int getFAQInsert(FaqVO faqVO) {
@@ -56,7 +85,4 @@ public class BoardDAOImpl implements BoardDAO {
 	public int deleteFAQ(FaqVO faqVO) {
 		return sqlSession.update("mapper.notice.deleteFAQ", faqVO);
 	}
-
-
-
 }
