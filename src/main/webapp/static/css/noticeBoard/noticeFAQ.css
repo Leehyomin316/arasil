@@ -48,7 +48,7 @@ div > article > h2{
 
 details summary {
     background: rgba(240,240,240);
-    padding: 5px;
+    padding: 10px;
     border: 5px solid transparent;
     outline: none;
     cursor: pointer;
@@ -65,4 +65,23 @@ details[open] summary {
 }
 #btnInsert{
 	margin-bottom:10px;
+}
+
+.main-content{
+	display:flex;
+	width:100%;
+}
+
+article > img{
+	position:absolute;
+	top:70px;
+	right:70px;
+	width:30%;	
+}
+@media (max-width:1280px){
+article > img{
+    display: none;
+    visibility: hidden;
+    width: 0%;
+}
 }
