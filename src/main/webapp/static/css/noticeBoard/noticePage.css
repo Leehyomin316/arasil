@@ -19,3 +19,8 @@ div > article > h2{
     color: #000000;
     background: #D2D2FF;
 }
+
+div.main-content > article{
+	margin:35px;
+}
+

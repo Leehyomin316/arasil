@@ -63,10 +63,10 @@
 				<table class="table table-striped table-sm">
 					<thead class="thead-dark">
 						<tr>
-							<th scope="col">번호</th>
-							<th scope="col">제목</th>
-							<th scope="col">작성일자</th>
-							<th scope="col">작성자</th>
+							<th nowrap scope="col">번호</th>
+							<th nowrap scope="col">제목</th>
+							<th nowrap class="hidden-table" scope="col">작성일자</th>
+							<th nowrap class="hidden-table" scope="col">작성자</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -84,9 +84,9 @@
 											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
 												<c:out value="${row.noticeTitle}" />
 										</a></td>
-										<td><fmt:formatDate value="${row.noticeDate}"
+										<td class="hidden-table"><fmt:formatDate value="${row.noticeDate}"
 												pattern="yyyy-MM-dd" /></td>
-										<td>${row.userId}</td>
+										<td class="hidden-table">${row.userId}</td>
 									</tr>
 								</c:forEach>
 							</c:when>

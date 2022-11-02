@@ -13,7 +13,7 @@
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
 <link
-	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
+	href="${pageContext.request.contextPath}/static/css/noticeBoard/boardFAQInsert.css"
 	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>		
 <script>
