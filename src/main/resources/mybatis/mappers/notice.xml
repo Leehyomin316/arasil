@@ -51,7 +51,8 @@
 		DELETE FROM NOTICE WHERE NOTICE_ID=#{noticeId};
 	</delete>
 
-<!-- 하단 FAQ sql -->
+<!-- 하단 FAQ -->
+
 
 	<select id="selectFAQ" resultType="com.scci.vo.FaqVO" parameterType="com.scci.vo.FaqVO">
 		select faq_id , faq_title, faq_content, user_id
@@ -60,6 +61,14 @@
 	     <if test="faqTitle!=null and !faqTitle.equals('')">
 			and faq_title like concat(#{faqTitle}, '%')
 		</if>         		
+	</select>
+	<select id="selectFAQContent" resultType="com.scci.vo.FaqVO">
+		select faq_id, faq_title, faq_content, user_id
+		from faq
+		where faq_id = #{faqId}
+		<if test= 'value != null'>
+			and faq_id = #{faqId}
+		</if>
 	</select>
 
 	<insert id="insertFAQ" parameterType="com.scci.vo.FaqVO">
@@ -75,7 +84,7 @@
 	</insert>
 	
 	<update id="updateFAQ" parameterType="com.scci.vo.FaqVO">
-		UPDATE `arasil`.`faq`
+		UPDATE `arasil`. `FAQ`
 		SET
 		`FAQ_TITLE` = #{faqTitle},
 		`FAQ_CONTENT` = #{faqContent},

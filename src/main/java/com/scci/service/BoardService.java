@@ -19,6 +19,8 @@ public interface BoardService {
 
 	public List<FaqVO> getBoardFAQ();
 
+	public FaqVO getFAQContent(int faqId);
+	
 	public void getFAQInsert(FaqVO faqVO);
 
 	public int updateFAQ(FaqVO faqVO);

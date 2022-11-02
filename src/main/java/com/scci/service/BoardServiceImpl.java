@@ -43,6 +43,11 @@ public class BoardServiceImpl implements BoardService{
 	public List<FaqVO> getBoardFAQ() {
 		return boardDAO.getBoardFAQ();
 	}
+	@Override
+	public FaqVO getFAQContent(int faqId) {
+		return boardDAO.getFAQContent(faqId);
+	}
+	
 
 	@Override
 	public void getFAQInsert(FaqVO faqVO) {
@@ -56,7 +61,7 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public int deleteFAQ(FaqVO faqVO) {
-		return boardDAO.updateFAQ(faqVO);
+		return boardDAO.deleteFAQ(faqVO);
 	}
 
 }
