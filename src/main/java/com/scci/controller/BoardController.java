@@ -23,11 +23,19 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 
-	@RequestMapping(value = "/noticePage", method = RequestMethod.GET)
-	public String noticePage(Model model, Principal principal) {
-		model.addAttribute("noticePage", boardService.getNotice());
-		return "board/noticePage";
-	}
+	/*
+	 * @RequestMapping(value = "/noticePage", method = RequestMethod.GET) public
+	 * String noticePage(Model model, Principal principal) {
+	 * model.addAttribute("noticePage", boardService.getNotice()); return
+	 * "board/noticePage"; }
+	 */
+	
+	@RequestMapping(value = "/noticePage", method = RequestMethod.GET) 
+	public String noticePage(@ModelAttribute NoticeVO noticeVO, Model model, Principal principal) {
+		List<NoticeVO> notice = boardService.getNotice(noticeVO);
+	 	model.addAttribute("notice", notice); 
+	 	return "board/noticePage";
+	 }
 
 	 @RequestMapping("/noticeForm")
 	 public String boardForm(Model model) {
