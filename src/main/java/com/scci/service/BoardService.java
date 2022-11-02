@@ -7,7 +7,7 @@ import com.scci.vo.NoticeVO;
 
 public interface BoardService {
 	
-	public List<NoticeVO> getNotice();
+	public List<NoticeVO> getNotice(NoticeVO noticeVO);
 	
 	public void getNoticeInsert(NoticeVO noticeVO);
 	

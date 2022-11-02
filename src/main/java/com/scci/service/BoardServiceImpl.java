@@ -15,8 +15,8 @@ public class BoardServiceImpl implements BoardService{
 private BoardDAO boardDAO;
 	
 	@Override 
-	public List<NoticeVO> getNotice(){
-	return boardDAO.getNotice();
+	public List<NoticeVO> getNotice(NoticeVO noticeVO){
+	return boardDAO.getNotice(noticeVO);
 	}
 	
 	@Override

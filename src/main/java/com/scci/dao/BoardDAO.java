@@ -9,7 +9,7 @@ import com.scci.vo.FaqVO;
 public interface BoardDAO {
 	
 	//게시물 목록 보기
-	public List<NoticeVO> getNotice();
+	public List<NoticeVO> getNotice(NoticeVO noticeVO);
 	
 	public int getNoticeInsert(NoticeVO noticeVO);
 	// 상세보기
