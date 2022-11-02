@@ -71,13 +71,13 @@
 					</thead>
 					<tbody>
 						<c:choose>
-							<c:when test="${empty noticePage}">
+							<c:when test="${empty notice}">
 								<tr>
 									<td colspan="5" align="center">데이터가 없습니다</td>
 								</tr>
 							</c:when>
-							<c:when test="${!empty noticePage}">
-								<c:forEach var="row" items="${noticePage}">
+							<c:when test="${!empty notice}">
+								<c:forEach var="row" items="${notice}">
 									<tr>
 										<td>${row.noticeId}</td>
 										<td><a href="#"
