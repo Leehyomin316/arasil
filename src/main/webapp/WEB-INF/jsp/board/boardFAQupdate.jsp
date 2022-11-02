@@ -29,6 +29,15 @@
 		});
 	});
 </script>
+<script>
+	$(function() {
+		$("#btnDelete").on("click",function(){
+			var url = "${pageContext.request.contextPath}/board/deleteFAQ";
+			url = url + "?faqId="+${boardFAQupdate.faqId};
+			location.href = url;
+		});
+	});
+</script>
 
 </head>
 <body>
@@ -52,9 +61,10 @@
 							id="faq_content" placeholder="내용을 입력해 주세요" required>${boardFAQupdate.faqContent}</textarea>
 					</div>
 						<input type="hidden" value="admin" name="userId" />
-						<input type="hidden" name="faqId" value="${boardFAQupdate.faqId}"/>	
+						<input type="hidden" name="faqId" value="<c:out value="${boardFAQupdate.faqId}"></c:out>"/>	
 					<div>
 						<button type="button" class="btn btn-sm btn-primary" id="btnSave">저장</button>
+						<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
 						<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 					</div>
 				</form>

@@ -85,8 +85,8 @@ private BoardDAO boardDAO;
 	}
 
 	@Override
-	public int deleteFAQ(FaqVO faqVO) {
-		return boardDAO.deleteFAQ(faqVO);
+	public int deleteFAQ(int faqId) {
+		return boardDAO.deleteFAQ(faqId);
 	}
 
 }
