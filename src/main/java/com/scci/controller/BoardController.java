@@ -132,12 +132,18 @@ public class BoardController {
 		int result = boardService.updateFAQ(faqVO);
 		return "redirect:/board/boardFAQ";
 	}
-	@RequestMapping(value="/deleteFAQ", method = RequestMethod.GET)
-	public String deleteFAQ(Model model, FaqVO faqVO) {
-		model.addAttribute("deleteFAQ", boardService.deleteFAQ(faqVO));
-		System.out.println("delete");
-		return "board/boardFAQ";
+	@RequestMapping(value ="/deleteFAQ", method = RequestMethod.GET)
+	public String deleteFAQ(Model model, @RequestParam("faqId") int faqId) {
+		model.addAttribute("deleteFAQ", boardService.deleteFAQ(faqId));
+		return "redirect:/board/boardFAQ";
 	}
+
+//	@RequestMapping(value="/deleteFAQ", method = RequestMethod.GET)
+//	public String deleteFAQ(Model model, FaqVO faqVO) {
+//		int result = boardService.deleteFAQ(faqVO);
+////		model.addAttribute("deleteFAQ", boardService.deleteFAQ(faqVO));
+//		return "redirect:/board/boardFAQ";
+//	}
 	@RequestMapping(value="/boardFaqSave",method = RequestMethod.POST)
 	public String faqBoard(@ModelAttribute("FaqVO")FaqVO faqVO,	RedirectAttributes rttr) {
 		boardService.getFAQInsert(faqVO);

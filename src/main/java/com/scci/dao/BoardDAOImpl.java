@@ -86,7 +86,7 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 
 	@Override
-	public int deleteFAQ(FaqVO faqVO) {
-		return sqlSession.delete("mapper.notice.deleteFAQ", faqVO);
+	public int deleteFAQ(int faqId) {
+		return sqlSession.delete("mapper.notice.deleteFAQ", faqId);
 	}
 }

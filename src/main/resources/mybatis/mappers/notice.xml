@@ -97,8 +97,9 @@
 		WHERE `FAQ_ID` = #{faqId}
 	</update>
 
-	<delete id="deleteFAQ" parameterType="com.scci.vo.FaqVO">
-		DELETE FROM faq where FAQ_ID=#{faqID};
+	<delete id="deleteFAQ" parameterType="int">
+		DELETE FROM `arasil`.`faq` 
+		where FAQ_ID = #{faqID};
 	</delete>
 
 </mapper>

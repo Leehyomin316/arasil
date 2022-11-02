@@ -41,6 +41,6 @@ public interface BoardDAO {
 
 	public int updateFAQ(FaqVO faqVO);
 
-	public int deleteFAQ(FaqVO faqVO);
+	public int deleteFAQ(int faqId);
 
 }
