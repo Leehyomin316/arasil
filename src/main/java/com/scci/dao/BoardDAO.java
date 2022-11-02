@@ -34,8 +34,8 @@ public interface BoardDAO {
 
 //----------------------------------------------------------------------------------
 	public List<FaqVO> getBoardFAQ();
-	
-	/* public FaqVO faqContent(int faqId); */
+
+	public FaqVO getFAQContent(int faqId);
 
 	public int getFAQInsert(FaqVO faqVO);
 

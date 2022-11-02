@@ -65,6 +65,10 @@ public class BoardDAOImpl implements BoardDAO {
 	public List<FaqVO> getBoardFAQ() {
 		return sqlSession.selectList("mapper.notice.selectFAQ");
 	}
+	@Override
+	public FaqVO getFAQContent(int faqId) {
+		return sqlSession.selectOne("mapper.notice.selectFAQContent", faqId);
+	}
 	
 	/*
 	 * @Override public FaqVO faqContent(int faqId) { return
@@ -83,6 +87,6 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public int deleteFAQ(FaqVO faqVO) {
-		return sqlSession.update("mapper.notice.deleteFAQ", faqVO);
+		return sqlSession.delete("mapper.notice.deleteFAQ", faqVO);
 	}
 }

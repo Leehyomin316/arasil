@@ -55,7 +55,8 @@
 		WHERE notice_id = #{notice_id}
 	</delete>
 
-<!-- 하단 FAQ sql -->
+<!-- 하단 FAQ -->
+
 
 	<select id="selectFAQ" resultType="com.scci.vo.FaqVO" parameterType="com.scci.vo.FaqVO">
 		select faq_id , faq_title, faq_content, user_id
@@ -65,12 +66,15 @@
 			and faq_title like concat(#{faqTitle}, '%')
 		</if>         		
 	</select>
-	
-<!-- 	<select id="faqContent" resultType="com.scci.vo.FaqVO">
+
+	<select id="selectFAQContent" resultType="com.scci.vo.FaqVO">
 		select faq_id, faq_title, faq_content, user_id
 		from faq
 		where faq_id = #{faqId}
-	</select> -->
+		<if test= 'value != null'>
+			and faq_id = #{faqId}
+		</if>
+	</select>
 
 	<insert id="insertFAQ" parameterType="com.scci.vo.FaqVO">
 		INSERT INTO `arasil`. `FAQ`
@@ -85,7 +89,7 @@
 	</insert>
 	
 	<update id="updateFAQ" parameterType="com.scci.vo.FaqVO">
-		UPDATE `arasil`.`faq`
+		UPDATE `arasil`. `FAQ`
 		SET
 		`FAQ_TITLE` = #{faqTitle},
 		`FAQ_CONTENT` = #{faqContent},

@@ -88,9 +88,9 @@
                 <ul class="navbar-nav ml-auto ul-margin">
                     <li class="nav-item active"><a class="nav-link">관리자메뉴</a>
                     	<ul class="underline">
-                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
+                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">공지사항관리</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/reservation/listPage">예약현황</a></li>
-                    		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticeForm">공지사항등록</a></li>
+<%--                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticeForm">공지사항등록</a></li> --%>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/boardFAQ">FAQ관리</a></li>
                     	</ul>
                     </li>

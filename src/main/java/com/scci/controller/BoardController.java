@@ -47,7 +47,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/noticeContent", method = RequestMethod.GET)
-	public String getNoticeContent(Model model, @RequestParam("noticeId")int noticeId) {
+	public String getNoticeContent(Model model, @RequestParam("noticeId") int noticeId) {
 		model.addAttribute("notice", boardService.getNoticeContent(noticeId));
 		return "board/noticeContent";
 	}
@@ -108,21 +108,21 @@ public class BoardController {
 		model.addAttribute("FAQ", boardService.getBoardFAQ());
 		return "board/boardFAQ";
 	}
-		
-	/*
-	 * @RequestMapping(value = "/faqContent", method = RequestMethod.GET) 
-	 * public String faqContent(Model model, @RequestParam("faqId")int faqId) {
-	 * model.addAttribute("faqContent", boardService.faqContent(faqId)); return
-	 * "board/boardFAQInsert"; }
-	 */
+
+	@RequestMapping(value="/boardFAQupdate", method = RequestMethod.GET)
+	public String getFAQContent(Model model, @RequestParam("faqId") int faqId) {
+		model.addAttribute("boardFAQupdate", boardService.getFAQContent(faqId));
+		return "board/boardFAQupdate";
+	}
+
 	@RequestMapping(value="/boardFAQInsert", method = RequestMethod.GET)
 	public String getFAQInsert() {
 		return "board/boardFAQInsert";
 	}
-	@RequestMapping(value="/updateFAQ", method = RequestMethod.GET)
+	@RequestMapping(value="/updateFAQ", method = RequestMethod.POST)
 	public String updateFAQ(Model model, FaqVO faqVO) {
-		model.addAttribute("updateFAQ", boardService.updateFAQ(faqVO));
-		return "redirect:/board/boardFAQInsert";
+		int result = boardService.updateFAQ(faqVO);
+		return "redirect:/board/boardFAQ";
 	}
 	@RequestMapping(value="/deleteFAQ", method = RequestMethod.GET)
 	public String deleteFAQ(Model model, FaqVO faqVO) {

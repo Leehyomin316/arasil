@@ -63,6 +63,11 @@ private BoardDAO boardDAO;
 	public List<FaqVO> getBoardFAQ() {
 		return boardDAO.getBoardFAQ();
 	}
+	@Override
+	public FaqVO getFAQContent(int faqId) {
+		return boardDAO.getFAQContent(faqId);
+	}
+	
 
 	/*
 	 * @Override public FaqVO faqContent(int faqId) { return
@@ -81,7 +86,7 @@ private BoardDAO boardDAO;
 
 	@Override
 	public int deleteFAQ(FaqVO faqVO) {
-		return boardDAO.updateFAQ(faqVO);
+		return boardDAO.deleteFAQ(faqVO);
 	}
 
 }

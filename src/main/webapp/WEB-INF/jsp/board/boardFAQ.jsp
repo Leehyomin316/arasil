@@ -25,22 +25,12 @@
 	});
 </script>
 <script>
-	function fn_updateFAQ(faqID) {
-		var url = "${pageContext.request.contextPath}/board/boardFAQInsert";
+	function fn_updateFAQ(faqId) {
+		var url = "${pageContext.request.contextPath}/board/boardFAQupdate";
 		url = url + "?faqId="+faqId;
 		location.href = url;
 	};
 </script>
-<script>
-	$(function() {
-		$("#btnUpdate").on("click", function() {
-			location.href = "${pageContext.request.contextPath}/board/updateFAQ";
-		})
-	})
-
-</script>
-
-
 </head>
 <body>
 	<%@ include file="../home/header.jsp"%>
@@ -63,9 +53,10 @@
 								<summary><b>&nbsp;${row.faqTitle}</b></summary>
 								<ul><b>&nbsp;&nbsp;&nbsp;-&nbsp;${row.faqContent}</b></ul>
 									<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
-									<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
-									<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
-									</sec:authorize>		
+										<button type="button" class="btn btn-sm btn-primary" id="btnUpdate" 
+												onclick="fn_updateFAQ(<c:out value="${row.faqId}"/>)">수정</button>
+										<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
+									</sec:authorize>
 								</details>
 							</tr>
 						</c:forEach>
