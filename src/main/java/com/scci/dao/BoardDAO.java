@@ -21,7 +21,8 @@ public interface BoardDAO {
 
 //---------------------------------------------------------------------------------
 	/*
-	 * //게시물 목록 보기 public List<NoticeVO> getNotice(NoticeVO noticeVO);
+	 * //게시물 목록 보기 
+	 * public List<NoticeVO> getNotice(NoticeVO noticeVO);
 	 * 
 	 * public NoticeVO getNoticeContent(int noticeId);
 	 * 

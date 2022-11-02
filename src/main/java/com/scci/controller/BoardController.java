@@ -29,13 +29,13 @@ public class BoardController {
 		return "board/noticePage";
 	}
 
-	   @RequestMapping("/noticeForm")
-	   public String boardForm(Model model) {
-	      model.addAttribute("NoticeVO", new NoticeVO());
-	      return "board/noticeForm";
-	   }
+	 @RequestMapping("/noticeForm")
+	 public String boardForm(Model model) {
+		model.addAttribute("NoticeVO", new NoticeVO());
+	    return "board/noticeForm";
+	}
 	@RequestMapping(value="/saveBoard",method = RequestMethod.POST)
-	public String saveBoard(@ModelAttribute("NoticeVO") NoticeVO noticeVO
+	public String saveBoard(@ModelAttribute("notice") NoticeVO noticeVO
 			,@RequestParam("mode") String mode
 			,RedirectAttributes rttr) {
 		if(mode.equals("edit")) {
@@ -66,6 +66,8 @@ public class BoardController {
 		boardService.getNoticeDelete(noticeId);
 		return "redirect:/board/noticePage";
 	}
+	
+	//--------------------------------------------------------------------
 /*
  * @Autowired private BoardService boardService;
  * 

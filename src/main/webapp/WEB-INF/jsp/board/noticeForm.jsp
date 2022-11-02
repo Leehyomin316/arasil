@@ -31,6 +31,7 @@
 			$("#btnList").on("click", function(){
 				location.href="${pageContext.request.contextPath}/board/noticePage";
 			});
+			
 		});
 </script>
 <script>	
@@ -38,12 +39,11 @@
 			var mode = '<c:out value="${mode}"/>';
 			if( mode == 'edit'){
 				// 입력 셋팅
-				$(#user_id).prop('readonly',true);
-				$("input:hidden[name='notice_id']").val(<c:out value="${notice.noticeId}"/>);
+				$("input:hidden[name='noticeId']").val(<c:out value="${notice.noticeId}"/>);
 				$("input:hidden[name='mode']").val('<c:out value ="${mode}"/>');
-				$("#user_id").val('<c:out value ="${notice.userId}"/>');
-				$("#notice_title").val('c:out value ="${notice.noticeTitle}"/>');
-				$("#notice_content").val('c:out value="${notice.noticeContent}"/>');
+				$("#userId").val('<c:out value ="${notice.userId}"/>');
+				$("#noticeTitle").val('<c:out value ="${notice.noticeTitle}"/>');
+				$("#noticeContent").val('<c:out value="${notice.noticeContent}"/>');
 			}
 		});
 </script>
@@ -55,7 +55,7 @@
 		<h1>공지사항 글쓰기</h1>
 	</header>
 		<article>
-			<div class="container" role="main">
+			<div class="container">
 				<form:form name="form" id="form" role="form" modelAttribute="NoticeVO" method="post"
 					action="${pageContext.request.contextPath}/board/saveBoard">
 					<form:hidden path="noticeId" />
@@ -68,7 +68,7 @@
 					<div class="mb-3">
 						<label for="noticeContent">내용</label>
 						<form:textarea path="noticeContent" class="form-control" rows="5"
-							id="notice_content" placeholder="내용을 입력해 주세요" />
+							id="noticeContent" placeholder="내용을 입력해 주세요" />
 					</div>
 					<input type="hidden" value="admin" name="userId" />
 				</form:form>
