@@ -98,14 +98,22 @@
 	</article> --%>
 	<article>
 		<div class="container" role="main">
-			<h2>게시글 내용</h2>
+		<header class ="title">
+			<h1>게시글 내용</h1>
+		</header>
 				<div class="bg-white rounded shadow-sm">
 					<div class="noticeTitle">
-						<label>제목 : </label>
-						<c:out value="${notice.noticeTitle }" />
+					<label for="faqTitle">제목</label> <input type="text"
+							class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"
+							placeholder="제목을 입력해 주세요" readonly>
+						<%-- <label>제목 : </label>
+						<c:out value="${notice.noticeTitle }" /> --%>
 					</div>
-					<label>내용</label>
-					<div class="noticeContent">${notice.noticeContent }</div>
+					<div class="mb-3">
+						<label for="notice_content">내용</label>
+						<input type="text" class="form-control" rows="5" name="noticeContent"
+							id="noticeContent" value="${notice.noticeContent}" readonly></input>
+					</div>
 				</div>
 
 			</div>
