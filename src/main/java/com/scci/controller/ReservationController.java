@@ -104,4 +104,5 @@ public class ReservationController {
 	public String checkReservation() {
 		return "reservation/checkReservation";
 	}
+	
 }

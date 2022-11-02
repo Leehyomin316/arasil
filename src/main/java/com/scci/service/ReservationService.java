@@ -17,4 +17,5 @@ public interface ReservationService {
 	public int getReservationTotal();
 	
 	public int updateStatus(List<String> ids, List<String> codes);
+	
 }

@@ -31,7 +31,7 @@
 			<section class="container">
 				<div class="emptyDiv"></div>
 				<div class="checkInput">
-					<input type="text" class="reservId" id="reservId" placeholder="주문번호">
+					<input type="text" class="reservSeq" id="reservSeq" placeholder="주문번호">
 				</div>
 				<div class="checkInput">
 					<input type="text" class="guestNm" id="guestNm" placeholder="이름">
@@ -85,7 +85,8 @@
 													<td>${reservationVO.reservCode}</td>
 												</tr>
 												<tr>
-													<td>${reservationVO.guestNm}</td>
+													<td><input readonly class="form-control-plaintext"
+														id="inputGuestNm" name="inputGuestNm"></td>
 												</tr>
 												<tr>
 													<td>${reservationVO.reservSeq}</td>
