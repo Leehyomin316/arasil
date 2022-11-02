@@ -63,30 +63,30 @@
 				<table class="table table-striped table-sm">
 					<thead class="thead-dark">
 						<tr>
-							<th scope="col">번호</th>
-							<th scope="col">제목</th>
-							<th scope="col">작성일자</th>
-							<th scope="col">작성자</th>
+							<th nowrap scope="col">번호</th>
+							<th nowrap scope="col">제목</th>
+							<th nowrap class="hidden-table" scope="col">작성일자</th>
+							<th nowrap class="hidden-table" scope="col">작성자</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:choose>
-							<c:when test="${empty notice}">
+							<c:when test="${empty noticePage}">
 								<tr>
 									<td colspan="5" align="center">데이터가 없습니다</td>
 								</tr>
 							</c:when>
-							<c:when test="${!empty notice}">
-								<c:forEach var="row" items="${notice}">
+							<c:when test="${!empty noticePage}">
+								<c:forEach var="row" items="${noticePage}">
 									<tr>
 										<td>${row.noticeId}</td>
 										<td><a href="#"
 											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
 												<c:out value="${row.noticeTitle}" />
 										</a></td>
-										<td><fmt:formatDate value="${row.noticeDate}"
+										<td class="hidden-table"><fmt:formatDate value="${row.noticeDate}"
 												pattern="yyyy-MM-dd" /></td>
-										<td>${row.userId}</td>
+										<td class="hidden-table">${row.userId}</td>
 									</tr>
 								</c:forEach>
 							</c:when>

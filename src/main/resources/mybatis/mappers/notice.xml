@@ -13,7 +13,6 @@
 		</if>         		
 	</select>
 
-
 	<select id="selectContent" resultType="com.scci.vo.NoticeVO">
 		select notice_id, notice_title, notice_content, notice_date, user_id
 		from notice
@@ -22,6 +21,7 @@
 			and notice_id = #{noticeId}
 		</if> -->
 	</select>
+	
 	<update id="updateNotice" parameterType="com.scci.vo.NoticeVO">
 		UPDATE `arasil`.`notice`
 		SET
@@ -45,10 +45,14 @@
 			,#{userId}
 			)
 	</insert>
-
-
-	<delete id="deleteNotice" parameterType="com.scci.vo.NoticeVO">
+	
+<!-- 	<delete id="deleteNotice" parameterType="com.scci.vo.NoticeVO">
 		DELETE FROM NOTICE WHERE NOTICE_ID=#{noticeId};
+	</delete> -->
+	
+	<delete id="deleteNotice" parameterType="int">
+		DELETE FROM `arasil`.`notice`
+		WHERE notice_id = #{notice_id}
 	</delete>
 
 <!-- 하단 FAQ -->
@@ -62,6 +66,7 @@
 			and faq_title like concat(#{faqTitle}, '%')
 		</if>         		
 	</select>
+
 	<select id="selectFAQContent" resultType="com.scci.vo.FaqVO">
 		select faq_id, faq_title, faq_content, user_id
 		from faq

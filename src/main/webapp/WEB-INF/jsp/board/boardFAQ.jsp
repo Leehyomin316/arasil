@@ -69,6 +69,9 @@
 				</sec:authorize>
 			</div>
 		</article>
+		<article>
+			<img src="${pageContext.request.contextPath}/static/img/FAQ.jpg"/>
+		</article>
 	</div>
 			<%@ include file="../home/footer.jsp"%>
 </body>

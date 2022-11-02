@@ -11,12 +11,12 @@ import com.scci.vo.NoticeVO;
 
 @Service
 public class BoardServiceImpl implements BoardService{
-	@Autowired
-	private BoardDAO boardDAO;
+@Autowired
+private BoardDAO boardDAO;
 	
 	@Override 
-	public List<NoticeVO> getNotice(NoticeVO noticeVO){
-	return boardDAO.getNotice(noticeVO);
+	public List<NoticeVO> getNotice(){
+	return boardDAO.getNotice();
 	}
 	
 	@Override
@@ -28,17 +28,37 @@ public class BoardServiceImpl implements BoardService{
 	public NoticeVO getNoticeContent(int noticeId) {
 		return boardDAO.getNoticeContent(noticeId);
 	}
+	@Override
+	public int getNoticeUpdate(NoticeVO noticeVO) {
+		return boardDAO.getNoticeUpdate(noticeVO);
+	}
+	@Override
+	public void getNoticeDelete(int noticeId) {
+		boardDAO.getNoticeDelete(noticeId);
+	}
+
+//--------------------------------------------------------------------
+	/*
+	 * @Autowired private BoardDAO boardDAO;
+	 * 
+	 * @Override public List<NoticeVO> getNotice(NoticeVO noticeVO){ return
+	 * boardDAO.getNotice(noticeVO); }
+	 * 
+	 * @Override public void getNoticeInsert(NoticeVO noticeVO) {
+	 * boardDAO.getNoticeInsert(noticeVO); }
+	 * 
+	 * @Override public NoticeVO getNoticeContent(int noticeId) { return
+	 * boardDAO.getNoticeContent(noticeId); }
+	 * 
+	 * @Override public int updateNotice(NoticeVO noticeVO) { return
+	 * boardDAO.updateNotice(noticeVO); }
+	 * 
+	 * @Override public int deleteNotice(NoticeVO noticeVO) { return
+	 * boardDAO.deleteNotice(noticeVO); }
+	 */
+// --------------------------------------------------------
 	
-	@Override
-	public int updateNotice(NoticeVO noticeVO) {
-		return boardDAO.updateNotice(noticeVO);
-	}
-
-	@Override
-	public int deleteNotice(NoticeVO noticeVO) {
-		return boardDAO.deleteNotice(noticeVO);
-	}
-
+	
 	@Override
 	public List<FaqVO> getBoardFAQ() {
 		return boardDAO.getBoardFAQ();
@@ -49,6 +69,11 @@ public class BoardServiceImpl implements BoardService{
 	}
 	
 
+	/*
+	 * @Override public FaqVO faqContent(int faqId) { return
+	 * boardDAO.faqContent(faqId); }
+	 */
+	
 	@Override
 	public void getFAQInsert(FaqVO faqVO) {
 		boardDAO.getFAQInsert(faqVO);

@@ -13,7 +13,7 @@
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
 <link
-	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
+	href="${pageContext.request.contextPath}/static/css/noticeBoard/boardFAQInsert.css"
 	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>		
 <script>
@@ -35,8 +35,8 @@
 				<form name="form" id="form" role="form" method="post"
 					action="${pageContext.request.contextPath}/board/boardFaqSave">
 					<div class="mb-3">
-						<label for="faq_title">제목</label> <input type="text"
-							class="form-control" name="faqTitle" id="faq_title"
+						<label for="faqTitle">제목</label> <input type="text"
+							class="form-control" name="faqTitle" id="faqTitle" value="${updateFAQ.faqTitle}"
 							placeholder="제목을 입력해 주세요" required>
 					</div>
 					<div class="mb-3">
