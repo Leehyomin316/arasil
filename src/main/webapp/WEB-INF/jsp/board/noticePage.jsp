@@ -127,7 +127,7 @@
 					</c:choose>
 				</div>
 			</div> --%>
-			<div>
+			<div class="btn-container">
 				<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
 					<button type="button" class="btn btn-sm-btn-primary"
 						id="btnWriteForm">글쓰기</button>
