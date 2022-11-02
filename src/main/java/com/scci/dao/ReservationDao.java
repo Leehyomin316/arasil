@@ -17,4 +17,5 @@ public interface ReservationDao {
 	public int getReservationTotal();
 	
 	public int updateStatus(ReservationVO vo);
+	
 }

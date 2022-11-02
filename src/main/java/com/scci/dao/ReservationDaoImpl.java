@@ -51,5 +51,5 @@ public class ReservationDaoImpl implements ReservationDao{
 		// TODO Auto-generated method stub
 		return sqlSession.insert("mapper.reservation.updateStatus", vo);
 	}
-
+	
 }
