@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import '../common.css';
+div.main-content > article{
+	margin:10px;
+}
+div > article > h2{
+	margin-top: 0;
+    margin-bottom: 1rem;
+    border: 1px solid white;
+    border-left: solid 10px #0000CD;
+    padding: 7px;
+    border-radius: 5px;
+    width: fit-content;
+    color: #000000;
+    background: #D2D2FF;
+}
+
+.FAQ_div{
+    width: 100%;
+    max-width: 600px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: 40px;
+}
+
+.FAQ_div > details{
+
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0.02rem 0.05rem 0.01rem rgb(0 0 0 / 40%);
+    border-radius: 5px;
+    overflow: hidden;
+    border-left: 0px;
+    position: relative;
+    padding-bottom: 0.5rem;
+    padding-right: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+
+details summary {
+    background: rgba(240,240,240);
+    padding: 5px;
+    border: 5px solid transparent;
+    outline: none;
+    cursor: pointer;
+    transition: margin 200ms ease-out;
+    box-shadow: 4px 3px 3px grey;
+    padding-right: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+details[open] summary {
+  margin-bottom: 10px;
+}
+#btnInsert{
+	margin-bottom:10px;
+}
+div.main-content > article{
+	margin:35px;
+}
+

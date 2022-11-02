@@ -49,7 +49,9 @@
 			<h1>예약 현황</h1>
 		</header>
 		<div style="overflow-x: auto; white-space: nowrap;">
-			<button id="saveBtn" type="button">저장</button>
+			<div class="btn-container">
+				<button class="saveBtn" id="saveBtn" type="button">저장</button>
+			</div>
 			<form id="updateForm" action='<c:url value="/reservation/updateStatus"/>' method="post">
 				<input type="hidden" name="ids" id="ids">
 				<input type="hidden" name="codes" id="codes">
@@ -83,7 +85,7 @@
 							<td>${reservationVO.guestCellPhone}</td>
 							<td>${reservationVO.extraPerson}</td>
 							<td>${reservationVO.totalFee}</td>
-							<td><select id="codeSelect" >
+							<td><select id="codeSelect" disabled>
 									<option value="A" <c:if test="${reservationVO.reservCode eq 'A'}">selected</c:if>>예약등록</option>
 									<option value="B" <c:if test="${reservationVO.reservCode eq 'B'}">selected</c:if>>입금대기</option>
 									<option value="C" <c:if test="${reservationVO.reservCode eq 'C'}">selected</c:if>>예약확정</option>

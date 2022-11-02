@@ -12,6 +12,15 @@ main {
 	margin:30px;
 	}
 }
+
+/* 모바일 버튼위치 */
+@media (max-width:800px){
+	button.goReservation{
+		position:absolute;
+		bottom:250px;
+	}
+}
+
 /* 버튼 */
 button.goReservation{
 	width: 124px;
@@ -25,13 +34,6 @@ button.goReservation{
     border: none;
     display: inline-block;
     font-weight: 600;
-}
-/* 모바일 버튼위치 */
-@media (max-width:800px){
-	button.goReservation{
-		position:absolute;
-		bottom:250px;
-	}
 }
 
 button.goReservation:active {

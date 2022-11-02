@@ -30,3 +30,33 @@ table.table{
 	max-width: 100%;
 	width: 100%;
 }
+div.btn-container{
+	display:flex;
+	justify-content: flex-end;
+	margin:15px;
+	
+}
+
+button.saveBtn{
+	width: 64px;
+	height: 40px;
+	background-color: #a3a1a1;
+    color: #e3dede;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: 0.25s;
+    border: none;
+    display: inline-block;
+    font-weight: 600;
+    
+}
+
+button.saveBtn:active {
+    transform: scale(1.5);
+}
+button.saveBtn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
