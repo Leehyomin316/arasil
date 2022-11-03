@@ -51,7 +51,7 @@
 							<tr>
 								<details>
 								<summary><b>&nbsp;${row.faqTitle}</b></summary>
-								<ul><b>&nbsp;&nbsp;&nbsp;-&nbsp;${row.faqContent}</b></ul>
+								<pre class="FAQ-container"><b>&nbsp;&nbsp;&nbsp;-&nbsp;${row.faqContent}</b></pre>
 									<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
 										<button type="button" class="btn btn-sm btn-primary" id="btnUpdate" 
 												onclick="fn_updateFAQ(<c:out value="${row.faqId}"/>)">수정</button>

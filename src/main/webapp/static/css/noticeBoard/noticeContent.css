@@ -2,14 +2,13 @@
 @import '../common.css';
 div.main-content > article{
 	margin:10px;
-	width:100%;
 }
 div > article > h2{
 	margin-top: 0;
     margin-bottom: 1rem;
     border: 1px solid white;
     border-left: solid 10px #0000CD;
-    padding: 20px 10px;
+    padding: 7px;
     border-radius: 5px;
     width: fit-content;
     color: #000000;
@@ -45,16 +44,11 @@ div > article > h2{
     border-bottom-left-radius: 5px;
 
 }
-.FAQ-container{
-	white-space:pre-wrap;
-	word-break:break-all;
-	overflow:auto;
-	font-family: 'IBM Plex Sans KR', sans-serif;
-}
+
 
 details summary {
     background: rgba(240,240,240);
-    padding: 10px;
+    padding: 5px;
     border: 5px solid transparent;
     outline: none;
     cursor: pointer;
@@ -72,22 +66,15 @@ details[open] summary {
 #btnInsert{
 	margin-bottom:10px;
 }
-
-.main-content{
-	display:flex;
-	width:100%;
+div.main-content > article{
+	margin:35px;
+}
+label.title {
+	margin-top:20px;
+    font-size: 1.5rem;
+	margin-bottom:15px;
 }
 
-article > img{
-	position:absolute;
-	top:70px;
-	right:70px;
-	width:30%;	
-}
-@media (max-width:1280px){
-article > img{
-    display: none;
-    visibility: hidden;
-    width: 0%;
-}
+.mb-3 > input.form-control{
+	min-height:200px;
 }
