@@ -1,19 +1,8 @@
 (function() {
-	$("#goCheck").on("click", function() {
-		if ($("#reservSeq").val() != $(vo.reservSeq)) {
-			alert("주문번호를 확인해주세요.");
-			return;
-		}
-		if ($("#guestNm").val() != '홍길동') {
-			alert("이름을 확인해주세요.");
-			return;
-		}
-		if ($("#guestCellPhone").val() != '01012345678') {
-			alert("연락처를 확인해주세요.");
-			return;
-		}
+	$("#checkBtn").on("click", function() {
+		// 3개의 입력값이 들어왔는지 검사
 		$.ajax({
-			type: "GET",
+			type: "POST",
 			url: `./checkReservation`,
 			dataType: "text",
 			data: { reservSeq: $("#reservSeq").val(), guestNm: $("#guestNm").val(), guestCellPhone: $("#guestCellPhone").val() },
@@ -23,9 +12,21 @@
 			},
 			success: function(data) {
 				const result = JSON.parse(data);
-				$("#guestNm").text(result.guestNm);
+				const list = result.list;
+				if ( list.length > 0 ) {
+					const revInfo = list[0];
+					$("#reservCode").text(revInfo.reservCode);
+					$("#inputGuestNm").text(revInfo.guestNm);
+					$("#reservSeq").text(revInfo.reservSeq);
+					$("#startDt").text(revInfo.startDt);
+					$("#endDt").text(revInfo.endDt);
+					$("#extraPerson").text(revInfo.extraPerson);
+					$("#totalFee").text(revInfo.totalFee);
+					$("#myModal").modal('show');
+				}else {
+					alert("예약 정보가 없습니다.");
+				}
 			}
 		});
-		$("#myModal").modal('show');
 	});
 })();

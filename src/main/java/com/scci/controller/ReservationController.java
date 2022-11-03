@@ -102,14 +102,15 @@ public class ReservationController {
 		return "forward:listPage";
 	}
 
-//	@RequestMapping(value="/checkReservation", method=RequestMethod.GET)
-//	public String checkReservation() {
-//		return "reservation/checkReservation";
-//	}
-
 	@RequestMapping(value="/checkReservation", method=RequestMethod.GET)
-	public String checkReservation(@ModelAttribute("vo") Model model, ReservationVO vo) {
-		List<ReservationVO> list = service.checkReservation(vo);
+	public String checkReservation() {
 		return "reservation/checkReservation";
+	}
+	
+	@RequestMapping(value="/checkReservation", method=RequestMethod.POST)
+	public String checkReservation(ReservationVO vo, Model model) {
+		List<ReservationVO> list = service.checkReservation(vo);
+		model.addAttribute("list", list);
+		return "jsonView";
 	}
 }

@@ -39,9 +39,9 @@
 				<div class="checkInput">
 					<input type="text" class="guestCellPhone" id="guestCellPhone" placeholder="연락처">
 				</div>
+				<button id="checkBtn" class="goCheck">예약 조회</button>
 			</section>
 			<section class="modal-area">
-				<button type="button" id="goCheck" class="goCheck">예약 조회</button>
 				<div class="goCheckBtn">
 					<h4>예약시 문자로 발송된 주문번호를 확인 후 예약조회를 진행해주세요</h4>
 				</div>
@@ -82,26 +82,25 @@
 											</thead>
 											<tbody id="tableTbody">
 												<tr>
-													<td>${reservationVO.reservCode}</td>
+													<td><span id="reservCode"></span></td>
 												</tr>
 												<tr>
-													<td><input readonly class="form-control-plaintext"
-														id="inputGuestNm" name="inputGuestNm"></td>
+													<td><span id="inputGuestNm"></span></td>
 												</tr>
 												<tr>
-													<td>${reservationVO.reservSeq}</td>
+													<td><span id="reservSeq"></span></td>
 												</tr>
 												<tr>
-													<td>${reservationVO.startDt}</td>
+													<td><span id="startDt"></span></td>
 												</tr>
 												<tr>
-													<td>${reservationVO.endDt}</td>
+													<td><span id="endDt"></span></td>
 												</tr>
 												<tr>
-													<td>${reservationVO.extraPerson}</td>
+													<td><span id="extraPerson"></span></td>
 												</tr>
 												<tr>
-													<td>${reservationVO.totalFee}</td>
+													<td><span id="totalFee"></span></td>
 												</tr>
 											</tbody>
 										</table>

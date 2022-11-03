@@ -86,9 +86,9 @@
 
 <select id="checkReservation" resultType="com.scci.vo.ReservationVO">
 <![CDATA[
-	select a.reserv_seq, a.room_id, a.guest_nm, a.reserv_code, a.guest_cell_phone, a.reserv_dt, a.start_dt, a.end_dt, a.end_dt-a.start_dt+1 days, a.extra_person, a.total_fee
-	  from reservation a
-	 where reserv_seq = #{reservSeq} and guest_nm = #{guestNm} and guest_cell_phone = #{guestCellPhone}
+	select a.reserv_seq, a.room_id, b.room_nm, a.guest_nm, a.reserv_code, a.guest_cell_phone, a.reserv_dt, a.start_dt, a.end_dt, a.end_dt-a.start_dt+1 days, a.extra_person, a.total_fee
+	  from reservation a inner join room_info b on a.room_id = b.room_id
+	 where a.reserv_seq = #{reservSeq} and a.guest_nm = #{guestNm} and a.guest_cell_phone = #{guestCellPhone}
 ]]>
 </select>
 
