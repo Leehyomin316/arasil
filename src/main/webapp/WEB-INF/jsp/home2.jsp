@@ -19,6 +19,29 @@
 	<link rel="stylesheet"
 		href="${pageContext.request.contextPath}/static/bootstrap/assets/css/noscript.css" />
 </noscript>
+	<style>
+		#menuToggle {
+			left: 0;
+			right: auto;
+		}
+		#menu {
+			width: 100vw;
+			height: 10vh;
+			backgroun-color: #fefefe;
+			display: none;
+		}
+		#menu.show{
+			display: block;
+		}
+		#main, #viewer {
+			height: 100vh;
+			top: 0;
+		}
+		#main.ninety, #viewer.ninety {
+			height: 90vh;
+			top: 10vh;
+		}			
+	</style>
 <script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
@@ -26,6 +49,13 @@
 <body class="is-preload-0 is-preload-1 is-preload-2">
 
 	<!-- Main -->
+	<div id="menu" class="">
+		<ul>
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+		</ul>
+	</div>
 	<div id="main">
 
 		<!-- Header -->
@@ -45,54 +75,7 @@
 					class="icon brands fa-kickstarter-k"><span class="label">KakaoTalk</span></a></li>
 			</ul>
 		</header>
-		<!-- menu -->
-		<div class="side-menu">
-			<ul class="navbar-nav ml-auto ul-margin">
-				<li class="nav-item active"><a class="nav-link"><b>소개</b></a>
-					<ul class="underline">
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/intro/introPlace">펜션정보</a></li>
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/intro/introSurround">주변소개</a></li>
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/intro/introLocation">찾아오시는길</a></li>
-					</ul></li>
-			</ul>
-			<ul class="navbar-nav ml-auto ul-margin">
-				<li class="nav-item active"><a class="nav-link"><b>예약</b></a>
-					<ul class="underline smooth">
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/reservation/reservationGuide">예약안내</a></li>
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li>
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/reservation/roomSchedule">예약현황</a></li>
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/reservation/checkReservation">예약조회/취소</a></li>
-					</ul></li>
-			</ul>
-			<ul class="navbar-nav ml-auto ul-margin">
-				<li class="nav-item active"><a class="nav-link"><b>게시판</b></a>
-					<ul class="underline smooth">
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
-						<li class="sub-menu"><a class="nav-link"
-							href="${pageContext.request.contextPath}/board/boardFAQ">자주묻는
-								질문</a></li>
 
-					</ul></li>
-			</ul>
-			<ul class="navbar-nav ml-auto ul-margin">
-				<li class="nav-item active"><a class="nav-link"><b>기타</b></a>
-					<ul class="underline smooth">
-						<li class="sub-menu"><a class="nav-link"
-							href="https://blog.naver.com/wlsfhrytk" target="_blank">네이버
-								블로그</a></li>
-						<li class="sub-menu"><a class="nav-link"
-							href="https://www.instagram.com/arasil_pension/" target="_blank">인스타그램</a></li>
-					</ul></li>
-			</ul>
-		</div>
 		<!-- Thumbnail -->
 		<section id="thumbnails">
 			<article>
@@ -169,6 +152,22 @@
 		src="${pageContext.request.contextPath}/static/bootstrap/assets/js/breakpoints.min.js"></script>
 	<script
 		src="${pageContext.request.contextPath}/static/bootstrap/assets/js/main.js"></script>
+	<script>
+		(function(){
+			console.log($("#viewer > .inner"));
+			const $viewer_inner = $("#viewer > .inner");
+			$(`<div id='menuToggle' class='toggle menu-toggle'></div>`).appendTo($viewer_inner);
+			const $menu = $("#menu");
+			const $main = $("#main");
+			const $viewer = $("#viewer");
+			$("#menuToggle").on("click", function(){
+				$menu.toggleClass("show");
+				$main.toggleClass("ninety");
+				$viewer.toggleClass("ninety");
+				
+			});
+		})();
+	</script>	
 
 </body>
 </html>
