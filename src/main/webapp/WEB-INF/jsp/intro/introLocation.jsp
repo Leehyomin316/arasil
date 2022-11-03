@@ -13,6 +13,7 @@
 	rel="stylesheet"></link>
 <link href="${pageContext.request.contextPath}/static/css/common.css"
 	rel="stylesheet"></link>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap')

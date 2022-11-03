@@ -15,6 +15,7 @@
 <link
 	href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css'
 	rel='stylesheet' type='text/css'>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 </head>
 <body>
 	<%@ include file="../home/header.jsp"%>
