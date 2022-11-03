@@ -1,6 +1,18 @@
 (function() {
 	$("#checkBtn").on("click", function() {
 		// 3개의 입력값이 들어왔는지 검사
+		if($("#reservSeq").val() == ''){
+			alert("주문번호를 입력해주세요.");
+			return;
+		}
+		if($("#guestNm").val() == ''){
+			alert("이름을 입력해주세요.");
+			return;
+		}
+		if($("#guestCellPhone").val() == ''){
+			alert("연락처를 입력해주세요.");
+			return;
+		}
 		$.ajax({
 			type: "POST",
 			url: `./checkReservation`,
@@ -13,11 +25,13 @@
 			success: function(data) {
 				const result = JSON.parse(data);
 				const list = result.list;
+				console.log(list);
 				if ( list.length > 0 ) {
 					const revInfo = list[0];
+					$("#roomNm").text(revInfo.roomNm);
 					$("#reservCode").text(revInfo.reservCode);
 					$("#inputGuestNm").text(revInfo.guestNm);
-					$("#reservSeq").text(revInfo.reservSeq);
+					$("#inputReservSeq").text(revInfo.reservSeq);
 					$("#startDt").text(revInfo.startDt);
 					$("#endDt").text(revInfo.endDt);
 					$("#extraPerson").text(revInfo.extraPerson);
