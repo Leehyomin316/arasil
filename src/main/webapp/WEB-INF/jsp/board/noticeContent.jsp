@@ -15,11 +15,10 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
-<link rel="icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 <link
 	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeContent.css"
 	rel="stylesheet"></link>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
 <!-- <script>
 /* 	$(function() {

@@ -20,9 +20,7 @@
 	href="${pageContext.request.contextPath}/static/css/reservation/listPage.css"
 	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>
-<link rel="icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
-
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>
 
 <script>
 	$(function() {

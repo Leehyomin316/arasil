@@ -13,10 +13,12 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <link
 	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
 	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>
 <script>
 	$(function() {
 		$("#btnInsert").on("click", function() {
