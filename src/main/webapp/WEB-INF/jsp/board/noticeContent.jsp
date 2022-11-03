@@ -18,7 +18,7 @@
 <link rel="icon" type="image/x-icon"
 	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 <link
-	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
+	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeContent.css"
 	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
 <!-- <script>
@@ -111,8 +111,8 @@
 					</div>
 					<div class="mb-3">
 						<label for="notice_content">내용</label>
-						<textarea type="text" class="form-control" rows="5" name="noticeContent"
-							id="noticeContent">${notice.noticeContent}</textarea>
+						<label type="text" class="form-control" rows="5" name="noticeContent"
+							id="noticeContent" readonly>${notice.noticeContent}</label>
 					</div>
 				</div>
 
