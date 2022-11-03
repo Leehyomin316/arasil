@@ -26,83 +26,90 @@ public class ReservationController {
 	private final Logger logger = LoggerFactory.getLogger(getClass());
 	@Autowired
 	private ReservationService service;
-	
-	@RequestMapping(value="/register", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String register(@RequestParam Map<String, String> param, Model model) {
-		if ( param.get("reserveDt") == null ) {
-	        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-	        Calendar c1 = Calendar.getInstance();
+		if (param.get("reserveDt") == null) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+			Calendar c1 = Calendar.getInstance();
 			param.put("reserveDt", sdf.format(c1.getTime()));
 		}
 		List<Map<String, String>> roomInfos = service.getRoomInfos(param);
 		model.addAttribute("roomInfoList", roomInfos);
 		return "reservation/register";
 	}
+
 	/*
 	 * ajax 형태로 호출 할 경우 아래와 같이 사용 할 수 있다.
 	 * 
-	 * */
-	@RequestMapping(value="/getRoomInfo", method=RequestMethod.GET)
+	 */
+	@RequestMapping(value = "/getRoomInfo", method = RequestMethod.GET)
 	public String getRoomInfo(@RequestParam Map<String, String> param, Model model) {
 		List<Map<String, String>> roomInfos = service.getRoomInfos(param);
 		model.addAttribute("roomInfoList", roomInfos);
 		return "jsonView";
 	}
-	
-	@RequestMapping(value="/getNearestDt", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/getNearestDt", method = RequestMethod.GET)
 	public String getNearestDt(@RequestParam Map<String, String> param, Model model) {
 		Map<String, String> nearestDt = service.getNearestDt(param);
 		model.addAttribute("nearestDt", nearestDt);
 		return "jsonView";
 	}
-	
-	@RequestMapping(value="/roomSchedule", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/roomSchedule", method = RequestMethod.GET)
 	public String reservationStatus(@RequestParam Map<String, String> param, Model model) {
 		return "reservation/roomSchedule";
 	}
-	
-	@RequestMapping(value="/getRoomSchedules", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/getRoomSchedules", method = RequestMethod.GET)
 	public String getRoomSchedules(@RequestParam Map<String, String> param, Model model) {
 		List<Map<String, String>> scheduleInfos = service.getRoomSchedules(param);
 		model.addAttribute("scheduleInfos", scheduleInfos);
 		return "jsonView";
 	}
-	
-	@RequestMapping(value="/addReservation", method=RequestMethod.POST)
+
+	@RequestMapping(value = "/addReservation", method = RequestMethod.POST)
 	public String addReservation(@RequestParam Map<String, String> param, Model model) {
-		service.insertReservation(param);	
+		service.insertReservation(param);
 		return "reservation/roomSchedule";
 	}
-	
-	@RequestMapping(value="/reservationGuide", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/reservationGuide", method = RequestMethod.GET)
 	public String reservationGuide() {
 		return "reservation/reservationGuide";
 	}
-	
+
 	// 관리자용 리스트 형태의 화면을 제공하기 위함
 	@RequestMapping("/listPage")
 	public String listPage(@ModelAttribute("cri") Criteria cri, Model model) throws Exception {
 		logger.info(cri.toString());
 		List<ReservationVO> list = service.getReservations(cri);
 		int total = service.getReservationTotal();
-		
+
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);
-		
+
 		model.addAttribute("list", list);
 		model.addAttribute("pageMaker", pageMaker);
 		return "reservation/listPage";
 	}
-	@RequestMapping(value="/updateStatus", method=RequestMethod.POST)
+
+	@RequestMapping(value = "/updateStatus", method = RequestMethod.POST)
 	public String updateStatus(@RequestParam List<String> ids, @RequestParam List<String> codes, Model model) {
 		service.updateStatus(ids, codes);
 		return "forward:listPage";
 	}
-	
+
+//	@RequestMapping(value="/checkReservation", method=RequestMethod.GET)
+//	public String checkReservation() {
+//		return "reservation/checkReservation";
+//	}
+
 	@RequestMapping(value="/checkReservation", method=RequestMethod.GET)
-	public String checkReservation() {
+	public String checkReservation(@ModelAttribute("vo") Model model, ReservationVO vo) {
+		List<ReservationVO> list = service.checkReservation(vo);
 		return "reservation/checkReservation";
 	}
-	
 }
