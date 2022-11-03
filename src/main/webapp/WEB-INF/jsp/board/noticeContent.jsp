@@ -111,8 +111,8 @@
 					</div>
 					<div class="mb-3">
 						<label for="notice_content">내용</label>
-						<input type="text" class="form-control" rows="5" name="noticeContent"
-							id="noticeContent" value="${notice.noticeContent}" readonly></input>
+						<textarea type="text" class="form-control" rows="5" name="noticeContent"
+							id="noticeContent">${notice.noticeContent}</textarea>
 					</div>
 				</div>
 
