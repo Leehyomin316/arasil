@@ -18,7 +18,7 @@
 <link rel="icon" type="image/x-icon"
 	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 <link
-	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
+	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeContent.css"
 	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
 <!-- <script>
@@ -184,4 +184,3 @@
 	</article>
 </body>
 <%-- <%@ include file="../home/footer.jsp"%> --%>
-</html> -->
