@@ -18,4 +18,5 @@ public interface ReservationService {
 	
 	public int updateStatus(List<String> ids, List<String> codes);
 	
+	public List<ReservationVO> checkReservation(ReservationVO vo);
 }

@@ -80,7 +80,7 @@
 													<th scope="col">이용요금</th>
 												</tr>
 											</thead>
-											<tbody>
+											<tbody id="tableTbody">
 												<tr>
 													<td>${reservationVO.reservCode}</td>
 												</tr>
