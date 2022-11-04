@@ -132,7 +132,7 @@ public class BoardController {
 		int result = boardService.updateFAQ(faqVO);
 		return "redirect:/board/boardFAQ";
 	}
-	@RequestMapping(value ="/deleteFAQ", method = RequestMethod.GET)
+	@RequestMapping(value ="/deleteFAQ", method = RequestMethod.POST)
 	public String deleteFAQ(Model model, @RequestParam("faqId") int faqId) {
 		model.addAttribute("deleteFAQ", boardService.deleteFAQ(faqId));
 		return "redirect:/board/boardFAQ";

@@ -58,6 +58,7 @@ pre.pre-margin{
 }
 
 .sec_cal .cal_nav .year-month {
+/*   width: 300px; */
   text-align: center;
   line-height: 1;
 }
