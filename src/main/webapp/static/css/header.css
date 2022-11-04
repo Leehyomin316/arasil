@@ -3960,20 +3960,7 @@ ul.ul-margin{
 	scroll-behavior:smooth;
 	transition:1s;
 }
-/* 마우스를 대야 나오는 매뉴 */
-/* @media screen and (Max-width:376px){ */
-/* 	ul > li ul.underline{ */
-/* 		display:none; */
-/* 		transition: all 1s; */
-/* 	} */
-/* } */
-/* @media screen and (Max-width:376px){ */
-/* 	ul > li:hover ul.underline{ */
-/* 		display:block; */
-/* 		float:none; */
-/* 		letter-spacing: -0.88px; */
-/* 	} */
-/* } */
+
 .underline{
 	border-bottom:solid;
 	border-width:1px;

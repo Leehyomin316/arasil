@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+nav{
+	position:relative;
+}
+.btn-group{
+	position:relative;	
+}
+/* 버튼 */
+#menuToggle {
+	left: 15px;
+	right: auto;
+	-moz-transition: opacity 0.5s ease, visibility 0.5s;
+	-webkit-transition: opacity 0.5s ease, visibility 0.5s;
+	-ms-transition: opacity 0.5s ease, visibility 0.5s;
+	transition: opacity 0.5s ease, visibility 0.5s;
+}
+/* 메뉴바 */
+#menu {
+	width: 100vw;
+	height: 30vh;
+	background-color: #fefefe;
+	display: none;
+	z-index:10010;
+}
+
+#menu.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* 메뉴바 간격조정 */
+.btn-group{
+	margin:15px;
+}
+/* 메뉴바 우선순위 조정 */
+.dropdown-menu.show{
+	z-index:9999999999;
+}
+
+/* 화면크기 지정 */
+#main, #viewer {
+	height: 100vh;
+	top: 0;
+}
+
+#main.ninety, #viewer.ninety {
+	height: 70vh;
+	top: 30vh;
+/* 	opacity:0; */
+}

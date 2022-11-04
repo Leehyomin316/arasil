@@ -15,46 +15,87 @@
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/bootstrap/assets/css/main.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/static/bootstrap/assets/css/home2.css" />
 <noscript>
 	<link rel="stylesheet"
 		href="${pageContext.request.contextPath}/static/bootstrap/assets/css/noscript.css" />
 </noscript>
-	<style>
-		#menuToggle {
-			left: 0;
-			right: auto;
-		}
-		#menu {
-			width: 100vw;
-			height: 10vh;
-			backgroun-color: #fefefe;
-			display: none;
-		}
-		#menu.show{
-			display: block;
-		}
-		#main, #viewer {
-			height: 100vh;
-			top: 0;
-		}
-		#main.ninety, #viewer.ninety {
-			height: 90vh;
-			top: 10vh;
-		}			
-	</style>
-<script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>
-<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<link
+	href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css'
+	rel='stylesheet' type='text/css'>
+
 
 </head>
 <body class="is-preload-0 is-preload-1 is-preload-2">
 
 	<!-- Main -->
-	<div id="menu" class="">
-		<ul>
-			<li>A</li>
-			<li>B</li>
-			<li>C</li>
-		</ul>
+	<div id="menu" class="container">
+		<nav class="navbar navbar-expand-lg">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+				aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="btn-group">
+				<button class="btn btn-secondary dropdown-toggle" type="button"
+					id="defaultDropdown" data-bs-toggle="dropdown"
+					data-bs-auto-close="true" aria-expanded="false">소개</button>
+				<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/intro/introPlace">펜션정보</a></li>
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/intro/introSurround">주변소개</a></li>
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/intro/introLocation">찾아오시는길</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-secondary dropdown-toggle" type="button"
+					id="dropdownMenuClickableOutside" data-bs-toggle="dropdown"
+					data-bs-auto-close="inside" aria-expanded="false">예약</button>
+				<ul class="dropdown-menu"
+					aria-labelledby="dropdownMenuClickableOutside">
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/reservation/reservationGuide">예약안내</a></li>
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li>
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/reservation/roomSchedule">예약현황</a></li>
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/reservation/checkReservation">예약조회/취소</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-secondary dropdown-toggle" type="button"
+					id="dropdownMenuClickableInside" data-bs-toggle="dropdown"
+					data-bs-auto-close="outside" aria-expanded="false">게시판</button>
+				<ul class="dropdown-menu"
+					aria-labelledby="dropdownMenuClickableInside">
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
+					<li><a class="dropdown-item"
+						href="${pageContext.request.contextPath}/board/boardFAQ">자주묻는
+							질문</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-secondary dropdown-toggle" type="button"
+					id="dropdownMenuClickable" data-bs-toggle="dropdown"
+					data-bs-auto-close="false" aria-expanded="false">기타</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+					<li><a class="dropdown-item"
+						href="https://blog.naver.com/wlsfhrytk" target="_blank">네이버
+							블로그</a></li>
+					<li><a class="dropdown-item"
+						href="https://www.instagram.com/arasil_pension/" target="_blank">인스타그램</a></li>
+				</ul>
+			</div>
+		</nav>
 	</div>
 	<div id="main">
 
@@ -153,21 +194,29 @@
 	<script
 		src="${pageContext.request.contextPath}/static/bootstrap/assets/js/main.js"></script>
 	<script>
-		(function(){
+		(function() {
 			console.log($("#viewer > .inner"));
 			const $viewer_inner = $("#viewer > .inner");
-			$(`<div id='menuToggle' class='toggle menu-toggle'></div>`).appendTo($viewer_inner);
+			$(`<div id='menuToggle' class='toggle menu-toggle'></div>`)
+					.appendTo($viewer_inner);
 			const $menu = $("#menu");
 			const $main = $("#main");
 			const $viewer = $("#viewer");
-			$("#menuToggle").on("click", function(){
+			$("#menuToggle").on("click", function() {
 				$menu.toggleClass("show");
 				$main.toggleClass("ninety");
 				$viewer.toggleClass("ninety");
 				
+
 			});
 		})();
-	</script>	
+	</script>
+	<%-- 	<script	src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>	 --%>
+	<script
+		src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+		
 
 </body>
 </html>
