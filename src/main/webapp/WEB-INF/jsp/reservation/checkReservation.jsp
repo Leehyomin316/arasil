@@ -83,8 +83,10 @@
 												</tr>
 											</tbody>
 										</table>
-										<button id="cancelButton" class="cancelButton">예약 취소</button>
 									</div>
+								</form>
+								<form>
+									<button id="cancelButton" class="cancelButton">예약 취소</button>
 								</form>
 							</div>
 						</div>
