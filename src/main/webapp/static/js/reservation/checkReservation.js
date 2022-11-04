@@ -1,15 +1,15 @@
 (function() {
 	$("#checkBtn").on("click", function() {
 		// 3개의 입력값이 들어왔는지 검사
-		if($("#reservSeq").val() == ''){
+		if ($("#reservSeq").val() == '') {
 			alert("주문번호를 입력해주세요.");
 			return;
 		}
-		if($("#guestNm").val() == ''){
+		if ($("#guestNm").val() == '') {
 			alert("이름을 입력해주세요.");
 			return;
 		}
-		if($("#guestCellPhone").val() == ''){
+		if ($("#guestCellPhone").val() == '') {
 			alert("연락처를 입력해주세요.");
 			return;
 		}
@@ -26,10 +26,24 @@
 				const result = JSON.parse(data);
 				const list = result.list;
 				console.log(list);
-				if ( list.length > 0 ) {
+				if (list.length > 0) {
 					const revInfo = list[0];
 					$("#roomNm").text(revInfo.roomNm);
-					$("#reservCode").text(revInfo.reservCode);
+					let reservCodeNm = '';
+					switch (revInfo.reservCode) {
+						case 'A':
+							reservCodeNm = "예약등록";
+							break;
+						case 'B':
+							reservCodeNm = "입금대기";
+							break;
+						case 'C':
+							reservCodeNm = "예약확정";
+							break;
+						default:
+							break;
+					}
+					$("#reservCode").text(reservCodeNm);
 					$("#inputGuestNm").text(revInfo.guestNm);
 					$("#inputReservSeq").text(revInfo.reservSeq);
 					$("#startDt").text(revInfo.startDt);
@@ -37,7 +51,7 @@
 					$("#extraPerson").text(revInfo.extraPerson);
 					$("#totalFee").text(revInfo.totalFee);
 					$("#myModal").modal('show');
-				}else {
+				} else {
 					alert("예약 정보가 없습니다.");
 				}
 			}
