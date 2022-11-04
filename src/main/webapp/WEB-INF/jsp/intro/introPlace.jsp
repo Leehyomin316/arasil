@@ -141,6 +141,14 @@
 					<img
 						src="${pageContext.request.contextPath}/static/img/place/place22.jpg">
 				</div>
+				<div class="right-img">
+					<img
+						src="${pageContext.request.contextPath}/static/img/place/place23.jpg">
+				</div>
+				<div class="right-img">
+					<img
+						src="${pageContext.request.contextPath}/static/img/place/place24.jpg">
+				</div>
 			</section>
 		</main>
 	</div>	

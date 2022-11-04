@@ -123,7 +123,7 @@
 						<thead>
 							<tr>
 								<th scope="col">객실정보</th>
-								<th scope="col">이용일</th>
+								<th scope="col">이용시작일</th>
 								<th scope="col">기간</th>
 								<th scope="col">이용인원</th>
 								<th scope="col">이용요금</th>
@@ -194,7 +194,7 @@
 											<thead>
 												<tr>
 													<th scope="col">객실정보</th>
-													<th scope="col">이용일</th>
+													<th scope="col">이용시작일</th>
 													<th scope="col">기간</th>
 													<th scope="col">이용인원</th>
 													<th scope="col">이용요금</th>
