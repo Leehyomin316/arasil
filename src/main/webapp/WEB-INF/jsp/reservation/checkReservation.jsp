@@ -108,6 +108,7 @@
 									</div>
 								</form>
 							</div>
+										<button id="cancelButton" class="cancelButton">예약 취소</button>
 						</div>
 					</div>
 				</div>

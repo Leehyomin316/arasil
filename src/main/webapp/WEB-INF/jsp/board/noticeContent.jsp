@@ -130,7 +130,6 @@
 	<%@ include file="../home/footer.jsp"%>
 </body>
 </html>
-
 <!-- 
 <script>
 	$(function() {
@@ -183,5 +182,9 @@
 		</div>
 	</article>
 </body>
+<<<<<<< Updated upstream
 <%-- <%@ include file="../home/footer.jsp"%> --%>
 </html> -->
+=======
+<%-- <%@ include file="../home/footer.jsp"%> --%> -->
+>>>>>>> Stashed changes
