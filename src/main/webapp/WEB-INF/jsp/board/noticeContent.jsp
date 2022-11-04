@@ -15,11 +15,10 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
-<link rel="icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 <link
-	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
+	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeContent.css"
 	rel="stylesheet"></link>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
 <!-- <script>
 /* 	$(function() {
@@ -111,8 +110,8 @@
 					</div>
 					<div class="mb-3">
 						<label for="notice_content">내용</label>
-						<input type="text" class="form-control" rows="5" name="noticeContent"
-							id="noticeContent" value="${notice.noticeContent}" readonly></input>
+						<label type="text" class="form-control" rows="5" name="noticeContent"
+							id="noticeContent" readonly>${notice.noticeContent}</label>
 					</div>
 				</div>
 
@@ -182,9 +181,3 @@
 		</div>
 	</article>
 </body>
-<<<<<<< Updated upstream
-<%-- <%@ include file="../home/footer.jsp"%> --%>
-</html> -->
-=======
-<%-- <%@ include file="../home/footer.jsp"%> --%> -->
->>>>>>> Stashed changes

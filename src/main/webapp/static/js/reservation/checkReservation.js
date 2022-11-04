@@ -1,34 +1,60 @@
 (function() {
-	$("#goCheck").on("click", function() {
+	$("#checkBtn").on("click", function() {
+		// 3개의 입력값이 들어왔는지 검사
+		if ($("#reservSeq").val() == '') {
+			alert("주문번호를 입력해주세요.");
+			return;
+		}
+		if ($("#guestNm").val() == '') {
+			alert("이름을 입력해주세요.");
+			return;
+		}
+		if ($("#guestCellPhone").val() == '') {
+			alert("연락처를 입력해주세요.");
+			return;
+		}
 		$.ajax({
-			type: "GET",
+			type: "POST",
 			url: `./checkReservation`,
 			dataType: "text",
-			data: {reservSeq: $("#reservSeq").val() , guestNm: $("#guestNm").val() , guestCellPhone: $("#guestCellPhone").val()},
+			data: { reservSeq: $("#reservSeq").val(), guestNm: $("#guestNm").val(), guestCellPhone: $("#guestCellPhone").val() },
 			contentType: "application/x-www-form-urlencoded;charset=UTF-8",
 			error: function() {
 				console.log('통신실패!!');
 			},
-			success: function(data){
-				
+			success: function(data) {
+				const result = JSON.parse(data);
+				const list = result.list;
+				console.log(list);
+				if (list.length > 0) {
+					const revInfo = list[0];
+					$("#roomNm").text(revInfo.roomNm);
+					let reservCodeNm = '';
+					switch (revInfo.reservCode) {
+						case 'A':
+							reservCodeNm = "예약등록";
+							break;
+						case 'B':
+							reservCodeNm = "입금대기";
+							break;
+						case 'C':
+							reservCodeNm = "예약확정";
+							break;
+						default:
+							break;
+					}
+					$("#reservCode").text(reservCodeNm);
+					$("#inputGuestNm").text(revInfo.guestNm);
+					$("#inputReservSeq").text(revInfo.reservSeq);
+					$("#startDt").text(revInfo.startDt);
+					$("#endDt").text(revInfo.endDt);
+					$("#extraPerson").text(revInfo.extraPerson);
+					$("#totalFee").text(revInfo.totalFee);
+					$("#myModal").modal('show');
+				} else {
+					alert("예약 정보가 없습니다.");
+				}
 			}
 		});
-
-		if ($("#reservSeq").val() != "${list.reservSeq}") {
-			alert("주문번호를 확인해주세요.");
-			return;
-		}
-		if ($("#guestNm").val() != '홍길동') {
-			alert("이름을 확인해주세요.");
-			return;
-		}
-		if ($("#guestCellPhone").val() != '01') {
-			alert("연락처를 확인해주세요.");
-			return;
-		}
-
-		$("#inputGuestNm").val($("#guestNm").val());
-		$("#myModal").modal('show');
-
 	});
 })();

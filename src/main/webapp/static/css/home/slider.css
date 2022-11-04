@@ -9,7 +9,7 @@
 }
 @media (min-width:800px){
 	.w3-content{
-	height:90vh;
+	height: calc(90vh - 80px);
 	}
 	
 }

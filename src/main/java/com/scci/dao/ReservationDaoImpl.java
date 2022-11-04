@@ -52,4 +52,8 @@ public class ReservationDaoImpl implements ReservationDao{
 		return sqlSession.insert("mapper.reservation.updateStatus", vo);
 	}
 	
+	@Override
+	public List<ReservationVO> checkReservation(ReservationVO vo) {
+		return sqlSession.selectList("mapper.reservation.checkReservation", vo);
+	}
 }

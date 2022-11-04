@@ -65,4 +65,9 @@ public class ReservationServiceImpl implements ReservationService {
 		return result;
 	}
 	
+	@Override
+	public List<ReservationVO> checkReservation(ReservationVO vo) {
+		// TODO Auto-generated method stub
+		return dao.checkReservation(vo);
+	}
 }
