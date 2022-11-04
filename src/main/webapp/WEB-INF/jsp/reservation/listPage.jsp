@@ -60,6 +60,7 @@
 						<th class="hidden-table">선택</th>
 						<th class="hidden-table">예약번호</th>
 						<th class="hidden-table">객실명</th>
+						<th>예약등록일</th>
 						<th>시작일</th>
 						<th class="hidden-table">종료일</th>
 						<th>기간</th>
@@ -76,6 +77,7 @@
 							<td class="hidden-table"><input class="chooseChk" name="chooseChk" type="checkbox"></td>
 							<td class="hidden-table"><input type="hidden" id="reservId" value="${reservationVO.reservSeq}">${reservationVO.reservSeq}</td>
 							<td class="hidden-table">${reservationVO.roomNm}</td>
+							<td>${reservationVO.reserveDt}</td>
 							<td>${reservationVO.startDt}</td>
 							<td class="hidden-table">${reservationVO.endDt}</td>
 							<td>${reservationVO.days}</td>
