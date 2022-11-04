@@ -3927,6 +3927,13 @@ footer.main-footer > ul >li{
 		font-size: calc(2px + 1vw);
 	}
 }
+@media screen and (Max-width:800px){
+	footer > ul > li.hidden{
+	    display: none;
+	    visibility: hidden;
+	    width: 0%;
+	}
+}
 
 .sub-menu{
 	flex-direction: row;
@@ -3953,11 +3960,13 @@ ul.ul-margin{
 }
 @media screen and (Max-width:574px){
 	.main-content{
+	margin-top:150px;
 	}
 }
 @media screen and (Min-width:574px) and (Max-width:800px){
 	.main-content{
 		margin-bottom:200px;
+		margin-top:100px;
 	}
 }
 @media screen and (Min-width:800px){

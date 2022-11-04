@@ -3912,6 +3912,13 @@ footer.main-footer > ul >li{
 		font-size: calc(2px + 1vw);
 	}
 }
+@media screen and (Max-width:800px){
+	footer > ul > li.hidden{
+	    display: none;
+	    visibility: hidden;
+	    width: 0%;
+	}
+}
 
 .sub-menu{
 	flex-direction: row;

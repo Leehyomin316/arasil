@@ -78,15 +78,12 @@
 							<c:when test="${!empty notice}">
 								<c:forEach var="row" items="${notice}">
 									<tr>
-										<td><a href="#"
-											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
-												<c:out value="${row.noticeId}" />
-										</a></td>
-										<td><a href="#"
+										<td>${row.noticeId}</td>
+										<td style="word-break:break-all; white-space:pre-line;"><a href="#"
 											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
 												<c:out value="${row.noticeTitle}" />
 										</a></td>
-										<td class="hidden-table"><fmt:formatDate value="${row.noticeDate}"
+										<td style="width:110px;" class="hidden-table"><fmt:formatDate value="${row.noticeDate}"
 												pattern="yyyy-MM-dd" /></td>
 										<td class="hidden-table">${row.userId}</td>
 									</tr>
