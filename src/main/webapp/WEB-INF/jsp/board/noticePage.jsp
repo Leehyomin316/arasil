@@ -78,7 +78,10 @@
 							<c:when test="${!empty notice}">
 								<c:forEach var="row" items="${notice}">
 									<tr>
-										<td>${row.noticeId}</td>
+										<td><a href="#"
+											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
+												<c:out value="${row.noticeId}" />
+										</a></td>
 										<td><a href="#"
 											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
 												<c:out value="${row.noticeTitle}" />
