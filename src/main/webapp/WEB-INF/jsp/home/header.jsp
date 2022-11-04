@@ -56,7 +56,6 @@
                     	<ul class="underline smooth">
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/boardFAQ">자주묻는 질문</a></li>
-
                     	</ul>
                     </li>
                 </ul>
