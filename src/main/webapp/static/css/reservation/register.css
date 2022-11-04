@@ -58,7 +58,6 @@ pre.pre-margin{
 }
 
 .sec_cal .cal_nav .year-month {
-  width: 300px;
   text-align: center;
   line-height: 1;
 }
@@ -252,7 +251,7 @@ table.table {
 }
 .mb-9{
 	font-size:x-small;
-	max-width:550px;
+/* 	max-width:550px; */
 	width:100%;	
 }
 
@@ -382,15 +381,22 @@ table.mb-8{
 table.smallTable{
 	 max-width: 100%; width: 100%; 
 }
-div.tablebox > table.table{
+ table.table{
 	 max-width: 100%; width: 100%; 
 }
-.select_option_table th{
-	width:calc(100%/5);
+.form-control-plaintext{
+	min-width:77px;
 }
-.select_option_table tr{
-	width:calc(100%/5);
+
+.form-select{
+	min-width:77px;
 }
+/* .select_option_table th{ */
+/* 	width:calc(100%/5); */
+/* } */
+/* .select_option_table tr{ */
+/* 	width:calc(100%/5); */
+/* } */
 /* 예약 창 모달 */
 .modal {
   position: fixed;

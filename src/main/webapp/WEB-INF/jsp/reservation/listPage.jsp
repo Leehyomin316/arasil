@@ -54,45 +54,47 @@
 				<input type="hidden" name="ids" id="ids">
 				<input type="hidden" name="codes" id="codes">
 			</form>
-			<table class="table table-hover table-striped">
-				<thead>
-					<tr>
-						<th class="hidden-table">선택</th>
-						<th class="hidden-table">예약번호</th>
-						<th class="hidden-table">객실명</th>
-						<th>시작일</th>
-						<th class="hidden-table">종료일</th>
-						<th>기간</th>
-						<th>예약자명</th>
-						<th>전화번호</th>
-						<th>총인원</th>
-						<th>이용요금</th>
-						<th>상태코드</th>
-					</tr>
-				</thead>
-				<tbody id="resultTbody">
-					<c:forEach items="${list}" var="reservationVO">
-						<tr class="resultRow">
-							<td class="hidden-table"><input class="chooseChk" name="chooseChk" type="checkbox"></td>
-							<td class="hidden-table"><input type="hidden" id="reservId" value="${reservationVO.reservSeq}">${reservationVO.reservSeq}</td>
-							<td class="hidden-table">${reservationVO.roomNm}</td>
-							<td>${reservationVO.startDt}</td>
-							<td class="hidden-table">${reservationVO.endDt}</td>
-							<td>${reservationVO.days}</td>
-							<td>${reservationVO.guestNm}</td>
-							<td>${reservationVO.guestCellPhone}</td>
-							<td>${reservationVO.extraPerson}</td>
-							<td>${reservationVO.totalFee}</td>
-							<td><select id="codeSelect" disabled>
-									<option value="A" <c:if test="${reservationVO.reservCode eq 'A'}">selected</c:if>>예약등록</option>
-									<option value="B" <c:if test="${reservationVO.reservCode eq 'B'}">selected</c:if>>입금대기</option>
-									<option value="C" <c:if test="${reservationVO.reservCode eq 'C'}">selected</c:if>>예약확정</option>
-									<option value="D" <c:if test="${reservationVO.reservCode eq 'D'}">selected</c:if>>예약취소</option>
-							</select></td>
+			<div class="table-container">
+				<table class="table table-hover table-striped">
+					<thead>
+						<tr>
+							<th>선택</th>
+							<th>예약번호</th>
+							<th>객실명</th>
+							<th>시작일</th>
+							<th>종료일</th>
+							<th>기간</th>
+							<th>예약자명</th>
+							<th>전화번호</th>
+							<th>총인원</th>
+							<th>이용요금</th>
+							<th>상태코드</th>
 						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
+					</thead>
+					<tbody id="resultTbody">
+						<c:forEach items="${list}" var="reservationVO">
+							<tr class="resultRow">
+								<td><input class="chooseChk" name="chooseChk" type="checkbox"></td>
+								<td><input type="hidden" id="reservId" value="${reservationVO.reservSeq}">${reservationVO.reservSeq}</td>
+								<td>${reservationVO.roomNm}</td>
+								<td>${reservationVO.startDt}</td>
+								<td>${reservationVO.endDt}</td>
+								<td>${reservationVO.days}</td>
+								<td>${reservationVO.guestNm}</td>
+								<td>${reservationVO.guestCellPhone}</td>
+								<td>${reservationVO.extraPerson}</td>
+								<td>${reservationVO.totalFee}</td>
+								<td><select id="codeSelect" disabled>
+										<option value="A" <c:if test="${reservationVO.reservCode eq 'A'}">selected</c:if>>예약등록</option>
+										<option value="B" <c:if test="${reservationVO.reservCode eq 'B'}">selected</c:if>>입금대기</option>
+										<option value="C" <c:if test="${reservationVO.reservCode eq 'C'}">selected</c:if>>예약확정</option>
+										<option value="D" <c:if test="${reservationVO.reservCode eq 'D'}">selected</c:if>>예약취소</option>
+								</select></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
 		</div>
 		<div>
 			<nav aria-label="Page navigation example" class="pagination">

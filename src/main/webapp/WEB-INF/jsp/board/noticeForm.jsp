@@ -44,7 +44,7 @@
 				$("input:hidden[name='mode']").val('<c:out value ="${mode}"/>');
 				$("#userId").val('<c:out value ="${notice.userId}"/>');
 				$("#noticeTitle").val('<c:out value ="${notice.noticeTitle}"/>');
-				$("#noticeContent").val('<c:out value="${notice.noticeContent}"/>');
+				$("#noticeContent").val(`<c:out value="${notice.noticeContent}"/>`);
 			}
 		});
 </script>

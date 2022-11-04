@@ -110,8 +110,8 @@
 					</div>
 					<div class="mb-3">
 						<label for="notice_content">내용</label>
-						<label type="text" class="form-control" rows="5" name="noticeContent"
-							id="noticeContent" readonly>${notice.noticeContent}</label>
+						<textarea type="text" class="form-control" rows="5" name="noticeContent"
+							id="noticeContent" readonly>${notice.noticeContent}</textarea>
 					</div>
 				</div>
 
