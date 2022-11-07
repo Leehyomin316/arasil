@@ -25,10 +25,10 @@
 <body>
 	<%@ include file="../home/header.jsp"%>
 	<div class="main-content">
-		<main>
-			<header class="title">
+		<header class="title">
 				<h1>주변소개</h1>
-			</header>
+		</header>
+		<main>
 			<figure class="surroundContent">
 				<br>
 				<h3 class="hTitle">보성 관광지</h3>

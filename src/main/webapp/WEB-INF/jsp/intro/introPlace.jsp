@@ -30,8 +30,7 @@
 				<header class="title">
 					<h1>펜션정보</h1>
 				</header>
-				<br>
-				<br>
+				<div style="margin:20px;">
 				<h4 class="sub-title">객실정보</h4>
 				<p>
 					방 4개, 화장실 2개, 거실 1개, 주방 1개 <br> <br> 기준인원 : 10인 | 최대인원 :
@@ -50,7 +49,8 @@
 				<div class="button-center">
 				<button type="button" class="goReservation"
 					onClick="location.href='${pageContext.request.contextPath}/reservation/register'">실시간예약</button>
-				</div>	
+				</div>
+				</div>
 			</section>
 			<section class="placeRight">
 				<div class="right-img">

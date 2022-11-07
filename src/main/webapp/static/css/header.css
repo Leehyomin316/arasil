@@ -3945,13 +3945,11 @@ ul.ul-margin{
 }
 @media screen and (Max-width:574px){
 	.main-content{
-		margin-top:76px;
 		margin-bottom:210px;
 	}
 }
 @media screen and (Min-width:574px) and (Max-width:800px){
 	.main-content{
-		margin-top:66px;
 		margin-bottom:210px;
 	}
 }

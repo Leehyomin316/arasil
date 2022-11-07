@@ -77,7 +77,6 @@ button.goReservation:hover {
 	width:80%;
 }
 main{
-	margin:20px;
 }
 /* 스크롤바 만들기 */
 .placeLeft::-webkit-scrollbar {

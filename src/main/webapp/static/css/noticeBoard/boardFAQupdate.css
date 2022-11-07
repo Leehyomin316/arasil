@@ -69,4 +69,8 @@ details[open] summary {
 div.main-content > article{
 	margin:35px;
 }
+.mb-3 > label{
+	font-size:1.3rem;
+}
+
 

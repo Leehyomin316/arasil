@@ -2,7 +2,13 @@
 @import '../common.css';
 div.main-content > article{
 	margin:10px;
-	width:100%;
+	width:calc(100% - 260px);
+}
+@media (max-width:800px){
+div.main-content > article{
+	margin:10px;
+	width:90%;
+}	
 }
 div > article > h2{
 	margin-top: 0;

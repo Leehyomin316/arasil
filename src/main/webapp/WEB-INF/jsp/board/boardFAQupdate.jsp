@@ -68,12 +68,12 @@
 			<form name="form" id="form" role="form" method="post"
 				action="${pageContext.request.contextPath}/board/updateFAQ">
 					<div class="mb-3">
-						<label for="faqTitle">제목</label>
+						<label for="faqTitle"><b>제목</b></label>
 						<input type="text" class="form-control" name="faqTitle" id="faq_title"
 							value="${boardFAQupdate.faqTitle}" placeholder="제목을 입력해 주세요" required>
 					</div>
 					<div class="mb-3">
-						<label for="faqContent">내용</label>
+						<label for="faqContent"><b>내용</b></label>
 						<textarea class="form-control" rows="5" name="faqContent"
 							id="faq_content" placeholder="내용을 입력해 주세요" required>${boardFAQupdate.faqContent}</textarea>
 					</div>

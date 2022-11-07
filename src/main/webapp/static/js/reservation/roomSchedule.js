@@ -142,9 +142,9 @@ $(function() {
 				let days = item.days;
 				let $scheduleUl = $(`.day.current.${startDt} .schedule`);
 				$scheduleUl.append(`<li>${item.room_nm}(${item.guest_nm})</li>`);
-				if ( days > 0 ){
-					for(let i=0; i<days; i++){
-						let $ul =  $(`.day.current.${startDt+(i+1)} .schedule`);
+				if ( days > 1 ){
+					for(let i=1; i<days; i++){
+						let $ul =  $(`.day.current.${startDt+(i)} .schedule`);
 						$ul.append(`<li>${item.room_nm}(${item.guest_nm})</li>`);								
 					}
 				}
