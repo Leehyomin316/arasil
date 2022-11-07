@@ -47,7 +47,8 @@
 					</div>
 					<input type="hidden" value="admin" name="userId" />
 					<div>
-						<button type="submit" class="btn btn-sm btn-primary" id="btnSave">저장</button>
+						<input type="submit" class="btn btn-sm btn-primary" id="btnSave" value="저장"
+						onclick="if(!confirm('저장하시겠습니까?')){return false;}"/>
 						<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 					</div>
 				</form>

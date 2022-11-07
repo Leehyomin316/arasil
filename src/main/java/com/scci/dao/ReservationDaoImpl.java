@@ -56,4 +56,8 @@ public class ReservationDaoImpl implements ReservationDao{
 	public List<ReservationVO> checkReservation(ReservationVO vo) {
 		return sqlSession.selectList("mapper.reservation.checkReservation", vo);
 	}
+	@Override
+	public long cancelReserv(long reservSeq) {
+		return sqlSession.delete("mapper.reservation.cancelReserv", reservSeq);
+	}
 }

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="com.scci.vo.ReservationVO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +19,7 @@
 <link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <style>
 @import
-	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap')
-	;
+	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
 </style>
 </head>
 <body>
@@ -85,11 +85,12 @@
 										</table>
 									</div>
 								</form>
-								<form>
-									<button id="cancelButton" class="cancelButton">예약 취소</button>
-								</form>
+									<button id="cancelBtn" class="goCheck">예약 취소</button>
+<!-- 								<form name="form" id="form" role="form" method="POST" -->
+<%-- 								action="${pageContext.request.contextPath}/reservation/cancelReserv"> --%>
+<!-- 									<input type="hidden" class="reservSeq" id="reservSeq">	 -->
+<!-- 								</form>								 -->
 							</div>
-										<button id="cancelButton" class="cancelButton">예약 취소</button>
 						</div>
 					</div>
 				</div>
@@ -99,5 +100,6 @@
 	<%@ include file="../home/footer.jsp"%>
 </body>
 <script
-	src="${pageContext.request.contextPath}/static/js/reservation/checkReservation.js"></script>
+	src="${pageContext.request.contextPath}/static/js/reservation/checkReservation.js">
+	</script>
 </html>

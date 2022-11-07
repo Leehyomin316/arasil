@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.scci.paging.Criteria;
 import com.scci.paging.PageMaker;
@@ -113,4 +114,10 @@ public class ReservationController {
 		model.addAttribute("list", list);
 		return "jsonView";
 	}
+	@RequestMapping(value ="/cancelReserv", method = RequestMethod.GET)
+	public String cancelReserv(Model model, @RequestParam("reservSeq") long reservSeq, RedirectAttributes rttr) throws Exception{
+		model.addAttribute("cancelReserv", service.cancelReserv(reservSeq));
+		return "redirect:/reservation/checkReservation";
+	}
+	
 }

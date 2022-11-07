@@ -57,4 +57,17 @@
 			}
 		});
 	});
+	$("#cancelBtn").on("click",function(){
+		if(!confirm('예약을 취소하시겠습니까?')){
+			return false;
+		}
+		alert("예약취소되었습니다1");
+		var url = "cancelReserv";
+		url = url + "?reservSeq="+reservSeq.value;
+		location.href = url;
+		});
+//		const form = document.getElementById("#checkRegForm");
+//		const cancelUrl = '<c:url value="/reservation/cancelReserv"/>';
+//			form.submit();
+//			form.action = cancelUrl;
 })();

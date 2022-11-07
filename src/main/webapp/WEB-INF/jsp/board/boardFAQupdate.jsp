@@ -23,9 +23,21 @@
 			location.href = "${pageContext.request.contextPath}/board/boardFAQ";
 		});
 		
+// 		const saveBtn = document.querySelector("#btnSave");
+// 		const formObj = document.querySelector("#form");
+// 		saveBtn.addEventListener("click", function(){
+// 			formObj.submit();
+// 		});
+	});
+</script>
+<script>
+	$(function() {
 		const saveBtn = document.querySelector("#btnSave");
 		const formObj = document.querySelector("#form");
 		saveBtn.addEventListener("click", function(){
+			if(!confirm('저장하시겠습니까?')){
+				return false;
+			}
 			formObj.submit();
 		});
 	});
@@ -35,6 +47,9 @@
 		const form = document.getElementById("form");
 		const deleteUrl = "${pageContext.request.contextPath}/board/deleteFAQ";
 		$("#btnDelete").on("click",function(){
+			if(!confirm('삭제하시겠습니까?')){
+				return false;
+			}
 			form.action = deleteUrl;
 			form.submit();
 		});
