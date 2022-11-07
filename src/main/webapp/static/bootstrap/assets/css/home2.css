@@ -16,13 +16,13 @@ nav{
 	transition: opacity 0.5s ease, visibility 0.5s;
 }
 /* 메뉴바 */
-#menu {
-	width: 100vw;
-	height: 30vh;
-	background-color: #fefefe;
-	display: none;
-	z-index:10010;
-}
+/* #menu { */
+/* 	width: 100vw; */
+/* 	height: 30vh; */
+/* 	background-color: #fefefe; */
+/* 	display: none; */
+/* 	z-index:10010; */
+/* } */
 
 #menu.show {
     display: flex;
@@ -34,9 +34,9 @@ nav{
 	margin:15px;
 }
 /* 메뉴바 우선순위 조정 */
-.dropdown-menu.show{
-	z-index:9999999999;
-}
+/* .dropdown-menu.show{ */
+/* 	z-index:9999999999; */
+/* } */
 
 /* 화면크기 지정 */
 #main, #viewer {
@@ -49,3 +49,8 @@ nav{
 	top: 30vh;
 /* 	opacity:0; */
 }
+.btn-group > .btn{
+	width:80px;
+}
+
+

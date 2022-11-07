@@ -195,26 +195,26 @@
 										<table class="table">
 											<thead>
 												<tr>
-													<th scope="col">객실정보</th>
-													<th scope="col">이용시작일</th>
-													<th scope="col">기간</th>
-													<th scope="col">이용인원</th>
-													<th scope="col">이용요금</th>
+													<th nowrap scope="col">객실정보</th>
+													<th nowrap scope="col">이용시작일</th>
+													<th nowrap scope="col">기간</th>
+													<th nowrap scope="col">이용인원</th>
+													<th nowrap scope="col">이용요금</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td><input type="hidden" id="inputRoomId"
+													<td nowrap><input type="hidden" id="inputRoomId"
 														name="inputRoomId"> <input type="text" readonly
 														class="form-control-plaintext" id="inputRoomNm"
 														name="inputRoomNm"></td>
-													<td><input readonly class="form-control-plaintext"
+													<td nowrap><input readonly class="form-control-plaintext"
 														id="inputStartDt" name="inputStartDt"></td>
-													<td><input readonly class="form-control-plaintext"
+													<td nowrap><input readonly class="form-control-plaintext"
 														id="inputUseDay" name="inputUseDay"></td>
-													<td><input readonly class="form-control-plaintext"
+													<td nowrap><input readonly class="form-control-plaintext"
 														id="inputUsePerson" name="inputUsePerson"></td>
-													<td><input readonly class="form-control-plaintext"
+													<td nowrap><input readonly class="form-control-plaintext"
 														id="inputTotalFee" name="inputTotalFee"></td>
 												</tr>
 											</tbody>
