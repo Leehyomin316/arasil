@@ -20,6 +20,25 @@
 	rel="stylesheet"></link>
 <link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
+<!-- <script>
+/* 	$(function() {
+		$("#btnList").on("click",function() {
+		location.href = "${pageContext.request.contextPath}/board/noticePage";
+		});
+		
+		const updateBtn = document.querySelector("#btnUpdate");
+		const formObj = document.querySelector("#form");
+		updateBtn.addEventListener("click", function(){
+			formObj.submit();
+		});
+		
+	}); */
+// 		const delete = document.querySelector("#btnDelete");
+//		$("#btnDelete").on("click", function(){
+//		});
+//		delete.addEventListener("click", function(){
+//		});
+</script> -->
 <script>
 	$(function() {
 		$("#btnList").on("click",function() {
@@ -41,9 +60,41 @@
 	});
 </script>
 </head>
+
 <body>
 	<%@ include file="../home/header.jsp"%>
 	<div class="main-content">
+	<%-- <article>
+	<header class="title">
+			<h1>공지사항 상세보기</h1>
+	</header>
+		<div class="container" role="main">
+			<form name="form" id="form" role="form" method="post"
+				action="${pageContext.request.contextPath}/board/updateNotice"
+				action="${pageContext.request.contextPath}/board/deleteNotice"
+				>
+				<div class="mb-3">
+					<label for="noticetitle">제목</label> <input type="text"
+						class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"
+						placeholder="제목을 입력해 주세요" >
+				</div>
+				<div class="mb-3">
+					<label for="noticeContent">내용</label>
+					<textarea class="form-control" rows="5" name="noticeContent"  id="noticeContent"
+						placeholder="내용을 입력해 주세요">${notice.noticeContent}</textarea>
+				</div>
+				<input type="hidden" value="admin" name="userId"/>
+				<input type="hidden" name="noticeId" value="${notice.noticeId}"/>				
+				<div>
+					<sec:authorize access="hasAnyRole('ROLE_ADMIN')">
+						<button type="button" class="btn btn-sm btn-primary" id="btnUpdate">수정</button>
+						<button type="button" class="btn btn-sm btn-primary" id="btnDelete">삭제</button>
+					</sec:authorize>			
+					<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
+				</div>
+			</form>
+		</div>
+	</article> --%>
 	<article>
 		<div class="container" role="main">
 		<header class ="title">
@@ -51,11 +102,9 @@
 		</header>
 				<div class="bg-white rounded shadow-sm">
 					<div class="noticeTitle">
-					<label for="faqTitle">제목</label> <input type="text"
-							class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"
+					<label for="faqTitle">제목</label>
+					 <input type="text" class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"
 							placeholder="제목을 입력해 주세요" readonly>
-						<%-- <label>제목 : </label>
-						<c:out value="${notice.noticeTitle }" /> --%>
 					</div>
 					<div class="mb-3">
 						<label for="notice_content">내용</label>
@@ -72,8 +121,9 @@
 				</sec:authorize>
 				<button type="button" class="btn btn-sm btn-primary" id="btnList">목록</button>
 			</div>
-		</article>
 		</div>
+	</article>
+	</div>
 	<%@ include file="../home/footer.jsp"%>
 </body>
 </html>
