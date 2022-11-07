@@ -92,4 +92,8 @@
 ]]>
 </select>
 
+<delete id="cancelReserv" parameterType="com.scci.vo.ReservationVO">
+	DELETE FROM `arasil`.`reservation` where RESERV_SEQ = #{reservSeq};
+</delete>
+
 </mapper>

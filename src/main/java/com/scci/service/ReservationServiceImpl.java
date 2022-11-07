@@ -70,4 +70,9 @@ public class ReservationServiceImpl implements ReservationService {
 		// TODO Auto-generated method stub
 		return dao.checkReservation(vo);
 	}
+
+	@Override
+	public long cancelReserv(long reservSeq) {
+		return dao.cancelReserv(reservSeq);
+	}
 }

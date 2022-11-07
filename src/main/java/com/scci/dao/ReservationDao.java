@@ -19,4 +19,5 @@ public interface ReservationDao {
 	public int updateStatus(ReservationVO vo);
 	
 	public List<ReservationVO> checkReservation(ReservationVO vo);
+	public long cancelReserv(long reservSeq);
 }
