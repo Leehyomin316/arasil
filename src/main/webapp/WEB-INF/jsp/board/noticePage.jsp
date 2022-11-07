@@ -79,7 +79,7 @@
 								<c:forEach var="row" items="${notice}">
 									<tr>
 										<td>${row.noticeId}</td>
-										<td style="word-break:break-all; white-space:pre-line;"><a href="#"
+										<td style="word-break:break-all;"><a href="#"
 											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
 												<c:out value="${row.noticeTitle}" />
 										</a></td>

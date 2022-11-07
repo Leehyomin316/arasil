@@ -325,6 +325,7 @@ svg {
 @media (Min-width:800px){
 	img#icon{
 	position: relative;
+	
 	width:54px;
 }
 }
@@ -1783,7 +1784,7 @@ li.sub-menu > a.nav-link{
 	    overflow: auto;
 	    overflow-x: hidden;
 	    align-content: flex-start;
-	    justify-content: center;
+	    justify-content: flex-start;
 
 	}
 }
