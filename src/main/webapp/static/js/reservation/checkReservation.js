@@ -40,6 +40,9 @@
 						case 'C':
 							reservCodeNm = "예약확정";
 							break;
+						case 'D':
+							reservCodeNm = "예약취소";
+							break;
 						default:
 							break;
 					}
@@ -51,13 +54,19 @@
 					$("#extraPerson").text(revInfo.extraPerson);
 					$("#totalFee").text(revInfo.totalFee);
 					$("#myModal").modal('show');
-				} else {
+				} 
+				else {
 					alert("예약 정보가 없습니다.");
 				}
 			}
 		});
 	});
+	
 	$("#cancelBtn").on("click",function(){
+//		if( reservCode=='D' ){
+//			alert("예약 취소된 건입니다.");
+//			}
+//		else{
 		if(!confirm('예약을 취소하시겠습니까?')){
 			return false;
 		}
@@ -65,6 +74,7 @@
 		var url = "cancelReserv";
 		url = url + "?reservSeq="+reservSeq.value;
 		location.href = url;
+//		}
 		});
 //		const form = document.getElementById("#checkRegForm");
 //		const cancelUrl = '<c:url value="/reservation/cancelReserv"/>';
