@@ -61,7 +61,7 @@
 		if(!confirm('예약을 취소하시겠습니까?')){
 			return false;
 		}
-		alert("예약취소되었습니다1");
+		alert("예약취소되었습니다");
 		var url = "cancelReserv";
 		url = url + "?reservSeq="+reservSeq.value;
 		location.href = url;
