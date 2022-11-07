@@ -20,6 +20,25 @@
 	rel="stylesheet"></link>
 <link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
+<!-- <script>
+/* 	$(function() {
+		$("#btnList").on("click",function() {
+		location.href = "${pageContext.request.contextPath}/board/noticePage";
+		});
+		
+		const updateBtn = document.querySelector("#btnUpdate");
+		const formObj = document.querySelector("#form");
+		updateBtn.addEventListener("click", function(){
+			formObj.submit();
+		});
+		
+	}); */
+// 		const delete = document.querySelector("#btnDelete");
+//		$("#btnDelete").on("click", function(){
+//		});
+//		delete.addEventListener("click", function(){
+//		});
+</script> -->
 <script>
 	$(function() {
 		$("#btnList").on("click",function() {
@@ -41,6 +60,7 @@
 	});
 </script>
 </head>
+
 <body>
    <%@ include file="../home/header.jsp"%>
    <div class="main-content">
@@ -51,14 +71,12 @@
       <div class="container" role="main">
             <div class="bg-white rounded shadow-sm">
                <div class="noticeTitle">
-               <label for="faqTitle">제목</label> <input type="text"
+               <label for="noticeTitle">제목</label> <input type="text"
                      class="form-control" name="noticeTitle" id="noticeTitle" value="${notice.noticeTitle}"
                      placeholder="제목을 입력해 주세요" readonly>
-                  <%-- <label>제목 : </label>
-                  <c:out value="${notice.noticeTitle }" /> --%>
                </div>
                <div class="mb-3">
-                  <label for="notice_content">내용</label>
+                  <label for="noticeContent">내용</label>
                   <textarea type="text" class="form-control" rows="5" name="noticeContent"
                      id="noticeContent" readonly>${notice.noticeContent}</textarea>
                </div>
