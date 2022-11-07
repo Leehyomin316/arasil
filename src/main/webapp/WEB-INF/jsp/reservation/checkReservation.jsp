@@ -26,7 +26,7 @@
 	<%@ include file="../home/header.jsp"%>
 	<div class="main-content">
 		<header class="title">
-			<h1>예약조회11</h1>
+			<h1>예약조회</h1>
 		</header>
 		<div class="checkMain">
 			<section class="container">
@@ -76,8 +76,8 @@
 													<td><span id="reservCode"></span></td>
 													<td><span id="inputGuestNm"></span></td>
 													<td><span id="inputReservSeq"></span></td>
-													<td><span id="startDt">15:00</span></td>
-													<td><span id="endDt">11:00</span></td>
+													<td><span id="startDt"></span></td>
+													<td><span id="endDt"></span></td>
 													<td><span id="extraPerson"></span></td>
 													<td><span id="totalFee"></span></td>
 												</tr>

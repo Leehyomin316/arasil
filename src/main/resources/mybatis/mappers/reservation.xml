@@ -24,7 +24,7 @@
 
 <select id="getReservedList" resultType="map" parameterType="map">
     <![CDATA[
-	select a.room_id, a.room_nm, a.guest_nm, a.guest_cell_phone, a.start_dt, a.end_dt, a.end_dt-a.start_dt days
+	select a.room_id, a.room_nm, a.guest_nm, a.guest_cell_phone, a.start_dt, a.end_dt, datediff(a.end_dt, a.start_dt)+1 days
 	  from ( select a.room_id, b.room_nm, a.guest_nm, a.guest_cell_phone, if ( a.start_dt < str_to_date(#{startDt}, '%Y%m%d'), str_to_date(#{startDt}, '%Y%m%d'), a.start_dt ) as start_dt,
 				    if ( a.end_dt > str_to_date(#{endDt}, '%Y%m%d'), str_to_date(#{endDt}, '%Y%m%d'), a.end_dt ) as end_dt
 			   from reservation a inner join room_info b on a.room_id = b.room_id
@@ -65,7 +65,7 @@
 
 <select id="selectReservations" resultType="com.scci.vo.ReservationVO">
 <![CDATA[
-	select a.reserv_seq, a.room_id, b.room_nm, a.guest_nm, a.reserv_code, a.guest_cell_phone, a.reserv_dt, a.start_dt, a.end_dt, datediff(a.end_dt, a.start_dt)+1 days, a.extra_person, a.total_fee
+	select a.reserv_seq, a.room_id, b.room_nm, a.guest_nm, a.reserv_code, a.guest_cell_phone, a.reserv_dt, a.start_dt, date_add(a.end_dt, interval 1 day) end_dt, datediff(a.end_dt, a.start_dt)+1 days, a.extra_person, a.total_fee
 	  from reservation a inner join room_info b on a.room_id = b.room_id
 	 order by a.reserv_dt desc
 	limit #{pageStart}, #{perPageNum}
@@ -86,14 +86,15 @@
 
 <select id="checkReservation" resultType="com.scci.vo.ReservationVO">
 <![CDATA[
-	select a.reserv_seq, a.room_id, b.room_nm, a.guest_nm, a.reserv_code, a.guest_cell_phone, a.reserv_dt, a.start_dt, a.end_dt, datediff(a.end_dt, a.start_dt)+1, a.extra_person, a.total_fee
+	select a.reserv_seq, a.room_id, b.room_nm, a.guest_nm, a.reserv_code, a.guest_cell_phone, a.reserv_dt, a.start_dt, date_add(a.end_dt, interval 1 day) end_dt, datediff(a.end_dt, a.start_dt)+1 days, a.extra_person, a.total_fee
 	  from reservation a inner join room_info b on a.room_id = b.room_id
 	 where a.reserv_seq = #{reservSeq} and a.guest_nm = #{guestNm} and a.guest_cell_phone = #{guestCellPhone}
 ]]>
 </select>
 
 <update id="cancelReserv" parameterType="com.scci.vo.ReservationVO">
-	update reservation set reserv_code='D' where RESERV_SEQ = #{reservSeq};
+	update reservation set reserv_code='D'
+	  where RESERV_SEQ = #{reservSeq};
 <!-- 	DELETE FROM `arasil`.`reservation` where RESERV_SEQ = #{reservSeq}; -->
 </update>
 
