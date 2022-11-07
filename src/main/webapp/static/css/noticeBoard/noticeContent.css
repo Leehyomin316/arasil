@@ -78,3 +78,28 @@ label.title {
 .mb-3 > input.form-control{
 	min-height:200px;
 }
+
+/* 버튼 */
+button.btn{
+	width: 64px;
+	height: 40px;
+	background-color: #a3a1a1;
+    color: #e3dede;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: 0.25s;
+    border: none;
+    display: inline-block;
+    font-weight: 600;
+    margin-left:1rem;
+}
+
+button.btn:active {
+    transform: scale(1.5);
+}
+button.btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}

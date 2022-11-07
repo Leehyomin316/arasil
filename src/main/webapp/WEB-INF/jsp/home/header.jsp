@@ -6,9 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Menu</title>
-<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>
-<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 <script src="https://kit.fontawesome.com/5c8c9f57c5.js" crossorigin="anonymous"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
@@ -58,7 +56,6 @@
                     	<ul class="underline smooth">
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
                     		<li class="sub-menu"><a class="nav-link" href="${pageContext.request.contextPath}/board/boardFAQ">자주묻는 질문</a></li>
-
                     	</ul>
                     </li>
                 </ul>

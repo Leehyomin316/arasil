@@ -15,6 +15,7 @@
 <link
 	href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css'
 	rel='stylesheet' type='text/css'>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap')
@@ -40,11 +41,11 @@
 					<input type="text" class="guestCellPhone" id="guestCellPhone" placeholder="연락처">
 				</div>
 				<button id="checkBtn" class="goCheck">예약 조회</button>
-			</section>
-			<section class="modal-area">
 				<div class="goCheckBtn">
 					<h4>예약시 문자로 발송된 주문번호를 확인 후 예약조회를 진행해주세요</h4>
 				</div>
+			</section>
+			<section class="modal-area">
 				<div class="modal" id="myModal">
 					<div class="modal-dialog modal-xl">
 						<div class="modal-content">
@@ -59,54 +60,36 @@
 										<table class="reservTable">
 											<thead>
 												<tr>
+													<th scope="col">객실이름</th>
 													<th scope="col">예약상태</th>
-												</tr>
-												<tr>
 													<th scope="col">예약자</th>
-												</tr>
-												<tr>
 													<th scope="col">예약번호</th>
-												</tr>
-												<tr>
 													<th scope="col">체크인</th>
-												</tr>
-												<tr>
 													<th scope="col">체크아웃</th>
-												</tr>
-												<tr>
 													<th scope="col">인원수</th>
-												</tr>
-												<tr>
 													<th scope="col">이용요금</th>
 												</tr>
 											</thead>
-											<tbody id="tableTbody">
+											<tbody>
 												<tr>
+													<td><span id="roomNm"></span></td>
 													<td><span id="reservCode"></span></td>
-												</tr>
-												<tr>
 													<td><span id="inputGuestNm"></span></td>
-												</tr>
-												<tr>
-													<td><span id="reservSeq"></span></td>
-												</tr>
-												<tr>
+													<td><span id="inputReservSeq"></span></td>
 													<td><span id="startDt"></span></td>
-												</tr>
-												<tr>
 													<td><span id="endDt"></span></td>
-												</tr>
-												<tr>
 													<td><span id="extraPerson"></span></td>
-												</tr>
-												<tr>
 													<td><span id="totalFee"></span></td>
 												</tr>
 											</tbody>
 										</table>
 									</div>
 								</form>
+								<form>
+									<button id="cancelButton" class="cancelButton">예약 취소</button>
+								</form>
 							</div>
+										<button id="cancelButton" class="cancelButton">예약 취소</button>
 						</div>
 					</div>
 				</div>

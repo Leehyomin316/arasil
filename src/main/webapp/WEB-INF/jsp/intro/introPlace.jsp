@@ -15,6 +15,7 @@
 <link
 	href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css'
 	rel='stylesheet' type='text/css'>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap')
@@ -139,6 +140,14 @@
 				<div class="right-img">
 					<img
 						src="${pageContext.request.contextPath}/static/img/place/place22.jpg">
+				</div>
+				<div class="right-img">
+					<img
+						src="${pageContext.request.contextPath}/static/img/place/place23.jpg">
+				</div>
+				<div class="right-img">
+					<img
+						src="${pageContext.request.contextPath}/static/img/place/place24.jpg">
 				</div>
 			</section>
 		</main>

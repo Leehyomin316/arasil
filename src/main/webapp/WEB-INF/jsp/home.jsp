@@ -15,6 +15,9 @@
 <link
 	href="${pageContext.request.contextPath}/static/css/home/slider.css"
 	rel="stylesheet"></link>
+<link
+	href="${pageContext.request.contextPath}/static/css/header-home.css"
+	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>
 
 </head>

@@ -17,8 +17,7 @@
 <link
 	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeList.css"
 	rel="stylesheet"></link>
-<link rel="icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>
 
 <script>
@@ -80,11 +79,11 @@
 								<c:forEach var="row" items="${notice}">
 									<tr>
 										<td>${row.noticeId}</td>
-										<td><a href="#"
+										<td style="word-break:break-all; white-space:pre-line;"><a href="#"
 											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
 												<c:out value="${row.noticeTitle}" />
 										</a></td>
-										<td class="hidden-table"><fmt:formatDate value="${row.noticeDate}"
+										<td style="width:110px;" class="hidden-table"><fmt:formatDate value="${row.noticeDate}"
 												pattern="yyyy-MM-dd" /></td>
 										<td class="hidden-table">${row.userId}</td>
 									</tr>

@@ -15,6 +15,7 @@
 <link
 	href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css'
 	rel='stylesheet' type='text/css'>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 </head>
 <body>
 	<%@ include file="../home/header.jsp"%>
@@ -122,7 +123,7 @@
 						<thead>
 							<tr>
 								<th scope="col">객실정보</th>
-								<th scope="col">이용일</th>
+								<th scope="col">이용시작일</th>
 								<th scope="col">기간</th>
 								<th scope="col">이용인원</th>
 								<th scope="col">이용요금</th>
@@ -193,7 +194,7 @@
 											<thead>
 												<tr>
 													<th scope="col">객실정보</th>
-													<th scope="col">이용일</th>
+													<th scope="col">이용시작일</th>
 													<th scope="col">기간</th>
 													<th scope="col">이용인원</th>
 													<th scope="col">이용요금</th>

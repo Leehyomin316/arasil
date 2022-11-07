@@ -15,6 +15,7 @@
 <link
 	href="${pageContext.request.contextPath}/static/css/noticeBoard/boardFAQupdate.css"
 	rel="stylesheet"></link>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>		
 <script>
 	$(function() {
@@ -31,10 +32,11 @@
 </script>
 <script>
 	$(function() {
+		const form = document.getElementById("form");
+		const deleteUrl = "${pageContext.request.contextPath}/board/deleteFAQ";
 		$("#btnDelete").on("click",function(){
-			var url = "${pageContext.request.contextPath}/board/deleteFAQ";
-			url = url + "?faqId="+${boardFAQupdate.faqId};
-			location.href = url;
+			form.action = deleteUrl;
+			form.submit();
 		});
 	});
 </script>
