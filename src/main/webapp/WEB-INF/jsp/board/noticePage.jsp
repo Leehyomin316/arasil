@@ -17,7 +17,8 @@
 <link
 	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeList.css"
 	rel="stylesheet"></link>
-<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
+<link href="${pageContext.request.contextPath}/static/css/header.css"
+	rel="stylesheet"></link>
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>
 
 <script>
@@ -39,10 +40,10 @@
 <body>
 	<%@ include file="../home/header.jsp"%>
 	<div class="main-content">
-		<article>
-			<header class="title">
+		<header class="title">
 			<h1>공지사항</h1>
-			</header>
+		</header>
+		<article>
 			<div class="container">
 				<form action="noticePage" method="get">
 					<div
@@ -79,12 +80,12 @@
 								<c:forEach var="row" items="${notice}">
 									<tr>
 										<td>${row.noticeId}</td>
-										<td style="word-break:break-all;"><a href="#"
+										<td style="word-break: break-all;"><a href="#"
 											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
 												<c:out value="${row.noticeTitle}" />
 										</a></td>
-										<td style="width:110px;" class="hidden-table"><fmt:formatDate value="${row.noticeDate}"
-												pattern="yyyy-MM-dd" /></td>
+										<td style="width: 110px;" class="hidden-table"><fmt:formatDate
+												value="${row.noticeDate}" pattern="yyyy-MM-dd" /></td>
 										<td class="hidden-table">${row.userId}</td>
 									</tr>
 								</c:forEach>
@@ -136,6 +137,6 @@
 	</div>
 	<%@ include file="../home/footer.jsp"%>
 </body>
-	<script
+<script
 	src="${pageContext.request.contextPath}/static/js/noticeBoard/noticeList.js"></script>
 </html>
