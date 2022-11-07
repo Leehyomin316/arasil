@@ -16,13 +16,9 @@ nav{
 	transition: opacity 0.5s ease, visibility 0.5s;
 }
 /* 메뉴바 */
-/* #menu { */
-/* 	width: 100vw; */
-/* 	height: 30vh; */
-/* 	background-color: #fefefe; */
-/* 	display: none; */
-/* 	z-index:10010; */
-/* } */
+.navbar-nav{
+	margin-right:15px;
+}
 
 #menu.show {
     display: flex;
@@ -52,5 +48,23 @@ nav{
 .btn-group > .btn{
 	width:80px;
 }
+/*메뉴 숨기기*/
+ul > li ul.underline{
+	height:0;
+	transition: 1s;
+	list-style:none;
+	visibility: hidden;
+	opacity:0;
+}
+ul > li:hover ul.underline{
+	float:none;
+	letter-spacing: -0.88px;
+    cursor: pointer;
+    height:20vh;
+    visibility: visible;
+    opacity:1;
+}
 
-
+b{
+	font-size:120%;
+}
