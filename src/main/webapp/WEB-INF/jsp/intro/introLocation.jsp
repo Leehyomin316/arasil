@@ -13,6 +13,7 @@
 	rel="stylesheet"></link>
 <link href="${pageContext.request.contextPath}/static/css/common.css"
 	rel="stylesheet"></link>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap')
@@ -29,7 +30,7 @@
 		<div class="sort">
 			<div id="map" style="width: 80%; height: 450px;"></div>
 			<div class="address">
-			주소 : 전라남도 장흥군 안양면 수문전원길 29, 전라남도 장흥군 안양면수문리 454</div>
+			주소 : 장흥군 안양면 수문전원길 29, 장흥군 안양면수문리 454</div>
 			<div class="bus">
 				<div>
 					<img src="${pageContext.request.contextPath}/static/img/bus.png"

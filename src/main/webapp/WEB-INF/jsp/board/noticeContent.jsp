@@ -15,11 +15,10 @@
 <link
 	href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css"
 	rel="stylesheet"></link>
-<link rel="icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/static/img/favicon.ico" />
 <link
 	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeFAQ.css"
 	rel="stylesheet"></link>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>	
 <!-- <script>
 /* 	$(function() {
@@ -112,8 +111,7 @@
 					<div class="mb-3">
 						<label for="notice_content">내용</label>
 						<textarea type="text" class="form-control" rows="5" name="noticeContent"
-							id="noticeContent" readonly><c:out value ="${notice.noticeContent}"/></textarea>
-						<p>${notice.noticeContent}</p>
+							id="noticeContent" readonly>${notice.noticeContent}</textarea>
 					</div>
 				</div>
 
@@ -131,7 +129,6 @@
 	<%@ include file="../home/footer.jsp"%>
 </body>
 </html>
-
 <!-- 
 <script>
 	$(function() {
@@ -184,5 +181,3 @@
 		</div>
 	</article>
 </body>
-<%-- <%@ include file="../home/footer.jsp"%> --%>
-</html> -->

@@ -23,6 +23,7 @@ pageContext.setAttribute("BR", "<br/>");
 <link
 	href="${pageContext.request.contextPath}/static/css/noticeBoard/noticeForm.css"
 	rel="stylesheet"></link>
+<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
 <script src="${pageContext.request.contextPath}/static/js/header.js"></script>		
 <!-- <script>
 	$(function() {
@@ -51,7 +52,7 @@ pageContext.setAttribute("BR", "<br/>");
 				$("input:hidden[name='mode']").val('<c:out value ="${mode}"/>');
 				$("#userId").val('<c:out value ="${notice.userId}"/>');
 				$("#noticeTitle").val('<c:out value ="${notice.noticeTitle}"/>');
-				$("#noticeContent").val('<c:out escapeXml = "false" value="${fn:replace(notice.noticeContent, CRLF ,'<엔터>')}"/>');
+				$("#noticeContent").val(`<c:out value="${notice.noticeContent}"/>`);
 			}
 		});
 </script>
