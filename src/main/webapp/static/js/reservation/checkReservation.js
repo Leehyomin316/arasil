@@ -46,8 +46,8 @@
 					$("#reservCode").text(reservCodeNm);
 					$("#inputGuestNm").text(revInfo.guestNm);
 					$("#inputReservSeq").text(revInfo.reservSeq);
-					$("#startDt").text(revInfo.startDt);
-					$("#endDt").text(revInfo.endDt);
+					$("#startDt").text(revInfo.startDt+"\u00a0\u00a0\u00a0"+'15:00');
+					$("#endDt").text(revInfo.endDt+"\u00a0\u00a0\u00a0"+'11:00');
 					$("#extraPerson").text(revInfo.extraPerson);
 					$("#totalFee").text(revInfo.totalFee);
 					$("#myModal").modal('show');

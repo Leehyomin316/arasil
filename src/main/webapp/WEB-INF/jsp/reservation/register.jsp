@@ -15,7 +15,8 @@
 <link
 	href='${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.css'
 	rel='stylesheet' type='text/css'>
-<link href="${pageContext.request.contextPath}/static/css/header.css" rel="stylesheet"></link>	
+<link href="${pageContext.request.contextPath}/static/css/header.css"
+	rel="stylesheet"></link>
 </head>
 <body>
 	<%@ include file="../home/header.jsp"%>
@@ -45,12 +46,13 @@
 					</div>
 				</div>
 				<div class="usage_rules">
-					<pre class="pre-margin">                          
+					<pre class="pre-margin"> </pre>
+<pre>                         
 ■ 입실/퇴실 시간
 - 입실시간 : 오후 3시
 - 퇴실시간 : 오전 11시
-   
-   
+</pre>   
+<pre>   
 ■ 인원 추가요금
 - 기준인원 초과 시 추가요금 발생
 - (유아,아동,성인) 1인 추가 1만원
@@ -62,8 +64,8 @@
    
 ■ 할인안내
 - 2박 이상 이용시 1박당 5만원 할인
-
-   
+</pre>
+<pre>   
 ■ 예약안내
 - 예약 이용수칙을 반드시 확인바랍니다.
 - 예약 전 취소수수료를 꼭 확인바랍니다.
