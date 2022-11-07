@@ -54,8 +54,10 @@
 					$("#extraPerson").text(revInfo.extraPerson);
 					$("#totalFee").text(revInfo.totalFee);
 					$("#myModal").modal('show');
-				} else {
-					alert("예약 정보가 없습니다.");
+
+				} 
+				else {
+					alert("예약 정보가 없습니다.\n관리자에게 문의하세요");
 				}
 			}
 		});
