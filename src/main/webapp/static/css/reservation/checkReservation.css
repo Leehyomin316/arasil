@@ -52,6 +52,30 @@ button.goCheck:hover {
 	transform: scale(1.2);
 	cursor: pointer;
 }
+button.cancelButton {
+	width: 124px;
+	height: 40px;
+	background-color: #a3a1a1;
+	color: #e3dede;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+	transition: 0.25s;
+	border: none;
+	display: inline-block;
+	font-weight: 600;
+	margin: 20px;
+}
+
+button.cancelButton:active {
+	transform: scale(1.5);
+}
+
+button.cancelButton:hover {
+	letter-spacing: 2px;
+	transform: scale(1.2);
+	cursor: pointer;
+}
 
 div.button-center {
 	display: flex;
@@ -74,7 +98,27 @@ div.button-center {
 	flex-direction: column;
 	align-items: center;
 }
+.cancelBtn {
+	display: flex;
+	justify-content: center;
+}
 
+.cancelBtn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cancelButton {
+	display: flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	overflow-x: auto;
+	overflow-y: hidden;
+	border-collapse: collapse;
+	margin: auto;
+	justify-content: center;
+}
 .reservTable {
 	display: flex;
 	display: -webkit-box;
@@ -105,30 +149,6 @@ tbody td {
 	border: 0.5px solid #444444;
 }
 
-button.cancelButton {
-	width: 100px;
-	height: 40px;
-	background-color: #a3a1a1;
-	color: #e3dede;
-	border-radius: 4px;
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-	text-decoration: none;
-	transition: 0.25s;
-	border: none;
-	display: inline-block;
-	font-weight: 600;
-	margin: 10px;
-}
-
-button.cancelButton:active {
-	transform: scale(1.5);
-}
-
-button.cancelButton:hover {
-	letter-spacing: 2px;
-	transform: scale(1.2);
-	cursor: pointer;
-}
 .modal {
   position: fixed;
   top: 0;

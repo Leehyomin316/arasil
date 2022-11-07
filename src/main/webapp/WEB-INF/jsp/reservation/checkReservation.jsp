@@ -85,11 +85,13 @@
 										</table>
 									</div>
 								</form>
-									<button id="cancelBtn" class="goCheck">예약 취소</button>
+								<div class="cancelBtn">
+									<button id="cancelBtn" class="cancelButton">예약 취소</button>
 <!-- 								<form name="form" id="form" role="form" method="POST" -->
 <%-- 								action="${pageContext.request.contextPath}/reservation/cancelReserv"> --%>
 <!-- 									<input type="hidden" class="reservSeq" id="reservSeq">	 -->
 <!-- 								</form>								 -->
+								</div>
 							</div>
 						</div>
 					</div>
