@@ -53,78 +53,122 @@
 			</ul>
 		</header>
 		<div id="menu" class="container">
-			<nav class="navbar navbar-expand-lg">
-				<div class="container-fluid">
-					<button class="navbar-toggler" type="button"
-						data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
-						aria-controls="navbarNavDarkDropdown" aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-						<div class="btn-group">
-							<button style="background-color: #0d6efd;"
-								class="btn btn-secondary dropdown-toggle" type="button"
-								id="defaultDropdown" data-bs-toggle="dropdown"
-								data-bs-auto-close="true" aria-expanded="false">소개</button>
-							<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/intro/introPlace">펜션정보</a></li>
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/intro/introSurround">주변소개</a></li>
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/intro/introLocation">찾아오시는길</a></li>
-							</ul>
-						</div>
+			<ul class="navbar-nav ml-auto ul-margin">
+				<li class="nav-item active"><a class="nav-link"><b>소개</b></a>
+					<ul class="underline">
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/intro/introPlace">펜션정보</a></li>
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/intro/introSurround">주변소개</a></li>
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/intro/introLocation">찾아오시는길</a></li>
+					</ul></li>
+			</ul>
+			<ul class="navbar-nav ml-auto ul-margin">
+				<li class="nav-item active"><a class="nav-link"><b>예약</b></a>
+					<ul class="underline">
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/reservation/reservationGuide">예약안내</a></li>
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li>
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/reservation/roomSchedule">예약현황</a></li>
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/reservation/checkReservation">예약조회/취소</a></li>
+					</ul></li>
+			</ul>
+			<ul class="navbar-nav ml-auto ul-margin">
+				<li class="nav-item active"><a class="nav-link"><b>게시판</b></a>
+					<ul class="underline">
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
+						<li class="sub-menu"><a class="nav-link"
+							href="${pageContext.request.contextPath}/board/boardFAQ">자주묻는
+								질문</a></li>
+					</ul></li>
+			</ul>
+			<ul class="navbar-nav ml-auto ul-margin">
+				<li class="nav-item active"><a class="nav-link"><b>기타</b></a>
+					<ul class="underline">
+						<li class="sub-menu"><a class="nav-link"
+							href="https://blog.naver.com/wlsfhrytk" target="_blank">네이버
+								블로그</a></li>
+						<li class="sub-menu"><a class="nav-link"
+							href="https://www.instagram.com/arasil_pension/" target="_blank">인스타그램</a></li>
+					</ul></li>
+			</ul>
+<!-- 			<nav class="navbar navbar-expand-lg"> -->
+<!-- 				<div class="container-fluid"> -->
+<!-- 					<button class="navbar-toggler" type="button" -->
+<!-- 						data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" -->
+<!-- 						aria-controls="navbarNavDarkDropdown" aria-expanded="false" -->
+<!-- 						aria-label="Toggle navigation"> -->
+<!-- 						<span class="navbar-toggler-icon"></span> -->
+<!-- 					</button> -->
+<!-- 					<div class="collapse navbar-collapse" id="navbarNavDarkDropdown"> -->
+<!-- 						<div class="btn-group"> -->
+<!-- 							<button style="background-color: #0d6efd;" -->
+<!-- 								class="btn btn-secondary dropdown-toggle" type="button" -->
+<!-- 								id="defaultDropdown" data-bs-toggle="dropdown" -->
+<!-- 								data-bs-auto-close="true" aria-expanded="false">소개</button> -->
+<!-- 							<ul class="dropdown-menu" aria-labelledby="defaultDropdown"> -->
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/intro/introPlace">펜션정보</a></li> --%>
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/intro/introSurround">주변소개</a></li> --%>
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/intro/introLocation">찾아오시는길</a></li> --%>
+<!-- 							</ul> -->
+<!-- 						</div> -->
 
-						<div class="btn-group">
-							<button style="background-color: #0d6efd;"
-								class="btn btn-secondary dropdown-toggle" type="button"
-								id="defaultDropdown" data-bs-toggle="dropdown"
-								data-bs-auto-close="true" aria-expanded="false">예약</button>
-							<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/reservation/reservationGuide">예약안내</a></li>
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li>
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/reservation/roomSchedule">예약현황</a></li>
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/reservation/checkReservation">예약조회/취소</a></li>
-							</ul>
-						</div>
+<!-- 						<div class="btn-group"> -->
+<!-- 							<button style="background-color: #0d6efd;" -->
+<!-- 								class="btn btn-secondary dropdown-toggle" type="button" -->
+<!-- 								id="defaultDropdown" data-bs-toggle="dropdown" -->
+<!-- 								data-bs-auto-close="true" aria-expanded="false">예약</button> -->
+<!-- 							<ul class="dropdown-menu" aria-labelledby="defaultDropdown"> -->
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/reservation/reservationGuide">예약안내</a></li> --%>
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/reservation/register">실시간예약</a></li> --%>
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/reservation/roomSchedule">예약현황</a></li> --%>
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/reservation/checkReservation">예약조회/취소</a></li> --%>
+<!-- 							</ul> -->
+<!-- 						</div> -->
 
-						<div class="btn-group">
-							<button style="background-color: #0d6efd;"
-								class="btn btn-secondary dropdown-toggle" type="button"
-								id="defaultDropdown" data-bs-toggle="dropdown"
-								data-bs-auto-close="true" aria-expanded="false">게시판</button>
-							<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li>
-								<li><a class="dropdown-item"
-									href="${pageContext.request.contextPath}/board/boardFAQ">자주묻는
-										질문</a></li>
-							</ul>
-						</div>
+<!-- 						<div class="btn-group"> -->
+<!-- 							<button style="background-color: #0d6efd;" -->
+<!-- 								class="btn btn-secondary dropdown-toggle" type="button" -->
+<!-- 								id="defaultDropdown" data-bs-toggle="dropdown" -->
+<!-- 								data-bs-auto-close="true" aria-expanded="false">게시판</button> -->
+<!-- 							<ul class="dropdown-menu" aria-labelledby="defaultDropdown"> -->
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/board/noticePage">공지사항</a></li> --%>
+<!-- 								<li><a class="dropdown-item" -->
+<%-- 									href="${pageContext.request.contextPath}/board/boardFAQ">자주묻는 --%>
+<!-- 										질문</a></li> -->
+<!-- 							</ul> -->
+<!-- 						</div> -->
 
-						<div class="btn-group">
-							<button style="background-color: #0d6efd;"
-								class="btn btn-secondary dropdown-toggle" type="button"
-								id="defaultDropdown" data-bs-toggle="dropdown"
-								data-bs-auto-close="true" aria-expanded="false">기타</button>
-							<ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-								<li><a class="dropdown-item"
-									href="https://blog.naver.com/wlsfhrytk" target="_blank">네이버
-										블로그</a></li>
-								<li><a class="dropdown-item"
-									href="https://www.instagram.com/arasil_pension/"
-									target="_blank">인스타그램</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</nav>
+<!-- 						<div class="btn-group"> -->
+<!-- 							<button style="background-color: #0d6efd;" -->
+<!-- 								class="btn btn-secondary dropdown-toggle" type="button" -->
+<!-- 								id="defaultDropdown" data-bs-toggle="dropdown" -->
+<!-- 								data-bs-auto-close="true" aria-expanded="false">기타</button> -->
+<!-- 							<ul class="dropdown-menu" aria-labelledby="defaultDropdown"> -->
+<!-- 								<li><a class="dropdown-item" -->
+<!-- 									href="https://blog.naver.com/wlsfhrytk" target="_blank">네이버 -->
+<!-- 										블로그</a></li> -->
+<!-- 								<li><a class="dropdown-item" -->
+<!-- 									href="https://www.instagram.com/arasil_pension/" -->
+<!-- 									target="_blank">인스타그램</a></li> -->
+<!-- 							</ul> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</nav> -->
 		</div>
 		<!-- Thumbnail -->
 		<section id="thumbnails">
@@ -202,23 +246,23 @@
 		src="${pageContext.request.contextPath}/static/bootstrap/assets/js/breakpoints.min.js"></script>
 	<script
 		src="${pageContext.request.contextPath}/static/bootstrap/assets/js/main.js"></script>
-<!-- 	<script> -->
-<!-- // 		(function() { -->
-<!-- // 			console.log($("#viewer > .inner")); -->
-<!-- // 			const $viewer_inner = $("#viewer > .inner"); -->
-<!-- // 			$(`<div id='menuToggle' class='toggle menu-toggle'></div>`) -->
-<!-- // 					.appendTo($viewer_inner); -->
-<!-- // 			const $menu = $("#menu"); -->
-<!-- // 			const $main = $("#main"); -->
-<!-- // 			const $viewer = $("#viewer"); -->
-<!-- // 			$("#menuToggle").on("click", function() { -->
-<!-- // 				$menu.toggleClass("show"); -->
-<!-- // 				$main.toggleClass("ninety"); -->
-<!-- // 				$viewer.toggleClass("ninety"); -->
+	<!-- 	<script> -->
+	<!-- // 		(function() { -->
+	<!-- // 			console.log($("#viewer > .inner")); -->
+	<!-- // 			const $viewer_inner = $("#viewer > .inner"); -->
+	<!-- // 			$(`<div id='menuToggle' class='toggle menu-toggle'></div>`) -->
+	<!-- // 					.appendTo($viewer_inner); -->
+	<!-- // 			const $menu = $("#menu"); -->
+	<!-- // 			const $main = $("#main"); -->
+	<!-- // 			const $viewer = $("#viewer"); -->
+	<!-- // 			$("#menuToggle").on("click", function() { -->
+	<!-- // 				$menu.toggleClass("show"); -->
+	<!-- // 				$main.toggleClass("ninety"); -->
+	<!-- // 				$viewer.toggleClass("ninety"); -->
 
-<!-- // 			}); -->
-<!-- // 		})(); -->
-<!-- 	</script> -->
+	<!-- // 			}); -->
+	<!-- // 		})(); -->
+	<!-- 	</script> -->
 	<%-- 		<script	src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>	 --%>
 
 	<script src="${pageContext.request.contextPath}/static/js/shareing.js"></script>

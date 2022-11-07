@@ -152,7 +152,6 @@ input, select, textarea {
 		-webkit-transition: color 0.25s ease, border-bottom-color 0.25s ease;
 		-ms-transition: color 0.25s ease, border-bottom-color 0.25s ease;
 		transition: color 0.25s ease, border-bottom-color 0.25s ease;
-		border-bottom: dotted 1px;
 		color: inherit;
 		text-decoration: none;
 	}
@@ -929,7 +928,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 3em 2.25em 0em 2.25em ;
+		padding: 1em 2.25em 0em 2.25em ;
 	}
 
 		#header h1 {

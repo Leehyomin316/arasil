@@ -27,12 +27,12 @@ public class HomeController {
 	@RequestMapping("/")
 	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("home");
+		mv.setViewName("home2");
 		return mv;
 	}
 	@RequestMapping(value="/home2", method=RequestMethod.GET)
 	public String home2() {
-		return "/home2";
+		return "/";
 	}
 	
 	@RequestMapping("/welcome")
