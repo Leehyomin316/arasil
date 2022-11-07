@@ -10,8 +10,11 @@
 	<http auto-config="true" use-expressions="true">
 		
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/customer**" access="hasRole('ROLE_ADMIN')" />
-<!-- 		<intercept-url pattern="/reservation/**" access="hasRole('ROLE_ADMIN')" /> -->
+		<intercept-url pattern="/reservation/listPage/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/board/boardFAQupdate**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/board/boardFAQInsert**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/board/noticeForm**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/customer**" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/**" access="permitAll" />
 		
 		
