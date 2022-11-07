@@ -78,7 +78,7 @@
 							</c:when>
 							<c:when test="${!empty notice}">
 								<c:forEach var="row" items="${notice}">
-									<tr>
+									<tr href="#" onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
 										<td>${row.noticeId}</td>
 										<td style="word-break: break-all;"><a href="#"
 											onClick="fn_contentView(<c:out value="${row.noticeId}"/>)">
