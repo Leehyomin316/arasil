@@ -58,6 +58,6 @@ public class ReservationDaoImpl implements ReservationDao{
 	}
 	@Override
 	public long cancelReserv(long reservSeq) {
-		return sqlSession.delete("mapper.reservation.cancelReserv", reservSeq);
+		return sqlSession.insert("mapper.reservation.cancelReserv", reservSeq);
 	}
 }

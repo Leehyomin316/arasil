@@ -26,7 +26,7 @@
 	<%@ include file="../home/header.jsp"%>
 	<div class="main-content">
 		<header class="title">
-			<h1>예약조회</h1>
+			<h1>예약조회11</h1>
 		</header>
 		<div class="checkMain">
 			<section class="container">
